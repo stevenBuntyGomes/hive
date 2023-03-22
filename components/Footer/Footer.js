@@ -5,7 +5,7 @@ const Footer = () => {
     <>
         <main className='bg-slate-50 pt-10'>
             <section className="bg-black text-white">
-                <div className="grid md:grid-cols-4 p-20 gap-5">
+                <div className="grid md:grid-cols-4 p-20 gap-5 text-center md:text-left">
                     <div className="px-4 my-2 max-w-[350px]">
                         <ul className="divide-y divide-gray-300">
                             <li className="cursor-pointer hover:bg-gray-100 hover:bg-opacity-20">

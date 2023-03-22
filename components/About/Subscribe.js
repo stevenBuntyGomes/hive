@@ -13,8 +13,8 @@ const Subscribe = () => {
                 <h5 class="font-bold uppercase md:text-[42px] text-4xl mb-5">SUBSCRIBE For Last Updates</h5>
                 <p>Subscribe our newsletter. join us and get the latest updates & patches! We do not spam will not share the
                     email to anyone.</p>
-                <div class="flex justify-center items center w-full mt-5">
-                    <div class="w-[500px]">
+                <div class="md:flex md:justify-center md:items center md:w-full mt-5">
+                    <div class="md:w-[500px]">
                         {/* <label className="block font-medium mb-2" htmlFor="text">
                             Label
                         </label> */}

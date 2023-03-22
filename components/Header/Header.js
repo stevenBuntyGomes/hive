@@ -46,10 +46,10 @@ const Header = () => {
             </div>
             <div className="text-black gt-sm pt-2">
                 <div class="md:flex-grow text-base">
-                    <Link href="#responsive-header" className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-orange-500 mr-6">
+                    <Link href="/" className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-orange-500 mr-6">
                         Home
                     </Link>
-                    <Link href="#responsive-header" className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-orange-500 mr-6">
+                    <Link href="/service" className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-orange-500 mr-6">
                         Services
                     </Link>
                     <Link href="#responsive-header" className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-orange-500 mr-6">

@@ -65,6 +65,19 @@ const Testimonial = () => {
                 autoplay = {{ delay: 1000 }}
                 // modules={[FreeMode, Pagination]}
                 className="mySwiper"
+                breakpoints={{
+                    0: {
+                        slidesPerView: 1,
+                    },
+                    576: {
+                        // width: 576,
+                        slidesPerView: 1,
+                    },
+                    768: {
+                        // width: 768,
+                        slidesPerView: 3,
+                    },
+                }}
             >
                 {contents && contents.map((content, index) => (
                     <SwiperSlide className="py-10" key = {index}>

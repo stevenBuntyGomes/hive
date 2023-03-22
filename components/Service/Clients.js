@@ -56,6 +56,19 @@ const Clients = () => {
                 spaceBetween={30}
                 freeMode={true}
                 autoplay = {{ delay: 1000 }}
+                breakpoints={{
+                0: {
+                    slidesPerView: 3,
+                },
+                576: {
+                    // width: 576,
+                    slidesPerView: 5,
+                },
+                768: {
+                    // width: 768,
+                    slidesPerView: 7,
+                },
+            }}
                 // modules={[FreeMode, Pagination]}
                 className="mySwiper"
             >

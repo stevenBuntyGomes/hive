@@ -61,6 +61,19 @@ export const ServicePrice = () => {
             spaceBetween={30}
             freeMode={true}
             autoplay = {{ delay: 1000 }}
+            breakpoints={{
+                0: {
+                    slidesPerView: 1,
+                },
+                576: {
+                    // width: 576,
+                    slidesPerView: 1,
+                },
+                768: {
+                    // width: 768,
+                    slidesPerView: 3,
+                },
+            }}
             // modules={[FreeMode, Pagination]}
             className="mySwiper"
         >
