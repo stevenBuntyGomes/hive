@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
+import ServiceCss from './service.module.css'
 
 // Import Swiper styles
 import "swiper/css";
@@ -50,7 +51,7 @@ const Service = () => {
   return (
     <>
     <main className="bg-slate-50 p-10">
-        <div class="text-center ">
+        <div class="text-center">
             <h2 class="text-orange-500 uppercase font-bold md:text-[32px] text-2xl pb-3">Our Services</h2>
             <h2 class="font-bold uppercase md:text-[42px] text-4xl mb-5">Quality Service is Our Guarantee</h2>
             <div class="flex justify-center items-center">
@@ -67,8 +68,21 @@ const Service = () => {
             spaceBetween={30}
             freeMode={true}
             autoplay = {{ delay: 1000 }}
+            breakpoints={{
+                0: {
+                    slidesPerView: 1,
+                },
+                576: {
+                    // width: 576,
+                    slidesPerView: 1,
+                },
+                768: {
+                    // width: 768,
+                    slidesPerView: 3,
+                },
+            }}
             // modules={[FreeMode, Pagination]}
-            className="mySwiper"
+            className={`mySwiper`}
         >
             {contents && contents.map((content, index) => (
                 <SwiperSlide className="py-10">

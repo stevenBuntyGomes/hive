@@ -38,7 +38,7 @@ const About = () => {
                         <Image src="/about.png" width={400} height = {659} class="md:w-[400px] relative z-10 md:h-[659px]" alt=""/>
                     </div>
                 </div>
-                <div class="w-full md:w-3/5 px-10">
+                <div class="w-full md:w-3/5 px-10 text-center md:text-left">
                     <div class="mb-10">
                         <h4 class="text-orange-500 uppercase font-bold md:text-[32px] text-2xl pb-3">About us</h4>
                         <h5 class="font-bold uppercase md:text-[42px] text-4xl mb-5">Plumbing is what we do</h5>
