@@ -1,7 +1,6 @@
 import React from 'react'
-import Layout from '@/components/Layout'
-import Footer from '@/components/Footer/Footer'
-import PrizeItem from '@/components/Service/PrizeItem'
+import Layout from '../components/Layout'
+import PrizeItem from '../components/Service/PrizeItem'
 
 const Services = () => {
 
@@ -118,8 +117,6 @@ const Services = () => {
                 ))}
                 </div>
             </main>
-                  
-            <Footer />
           </div>
         </Layout>
     </>
