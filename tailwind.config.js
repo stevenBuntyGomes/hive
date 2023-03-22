@@ -8,12 +8,13 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        raleway: ['Raleway']
+        raleway: ['Raleway', 'sans-serif']
       },
-      // colors: {
-      //   "orange": "#F07E22",
-      //   "brightBlue": "#0A59F3",
-      // }
+    // font-family: 'Roboto Slab', serif;
+      colors: {
+        "orange-500": "#F07E22",
+        "brightBlue": "#0A59F3",
+      }
     },
   },
   plugins: [
