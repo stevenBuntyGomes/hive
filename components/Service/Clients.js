@@ -1,0 +1,75 @@
+import React, {useState, useEffect} from 'react'
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/pagination";
+
+
+const Clients = () => {
+    const onClick = () => {
+
+    }
+    const contents = [
+        {
+            img: '/1.png'
+        },
+        {
+            img: '/2.png'
+        },
+        {
+            img: '/3.png'
+        },
+        {
+            img: '/4.png'
+        },
+        {
+            img: '/3.png'
+        },
+        {
+            img: '/2.png'
+        },
+        {
+            img: '/1.png'
+        },
+        {
+            img: '/5.png'
+        },
+        {
+            img: '/6.png'
+        },
+    ];
+  return (
+    <>
+        <main className='bg-slate-50 pt-10'>
+            <div className='bg-slate-50 md:p-20 p-10'>
+                <div class="text-center">
+                    <h2 class="text-orange-500 uppercase font-bold md:text-[32px] text-2xl">Our BIG CLINTS</h2>
+                    <h1 class="font-bold uppercase md:text-[42px] text-4xl py-5">WE WORK WITH</h1>
+                    <p class="">We offer a wide range of plumbing services catered to both residential and commercial clients.
+                        Even
+                        the all-powerful Pointing has no control about the blind texts.</p>
+                </div>
+                <Swiper
+                slidesPerView={7}
+                spaceBetween={30}
+                freeMode={true}
+                autoplay = {{ delay: 1000 }}
+                // modules={[FreeMode, Pagination]}
+                className="mySwiper"
+            >
+                {contents && contents.map((content, index) => (
+                    <SwiperSlide className="py-10" key = {index}>
+                        <img src={content.img} alt = "image content"/>
+                    </SwiperSlide>
+                ))}
+                
+            </Swiper>
+            </div>
+        </main>
+    </>
+  )
+}
+
+export default Clients
