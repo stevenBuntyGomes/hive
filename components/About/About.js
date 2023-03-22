@@ -31,18 +31,18 @@ const About = () => {
     }
   return (
     <>
-        <div class="w-full max-w-7xl rounded bg-white p-10 lg:px-20 mx-auto text-gray-800 relative md:text-left">
-            <div class="md:flex items-center -mx-10">
-                <div class="w-full md:w-2/5 px-10 mb-10 md:mb-0">
-                    <div class="relative">
-                        <Image src="/about.png" width={400} height = {659} class="md:w-[400px] relative z-10 md:h-[659px]" alt=""/>
+        <div className="w-full max-w-7xl rounded bg-white p-10 lg:px-20 mx-auto text-gray-800 relative md:text-left">
+            <div className="md:flex items-center -mx-10">
+                <div className="w-full md:w-2/5 px-10 mb-10 md:mb-0">
+                    <div className="relative">
+                        <Image src="/about.png" width={400} height = {659} className="md:w-[400px] relative z-10 md:h-[659px]" alt=""/>
                     </div>
                 </div>
-                <div class="w-full md:w-3/5 px-10 text-center md:text-left">
-                    <div class="mb-10">
-                        <h4 class="text-orange-500 uppercase font-bold md:text-[32px] text-2xl pb-3">About us</h4>
-                        <h5 class="font-bold uppercase md:text-[42px] text-4xl mb-5">Plumbing is what we do</h5>
-                        <p class="">We are an award winning plumbing company with over 20 years experience in the
+                <div className="w-full md:w-3/5 px-10 text-center md:text-left">
+                    <div className="mb-10">
+                        <h4 className="text-orange-500 uppercase font-bold md:text-[32px] text-2xl pb-3">About us</h4>
+                        <h5 className="font-bold uppercase md:text-[42px] text-4xl mb-5">Plumbing is what we do</h5>
+                        <p className="">We are an award winning plumbing company with over 20 years experience in the
                             business. We provide a wide range of services for both residential and commercial clients.</p>
                         <div className="py-10">
                             <div className="grid grid-cols-2">

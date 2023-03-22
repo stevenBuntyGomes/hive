@@ -21,7 +21,7 @@ const Header = () => {
                 Call Us: +43 660 3924728
             </div>
             <div className="text-white gt-sm">
-                <div class="text-sm md:flex-grow text-xl">
+                <div className="text-sm md:flex-grow text-xl">
                     <Link href="#responsive-header" className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-orange-500 mr-6">
                         <FontAwesomeIcon icon={faFacebookF} />
                     </Link>
@@ -45,7 +45,7 @@ const Header = () => {
                 <Image src="/hive.png" alt="hive-logo" width={200} height ={50} className="md:h-[50px] md:w-[200px] w-[80px] h-[20px]" />
             </div>
             <div className="text-black gt-sm pt-2">
-                <div class="md:flex-grow text-base">
+                <div className="md:flex-grow text-base">
                     <Link href="/" className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-orange-500 mr-6">
                         Home
                     </Link>
