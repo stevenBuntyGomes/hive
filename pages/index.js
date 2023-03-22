@@ -13,7 +13,7 @@ import AnyProblem from '@/components/Service/AnyProblem'
 import Testimonial from '@/components/About/Testimonial'
 import Clients from '@/components/Service/Clients'
 import Subscribe from '@/components/About/Subscribe'
-import Footer from '@/components/Footer/Footer'
+
 import Header2 from '@/components/Header/Header2'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -46,7 +46,6 @@ export default function Home() {
           <Testimonial/>
           <Clients/>
           <Subscribe/>
-          <Footer/>
         </div>
       </Layout>
     </>
