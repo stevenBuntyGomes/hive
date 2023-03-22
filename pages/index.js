@@ -1,20 +1,20 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
-import styles from '@/styles/Home.module.css'
-import Layout from '@/components/Layout'
-import Banner from '@/components/Home/Banner'
-import About from '@/components/About/About'
-import Service from '@/components/Service/service'
-import Video from '@/components/Video/Video'
-import { ServicePrice } from '@/components/Service/ServicePrice'
-import DownloadApp from '@/components/Video/DownloadApp'
-import AnyProblem from '@/components/Service/AnyProblem'
-import Testimonial from '@/components/About/Testimonial'
-import Clients from '@/components/Service/Clients'
-import Subscribe from '@/components/About/Subscribe'
+import styles from '../styles/Home.module.css'
+import Layout from '../components/Layout'
+import Banner from '../components/Home/Banner'
+import About from '../components/About/About'
+import Service from '../components/Service/service'
+import Video from '../components/Video/Video'
+import { ServicePrice } from '../components/Service/ServicePrice'
+import DownloadApp from '../components/Video/DownloadApp'
+import AnyProblem from '../components/Service/AnyProblem'
+import Testimonial from '../components/About/Testimonial'
+import Clients from '../components/Service/Clients'
+import Subscribe from '../components/About/Subscribe'
 
-import Header2 from '@/components/Header/Header2'
+
 
 const inter = Inter({ subsets: ['latin'] })
 
