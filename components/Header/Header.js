@@ -21,7 +21,7 @@ const Header = () => {
                 Call Us: +43 660 3924728
             </div>
             <div className="text-white gt-sm">
-                <div className="text-sm md:flex-grow text-xl">
+                <div className="text-sm md:flex-grow">
                     <Link href="#responsive-header" className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-orange-500 mr-6">
                         <FontAwesomeIcon icon={faFacebookF} />
                     </Link>
