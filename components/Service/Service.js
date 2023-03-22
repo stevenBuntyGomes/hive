@@ -64,7 +64,7 @@ const Service = () => {
                     all-powerful Pointing has no control about the blind texts.</p>
             </div>
 
-              </div>
+        </div>
               
         <Swiper
             slidesPerView={3}
