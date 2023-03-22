@@ -1,0 +1,8 @@
+.swiper-wrapper .swiper-pagination-bullet {
+	position: absolute;
+	right: 0px;
+	top: -150px;
+	width: 3px;
+	height: 23px;
+}
+

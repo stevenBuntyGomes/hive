@@ -7,10 +7,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
+import './banner.module.css';
 
 // import required modules
 import { FreeMode, Pagination } from "swiper";
-
 
 const BannerComponent = () => {
   const [color, setColor] = useState('');
@@ -29,20 +29,19 @@ const BannerComponent = () => {
       <section>
         
         <div className="bg-[url('/hero_section.png')] bg-no-repeat bg-cover w-full h-[700px] md:px-20 py-10">
-            <Swiper
-            slidesPerView={1}
-            spaceBetween={30}
-            freeMode={true}
-            pagination={{
-              clickable: true,
-            }}
-            modules={[FreeMode, Pagination]}
-            autoplay = {{ delay: 1000 }}
-            // modules={[FreeMode, Pagination]}
-            className="mySwiper"
-        >
+              <Swiper
+                slidesPerView={1}
+                spaceBetween={30}
+                freeMode={true}
+                pagination={{
+                  clickable: true,
+                }}
+                modules={[FreeMode, Pagination]}
+                autoplay = {{ delay: 1000 }}
+                className="mySwiper"
+              >
                 <SwiperSlide className="py-10">
-                    <div className="p-4 md:p-0 text-center md:text-left">
+                    <div className="p-4 md:p-0 text-center md:text-left relative">
                         <h5 className="md:text-[32px] text-2xl font-semibold">Handyman Expertise</h5>
                         <h3 className="md:text-[70px] text-4xl font-bold pt-5">
                           You Can <span className="text-orange-500">Trust</span>
@@ -197,26 +196,25 @@ const BannerComponent = () => {
                         </button>
                       </div>
                 </SwiperSlide>
-        </Swiper>
-                      
-                    </div>
+              </Swiper>           
+        </div>
        
         <div className='grid md:grid-cols-3 grid-cols-1 justify-between items-center transform -translate-y-32  md:px-20 px-10 gap-5'>
-          <div className="text-center w-max-[360px] rounded-xl py-5 bg-white shadow-[0_4px_20px_0px_rgba(0,0,0,0.3)]">
-            <img src="/icon1.png" className="w-[111px] h-[108px] m-auto" alt="icon1" />
-            <div className="text-xl font-medium py-4">General Plumbing Maintenance</div>
-            <div className="p-4">Leaky faucet? Clogged toilet? We got you covered with wide range of plumbing maintenance services.</div>
-          </div>
-          <div className="text-center w-max-[360px] rounded-xl py-5 bg-white shadow-[0_4px_20px_0px_rgba(0,0,0,0.3)]">
-            <img src="/icon2.png" className="w-[111px] h-[108px] m-auto" alt="icon2" />
-            <div className="text-xl font-medium py-4">24/7 Emergency Plumbing Service</div>
-            <div className="p-4">No matter the time or day are on call to serve you. It is a paradisematic country, in which roasted parts.</div>
-          </div>
-           <div className="text-center w-max-[360px] rounded-xl py-5 bg-white shadow-[0_4px_20px_0px_rgba(0,0,0,0.3)]">
-            <img src="/icon3.png" className="w-[111px] h-[108px] m-auto" alt="icon2" />
-            <div className="text-xl font-medium py-4">General Plumbing Maintenance</div>
-            <div className="p-4">No matter the time or day are on call to serve you. It is a paradisematic country, in which roasted parts.</div>
-          </div>
+            <div className="text-center w-max-[360px] rounded-xl py-5 bg-white shadow-[0_4px_20px_0px_rgba(0,0,0,0.3)]">
+              <img src="/icon1.png" className="w-[111px] h-[108px] m-auto" alt="icon1" />
+              <div className="text-xl font-medium py-4">General Plumbing Maintenance</div>
+              <div className="p-4">Leaky faucet? Clogged toilet? We got you covered with wide range of plumbing maintenance services.</div>
+            </div>
+            <div className="text-center w-max-[360px] rounded-xl py-5 bg-white shadow-[0_4px_20px_0px_rgba(0,0,0,0.3)]">
+              <img src="/icon2.png" className="w-[111px] h-[108px] m-auto" alt="icon2" />
+              <div className="text-xl font-medium py-4">24/7 Emergency Plumbing Service</div>
+              <div className="p-4">No matter the time or day are on call to serve you. It is a paradisematic country, in which roasted parts.</div>
+            </div>
+            <div className="text-center w-max-[360px] rounded-xl py-5 bg-white shadow-[0_4px_20px_0px_rgba(0,0,0,0.3)]">
+              <img src="/icon3.png" className="w-[111px] h-[108px] m-auto" alt="icon2" />
+              <div className="text-xl font-medium py-4">General Plumbing Maintenance</div>
+              <div className="p-4">No matter the time or day are on call to serve you. It is a paradisematic country, in which roasted parts.</div>
+            </div>
         </div>
       </section>
     </Fragment>
