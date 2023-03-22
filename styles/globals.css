@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+
+p {
+  font-size: 16px!important;
+}
 /* :root {
   --max-width: 1100px;
   --border-radius: 12px;
