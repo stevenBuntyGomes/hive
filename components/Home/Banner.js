@@ -76,7 +76,7 @@ const BannerComponent = () => {
                             <li className="pt-2 md:text-[32px] text-md">CARPENTRY</li>
                           </ul>
                         </div>
-                        <p class="text-[16px] h-auto md:w-[701px] p-5 md:pr-10">Lorem Ipsum is simply dummy text of the printing and
+                        <p className="text-[16px] h-auto md:w-[701px] p-5 md:pr-10">Lorem Ipsum is simply dummy text of the printing and
                           typesetting
                           industry. Lorem Ipsum has
                           been the industry's
@@ -84,7 +84,7 @@ const BannerComponent = () => {
                           scrambled it to make
                           a type specimen book.</p>
                       </div>
-                      <div class="pt-10 flex justify-center md:justify-start">
+                      <div className="pt-10 flex justify-center md:justify-start">
                         <button className="bg-gray-800 text-white py-2 px-5 rounded-md mr-4" onClick={handleClick}>
                           Get More
                         </button>
@@ -128,7 +128,7 @@ const BannerComponent = () => {
                             <li className="pt-2 md:text-[32px] text-md">CARPENTRY</li>
                           </ul>
                         </div>
-                        <p class="text-[16px] h-auto md:w-[701px] p-5 md:pr-10">Lorem Ipsum is simply dummy text of the printing and
+                        <p className="text-[16px] h-auto md:w-[701px] p-5 md:pr-10">Lorem Ipsum is simply dummy text of the printing and
                           typesetting
                           industry. Lorem Ipsum has
                           been the industry's
@@ -136,7 +136,7 @@ const BannerComponent = () => {
                           scrambled it to make
                           a type specimen book.</p>
                       </div>
-                      <div class="pt-10 flex justify-center md:justify-start">
+                      <div className="pt-10 flex justify-center md:justify-start">
                         <button className="bg-gray-800 text-white py-2 px-5 rounded-md mr-4" onClick={handleClick}>
                           Get More
                         </button>
@@ -180,7 +180,7 @@ const BannerComponent = () => {
                             <li className="pt-2 md:text-[32px] text-md">CARPENTRY</li>
                           </ul>
                         </div>
-                        <p class="text-[16px] h-auto md:w-[701px] p-5 md:pr-10">Lorem Ipsum is simply dummy text of the printing and
+                        <p className="text-[16px] h-auto md:w-[701px] p-5 md:pr-10">Lorem Ipsum is simply dummy text of the printing and
                           typesetting
                           industry. Lorem Ipsum has
                           been the industry's
@@ -188,7 +188,7 @@ const BannerComponent = () => {
                           scrambled it to make
                           a type specimen book.</p>
                       </div>
-                      <div class="pt-10 flex justify-center md:justify-start">
+                      <div className="pt-10 flex justify-center md:justify-start">
                         <button className="bg-gray-800 text-white py-2 px-5 rounded-md mr-4" onClick={handleClick}>
                           Get More
                         </button>
@@ -214,7 +214,7 @@ const BannerComponent = () => {
           </div>
            <div className="text-center w-max-[360px] rounded-xl py-5 bg-white shadow-[0_4px_20px_0px_rgba(0,0,0,0.3)]">
             <img src="/icon3.png" className="w-[111px] h-[108px] m-auto" alt="icon2" />
-            <div class="text-xl font-medium py-4">General Plumbing Maintenance</div>
+            <div className="text-xl font-medium py-4">General Plumbing Maintenance</div>
             <div className="p-4">No matter the time or day are on call to serve you. It is a paradisematic country, in which roasted parts.</div>
           </div>
         </div>

@@ -51,11 +51,11 @@ const Service = () => {
   return (
     <>
     <main className="bg-slate-50 p-10">
-        <div class="text-center">
-            <h2 class="text-orange-500 uppercase font-bold md:text-[32px] text-2xl pb-3">Our Services</h2>
-            <h2 class="font-bold uppercase md:text-[42px] text-4xl mb-5">Quality Service is Our Guarantee</h2>
-            <div class="flex justify-center items-center">
-                <p class="max-w-[830px]">We offer a wide range of plumbing services catered to
+        <div className="text-center">
+            <h2 className="text-orange-500 uppercase font-bold md:text-[32px] text-2xl pb-3">Our Services</h2>
+            <h2 className="font-bold uppercase md:text-[42px] text-4xl mb-5">Quality Service is Our Guarantee</h2>
+            <div className="flex justify-center items-center">
+                <p className="max-w-[830px]">We offer a wide range of plumbing services catered to
                     both
                     residential and commercial
                     clients. Even the
