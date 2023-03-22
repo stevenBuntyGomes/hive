@@ -7,7 +7,7 @@ import Footer from '../components/Footer/Footer'
 const Layout = ({children}) => {
   return (
     <Fragment>
-        <Header/>
+        <Header2/>
         <div>
           {children}
         </div>

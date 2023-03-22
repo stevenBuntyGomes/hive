@@ -1,14 +1,15 @@
-const PrizeItem = (content , index) => {
+const PrizeItem = ({content , index}) => {
   return (
     <div className={`${index % 2 === 0 ? 'border-orange-500' : 'border-black'} text-center m-5 md:w-[370px] rounded-xl grid grid-cols-1 border-2 bg-white`}>
         <div className={`rounded-t-xl ${index % 2 === 0 ? 'bg-orange-500' : 'bg-black'} text-white p-10`}>
-            <h1 className="uppercase font-bold text-[32px]">{content.content.rate}</h1>
+            <h1 className="uppercase font-bold text-[32px]">{content.rate}</h1>
+            
         </div>
         <div className="p-10">
-            {content.content.desc}
+            {content.desc}
         </div>
         <div className={`text-[42px] font-bold ${index % 2 === 0 ? 'text-orange-500 mb-5' : 'text-black mb-5'} `}>
-            €{content.content.price }
+            €{content.price }
         </div>
         <div className='mb-10'>excl vat</div>
         <div className="mb-10">

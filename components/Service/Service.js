@@ -9,7 +9,7 @@ import "swiper/css/free-mode";
 import "swiper/css/pagination";
 
 // import required modules
-import { FreeMode, Pagination } from "swiper";
+import { FreeMode, Pagination, Autoplay } from "swiper";
 
 const Service = () => {
 
@@ -70,7 +70,7 @@ const Service = () => {
             slidesPerView={3}
             spaceBetween={30}
             freeMode={true}
-            autoplay = {{ delay: 1000 }}
+            Autoplay = {{ delay: 1000 }}
             breakpoints={{
                 0: {
                     slidesPerView: 1,
@@ -89,7 +89,7 @@ const Service = () => {
               >
                   
             {contents && contents.map((content, index) => (
-                <SwiperSlide className="py-10">
+                <SwiperSlide className="py-10" key = {index}>
                     <div className="shadow-[0_0_15px_2px_rgba(0,0,0,0.3)] text-center md:w-[370px] rounded-xl grid grid-cols-1">
                         <img src={content.img} className="w-full h-[250px] rounded-md" />
                         <div className="text-xl font-medium py-4">
