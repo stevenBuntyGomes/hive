@@ -78,7 +78,7 @@ export const ServicePrice = () => {
             className="mySwiper"
         >
             {contents && contents.map((content, index) => (
-                <SwiperSlide className="py-10">
+                <SwiperSlide className="py-10" key = {index}>
                     <div className={`${index % 2 === 0 ? 'border-orange-500' : 'border-black'} text-center md:w-[370px] rounded-xl grid grid-cols-1 border-2 bg-white`}>
                         <div className={`rounded-t-xl ${index % 2 === 0 ? 'bg-orange-500' : 'bg-black'} text-white p-10`}>
                             <h1 className="uppercase font-bold text-[32px]">{content.rate}</h1>

@@ -113,7 +113,7 @@ const Services = () => {
 
                 <div className='flex flex-row flex-wrap justify-center'>
                 {contents && contents.map((content, index) => (
-                    <PrizeItem content={content} index={index} />
+                    <PrizeItem content={content} index={index} key={index} />
                 ))}
                 </div>
             </main>
