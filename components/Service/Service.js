@@ -16,38 +16,40 @@ const Service = () => {
     const onClick = () => {
 
     }
+
     const contents = [
-                {
-                    img: 'https://i.ibb.co/QNv7649/image1.png',
-                    title: 'Plumbing Design',
-                    desc: 'Let us design or remodel your bathroom or kitchen. Even the all-powerful Pointing has no control.'
-                },
-                {
-                    img: 'https://i.ibb.co/b5TyhtP/image2.png',
-                    title: 'Water Heating & Cooling',
-                    desc: 'Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi.'
-                },
-                {
-                    img: 'https://i.ibb.co/DCNWhXw/image3.png',
-                    title: 'Toilet Installation & Repair',
-                    desc: 'Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra.'
-                },
-                {
-                    img: 'https://i.ibb.co/QNv7649/image1.png',
-                    title: 'Plumbing Design',
-                    desc: 'Let us design or remodel your bathroom or kitchen. Even the all-powerful Pointing has no control.'
-                },
-                {
-                    img: 'https://i.ibb.co/b5TyhtP/image2.png',
-                    title: 'Water Heating & Cooling',
-                    desc: 'Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi.'
-                },
-                {
-                    img: 'https://i.ibb.co/DCNWhXw/image3.png',
-                    title: 'Toilet Installation & Repair',
-                    desc: 'Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra.'
-                },
-            ]
+        {
+            img: 'https://i.ibb.co/QNv7649/image1.png',
+            title: 'Plumbing Design',
+            desc: 'Let us design or remodel your bathroom or kitchen. Even the all-powerful Pointing has no control.'
+        },
+        {
+            img: 'https://i.ibb.co/b5TyhtP/image2.png',
+            title: 'Water Heating & Cooling',
+            desc: 'Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi.'
+        },
+        {
+            img: 'https://i.ibb.co/DCNWhXw/image3.png',
+            title: 'Toilet Installation & Repair',
+            desc: 'Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra.'
+        },
+        {
+            img: 'https://i.ibb.co/QNv7649/image1.png',
+            title: 'Plumbing Design',
+            desc: 'Let us design or remodel your bathroom or kitchen. Even the all-powerful Pointing has no control.'
+        },
+        {
+            img: 'https://i.ibb.co/b5TyhtP/image2.png',
+            title: 'Water Heating & Cooling',
+            desc: 'Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi.'
+        },
+        {
+            img: 'https://i.ibb.co/DCNWhXw/image3.png',
+            title: 'Toilet Installation & Repair',
+            desc: 'Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra.'
+        },
+    ]
+
   return (
     <>
     <main className="bg-slate-50 p-10">
@@ -62,7 +64,8 @@ const Service = () => {
                     all-powerful Pointing has no control about the blind texts.</p>
             </div>
 
-        </div>
+              </div>
+              
         <Swiper
             slidesPerView={3}
             spaceBetween={30}
@@ -83,7 +86,8 @@ const Service = () => {
             }}
             // modules={[FreeMode, Pagination]}
             className={`mySwiper`}
-        >
+              >
+                  
             {contents && contents.map((content, index) => (
                 <SwiperSlide className="py-10">
                     <div className="shadow-[0_0_15px_2px_rgba(0,0,0,0.3)] text-center md:w-[370px] rounded-xl grid grid-cols-1 rounded-md">
@@ -91,6 +95,7 @@ const Service = () => {
                         <div className="text-xl font-medium py-4">
                             {content.title}
                         </div>
+                        <div className="w-[152px] h-[3px] bg-orange-500 text-center items-center m-auto"></div>
                         <div className=" p-4">
                             {content.desc}
                         </div>
