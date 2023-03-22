@@ -86,7 +86,7 @@ const Footer = () => {
                                         </div>
                                     </li>
                                     <li className="cursor-pointer hover:bg-gray-100 hover:bg-opacity-20">
-                                        <div className="flex items-center justify-between pb-4">
+                                        <div className="flex items-center justify-between p-4 border-b">
                                         <p>Contact Us</p>
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
