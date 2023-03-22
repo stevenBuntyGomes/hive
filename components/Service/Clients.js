@@ -44,10 +44,10 @@ const Clients = () => {
     <>
         <main className='bg-slate-50 pt-10'>
             <div className='bg-slate-50 md:p-20 p-10'>
-                <div class="text-center">
-                    <h2 class="text-orange-500 uppercase font-bold md:text-[32px] text-2xl">Our BIG CLINTS</h2>
-                    <h1 class="font-bold uppercase md:text-[42px] text-4xl py-5">WE WORK WITH</h1>
-                    <p class="">We offer a wide range of plumbing services catered to both residential and commercial clients.
+                <div className="text-center">
+                    <h2 className="text-orange-500 uppercase font-bold md:text-[32px] text-2xl">Our BIG CLINTS</h2>
+                    <h1 className="font-bold uppercase md:text-[42px] text-4xl py-5">WE WORK WITH</h1>
+                    <p className="">We offer a wide range of plumbing services catered to both residential and commercial clients.
                         Even
                         the all-powerful Pointing has no control about the blind texts.</p>
                 </div>
