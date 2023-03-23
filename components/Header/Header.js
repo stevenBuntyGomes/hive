@@ -60,10 +60,10 @@ const Header = () => {
                     <Link href="/about" className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-orange-500 mr-6">
                         About Us
                     </Link>
-                    <Link href="#responsive-header" className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-orange-500 mr-6">
+                    <Link href="/inquiry" className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-orange-500 mr-6">
                         Inquery
                     </Link>
-                    <Link href="#responsive-header" className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-orange-500 mr-6">
+                    <Link href="/contact" className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-orange-500 mr-6">
                         Contact
                     </Link>
                 </div>
