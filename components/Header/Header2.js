@@ -70,7 +70,7 @@ const Header2 = () => {
                         <Link href="/prize" className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-orange-500 mr-6">
                             Prizes
                         </Link>
-                        <Link href="#responsive-header" className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-orange-500 mr-6">
+                        <Link href="/about" className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-orange-500 mr-6">
                             About Us
                         </Link>
                         <Link href="#responsive-header" className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-orange-500 mr-6">
