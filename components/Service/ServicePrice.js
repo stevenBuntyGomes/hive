@@ -48,10 +48,10 @@ export const ServicePrice = () => {
     <>
         <main className='bg-slate-50 p-10'>
             <div className="text-center">
-                <h2 className="text-orange-500 uppercase font-bold md:text-[32px] text-2xl pb-3">Our Services PRICES</h2>
-                <h2 className="font-bold uppercase md:text-[42px] text-4xl mb-5">Quality Service WITH STANDARD PRICES</h2>
+                <h2 className="text-orange-500 uppercase font-bold md:text-[32px] leading-[36px] text-2xl pb-3">Our Services PRICES</h2>
+                <h2 className="font-bold uppercase md:text-[42px] text-4xl leading-[50px] mb-[40px]">Quality Service WITH STANDARD PRICES</h2>
                 <div className="flex justify-center items-center">
-                    <p className="max-w-[830px]">We offer a wide range of plumbing services catered to both residential and
+                    <p className="max-w-[830px] text-base leading-[30px] mb-[40px]">We offer a wide range of plumbing services catered to both residential and
                         commercial clients. Even the
                         all-powerful Pointing has no control about the blind texts.</p>
                 </div>
@@ -80,17 +80,17 @@ export const ServicePrice = () => {
             {contents && contents.map((content, index) => (
                 <SwiperSlide className="py-10" key = {index}>
                     <div className={`${index % 2 === 0 ? 'border-orange-500' : 'border-black'} text-center md:w-[370px] rounded-xl grid grid-cols-1 border-2 bg-white`}>
-                        <div className={`rounded-t-xl ${index % 2 === 0 ? 'bg-orange-500' : 'bg-black'} text-white p-10`}>
+                        <div className={`rounded-xl ${index % 2 === 0 ? 'bg-orange-500' : 'bg-black'} text-white p-10`}>
                             <h1 className="uppercase font-bold text-[32px]">{content.rate}</h1>
                         </div>
-                        <div className="p-4">
+                        <div className="p-8 mb-[38]">
                             {content.desc}
                         </div>
-                        <div className={`text-[42px] font-bold ${index % 2 === 0 ? 'text-orange-500' : 'text-black'} `}>
+                        <div className={`text-[42px] mb-[38px] font-bold ${index % 2 === 0 ? 'text-orange-500' : 'text-black'} `}>
                             €{content.price }
                         </div>
-                        <div className='mb-2'>excl vat</div>
-                        <div className="mb-5">
+                        <div className='mb-[36px]'>excl vat</div>
+                        <div className="mb-[48px]">
                             <button onClick={onClick} className="bg-black hover:bg-orange-500 text-white font-bold py-2 px-4 rounded">
                             Show More
                             </button>

@@ -42,7 +42,7 @@ const About = () => {
                     <div className="mb-10">
                         <h4 className="text-orange-500 uppercase font-bold md:text-[32px] text-2xl pb-3">About us</h4>
                         <h5 className="font-bold uppercase md:text-[42px] text-4xl mb-5">Plumbing is what we do</h5>
-                        <p className="">We are an award winning plumbing company with over 20 years experience in the
+                        <p className="text-base leading-[30px]">We are an award winning plumbing company with over 20 years experience in the
                             business. We provide a wide range of services for both residential and commercial clients.</p>
                         <div className="py-10">
                             <div className="grid grid-cols-2">
@@ -61,7 +61,7 @@ const About = () => {
                             </div>
                         </div>
 
-                        <p>No job is too big or too small, we’ve got you covered. In addition to our services, you can check out
+                        <p className='text-base leading-[30px]'>No job is too big or too small, we’ve got you covered. In addition to our services, you can check out
                             our shop for a wide range of plumbing supplies and equipment. When it comes to plumbing we are your
                             one stop shop.</p>
                         <div className="pt-10 q-gutter-md">

@@ -54,10 +54,10 @@ const Service = () => {
     <>
     <main className="bg-slate-50 p-10">
         <div className="text-center">
-            <h2 className="text-orange-500 uppercase font-bold md:text-[32px] text-2xl pb-3">Our Services</h2>
-            <h2 className="font-bold uppercase md:text-[42px] text-4xl mb-5">Quality Service is Our Guarantee</h2>
+            <h2 className="text-orange-500 uppercase font-bold md:text-[32px] leading-[36px] text-2xl pb-3">Our Services</h2>
+            <h2 className="font-bold uppercase md:text-[42px] text-4xl leading-[50px] mt-[30px] mb-5">Quality Service is Our Guarantee</h2>
             <div className="flex justify-center items-center">
-                <p className="max-w-[830px]">We offer a wide range of plumbing services catered to
+                <p className="max-w-[830px] text-base leading-[30px] mb-[40px]">We offer a wide range of plumbing services catered to
                     both
                     residential and commercial
                     clients. Even the
@@ -90,16 +90,16 @@ const Service = () => {
                   
             {contents && contents.map((content, index) => (
                 <SwiperSlide className="py-10" key = {index}>
-                    <div className="shadow-[0_0_15px_2px_rgba(0,0,0,0.3)] text-center md:w-[370px] rounded-xl grid grid-cols-1">
-                        <img src={content.img} className="w-full h-[250px] rounded-md" />
-                        <div className="text-xl font-medium py-4">
+                    <div className="shadow-[0_0_15px_2px_rgba(0,0,0,0.3)] text-center md:w-[370px] rounded-md grid grid-cols-1">
+                        <img src={content.img} className="w-full h-[250px] rounded-md mb-[38px]" />
+                        <div className="text-xl font-bold leading-[24px] mb-[20px]">
                             {content.title}
                         </div>
                         <div className="w-[152px] h-[3px] bg-orange-500 text-center items-center m-auto"></div>
-                        <div className=" p-4">
+                        <div className="text-base leading-[30px] p-8">
                             {content.desc}
                         </div>
-                        <div className="mb-5">
+                        <div className="mb-[38px]">
                             <button onClick={onClick} className="bg-black hover:bg-orange-500 text-white font-bold py-2 px-4 rounded">
                             Show More
                             </button>

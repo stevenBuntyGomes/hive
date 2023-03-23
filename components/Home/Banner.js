@@ -202,18 +202,18 @@ const BannerComponent = () => {
         <div className='grid md:grid-cols-3 grid-cols-1 justify-between items-center transform -translate-y-32  md:px-20 px-10 gap-5'>
             <div className="text-center w-max-[360px] rounded-xl py-5 bg-white shadow-[0_4px_20px_0px_rgba(0,0,0,0.3)]">
               <img src="/icon1.png" className="w-[111px] h-[108px] m-auto" alt="icon1" />
-              <div className="text-xl font-medium py-4">General Plumbing Maintenance</div>
-              <div className="p-4">Leaky faucet? Clogged toilet? We got you covered with wide range of plumbing maintenance services.</div>
+              <div className="text-xl font-bold leading-[30px] py-4 md:px-20">General Plumbing Maintenance</div>
+              <div className="md:px-12">Leaky faucet? Clogged toilet? We got you covered with of plumbing maintenance services.</div>
             </div>
             <div className="text-center w-max-[360px] rounded-xl py-5 bg-white shadow-[0_4px_20px_0px_rgba(0,0,0,0.3)]">
               <img src="/icon2.png" className="w-[111px] h-[108px] m-auto" alt="icon2" />
-              <div className="text-xl font-medium py-4">24/7 Emergency Plumbing Service</div>
-              <div className="p-4">No matter the time or day are on call to serve you. It is a paradisematic country, in which roasted parts.</div>
+              <div className="text-xl font-bold leading-[30px] py-4 md:px-20">24/7 Emergency Plumbing Service</div>
+              <div className="md:px-12">No matter the time or day are on call to serve you. It is a paradisematic country, in which roasted parts.</div>
             </div>
             <div className="text-center w-max-[360px] rounded-xl py-5 bg-white shadow-[0_4px_20px_0px_rgba(0,0,0,0.3)]">
               <img src="/icon3.png" className="w-[111px] h-[108px] m-auto" alt="icon2" />
-              <div className="text-xl font-medium py-4">General Plumbing Maintenance</div>
-              <div className="p-4">No matter the time or day are on call to serve you. It is a paradisematic country, in which roasted parts.</div>
+              <div className="text-xl font-bold leading-[30px] py-4 md:px-20">Plumbing Supplies and Equipment</div>
+              <div className="md:px-12">Need a plunger or a new faucet? We sell a wide range of plumbing supplies for all needs.</div>
             </div>
         </div>
       </section>
