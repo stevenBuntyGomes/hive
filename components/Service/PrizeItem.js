@@ -18,9 +18,9 @@ const PrizeItem = ({content , index}) => {
         <div className={`text-[42px] font-bold ${index % 2 === 0 ? 'text-orange-500 mb-5' : 'text-black mb-5'} `}>
             €{content.price }
         </div>
-        <div className='mb-10'>excl vat</div>
-        <div className="mb-10">
-            <button onClick={prizeDetailhandler} className="bg-black hover:bg-orange-500 text-white font-bold py-2 px-4 rounded">
+        <div className='mb-[36px]'>excl vat</div>
+        <div className="mb-[36px]">
+            <button className="bg-black hover:bg-orange-500 text-white font-bold py-2 px-4 rounded">
             Show More
             </button>
         </div>
