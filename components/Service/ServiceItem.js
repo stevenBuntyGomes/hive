@@ -1,3 +1,6 @@
+import React, {useState} from "react";
+import Link from "next/link";
+
 const ServiceItem = (content , index) => {
   return (
     <div className="shadow-[0_0_15px_2px_rgba(0,0,0,0.3)] text-center md:w-[370px] rounded-xl m-5" key={index}>
@@ -10,9 +13,9 @@ const ServiceItem = (content , index) => {
             {content.content.desc}
         </div>
         <div className="mb-10">
-            <button className="bg-black hover:bg-orange-500 text-white font-bold py-2 px-4 rounded">
+            <Link href='/details/service_details' className="bg-black hover:bg-orange-500 text-white font-bold py-2 px-4 rounded">
                 Show More
-            </button>
+            </Link>
         </div>
     </div>
   )
