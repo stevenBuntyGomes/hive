@@ -41,8 +41,10 @@ const Header = () => {
             </div>
         </div>
         <div className='bg-white py-5 gt-sm md:px-20 px-5 md:flex md:w-auto md:flex-grow shadow-[0_4px_20px_0px_rgba(0,0,0,0.3)]'>
-            <div className='md:flex-grow'>
-                <Image src="/hive.png" alt="hive-logo" width={200} height ={50} className="md:h-[50px] md:w-[200px] w-[80px] h-[20px]" />
+              <div className='md:flex-grow'>
+                <Link href="/">
+                    <Image src="/hive.png" alt="hive-logo" width={200} height ={50} className="md:h-[50px] md:w-[200px] w-[80px] h-[20px]" />
+                </Link>
             </div>
             <div className="text-black gt-sm pt-2">
                 <div className="md:flex-grow text-base">
@@ -55,7 +57,7 @@ const Header = () => {
                     <Link href="/prize" className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-orange-500 mr-6">
                         Prizes
                     </Link>
-                    <Link href="#responsive-header" className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-orange-500 mr-6">
+                    <Link href="/about" className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-orange-500 mr-6">
                         About Us
                     </Link>
                     <Link href="#responsive-header" className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-orange-500 mr-6">
