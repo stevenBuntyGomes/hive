@@ -1,11 +1,7 @@
 import React, {useState} from 'react'
-import Image from 'next/image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-    faArrowRightLong,
-    faDownload,
-    faFileDownload,
-    
+    faArrowRightLong
 } from '@fortawesome/free-solid-svg-icons'
 import Link from 'next/link';
 
@@ -48,8 +44,8 @@ const ServiceDetails = () => {
                         </div>
                     </div>
                 </div>
-                
-            </div>
+              </div>
+              
             <div className='md:w-[1440px] md:m-auto sm:m-auto m-10 py-10'>
                 <div className='md:flex items-center'>
                     <div className='w-full md:w-[30%] md:pl-10 mb-10 md:mb-0 text-center md:text-left'>
@@ -259,9 +255,8 @@ const ServiceDetails = () => {
                             </div>
                         </div>
                         <div className='my-10'>
-
                             <div>
-                                <div className="p-10 my-2 md:max-w-[350px] shadow-[0_0_15px_2px_rgba(0,0,0,0.3)] p-10">
+                                <div className="my-2 md:max-w-[350px] shadow-[0_0_15px_2px_rgba(0,0,0,0.3)] p-10">
                                     <ul className="divide-y">
                                         <li className="border-0 cursor-pointer hover:bg-gray-100 hover:bg-opacity-20">
                                             <p className="font-raleway font-bold mx-4 py-4 text-[20px] mb-2">
@@ -287,11 +282,11 @@ const ServiceDetails = () => {
                                     </ul>
                                 </div>
                             </div>
-                        </div>
+                          </div>
+                          
                         <div className='my-10'>
-
                             <div>
-                                <div className="p-10 my-2 md:max-w-[350px] shadow-[0_0_15px_2px_rgba(0,0,0,0.3)] p-10">
+                                <div className="p-10 my-2 md:max-w-[350px] shadow-[0_0_15px_2px_rgba(0,0,0,0.3)]">
                                     <ul className="divide-y">
                                         <li className="border-0 cursor-pointer hover:bg-gray-100 hover:bg-opacity-20">
                                             <p className="font-raleway font-bold mx-4 py-4 text-[20px] mb-2">
@@ -302,13 +297,6 @@ const ServiceDetails = () => {
                                         <div className="mb-5 mt-10 text-center border-none">
                                             <Link href="#"
                                                 className="mb-5 md:m-5 w-full sm:w-auto bg-white text-black border-2 border-orange-500 focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-lg inline-flex items-center justify-center px-4 py-2.5 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700">
-                                                {/* <svg className="mr-3 w-7 h-7" aria-hidden="true" focusable="false" data-prefix="fab"
-                                                    data-icon="google-play" role="img" xmlns="http://www.w3.org/2000/svg"
-                                                    viewBox="0 0 512 512">
-                                                    <path fill="currentColor"
-                                                        d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z">
-                                                    </path>
-                                                </svg> */}
                                                 <img className="mr-3 w-5 h-7" src = '/fontawesome.png'/>
                                                 
                                                 <div className="text-left">
@@ -317,13 +305,6 @@ const ServiceDetails = () => {
                                             </Link>
                                             <Link href="#"
                                                 className="w-full sm:w-auto bg-white text-black border-2 border-orange-500 focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-lg inline-flex items-center justify-center px-4 py-2.5 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700">
-                                                {/* <svg className="mr-3 w-7 h-7" aria-hidden="true" focusable="false" data-prefix="fab"
-                                                    data-icon="google-play" role="img" xmlns="http://www.w3.org/2000/svg"
-                                                    viewBox="0 0 512 512">
-                                                    <path fill="currentColor"
-                                                        d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z">
-                                                    </path>
-                                                </svg> */}
                                                 <img className="mr-3 w-5 h-7" src = '/fontawesome.png'/>
                                                 <div className="text-left">
                                                     <div className="-mt-1 font-sans text-sm font-semibold mr-5">Our company details </div>
@@ -334,7 +315,8 @@ const ServiceDetails = () => {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                      </div>
+                      
                     <div className='w-full md:w-[70%] pr-0 pl-0 md:pl-0 mb-10 md:mb-0 md:pr-10 pb-10 pt-10 text-center md:text-left'>
                         <div className='mb-10 pb-10'>
                             <div className='mb-10 pb-10'>
@@ -344,7 +326,6 @@ const ServiceDetails = () => {
                                 />
                             </div>
                             <div className="mb-10">
-                                {/* <h4 className="text-orange-500 uppercase font-bold md:text-[32px] text-2xl pb-3">About us</h4> */}
                                 <h5 className="font-bold uppercase md:text-[42px] text-4xl mb-5">QUALITY SERVICE IS OUR GUARANTEE</h5>
                                 <p className="">We offer a wide range of plumbing services catered to both residential and commercial clients. Even the all-powerful Pointing has no control about the blind texts. Qualified team Affordable pricing Quick service We offer a wide range of plumbing services catered to both residential and
                                 </p>
@@ -378,25 +359,11 @@ const ServiceDetails = () => {
                                 />
                             </div>
                             <div className="mb-10">
-                                {/* <h4 className="text-orange-500 uppercase font-bold md:text-[32px] text-2xl pb-3">About us</h4> */}
                                 <h5 className="font-bold uppercase md:text-[42px] text-4xl mb-5">QUALITY SERVICE IS OUR GUARANTEE</h5>
                                 <p className="">We offer a wide range of plumbing services catered to both residential and commercial clients. Even the all-powerful Pointing has no control about the blind texts. Qualified team Affordable pricing Quick service We offer a wide range of plumbing services catered to both residential and
                                 </p>
                                 <div className="py-10">
-                                    {/* <div className="grid grid-cols-2">
-                                        {options.map((option, index) => (
-                                        <label className="inline-flex items-center" key={index}>
-                                            <input
-                                            type="radio"
-                                            className="form-radio h-4 w-4 text-orange-500"
-                                            value={option.name}
-                                            checked={group === option.name}
-                                            onChange={() => setGroup(option.name)}
-                                            />
-                                            <span className="ml-2 text-gray-700">{option.name}</span>
-                                        </label>
-                                        ))}
-                                    </div> */}
+                                   
                                     <ul className='divide-y text-left'>
                                         <li className="text-left cursor-pointer hover:bg-gray-100 hover:bg-opacity-20 border-none text-black font-raleway">
                                             <div className="flex items-center p-4">
