@@ -4,7 +4,9 @@ import Clients from '@/components/Service/Clients';
 import Subscribe from '@/components/About/Subscribe';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-    faLocation
+    faLocationDot,
+    faPhoneFlip,
+    faEnvelope,
 } from '@fortawesome/free-solid-svg-icons'
 
 const Contact = () => {
@@ -23,16 +25,38 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className='justify-between items-center rounded-xl transform -translate-y-32 shadow-[0_4px_20px_0px_rgba(0,0,0,0.3)] mx-[90px] gap-5'>
+              <div className='justify-between items-center rounded-xl transform -translate-y-32 shadow-[0_4px_20px_0px_rgba(0,0,0,0.3)] mx-10 md:mx-[90px] gap-5'>
                   <div className="text-center w-max-[360px] py-5 bg-white rounded-xl">
-                     <h2 className="text-[32px] font-bold text-center leading-[36px] pb-[56px]">
+                     <h2 className="text-[32px] font-bold text-center pt-[44px] leading-[36px] pb-[56px]">
                         CONTACT US
                     </h2>
                 </div>
-                <div className = "">
-                    <div className=''>
-                        <FontAwesomeIcon icon = {faLocation}/>
+                <div className = "mx-[15%] text-center">
+                    <div className='md:flex pb-[60px]'>
+                        <div className = "md:flex px-5 md:px-[37px] md:border-r-2 border-orange-500 py-[16px]">
+                            <FontAwesomeIcon icon = {faLocationDot} className='pb-[10px] md:pb-0 pt-[8px] text-[35px] text-orange-500 px-[14px]'/>
+                            <div className='text-black'>
+                                <p>14 Tottenham Court Road</p>
+                                <p>Bulls Stadium, Califorina</p>
+                            </div>
+                        </div>
+                        <div className = "md:flex px-5 md:px-[37px] md:border-r-2 border-orange-500 py-[16px]">
+                            <FontAwesomeIcon icon = {faPhoneFlip} className='pb-[10px] md:pt-[8px] md:pb-0 text-[35px] text-orange-500 px-[14px]'/>
+                            <div className='text-black'>
+                                <p>14 Tottenham Court Road</p>
+                                <p>Bulls Stadium, Califorina</p>
+                            </div>
+                        </div>
+                        <div className = "md:flex px-5 md:px-[37px] py-[16px]">
+                            <FontAwesomeIcon icon = {faEnvelope} className='pb-[10px] md:pb-0 pt-[8px] text-[35px] text-orange-500 px-[14px]'/>
+                            <div className='text-black'>
+                                <p>14 Tottenham Court Road</p>
+                                <p>Bulls Stadium, Califorina</p>
+                            </div>
+                        </div>
+                        
                     </div>
+                    
                 </div>
             </div>
               
@@ -48,7 +72,7 @@ const Contact = () => {
                             <h1 className="text-center md:text-left text-base font-medium text-left leading-[18px] pb-[12px]">
                                 QUICK SUPPORT
                             </h1>
-                            <h2 className="text-[32px] font-bold text-left leading-[36px] pb-[56px]">
+                            <h2 className="text-[32px] font-bold text-center md:text-left leading-[36px] pb-[56px]">
                                 SEND US A MESSAGE
                             </h2>
                         </div>
