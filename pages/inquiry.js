@@ -136,7 +136,7 @@ const Inquiry = () => {
                             TOGETHER
                         </h3>
                         <div className="p-2 w-full">
-                            <button className="font-raleway font-bold bg-transparent text-white py-2 px-[50px] border-2 border-white">
+                            <button className="font-raleway rounded-md font-bold bg-transparent text-white py-2 px-[50px] border-2 border-white hover:bg-orange-500 hover:border-orange-500 transition">
                                 CONTACT US <FontAwesomeIcon icon = {faChevronRight}/><FontAwesomeIcon className='ml-[-2px]' icon = {faChevronRight}/>
                             </button>
                         </div>

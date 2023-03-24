@@ -29,7 +29,7 @@ const Header2 = () => {
     <nav className="sticky top-0 z-50">
         <div className="container mx-auto">
         {/* top bar number part starts */}
-            <div className={`md:px-20 hidden md:block bg-black md:py-5 md:flex md:w-auto md:flex-grow`}>
+            <div className={`md:px-20 hidden bg-black md:py-5 md:flex md:w-auto md:flex-grow`}>
                 <div className='text-white text-xl font-raleway font-normal md:flex-grow'>
                     Call Us: +43 660 3924728
                 </div>
@@ -53,8 +53,7 @@ const Header2 = () => {
                     </div>
                 </div>
             </div>
-            {/* top bar number part ends */}
-            {/* main navigation bar starts */}
+
             <div className='bg-white py-5 gt-sm md:px-20 px-5 md:flex md:w-auto md:flex-grow shadow-[0_4px_20px_0px_rgba(0,0,0,0.3)]'>
                 <div className='md:flex-grow'>
                     <Image src="/hive.png" alt="hive-logo" width={200} height ={50} className="md:h-[50px] md:w-[200px] w-[200px] h-[50px]" />
@@ -81,27 +80,8 @@ const Header2 = () => {
                         </Link>
                     </div>
                 </div>
-            </div>
-            {/* main navigation bar ends */}
-                {/* <div className="flex justify-between">
-                    <div className="flex justify-center items-center">
-                        <div className='md:flex-grow'>
-                            <Image src="/hive.png" alt="hive-logo" width={200} height ={50} className="md:h-[50px] md:w-[200px] w-[80px] h-[20px]" />
-                        </div>
-                        <div className="hidden md:block ml-8 group relative">
-                            <img src="" alt="" className="w-8 h-8 cursor-pointer" />
-                        </div>
-                        <div className="hidden md:block ml-16 relative">
-                            <span className="absolute top-2.5 left-4">
-                                <i className="fa-solid fa-magnifying-glass"></i>
-                            </span>
-                            <input type="search"
-                                className="transition w-full min-w-[300px] text-xs rounded-md p-3 pl-12 bg-slate-100 outline-none outline-1 focus:outline-red-300"
-                                placeholder="Search for Tuts, Videos, Tutors etc.."/>
-                        </div>
-                    </div>
-                </div> */}
-
+                </div>
+                
                 <div className="absolute top-3 right-6 cursor-pointer mt-5">
                     <span className="md:hidden navbar-toggle text-slate-900 transition duration-500" onClick={toggleMobileNavbar}>
                         <FontAwesomeIcon className="text-2xl" icon={ mobileNavbarVisible ? faTimes : faBars } />
@@ -114,7 +94,7 @@ const Header2 = () => {
                 
                 <div className="text-center pt-2 flex items-center mt-3">
                     <a href="/" className="m-0 mx-auto">
-                        <Image width={200} height ={50} src="/hive.png" alt="" className="w-[200px] h-[50px]" />
+                         Call Us: +43 660 3924728
                     </a>
                 </div>
                 
