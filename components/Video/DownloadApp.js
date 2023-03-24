@@ -3,7 +3,7 @@ import React, {useStatem, useEffect} from 'react'
 const DownloadApp = () => {
   return (
     <>
-        <main className='bg-slate-50 p-10'>
+        <main className='bg-slate-50 pt-0 px-10 pb-10 md:p-10'>
             <div className="w-full rounded bg-white py-10 lg:p-20 text-gray-800 relative md:text-left">
                 <div className="md:flex items-center -mx-10">
                     <div className="w-full md:w-1/2 px-10 md:px-0">
@@ -16,7 +16,7 @@ const DownloadApp = () => {
                                     your bathroom or kitchen. Even the all-powerful Pointing has no control.</p>
                                 <div className=" space-y-4 sm:flex sm:space-y-0 sm:space-x-4">
                                     <a href="#"
-                                        className="w-full sm:w-auto bg-gray-800 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-300 text-white rounded-lg inline-flex items-center justify-center px-4 py-2.5 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700">
+                                        className="w-full sm:w-auto bg-gray-800 hover:bg-orange-500 focus:ring-4 focus:outline-none focus:ring-gray-300 text-white rounded-lg inline-flex items-center justify-center px-4 py-2.5 dark:bg-gray-700 dark:hover:bg-orange-500 dark:focus:ring-gray-700">
                                         <svg className="mr-3 w-7 h-7" aria-hidden="true" focusable="false" data-prefix="fab"
                                             data-icon="apple" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
                                             <path fill="currentColor"
