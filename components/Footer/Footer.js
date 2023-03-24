@@ -159,7 +159,7 @@ const Footer = () => {
 
                         <div>
                             <div className="px-4 my-2 max-w-[350px]">
-                                <div className="mx-4 pb-4 border-b border-orange-500">
+                                <div className="mx-4 pb-4">
                                     <h2 className="pb-4  mb-1 pt-2 font-medium text-lg">Contact Us</h2>
                                     <div className="w-[100px] h-[3px] bg-orange-500 m-auto md:mx-0 mb-2"></div>
                                     <div className="flex flex-col space-y-2">
