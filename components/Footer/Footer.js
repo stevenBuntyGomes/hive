@@ -1,18 +1,19 @@
 import React, {useState} from 'react'
+import Link from 'next/link'
 
 const Footer = () => {
   return (
     <>
-        <main className='bg-slate-50 pt-10'>
+        <main className='container mx-auto'>
             <section className="bg-black text-white">
-                <div className="grid md:grid-cols-4 p-20 gap-5 text-center md:text-left">
+                <div className="grid md:grid-cols-4 p-10 md:p-20 gap-5 text-center md:text-left">
                     <div className="px-4 my-2 max-w-[350px]">
                         <ul className="divide-y divide-gray-300">
-                            <li className="mx-4 cursor-pointer hover:bg-gray-100 hover:bg-opacity-20">
+                            <li className="mx-4 cursor-pointer">
                                 <p className="py-4 font-medium text-lg mb-2">{/* About Us */}About Us</p>
                             <div className="w-[100px] h-[3px] bg-orange-500 m-auto md:mx-0"></div>
                             </li>
-                            <li className="cursor-pointer hover:bg-gray-100 hover:bg-opacity-20 border-none">
+                            <li className="cursor-pointer border-none">
                                 <p className="p-4">{/* We are an award winning plumbing company with over 20 years experience in the
                                                             business. We provide a
                                                             wide range of services for both residential and commercial clients. */}
@@ -26,13 +27,15 @@ const Footer = () => {
                         <div>
                             <div className="px-4 my-2 max-w-[350px]">
                                 <ul className="divide-y divide-gray-300">
-                                    <li className="cursor-pointer hover:bg-gray-100 hover:bg-opacity-20">
+                                    <li className="cursor-pointer">
                                         <p className="py-4 font-medium text-lg mb-2">Quick Links</p>
                                     <div className="w-[100px] h-[3px] bg-orange-500 m-auto md:mx-0"></div>
                                     </li>
-                                    <li className="cursor-pointer hover:bg-gray-100 hover:bg-opacity-20 border-none">
+                                    <li className="cursor-pointer border-none">
                                         <div className="flex items-center justify-between p-4 border-b">
-                                        <p>Services</p>
+                                        <Link href = "/service">
+                                            Services
+                                        </Link>
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
                                             className="h-6 w-6 text-white"
@@ -49,9 +52,12 @@ const Footer = () => {
                                         </svg>
                                         </div>
                                     </li>
-                                    <li className="cursor-pointer hover:bg-gray-100 hover:bg-opacity-20">
+                                    <li className="cursor-pointer">
                                         <div className="flex items-center justify-between p-4 border-b">
-                                        <p>About Us</p>
+                                        <Link href = "/about">
+                                            About Us
+                                        </Link>
+                                        
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
                                             className="h-6 w-6 text-white"
@@ -68,9 +74,11 @@ const Footer = () => {
                                         </svg>
                                         </div>
                                     </li>
-                                    <li className="cursor-pointer hover:bg-gray-100 hover:bg-opacity-20">
+                                    <li className="cursor-pointer">
                                         <div className="flex items-center justify-between p-4 border-b">
-                                        <p>Inquery</p>
+                                        <Link href = "/inquiry">
+                                            Inquery
+                                        </Link>
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
                                             className="h-6 w-6 text-white"
@@ -87,9 +95,11 @@ const Footer = () => {
                                         </svg>
                                         </div>
                                     </li>
-                                    <li className="cursor-pointer hover:bg-gray-100 hover:bg-opacity-20">
+                                    <li className="cursor-pointer">
                                         <div className="flex items-center justify-between p-4 border-b">
-                                        <p>Contact Us</p>
+                                        <Link href = "/inquiry">
+                                            Contact Us
+                                        </Link>
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
                                             className="h-6 w-6 text-white"
@@ -121,32 +131,32 @@ const Footer = () => {
                                         </h3>
                                     <div className="w-[100px] h-[3px] bg-orange-500 m-auto md:mx-0"></div>
                                     </li>
-                                    <li className="py-2 flex justify-between items-center border-none">
+                                    <li className="py-2 flex md:justify-between justify-center items-center">
                                         <div>
                                         <h4 className="text-sm leading-5 font-medium">
                                             MONDAY - FRIDAY
                                         </h4>
-                                        <p className="text-sm leading-5 text-gray-500">
+                                        <p className="text-sm leading-5 text-gray-100">
                                             8.00AM - 5.00PM
                                         </p>
                                         </div>
                                     </li>
-                                    <li className="py-2 flex justify-between items-center">
+                                    <li className="py-2 flex md:justify-between justify-center items-center">
                                         <div>
                                         <h4 className="text-sm leading-5 font-medium">
                                             SATURDAY
                                         </h4>
-                                        <p className="text-sm leading-5 text-gray-500">
+                                        <p className="text-sm leading-5 text-gray-100">
                                             9.00AM - 6.00PM
                                         </p>
                                         </div>
                                     </li>
-                                    <li className="py-2 flex justify-between items-center">
+                                    <li className="py-2 flex md:justify-between justify-center items-center">
                                         <div>
-                                        <h4 className="text-sm leading-5 font-medium text-gray-500">
+                                        <h4 className="text-sm leading-5 font-medium">
                                             SUNDAY
                                         </h4>
-                                        <p className="text-sm leading-5 text-gray-900">
+                                        <p className="text-sm leading-5 text-gray-100">
                                             Closed
                                         </p>
                                         </div>
@@ -173,8 +183,8 @@ const Footer = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="cursor-pointer rounded-lg hover:bg-gray-100 hover:bg-opacity-20 p-4">
-                                        <div className="flex flex-col items-start">
+                                <div className="cursor-pointer rounded-lg p-4">
+                                        <div className="flex flex-col md:items-start justify-center">
                                             <p className="text-lg font-medium">www.website.com</p>
                                             <p className="text-sm text-gray-500">support@email.com</p>
                                         </div>
