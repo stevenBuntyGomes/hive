@@ -39,7 +39,7 @@ const Contact = () => {
                 </div>
                     </div>
 
-              <div className='justify-between items-center rounded-xl transform -translate-y-32 shadow-[0_4px_20px_0px_rgba(0,0,0,0.3)] mx-10 md:mx-[90px] gap-5'>
+              <div className='justify-between items-center rounded-xl transform -translate-y-32 shadow-[0_4px_20px_0px_rgba(0,0,0,0.3)] mx-5 md:mx-[90px] gap-5'>
                   <div className="text-center w-max-[360px] py-5 bg-white rounded-xl">
                      <h2 className="text-[32px] font-bold text-center pt-[44px] leading-[36px] pb-[56px]">
                         CONTACT US
@@ -72,16 +72,16 @@ const Contact = () => {
                 </div>
                 </div>
               
-                <div className='grid md:grid-cols-2 grid-cols-1 justify-center items-center transform -translate-y-32  md:px-20 px-10 gap-5 mt-[100px]'>
+                <div className='grid md:grid-cols-2 grid-cols-1 justify-center items-center transform -translate-y-32  md:px-20 px-5 gap-5 mt-[100px]'>
                         <div className='bg-[url("/contactWorkImage.png")] bg-no-repeat bg-cover max-w-[935px] max-h-[959px] md:w-[935px] md:h-[959px]'>
 
                         </div>
-                    <div className="text-center w-max-[360px] rounded-xl py-5 bg-white shadow-[0_4px_20px_0px_rgba(0,0,0,0.3)]">
+                    <div className="text-center w-max-[360px] rounded-xl py-5 bg-white shadow-[0_4px_20px_0px_rgba(0,0,0,0.3)] md:mr-4">
                         
                         <section className="text-gray-700 body-font relative">
-                            <div className="container pl-[52px] pr-[52px] pr-[30px] pt-[54px] pb-[54px] mx-auto">
+                            <div className="md:pl-[52px] md:pr-[52px] px-[30px] pt-[54px] pb-[54px] py-[40px] mx-auto">
                             <div className="text-center md:text-left flex flex-col w-full">
-                                <h1 className="text-center md:text-left text-base font-medium text-left leading-[18px] pb-[12px]">
+                                <h1 className="text-center md:text-left text-base font-medium leading-[18px] pb-[12px]">
                                     QUICK SUPPORT
                                 </h1>
                                 <h2 className="text-[32px] font-bold text-center md:text-left leading-[36px] pb-[56px]">
@@ -161,7 +161,7 @@ const Contact = () => {
               </div>
               
               <div className='container mx-auto'>
-                  <Clients />
+                <Clients />
                 <Subscribe />
               </div>
  

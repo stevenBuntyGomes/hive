@@ -139,19 +139,19 @@ const Header2 = () => {
                         </li>
                         
                         <li className="transition p-3 cursor-pointer hover:bg-slate-100 mb-1 hover:opacity-80 border-b border-slate-100">
-                            <Link href="/">
+                            <Link href="/about">
                                 <i className="fa-solid fa-chevron-right text-xs mr-4"></i> About Us
                             </Link>
                         </li>
 
                         <li className="transition p-3 cursor-pointer hover:bg-slate-100 mb-1 hover:opacity-80 border-b border-slate-100">
-                            <Link href="/">
-                                <i className="fa-solid fa-chevron-right text-xs mr-4"></i> Inquery
+                            <Link href="/inquiry">
+                                <i className="fa-solid fa-chevron-right text-xs mr-4"></i> Inquiry
                             </Link>
                         </li>
 
                         <li className="transition p-3 cursor-pointer hover:bg-slate-100 mb-1 hover:opacity-80 border-b border-slate-100">
-                            <Link href="/">
+                            <Link href="/contact">
                                 <i className="fa-solid fa-chevron-right text-xs mr-4"></i> Contact
                             </Link>
                         </li>
