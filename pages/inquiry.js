@@ -11,7 +11,8 @@ const Inquiry = () => {
 
   return (
       <>
-        <Layout> 
+          <Layout> 
+              
             <div className="font-raleway relative bg-[url('/inquery.png')] bg-no-repeat bg-cover w-full h-[378px] md:h-[783px] md:px-20 py-10">
                 <div className='absolute bottom-0 left-0 top-0 right-0 bg-overlay'>
                     <div className='md:w-[1440px] md:m-auto'>
@@ -22,17 +23,18 @@ const Inquiry = () => {
                     </div>
                 </div>
               </div>
-              
-              <div className='grid md:grid-cols-2 grid-cols-1 justify-center items-center transform -translate-y-32 md:-translate-y-[369px]  md:px-20 px-10 gap-5'>
-                  <div className="mb-5 md:mb-0 text-center w-max-[360px] py-5 bg-white shadow-[0_4px_20px_0px_rgba(0,0,0,0.3)]">
+
+              <div className='container mx-auto'>
+                  <div className='grid md:grid-cols-2 grid-cols-1 justify-center items-center transform -translate-y-32 md:-translate-y-[369px]  md:px-20 px-5 gap-5'>
+                  <div className="mb-5 md:mb-0 text-center w-max-[360px] py-2 bg-white shadow-[0_4px_20px_0px_rgba(0,0,0,0.3)]">
                       
                      <section className="text-gray-700 body-font relative">
-                        <div className="container pl-[52px] pr-[52px] pr-[30px] pt-[54px] pb-[54px] mx-auto">
+                        <div className="md:pl-[52px] md:pr-[52px] pl-[30px] pr-[30px] md:pt-[54px] pt-[40px] md:pb-[54px] pb-[40px] mx-auto">
                         <div className="text-center md:text-left flex flex-col w-full">
-                            <h1 className="text-center md:text-left text-base font-medium text-left leading-[18px] pb-[12px]">
+                            <h1 className="text-center md:text-left text-base font-medium leading-[18px] pb-[12px]">
                                 FREE CONSULTATION
                             </h1>
-                            <h2 className="text-[32px] font-bold text-left leading-[36px] pb-[56px]">
+                            <h2 className="text-[32px] font-bold md:text-left leading-[36px] pb-[56px]">
                                 GET A FREE INQUERY
                             </h2>
                         </div>
@@ -120,18 +122,17 @@ const Inquiry = () => {
                                 </div>   
                             </div>
                         </div>
-                    </section>
-                       
+                    </section>   
                 </div>
-                <div className='bg-[url("/inquery01.png")] w-full bg-no-repeat bg-cover w-full w-max-[360px] md:ml-[-20px]'>
+                <div className='bg-[url("/inquery01.png")] w-full bg-no-repeat bg-cover w-max-[360px] md:ml-[-20px]'>
                     <div className='text-center md:text-left mt-[351px] mb-[51px] md:ml-[60px]'>
-                        <h3 className="md:text-[70px] text-4xl font-bold pt-5 text-orange-500 mb-[26px]">
+                        <h3 className="md:text-[70px] text-2xl font-bold md:pt-5 text-orange-500 md:mb-[26px]">
                             LETS
                         </h3>
-                        <h3 className="md:text-[70px] text-4xl font-bold pt-5 text-white mb-[26px]">
+                        <h3 className="md:text-[70px] text-2xl font-bold md:pt-5 text-white md:mb-[26px]">
                             CONNECT
                         </h3>
-                        <h3 className="md:text-[70px] text-4xl font-bold pt-5 text-orange-500 mb-[46px]">
+                        <h3 className="md:text-[70px] text-2xl font-bold md:pt-5 text-orange-500 md:mb-[46px]">
                             TOGETHER
                         </h3>
                         <div className="p-2 w-full">
@@ -147,9 +148,9 @@ const Inquiry = () => {
                 <Clients />
                 <Subscribe />
               </div>
-            
-              
-           
+                  
+              </div>
+
         </Layout>
     </>
   )
