@@ -8,8 +8,9 @@ const Footer = () => {
                 <div className="grid md:grid-cols-4 p-20 gap-5 text-center md:text-left">
                     <div className="px-4 my-2 max-w-[350px]">
                         <ul className="divide-y divide-gray-300">
-                            <li className="cursor-pointer hover:bg-gray-100 hover:bg-opacity-20">
-                                <p className="mx-4 py-4 font-medium text-lg mb-2 border-b border-orange-500">{/* About Us */}About Us</p>
+                            <li className="mx-4 cursor-pointer hover:bg-gray-100 hover:bg-opacity-20">
+                                <p className="py-4 font-medium text-lg mb-2">{/* About Us */}About Us</p>
+                            <div className="w-[100px] h-[3px] bg-orange-500 m-auto md:mx-0"></div>
                             </li>
                             <li className="cursor-pointer hover:bg-gray-100 hover:bg-opacity-20 border-none">
                                 <p className="p-4">{/* We are an award winning plumbing company with over 20 years experience in the
@@ -26,7 +27,8 @@ const Footer = () => {
                             <div className="px-4 my-2 max-w-[350px]">
                                 <ul className="divide-y divide-gray-300">
                                     <li className="cursor-pointer hover:bg-gray-100 hover:bg-opacity-20">
-                                        <p className="mx-4 py-4 font-medium text-lg mb-2 border-b border-orange-500">Quick Links</p>
+                                        <p className="py-4 font-medium text-lg mb-2">Quick Links</p>
+                                    <div className="w-[100px] h-[3px] bg-orange-500 m-auto md:mx-0"></div>
                                     </li>
                                     <li className="cursor-pointer hover:bg-gray-100 hover:bg-opacity-20 border-none">
                                         <div className="flex items-center justify-between p-4 border-b">
@@ -113,10 +115,11 @@ const Footer = () => {
                         <div>
                             <div className="px-4 my-2 max-w-[350px]">
                                 <ul className="divide-y divide-gray-200">
-                                    <li className="mx-4 py-4 font-medium text-lg mb-2 border-b border-orange-500">
-                                        <h3 className="text-lg font-medium leading-6">
+                                    <li className="pb-4 font-medium text-lg mb-2">
+                                        <h3 className="py-4 font-medium text-lg mb-2">
                                         Opening Hours
                                         </h3>
+                                    <div className="w-[100px] h-[3px] bg-orange-500 m-auto md:mx-0"></div>
                                     </li>
                                     <li className="py-2 flex justify-between items-center border-none">
                                         <div>
@@ -156,8 +159,9 @@ const Footer = () => {
 
                         <div>
                             <div className="px-4 my-2 max-w-[350px]">
-                                <div className="mx-4 pb-4 border-b border-orange-500">
-                                    <h2 className="mx-4 pb-4 pt-2 font-medium text-lg mb-2 border-b border-orange-500">Contact Us</h2>
+                                <div className="mx-4 pb-4">
+                                    <h2 className="pb-4  mb-1 pt-2 font-medium text-lg">Contact Us</h2>
+                                    <div className="w-[100px] h-[3px] bg-orange-500 m-auto md:mx-0 mb-2"></div>
                                     <div className="flex flex-col space-y-2">
                                         <div className="flex flex-col space-y-1">
                                         <span className="text-base font-medium">14 Tottenham Court Road</span>
@@ -178,6 +182,9 @@ const Footer = () => {
                             </div>
                         </div>
                     </div>
+                </div>
+                <div className='text-[14px] md:text-[16px] text-center text-gray-500 py-[15px] border-t border-gray-500 font-raleway'>
+                    Copyright © 2021 Hive - Haustechnik. All Rights Reserved.
                 </div>
             </section>
         </main>

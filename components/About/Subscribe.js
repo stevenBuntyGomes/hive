@@ -8,7 +8,7 @@ const Subscribe = () => {
   return (
     <>
         <main className='bg-slate-50 pb-10'>
-            <div className="text-center md:p-20 p-10">
+            <div className="text-center md:p-20 md:pt-10 md:pb-10 p-10">
                 <h6 className="text-orange-500 uppercase font-bold md:text-[32px] text-2xl pb-5">SUBSCRIBE</h6>
                 <h5 className="font-bold uppercase md:text-[42px] text-4xl mb-5">SUBSCRIBE For Last Updates</h5>
                 <p>Subscribe our newsletter. join us and get the latest updates & patches! We do not spam will not share the
