@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const ServiceItem = (content , index) => {
   return (
-    <div className="shadow-[0_0_15px_2px_rgba(0,0,0,0.3)] text-center md:w-[370px] rounded-xl m-5" key={index}>
+    <div className="shadow-[0_0_15px_2px_rgba(0,0,0,0.3)] text-center md:w-[370px] rounded-md grid grid-cols-1 my-5 md:m-5" key={index}>
         <img src={content.content.img} className="w-full h-[250px] rounded-md" />
         <div className="text-xl font-bold py-4">
             {content.content.title}
