@@ -12,7 +12,7 @@ const Inquiry = () => {
   return (
       <>
         <Layout> 
-            <div className="relative bg-[url('/priceDetailsBanner.png')] bg-no-repeat bg-cover w-full h-[378px] md:px-20 py-10 mb-10">
+            <div className="relative bg-[url('/inquery.png')] bg-no-repeat bg-cover w-full h-[378px] md:h-[783px] md:px-20 py-10">
                 <div className='absolute bottom-0 left-0 top-0 right-0 bg-overlay'>
                     <div className='md:w-[1440px] md:m-auto'>
                         <div className='mt-16 p-10 text-center text-white font-raleway'>
@@ -23,7 +23,7 @@ const Inquiry = () => {
                 </div>
               </div>
               
-              <div className='grid md:grid-cols-2 grid-cols-1 justify-center items-center transform -translate-y-32  md:px-20 px-10 gap-5'>
+              <div className='grid md:grid-cols-2 grid-cols-1 justify-center items-center transform -translate-y-32 md:-translate-y-[369px]  md:px-20 px-10 gap-5'>
                   <div className="mb-5 md:mb-0 text-center w-max-[360px] py-5 bg-white shadow-[0_4px_20px_0px_rgba(0,0,0,0.3)]">
                       
                      <section className="text-gray-700 body-font relative">
@@ -141,10 +141,14 @@ const Inquiry = () => {
                         </div>
                     </div>
                 </div>
+                
+              </div>
+              <div className = "mt-[-100px] md:mt-[-320px]">
+                <Clients />
+                <Subscribe />
               </div>
             
-              <Clients />
-              <Subscribe />
+              
            
         </Layout>
     </>
