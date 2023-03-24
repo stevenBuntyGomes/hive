@@ -4,12 +4,12 @@ const DownloadApp = () => {
   return (
     <>
         <main className='bg-slate-50 p-10'>
-            <div className="w-full max-w-7xl rounded bg-white p-10 lg:p-20 mx-auto text-gray-800 relative md:text-left">
+            <div className="w-full rounded bg-white py-10 lg:p-20 text-gray-800 relative md:text-left">
                 <div className="md:flex items-center -mx-10">
-                    <div className="w-full md:w-1/2 px-10">
+                    <div className="w-full md:w-1/2 px-10 md:px-0">
                         <div className="mb-10">
 
-                            <div className="text-center md:text-left w-full p-4 bg-white rounded-lg sm:p-8 dark:border-gray-700">
+                            <div className="text-center md:text-left w-full md:py-4 bg-white rounded-lg  dark:border-gray-700">
                                 <h5 className="mb-2 text-3xl font-bold">Download Our App</h5>
                                 <p className="mb-5 text-base">Let us design or remodel your
                                     bathroom or kitchen. Even the all-powerful Pointing has no control. Let us design or remodel

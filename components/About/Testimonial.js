@@ -51,7 +51,7 @@ const Testimonial = () => {
         ]
   return (
     <>
-        <main className='bg-slate-50 p-10'>
+        <main className='w-full rounded bg-white p-10 lg:px-20'>
             <div className="text-center">
                 <h5 className="text-orange-500 uppercase font-bold md:text-[32px] text-2xl">OUR TESTIMONIALS</h5>
                 <h4 className="font-bold uppercase md:text-[42px] text-4xl py-5">WHAT IS OUR CLIENTS SAY?</h4>

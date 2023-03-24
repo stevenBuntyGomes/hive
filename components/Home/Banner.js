@@ -207,7 +207,7 @@ const BannerComponent = () => {
               <div className="text-center w-max-[360px] rounded-xl pt-[70px] pb-[70px] bg-white shadow-[0_4px_20px_0px_rgba(0,0,0,0.3)]">
                 <img src="/icon2.png" className="w-[111px] h-[108px] m-auto" alt="icon2" />
                 <div className="text-xl font-bold leading-[30px] pt-[22px] pb-[37px] md:px-20">24/7 EMERGENCY PLUBMUING SERVICE</div>
-                <div className="px-5 md:px-12">No matter the time or day are on call to serve you. It is a paradisematic country, in which roasted parts.</div>
+                <div className="px-5 md:px-12">No matter the time or day are on call to serve you. It is in which roasted parts.</div>
               </div>
               <div className="text-center w-max-[360px] rounded-xl pt-[70px] pb-[70px] bg-white shadow-[0_4px_20px_0px_rgba(0,0,0,0.3)]">
                 <img src="/icon3.png" className="w-[111px] h-[108px] m-auto" alt="icon2" />

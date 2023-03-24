@@ -48,7 +48,7 @@ export const ServicePrice = () => {
             ];
   return (
     <>
-        <main className='bg-slate-50 p-10'>
+        <main className='w-full rounded bg-white p-10 lg:px-20'>
             <div className="text-center">
                 <h2 className="text-orange-500 uppercase font-bold md:text-[32px] leading-[36px] text-2xl pb-3">Our Services PRICES</h2>
                 <h2 className="font-bold uppercase md:text-[42px] text-4xl leading-[50px] mb-[40px]">Quality Service WITH STANDARD PRICES</h2>
@@ -81,7 +81,7 @@ export const ServicePrice = () => {
         >
             {contents && contents.map((content, index) => (
                 <SwiperSlide className="py-10" key = {index}>
-                    <div className={`${index % 2 === 0 ? 'border-orange-500' : 'border-black'} text-center md:w-[370px] rounded-xl grid grid-cols-1 border-2 bg-white`}>
+                    <div className={`shadow-[0_0_15px_2px_rgba(0,0,0,0.4)] ${index % 2 === 0 ? 'border-orange-500' : 'border-black'} text-center md:w-[430px] rounded-xl grid grid-cols-1 border-2 bg-white`}>
                         <div className={`rounded-xl ${index % 2 === 0 ? 'bg-orange-500' : 'bg-black'} text-white p-10`}>
                             <h1 className="uppercase font-bold text-[32px]">{content.rate}</h1>
                         </div>

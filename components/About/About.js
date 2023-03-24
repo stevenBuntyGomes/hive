@@ -35,7 +35,7 @@ const About = () => {
     }
   return (
     <>
-        <div className="w-full max-w-7xl rounded bg-white p-10 lg:px-20 mx-auto text-gray-800 relative md:text-left">
+        <div className="w-full rounded bg-white p-10 lg:px-20 text-gray-800 relative md:text-left">
             <div className="md:flex items-center -mx-10">
                 <div className="w-full md:w-2/5 px-10 mb-10 md:mb-0">
                     <div className="relative">

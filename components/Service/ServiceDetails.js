@@ -35,7 +35,7 @@ const ServiceDetails = () => {
   return (
     <>
         <main className='font-raleway'>
-            <div className="relative bg-[url('/rectangle63.png')] bg-no-repeat bg-cover w-full h-[378px] md:px-20 py-10 mb-10">
+            <div className="font-raleway relative bg-[url('/priceDetailsBanner.png')] bg-no-repeat bg-cover w-full h-[378px] md:px-20 py-10 mb-10">
                 <div className='absolute bottom-0 left-0 top-0 right-0 bg-overlay'>
                     <div className='md:w-[1440px] md:m-auto'>
                         <div className='mt-16 p-10 text-center text-white font-raleway'>
@@ -47,7 +47,7 @@ const ServiceDetails = () => {
               </div>
               
             <div className='md:w-[1440px] md:m-auto sm:m-auto m-10 py-10'>
-                <div className='md:flex items-center'>
+                <div className='md:flex'>
                     <div className='w-full md:w-[30%] md:pl-10 mb-10 md:mb-0 text-center md:text-left'>
                         <div className="my-10">
 

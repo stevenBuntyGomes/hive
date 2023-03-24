@@ -34,7 +34,7 @@ export default function Home() {
     <>
       {indexHeader()}
       <Layout>
-        <div className='md:w-[1440px] md:m-auto font-raleway'>
+        <div className='container mx-auto'>
           <Banner/>
           <About/>
           <Service/>
