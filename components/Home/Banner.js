@@ -52,8 +52,8 @@ const BannerComponent = () => {
                                 <label className={`inline-flex items-center cursor-pointer md text-orange-500`}>
                                   <input
                                     type="radio"
-                                    value="teal"
-                                    checked={color === 'teal'}
+                                    value="hello"
+                                    checked={color === 'hello'}
                                     onChange={handleChange}
                                     className="form-radio h-6 w-6 text-orange-500"
                                   />
@@ -64,8 +64,8 @@ const BannerComponent = () => {
                                 <label className={`inline-flex items-center cursor-pointer md text-orange-500`}>
                                   <input
                                     type="radio"
-                                    value="bunty"
-                                    checked={color === 'bunty'}
+                                    value="world"
+                                    checked={color === 'world'}
                                     onChange={handleChange}
                                     className="form-radio h-6 w-6 text-orange-500"
                                   />
@@ -104,8 +104,8 @@ const BannerComponent = () => {
                                 <label className={`inline-flex items-center cursor-pointer md text-orange-500`}>
                                   <input
                                     type="radio"
-                                    value="teal"
-                                    checked={color === 'teal'}
+                                    value="hello"
+                                    checked={color === 'hello'}
                                     onChange={handleChange}
                                     className="form-radio h-6 w-6 text-orange-500"
                                   />
@@ -116,8 +116,8 @@ const BannerComponent = () => {
                                 <label className={`inline-flex items-center cursor-pointer md text-orange-500`}>
                                   <input
                                     type="radio"
-                                    value="teal"
-                                    checked={color === 'teal'}
+                                    value="world"
+                                    checked={color === 'world'}
                                     onChange={handleChange}
                                     className="form-radio h-6 w-6 text-orange-500"
                                   />
@@ -135,10 +135,10 @@ const BannerComponent = () => {
                             a type specimen book.</p>
                         </div>
                         <div className="pt-[42px] flex justify-center md:justify-start">
-                          <button className="bg-gray-800 text-white py-2 px-[30px] py-[14px] rounded-md mr-4" onClick={handleClick}>
+                          <button className="bg-gray-800 text-white py-2 px-[30px] md:py-[14px] rounded-md mr-4" onClick={handleClick}>
                             GET MORE
                           </button>
-                          <button className="bg-orange-500 text-white py-2 px-[30px] py-[14px] rounded-md" onClick={handleClick}>
+                          <button className="bg-orange-500 text-white py-2 px-[30px] md:py-[14px] rounded-md" onClick={handleClick}>
                             GET A QUOTE
                           </button>
                         </div>
@@ -156,8 +156,8 @@ const BannerComponent = () => {
                                 <label className={`inline-flex items-center cursor-pointer md text-orange-500`}>
                                   <input
                                     type="radio"
-                                    value="teal"
-                                    checked={color === 'teal'}
+                                    value="hello"
+                                    checked={color === 'hello'}
                                     onChange={handleChange}
                                     className="form-radio h-6 w-6 text-orange-500"
                                   />
@@ -168,8 +168,8 @@ const BannerComponent = () => {
                                 <label className={`inline-flex items-center cursor-pointer md text-orange-500`}>
                                   <input
                                     type="radio"
-                                    value="teal"
-                                    checked={color === 'teal'}
+                                    value="world"
+                                    checked={color === 'world'}
                                     onChange={handleChange}
                                     className="form-radio h-6 w-6 text-orange-500"
                                   />
@@ -187,10 +187,10 @@ const BannerComponent = () => {
                             a type specimen book.</p>
                         </div>
                         <div className="pt-10 flex justify-center md:justify-start">
-                          <button className="bg-gray-800 text-white py-2 px-5 rounded-md mr-4" onClick={handleClick}>
+                          <button className="bg-gray-800 hover:bg-orange-500 text-white py-2 px-5 rounded-md mr-4" onClick={handleClick}>
                             Get More
                           </button>
-                          <button className="bg-orange-500 text-white py-2 px-5 rounded-md" onClick={handleClick}>
+                          <button className="bg-gray-800 hover:bg-orange-500 text-white py-2 px-5 rounded-md" onClick={handleClick}>
                             Get a Quote
                           </button>
                         </div>
@@ -201,17 +201,17 @@ const BannerComponent = () => {
           <div className='mt-10 md:mt-0 grid md:grid-cols-3 grid-cols-1 justify-between items-center transform -translate-y-32  md:px-20 px-10 gap-5'>
               <div className="text-center w-max-[360px] rounded-xl pt-[70px] pb-[70px] bg-white shadow-[0_4px_20px_0px_rgba(0,0,0,0.3)]">
                 <img src="/icon1.png" className="w-[111px] h-[108px] m-auto" alt="icon1" />
-                <div className="text-xl font-bold leading-[30px] pt-[22px] pb-[37px] md:px-20">GENERAL PLUMBING MAINTAINANCE</div>
+                <div className="text-xl font-bold leading-[30px] pt-[22px] pb-[37px] md:px-20 px-5">GENERAL PLUMBING MAINTAINANCE</div>
                 <div className="px-5 md:px-12">Leaky faucet? Clogged toilet? We got you covered with of plumbing maintenance services.</div>
               </div>
               <div className="text-center w-max-[360px] rounded-xl pt-[70px] pb-[70px] bg-white shadow-[0_4px_20px_0px_rgba(0,0,0,0.3)]">
                 <img src="/icon2.png" className="w-[111px] h-[108px] m-auto" alt="icon2" />
-                <div className="text-xl font-bold leading-[30px] pt-[22px] pb-[37px] md:px-20">24/7 EMERGENCY PLUBMUING SERVICE</div>
+                <div className="text-xl font-bold leading-[30px] pt-[22px] pb-[37px] md:px-20 px-5">24/7 EMERGENCY PLUBMUING SERVICE</div>
                 <div className="px-5 md:px-12">No matter the time or day are on call to serve you. It is in which roasted parts.</div>
               </div>
               <div className="text-center w-max-[360px] rounded-xl pt-[70px] pb-[70px] bg-white shadow-[0_4px_20px_0px_rgba(0,0,0,0.3)]">
                 <img src="/icon3.png" className="w-[111px] h-[108px] m-auto" alt="icon2" />
-                <div className="text-xl font-bold leading-[30px] pt-[22px] pb-[37px] md:px-20">PLUMBING SUPPLIES AND EQUIPMENT</div>
+                <div className="text-xl font-bold leading-[30px] pt-[22px] pb-[37px] md:px-20 px-5">PLUMBING SUPPLIES AND EQUIPMENT</div>
                 <div className="px-5 md:px-12">Need a plunger or a new faucet? We sell a wide range of plumbing supplies for all needs.</div>
               </div>
           </div>

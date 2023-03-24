@@ -29,7 +29,7 @@ const DownloadApp = () => {
                                         </div>
                                     </a>
                                     <a href="#"
-                                        className="w-full sm:w-auto bg-gray-800 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-300 text-white rounded-lg inline-flex items-center justify-center px-4 py-2.5 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700">
+                                        className="w-full sm:w-auto bg-gray-800 hover:bg-orange-500 focus:ring-4 focus:outline-none focus:ring-gray-300 text-white rounded-lg inline-flex items-center justify-center px-4 py-2.5 dark:bg-gray-700 dark:hover:bg-orange-500 dark:focus:ring-gray-700">
                                         <svg className="mr-3 w-7 h-7" aria-hidden="true" focusable="false" data-prefix="fab"
                                             data-icon="google-play" role="img" xmlns="http://www.w3.org/2000/svg"
                                             viewBox="0 0 512 512">
