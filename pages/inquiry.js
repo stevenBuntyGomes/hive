@@ -28,8 +28,8 @@ const Inquiry = () => {
                       
                      <section className="text-gray-700 body-font relative">
                         <div className="container pl-[52px] pr-[52px] pr-[30px] pt-[54px] pb-[54px] mx-auto">
-                        <div className="flex flex-col text-center w-full">
-                            <h1 className="text-base font-medium text-left leading-[18px] pb-[12px]">
+                        <div className="text-center md:text-left flex flex-col w-full">
+                            <h1 className="text-center md:text-left text-base font-medium text-left leading-[18px] pb-[12px]">
                                 FREE CONSULTATION
                             </h1>
                             <h2 className="text-[32px] font-bold text-left leading-[36px] pb-[56px]">
@@ -37,7 +37,7 @@ const Inquiry = () => {
                             </h2>
                         </div>
                          <div className="flex flex-wrap -m-2">
-                                <div className="pb-[28px] w-1/2 pr-[24px]">
+                                <div className="pb-[28px] w-full md:w-1/2 md:pr-[24px]">
                                     <div className="relative">
                                     <input
                                         type="text"
@@ -47,7 +47,7 @@ const Inquiry = () => {
                                     />
                                     </div>
                                 </div>
-                                <div className="pb-[28px] w-1/2">
+                                <div className="pb-[28px] w-full md:w-1/2">
                                     <div className="relative">
                                     <input
                                         type="email"
@@ -59,7 +59,7 @@ const Inquiry = () => {
                                     </div>
                                   </div>
 
-                                   <div className="pb-[28px] w-1/2 pr-[24px]">
+                                   <div className="pb-[28px] w-full md:w-1/2 md:pr-[24px]">
                                     <div className="relative">
                                     <input
                                         type="number"
@@ -69,7 +69,7 @@ const Inquiry = () => {
                                     />
                                     </div>
                                 </div>
-                                <div className="pb-[28px] w-1/2">
+                                <div className="pb-[28px] w-full md:w-1/2">
                                     <div className="relative">
                                     <input
                                         type="text"
@@ -80,7 +80,7 @@ const Inquiry = () => {
                                     </div>
                                   </div>
 
-                                  <div className="pb-[28px] w-1/2 pr-[24px]">
+                                  <div className="pb-[28px] w-full md:w-1/2 md:pr-[24px]">
                                     <div className="relative">
                                     <input
                                         type="text"
@@ -91,7 +91,7 @@ const Inquiry = () => {
                                     </div>
                                   </div>
 
-                                  <div className="pb-[28px] w-1/2">
+                                  <div className="pb-[28px] w-full md:w-1/2">
                                     <div className="relative">
                                     <input
                                         type="number"
@@ -113,8 +113,8 @@ const Inquiry = () => {
                                     ></textarea>
                                     </div>
                                 </div>
-                                <div className="pb-[28px] w-full">
-                                    <button className="bg-orange-500 text-white py-2 px-5 rounded-md">
+                                <div className="pb-[4px] w-full">
+                                    <button className="py-2 px-5 md:px-[185px] md:py-[20px] font-bold bg-orange-500 text-white rounded-md">
                                         GET A FREE INQUERY
                                     </button>
                                 </div>   
