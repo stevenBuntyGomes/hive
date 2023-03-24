@@ -124,7 +124,7 @@ const Inquiry = () => {
                        
                 </div>
                 <div className='bg-[url("/inquery01.png")] w-full bg-no-repeat bg-cover w-full w-max-[360px] md:ml-[-20px]'>
-                    <div className='mt-[351px] mb-[51px] ml-[60px]'>
+                    <div className='text-center md:text-left mt-[351px] mb-[51px] md:ml-[60px]'>
                         <h3 className="md:text-[70px] text-4xl font-bold pt-5 text-orange-500 mb-[26px]">
                             LETS
                         </h3>
@@ -135,7 +135,7 @@ const Inquiry = () => {
                             TOGETHER
                         </h3>
                         <div className="p-2 w-full">
-                            <button className="font-raleway font-bold bg-transparent text-white py-2 px-5 rounded-md border-2 border-white">
+                            <button className="font-raleway font-bold bg-transparent text-white py-2 px-[50px] border-2 border-white">
                                 CONTACT US <FontAwesomeIcon icon = {faChevronRight}/><FontAwesomeIcon className='ml-[-2px]' icon = {faChevronRight}/>
                             </button>
                         </div>

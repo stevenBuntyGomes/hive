@@ -9,7 +9,7 @@ const DownloadApp = () => {
                     <div className="w-full md:w-1/2 px-10">
                         <div className="mb-10">
 
-                            <div className="w-full p-4 bg-white rounded-lg sm:p-8 dark:border-gray-700">
+                            <div className="text-center md:text-left w-full p-4 bg-white rounded-lg sm:p-8 dark:border-gray-700">
                                 <h5 className="mb-2 text-3xl font-bold">Download Our App</h5>
                                 <p className="mb-5 text-base">Let us design or remodel your
                                     bathroom or kitchen. Even the all-powerful Pointing has no control. Let us design or remodel

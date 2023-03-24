@@ -3,6 +3,7 @@ import Layout from '@/components/Layout';
 import Clients from '@/components/Service/Clients';
 import Subscribe from '@/components/About/Subscribe';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { GoogleMap } from "@react-google-maps/api";
 import {
     faLocationDot,
     faPhoneFlip,
@@ -10,6 +11,17 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 
 const Contact = () => {
+    const containerStyle = {
+        width: "100%",
+        height: "661px",
+    };
+
+    const center = {
+        lat: 37.7749,
+        lng: -122.4194,
+    };
+
+    const zoom = 10;
 
   return (
       <>
@@ -147,6 +159,13 @@ const Contact = () => {
                 </div>
                 
             </div> 
+
+            {/* <GoogleMap
+                mapContainerStyle={containerStyle}
+                center={center}
+                zoom={zoom}
+            ></GoogleMap> */}
+
             <div className='bg-[url("/Map.png")] w-full md:max-w-full h-[400px] md:h-[661px] bg-no-repeat bg-cover'>
                 
             </div>
