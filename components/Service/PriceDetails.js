@@ -40,8 +40,9 @@ const PriceDetail = () => {
     ];
   return (
     <>
-        <main className='font-raleway w-full rounded bg-white p-10 lg:px-20'>
-            <div className="relative bg-[url('/priceDetailsBanner.png')] bg-no-repeat bg-cover w-full h-[378px] md:px-20 py-10 mb-10">
+        <main className='font-raleway w-full rounded bg-white'>
+            <div className="font-raleway relative bg-[url('/priceDetailsBanner.png')] bg-no-repeat bg-cover w-full h-[378px] md:px-20 py-10 mb-10">
+            {/* <div className="relative bg-[url('/priceDetailsBanner.png')] bg-no-repeat bg-cover w-full h-[378px] md:px-20 py-10 mb-10"> */}
                 <div className='absolute bottom-0 left-0 top-0 right-0 bg-overlay'>
                     <div className='md:w-[1440px] md:m-auto'>
                         <div className='mt-16 p-10 text-center text-white font-raleway'>
@@ -53,7 +54,7 @@ const PriceDetail = () => {
                 
             </div>
             <div className='md:w-[1440px] md:m-auto sm:m-auto m-10 py-10'>
-                <div className='w-full pr-0 pl-0 md:pl-0 mb-10 md:mb-0 md:pr-10 pb-10 pt-10 text-center md:text-left'>
+                <div className='w-full pr-0 pl-0 md:pl-0 mb-10 md:mb-0 md:pr-10 pt-10 text-center md:text-left'>
                         <div className='mb-10 pb-10'>
                             <div className='mb-10 pb-10'>
                                 <img 
@@ -64,7 +65,7 @@ const PriceDetail = () => {
                             <div className="mb-10">
                                 {/* <h4 className="text-orange-500 uppercase font-bold md:text-[32px] text-2xl pb-3">About us</h4> */}
                                 <h4 className="text-orange-500 uppercase font-bold md:text-[32px] text-2xl pb-3">FLAT RATE 1</h4>
-                                <div className='flex justify-between'>
+                                <div className='md:flex md:justify-between'>
                                     <h5 className="font-bold uppercase md:text-[42px] text-4xl mb-5">QUALITY SERVICE IS OUR GUARANTEE</h5>
                                     <h4 className="text-orange-500 uppercase font-bold md:text-[32px] text-2xl pb-3">$199</h4>
                                 </div>
@@ -92,8 +93,8 @@ const PriceDetail = () => {
                                     one stop shop.</p>
                             </div>
                         </div>
-                        <div className='mb-10 pb-10'>
-                            <div className='mb-10 pb-10'>
+                        <div className=''>
+                            <div className='pb-10 mb-10'>
                                 <img 
                                     src = '/priceDetails2.png'
                                     className="md:w-[100%] relative z-10"
