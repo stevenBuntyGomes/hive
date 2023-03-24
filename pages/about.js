@@ -50,10 +50,11 @@ const About = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+              </div>
               
-            <div className="w-full rounded bg-white p-10 lg:px-20 text-gray-800 relative md:text-left">
-                <div className="md:flex items-center -mx-10">
+              <div className='container mx-auto'>
+                  <div className="w-full rounded bg-white p-10 lg:px-20 text-gray-800 relative md:text-left">
+                    <div className="md:flex items-center -mx-10">
                     <div className="w-full md:w-2/5 px-10 mb-10 md:mb-0">
                         <div className="relative">
                             <Image src="/about.png" width={400} height = {659} className="md:w-[400px] relative z-10 md:h-[659px]" alt=""/>
@@ -143,11 +144,16 @@ const About = () => {
                       
                       <p className='text-base mt-[60px]'>No job is too big or too small, we’ve got you covered. In addition to our services, you can check out our shop for a wide range of plumbing supplies and equipment. When it comes to plumbing we are your one stop shop. No job is too big or too small, we’ve got you covered. In addition to our services, you can check out our shop for a wide range of plumbing supplies and equipment. When it comes to plumbing we are your one stop shop.</p> 
 
-                  </div>
+                      </div>
+                      
+                                 </div>
+              </div>
                   
                   <Clients />
                   <Subscribe/>
-            </div>
+     
+              
+            
               
           </Layout>
         
