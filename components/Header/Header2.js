@@ -47,7 +47,7 @@ const Header2 = () => {
                         <Link href="#responsive-header" className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-orange-500 mr-[40px]">
                             <FontAwesomeIcon icon={faLinkedin} />
                         </Link>
-                        <Link href="#responsive-header" className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-orange-500">
+                        <Link href="#responsive-header" className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-orange-500 mr-[20px]">
                             <FontAwesomeIcon icon={faYoutube} />
                         </Link>
                     </div>
