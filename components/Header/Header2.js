@@ -35,19 +35,19 @@ const Header2 = () => {
                 </div>
                 <div className="text-white gt-sm">
                     <div className="text-sm md:flex-grow">
-                        <Link href="#responsive-header" className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-orange-500 mr-6">
+                        <Link href="#responsive-header" className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-orange-500 mr-[40px]">
                             <FontAwesomeIcon icon={faFacebookF} />
                         </Link>
-                        <Link href="#responsive-header" className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-orange-500 mr-6">
+                        <Link href="#responsive-header" className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-orange-500 mr-[40px]">
                             <FontAwesomeIcon icon={faInstagram} />
                         </Link>
-                        <Link href="#responsive-header" className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-orange-500 mr-6">
+                        <Link href="#responsive-header" className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-orange-500 mr-[40px]">
                             <FontAwesomeIcon icon={faTwitter} />
                         </Link>
-                        <Link href="#responsive-header" className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-orange-500 mr-6">
+                        <Link href="#responsive-header" className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-orange-500 mr-[40px]">
                             <FontAwesomeIcon icon={faLinkedin} />
                         </Link>
-                        <Link href="#responsive-header" className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-orange-500 mr-6">
+                        <Link href="#responsive-header" className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-orange-500">
                             <FontAwesomeIcon icon={faYoutube} />
                         </Link>
                     </div>
