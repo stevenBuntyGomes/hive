@@ -2,6 +2,10 @@ import React, {useState} from 'react'
 import Layout from '@/components/Layout';
 import Clients from '@/components/Service/Clients';
 import Subscribe from '@/components/About/Subscribe';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+    faChevronRight
+} from '@fortawesome/free-solid-svg-icons'
 
 const Inquiry = () => {
 
@@ -20,104 +24,122 @@ const Inquiry = () => {
               </div>
               
               <div className='grid md:grid-cols-2 grid-cols-1 justify-center items-center transform -translate-y-32  md:px-20 px-10 gap-5'>
-                  <div className="text-center w-max-[360px] rounded-xl py-5 bg-white shadow-[0_4px_20px_0px_rgba(0,0,0,0.3)]">
+                  <div className="mb-5 md:mb-0 text-center w-max-[360px] py-5 bg-white shadow-[0_4px_20px_0px_rgba(0,0,0,0.3)]">
                       
                      <section className="text-gray-700 body-font relative">
-                        <div className="container px-5 py-24 mx-auto">
-                        <div className="flex flex-col text-center w-full mb-12">
-                            <h1 className="text-base font-medium text-left leading-[18px]">
-                                Free Consultation
+                        <div className="container pl-[52px] pr-[52px] pr-[30px] pt-[54px] pb-[54px] mx-auto">
+                        <div className="flex flex-col text-center w-full">
+                            <h1 className="text-base font-medium text-left leading-[18px] pb-[12px]">
+                                FREE CONSULTATION
                             </h1>
-                            <h2 className="text-[32px] font-bold text-left leading-[36px]">
-                                Get a Free Inquiry
+                            <h2 className="text-[32px] font-bold text-left leading-[36px] pb-[56px]">
+                                GET A FREE INQUERY
                             </h2>
                         </div>
                          <div className="flex flex-wrap -m-2">
-                                <div className="p-2 w-1/2">
+                                <div className="pb-[28px] w-1/2 pr-[24px]">
                                     <div className="relative">
                                     <input
                                         type="text"
                                         name="name"
                                         placeholder='Full Name'
-                                        className="w-full bg-gray-100 rounded border border-gray-300 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                                        className="w-full bg-gray-100 rounded border border-gray-300 focus:border-indigo-500 text-base outline-none text-gray-700 py-3 px-5 leading-8 transition-colors duration-200 ease-in-out"
                                     />
                                     </div>
                                 </div>
-                                <div className="p-2 w-1/2">
+                                <div className="pb-[28px] w-1/2">
                                     <div className="relative">
                                     <input
                                         type="email"
                                         id="email"
                                         name="email"
                                         placeholder='Email'
-                                        className="w-full bg-gray-100 rounded border border-gray-300 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                                        className="w-full bg-gray-100 rounded border border-gray-300 focus:border-indigo-500 text-base outline-none text-gray-700 py-3 px-5 leading-8 transition-colors duration-200 ease-in-out"
                                     />
                                     </div>
                                   </div>
 
-                                   <div className="p-2 w-1/2">
+                                   <div className="pb-[28px] w-1/2 pr-[24px]">
                                     <div className="relative">
                                     <input
                                         type="number"
                                         name="phone"
                                         placeholder='Phone Number'
-                                        className="w-full bg-gray-100 rounded border border-gray-300 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                                        className="w-full bg-gray-100 rounded border border-gray-300 focus:border-indigo-500 text-base outline-none text-gray-700 py-3 px-5 leading-8 transition-colors duration-200 ease-in-out"
                                     />
                                     </div>
                                 </div>
-                                <div className="p-2 w-1/2">
+                                <div className="pb-[28px] w-1/2">
                                     <div className="relative">
                                     <input
                                         type="text"
                                         name="address"
                                         placeholder='Address'
-                                        className="w-full bg-gray-100 rounded border border-gray-300 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                                        className="w-full bg-gray-100 rounded border border-gray-300 focus:border-indigo-500 text-base outline-none text-gray-700 py-3 px-5 leading-8 transition-colors duration-200 ease-in-out"
                                     />
                                     </div>
                                   </div>
 
-                                  <div className="p-2 w-1/2">
+                                  <div className="pb-[28px] w-1/2 pr-[24px]">
                                     <div className="relative">
                                     <input
                                         type="text"
                                         name="service"
                                         placeholder='Your Service'
-                                        className="w-full bg-gray-100 rounded border border-gray-300 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                                        className="w-full bg-gray-100 rounded border border-gray-300 focus:border-indigo-500 text-base outline-none text-gray-700 py-3 px-5 leading-8 transition-colors duration-200 ease-in-out"
                                     />
                                     </div>
                                   </div>
 
-                                  <div className="p-2 w-1/2">
+                                  <div className="pb-[28px] w-1/2">
                                     <div className="relative">
                                     <input
                                         type="number"
                                         name="budget"
                                         placeholder='Your Budget'
-                                        className="w-full bg-gray-100 rounded border border-gray-300 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                                        className="w-full bg-gray-100 rounded border border-gray-300 focus:border-indigo-500 text-base outline-none text-gray-700 py-3 px-5 leading-8 transition-colors duration-200 ease-in-out"
                                     />
                                     </div>
                                   </div>
                                   
 
-                                <div className="p-2 w-full">
+                                <div className="pb-[31px] w-full">
                                     <div className="relative">
                                     <textarea
                                         id="message"
                                         name="message"
                                         placeholder='Message'
-                                        className="w-full bg-gray-100 rounded border border-gray-300 focus:border-indigo-500 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
+                                        className="w-full bg-gray-100 rounded border border-gray-300 focus:border-indigo-500 h-32 text-base outline-none text-gray-700 py-3 px-5 resize-none leading-6 transition-colors duration-200 ease-in-out"
                                     ></textarea>
                                     </div>
                                 </div>
-                                <div className="p-2 w-full">
+                                <div className="pb-[28px] w-full">
                                     <button className="bg-orange-500 text-white py-2 px-5 rounded-md">
-                                        Get a Free Inquiry
+                                        GET A FREE INQUERY
                                     </button>
                                 </div>   
                             </div>
                         </div>
                     </section>
                        
+                </div>
+                <div className='bg-[url("/inquery01.png")] w-full bg-no-repeat bg-cover w-full w-max-[360px] md:ml-[-20px]'>
+                    <div className='mt-[351px] mb-[51px] ml-[60px]'>
+                        <h3 className="md:text-[70px] text-4xl font-bold pt-5 text-orange-500 mb-[26px]">
+                            LETS
+                        </h3>
+                        <h3 className="md:text-[70px] text-4xl font-bold pt-5 text-white mb-[26px]">
+                            CONNECT
+                        </h3>
+                        <h3 className="md:text-[70px] text-4xl font-bold pt-5 text-orange-500 mb-[46px]">
+                            TOGETHER
+                        </h3>
+                        <div className="p-2 w-full">
+                            <button className="font-raleway font-bold bg-transparent text-white py-2 px-5 rounded-md border-2 border-white">
+                                CONTACT US <FontAwesomeIcon icon = {faChevronRight}/><FontAwesomeIcon className='ml-[-2px]' icon = {faChevronRight}/>
+                            </button>
+                        </div>
+                    </div>
                 </div>
               </div>
             
