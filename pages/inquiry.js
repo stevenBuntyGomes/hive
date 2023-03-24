@@ -12,7 +12,7 @@ const Inquiry = () => {
   return (
       <>
         <Layout> 
-            <div className="relative bg-[url('/inquery.png')] bg-no-repeat bg-cover w-full h-[378px] md:h-[783px] md:px-20 py-10">
+            <div className="font-raleway relative bg-[url('/inquery.png')] bg-no-repeat bg-cover w-full h-[378px] md:h-[783px] md:px-20 py-10">
                 <div className='absolute bottom-0 left-0 top-0 right-0 bg-overlay'>
                     <div className='md:w-[1440px] md:m-auto'>
                         <div className='mt-16 p-10 text-center text-white font-raleway'>
