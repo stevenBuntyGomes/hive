@@ -81,7 +81,7 @@ const Testimonial = () => {
             >
                 {contents && contents.map((content, index) => (
                     <SwiperSlide className="py-10" key = {index}>
-                        <div className="shadow-[0_0_15px_2px_rgba(0,0,0,0.3)] border-2 border-orange-500 hover:border-blue-500 md:w-[370px] rounded-xl rounded-md">
+                        <div className="shadow-[0_0_15px_2px_rgba(0,0,0,0.3)] border-2 border-orange-500 md:w-[370px] rounded-xl rounded-md">
                             <div className="p-4 flex items-center space-x-4">
                                 <div className="flex-shrink-0">
                                     <img className="w-16 h-16 rounded-full" src={content.img} alt="Neil image"/>

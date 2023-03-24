@@ -7,13 +7,15 @@ import {
     
 } from '@fortawesome/free-solid-svg-icons'
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 const PriceDetail = () => {
+    const Router = useRouter();
 
     const [group, setGroup] = useState('');
 
     const onClick = () => {
-
+        Router.replace("/details/price_details");
     }
 
     const options = [

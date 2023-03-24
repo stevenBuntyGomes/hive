@@ -25,6 +25,10 @@ const About = () => {
         },
     ];
 
+    const handleColorChange = (event) => {
+        setGroup(event.target.value);
+    }
+
 
     const onClick =() => {
 
@@ -51,9 +55,11 @@ const About = () => {
                                     <input
                                     type="radio"
                                     className="form-radio h-4 w-4 text-orange-500"
-                                    value={option.name}
-                                    checked={group === option.name}
-                                    onChange={() => setGroup(option.name)}
+                                    // value={option.name}
+                                    // checked={group === option.name}
+                                    value={index == 0 ? 'teal' : 'bunty'}
+                                    checked={group === index == 0 ? 'teal' : 'bunty'}
+                                    onChange={handleColorChange}
                                     />
                                     <span className="ml-2 text-gray-700">{option.name}</span>
                                 </label>

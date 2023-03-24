@@ -1,5 +1,6 @@
 import React from 'react'
 import { Swiper, SwiperSlide } from "swiper/react";
+import { useRouter } from 'next/router';
 
 // Import Swiper styles
 import "swiper/css";
@@ -7,9 +8,10 @@ import "swiper/css/free-mode";
 import "swiper/css/pagination";
 
 export const ServicePrice = () => {
+    const Router = useRouter();
 
     const onClick = () => {
-
+        Router.replace('/details/price_details');
     }
 
     const contents = [
@@ -86,13 +88,13 @@ export const ServicePrice = () => {
                         <div className="p-8 mb-[38]">
                             {content.desc}
                         </div>
-                        <div className={`text-[42px] mb-[38px] font-bold ${index % 2 === 0 ? 'text-orange-500' : 'text-black'} `}>
+                        <div className={`text-[42px] mb-[38px] font-bold ${index % 2 === 0 ? 'text-black' : 'text-orange-500'} `}>
                             €{content.price }
                         </div>
                         <div className='mb-[36px]'>excl vat</div>
                         <div className="mb-[48px]">
                             <button onClick={onClick} className="bg-black hover:bg-orange-500 text-white font-bold py-2 px-4 rounded">
-                            Show More
+                                Show More
                             </button>
                         </div>
                     </div>

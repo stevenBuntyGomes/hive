@@ -15,13 +15,13 @@ const PrizeItem = ({content , index}) => {
         <div className="p-10">
             {content.desc}
         </div>
-        <div className={`text-[42px] font-bold ${index % 2 === 0 ? 'text-orange-500 mb-5' : 'text-black mb-5'} `}>
+        <div className={`text-[42px] font-bold ${index % 2 === 0 ? 'text-black mb-5' : 'text-orange-500 mb-5'} `}>
             €{content.price }
         </div>
         <div className='mb-[36px]'>excl vat</div>
         <div className="mb-[36px]">
-            <button className="bg-black hover:bg-orange-500 text-white font-bold py-2 px-4 rounded">
-            Show More
+            <button onClick={prizeDetailhandler} className="bg-black hover:bg-orange-500 text-white font-bold py-2 px-4 rounded">
+                Show More
             </button>
         </div>
     </div>

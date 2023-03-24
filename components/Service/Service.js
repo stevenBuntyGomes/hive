@@ -7,14 +7,16 @@ import ServiceCss from './service.module.css'
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
+import { useRouter } from "next/router";
 
 // import required modules
 import { FreeMode, Pagination, Autoplay } from "swiper";
 
 const Service = () => {
+    const Router = useRouter();
 
     const onClick = () => {
-
+        Router.replace('/details/service_details');
     }
 
     const contents = [
@@ -55,7 +57,7 @@ const Service = () => {
     <main className="bg-slate-50 p-10">
         <div className="text-center">
             <h2 className="text-orange-500 uppercase font-bold md:text-[32px] leading-[36px] text-2xl pb-3">Our Services</h2>
-            <h2 className="font-bold uppercase md:text-[42px] text-4xl leading-[50px] mt-[30px] mb-5">Quality Service is Our Guarantee</h2>
+            <h2 className="font-bold uppercase md:text-[42px] text-4xl leading-[50px] mb-5">Quality Service is Our Guarantee</h2>
             <div className="flex justify-center items-center">
                 <p className="max-w-[830px] text-base leading-[30px] mb-[40px]">We offer a wide range of plumbing services catered to
                     both
@@ -101,7 +103,7 @@ const Service = () => {
                         </div>
                         <div className="mb-[38px]">
                             <button onClick={onClick} className="bg-black hover:bg-orange-500 text-white font-bold py-2 px-4 rounded">
-                            Show More
+                                Show More
                             </button>
                         </div>
                     </div>

@@ -29,7 +29,7 @@ const Header2 = () => {
     <nav className="sticky top-0 z-50">
         <div className="container mx-auto">
         {/* top bar number part starts */}
-            <div className={`hidden md:block bg-black md:px-12 md:py-5 md:flex md:w-auto md:flex-grow`}>
+            <div className={`md:px-20 hidden md:block bg-black md:px-12 md:py-5 md:flex md:w-auto md:flex-grow`}>
                 <div className='text-white text-xl font-raleway font-normal md:flex-grow'>
                     Call Us: +43 660 3924728
                 </div>
