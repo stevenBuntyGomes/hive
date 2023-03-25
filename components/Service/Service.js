@@ -54,7 +54,7 @@ const Service = () => {
 
   return (
     <>
-    <main className="w-full rounded bg-white p-10 lg:px-20">
+    <main className="w-full rounded bg-white md:p-10 p-5 lg:px-20">
         <div className="text-center">
             <h2 className="text-orange-500 uppercase font-bold md:text-[32px] leading-[36px] text-2xl pb-3">Our Services</h2>
             <h2 className="font-bold uppercase md:text-[42px] text-4xl leading-[50px] mb-5">Quality Service is Our Guarantee</h2>
@@ -92,8 +92,8 @@ const Service = () => {
                   
             {contents && contents.map((content, index) => (
                 <SwiperSlide className="py-10" key = {index}>
-                    <div className="shadow-[0_0_15px_2px_rgba(0,0,0,0.3)] text-center md:w-[370px] rounded-md grid grid-cols-1">
-                        <img src={content.img} className="w-full h-[216px] md:h-[250px] rounded-md mb-[38px]" />
+                    <div className="shadow-[0_0_15px_2px_rgba(0,0,0,0.3)] text-center md:w-[420px] rounded-md grid grid-cols-1">
+                        <img src={content.img} className="w-full h-[226px] md:h-[270px] rounded-md mb-[38px]" />
                         <div className="text-xl font-bold leading-[24px] mb-[20px]">
                             {content.title}
                         </div>

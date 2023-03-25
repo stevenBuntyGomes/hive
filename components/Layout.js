@@ -12,7 +12,7 @@ const Layout = ({children}) => {
           {children}
         </div>
         <Footer/>
-        {/* <p>footer</p> */}
+        <p>footer</p>
     </Fragment>
   )
 }

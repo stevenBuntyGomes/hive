@@ -48,7 +48,7 @@ export const ServicePrice = () => {
             ];
   return (
     <>
-        <main className='w-full rounded bg-white p-10 lg:px-20'>
+        <main className='w-full rounded bg-white md:p-10 p-5 lg:px-20'>
             <div className="text-center">
                 <h2 className="text-orange-500 uppercase font-bold md:text-[32px] leading-[36px] text-2xl pb-3">Our Services PRICES</h2>
                 <h2 className="font-bold uppercase md:text-[42px] text-4xl leading-[50px] mb-[40px]">Quality Service WITH STANDARD PRICES</h2>

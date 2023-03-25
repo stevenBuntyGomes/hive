@@ -6,17 +6,15 @@ const Footer = () => {
     <>
         <main className='container mx-auto'>
             <section className="bg-black text-white">
-                <div className="grid md:grid-cols-4 p-10 md:p-20 gap-5 text-center md:text-left">
-                    <div className="px-4 my-2 max-w-[350px]">
+                <div className="grid md:grid-cols-4 p-5 md:p-20 gap-5 text-center md:text-left">
+                    <div className="px-4 md:px-0 my-2 max-w-[350px]">
                         <ul className="divide-y divide-gray-300">
-                            <li className="mx-4 cursor-pointer">
+                            <li className="cursor-pointer">
                                 <p className="py-4 font-medium text-lg mb-2">{/* About Us */}About Us</p>
                             <div className="w-[100px] h-[3px] bg-orange-500 m-auto md:mx-0"></div>
                             </li>
                             <li className="cursor-pointer border-none">
-                                <p className="p-4">{/* We are an award winning plumbing company with over 20 years experience in the
-                                                            business. We provide a
-                                                            wide range of services for both residential and commercial clients. */}
+                                <p className="py-4">
                                 We are an award winning plumbing company with over 20 years experience in the business. We provide a wide range of services for both residential and commercial clients.
                                 </p>
                             </li>
