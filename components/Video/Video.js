@@ -3,7 +3,7 @@ import React from 'react'
 const Video = () => {
   return (
     <>
-        <main className="p-10">
+        <main className="md:p-10 p-5">
             <div className="text-center">
                 <h2 className="text-orange-500 uppercase font-bold md:text-[32px] text-2xl pb-3">VIDEO TOUR</h2>
                 <h2 className="font-bold uppercase md:text-[42px] text-3xl mb-5">Take a video tour in our work</h2>
@@ -14,10 +14,10 @@ const Video = () => {
                 </div>
 
             </div>
-            <div className="mt-[60px]">
+            <div className="md:mt-[60px] mt-[40px]">
                 <iframe
-                    title="Quasar to React/Tailwind Conversion"
-                    className="md:w-[855px] md:h-[481px] m-auto"
+                    title="Video"
+                    className="md:w-[855px] w-auto md:h-[481px] m-auto"
                     src="https://www.youtube.com/embed/k3_tw44QsZQ?rel=0"
                     allowFullScreen
                 />

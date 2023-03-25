@@ -3,10 +3,10 @@ import React from 'react'
 const DownloadApp = () => {
   return (
     <>
-        <main className='bg-slate-50 pt-0 px-10 pb-10 md:p-10'>
-            <div className="w-full rounded bg-white py-10 lg:p-20 text-gray-800 relative md:text-left">
-                <div className="md:flex items-center -mx-10">
-                    <div className="w-full md:w-1/2 px-10 md:px-0">
+        <main className='bg-slate-50 pt-0 px-10 md:pb-10 md:p-10'>
+            <div className="w-full rounded bg-white md:py-10 md:p-10 text-gray-800 relative md:text-left">
+                <div className="md:flex items-center">
+                    <div className="w-full md:w-1/2 md:px-0">
                         <div className="mb-10">
 
                             <div className="text-center md:text-left w-full md:py-4 bg-white rounded-lg  dark:border-gray-700">

@@ -198,11 +198,11 @@ const BannerComponent = () => {
                 </Swiper>           
           </div>
         
-          <div className='mt-10 md:mt-0 grid md:grid-cols-3 grid-cols-1 justify-between items-center transform -translate-y-32  md:px-20 px-10 gap-5'>
+          <div className='mt-20 md:mt-0 grid md:grid-cols-3 grid-cols-1 justify-between items-center transform -translate-y-32  md:px-20 px-5 gap-5'>
               <div className="text-center w-max-[360px] rounded-xl pt-[70px] pb-[70px] bg-white shadow-[0_4px_20px_0px_rgba(0,0,0,0.3)]">
                 <img src="/icon1.png" className="w-[111px] h-[108px] m-auto" alt="icon1" />
                 <div className="text-xl font-bold leading-[30px] pt-[22px] pb-[37px] md:px-20 px-5">GENERAL PLUMBING MAINTAINANCE</div>
-                <div className="px-5 md:px-12">Leaky faucet? Clogged toilet? We got you covered with of plumbing maintenance services.</div>
+                <div className="px-5 md:px-12">Leaky faucet? Clogged toilet? We got you of plumbing maintenance services.</div>
               </div>
               <div className="text-center w-max-[360px] rounded-xl pt-[70px] pb-[70px] bg-white shadow-[0_4px_20px_0px_rgba(0,0,0,0.3)]">
                 <img src="/icon2.png" className="w-[111px] h-[108px] m-auto" alt="icon2" />
