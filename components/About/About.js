@@ -37,7 +37,7 @@ const About = () => {
       <>
         <div className="bg-[#F5F5F5] w-full rounded p-5 md:p-10 lg:px-20 text-gray-800 relative md:text-left">
             <div className="md:flex items-center -mx-5">
-                <div className="w-full md:w-2/5 md:px-10 px-5 mb-10 md:mb-0">
+                <div className="w-full md:w-2/5 px-5 mb-10 md:mb-0">
                     <div className="md:relative">
                         <Image src="/about.png" width={400} height = {659} className="md:w-[400px] relative z-10 md:h-[659px]" alt=""/>
                     </div>
