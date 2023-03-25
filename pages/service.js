@@ -114,7 +114,7 @@ const Services = () => {
 
             <div className='md:w-[1440px] md:m-auto'>
 
-                <main className="bg-slate-50 p-10">
+                <main className="bg-slate-50 p-5 md:p-10">
                             
                 
 
