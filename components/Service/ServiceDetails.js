@@ -326,7 +326,7 @@ const ServiceDetails = () => {
                                 />
                             </div>
                             <div className="mb-10">
-                                <h5 className="font-bold uppercase md:text-[42px] text-4xl mb-5">QUALITY SERVICE IS OUR GUARANTEE</h5>
+                                <h5 className="font-bold uppercase md:text-[42px] mt-10 md:mt-0 text-4xl mb-5">QUALITY SERVICE IS OUR GUARANTEE</h5>
                                 <p className="text-left">We offer a wide range of plumbing services catered to both residential and commercial clients. Even the all-powerful Pointing has no control about the blind texts. Qualified team Affordable pricing Quick service We offer a wide range of plumbing services catered to both residential and
                                 </p>
                                 <div className="py-10">
