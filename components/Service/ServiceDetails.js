@@ -34,11 +34,11 @@ const ServiceDetails = () => {
     ];
   return (
     <>
-        <main className='font-raleway'>
-            <div className="font-raleway relative bg-[url('/priceDetailsBanner.png')] bg-no-repeat bg-cover w-full h-[378px] md:px-20 py-10 mb-10">
+        <main className=' '>
+            <div className="  relative bg-[url('/priceDetailsBanner.png')] bg-no-repeat bg-cover w-full h-[378px] md:px-20 py-10 mb-10">
                 <div className='absolute bottom-0 left-0 top-0 right-0 bg-overlay'>
                     <div className='md:w-[1440px] md:m-auto'>
-                        <div className='mt-16 md:p-10 p-5 text-center text-white font-raleway'>
+                        <div className='mt-16 md:p-10 p-5 text-center text-white  '>
                             <h2 className='font-bold text-[42px] pb-2'>SERVICE DETAILS</h2>
                             <h6 className='font-bold text-[20px]'>HOME-SERVICES-SERVICE DETAILS</h6>
                         </div>
@@ -55,12 +55,12 @@ const ServiceDetails = () => {
                                 <div className="md:p-10 p-5 my-2 md:max-w-[350px] shadow-[0_0_15px_2px_rgba(0,0,0,0.3)]">
                                     <ul className="divide-y">
                                         <li className="cursor-pointer hover:bg-gray-100 hover:bg-opacity-20">
-                                            <p className="font-raleway font-bold mx-4 py-4 text-[20px] mb-2 ">
+                                            <p className="  font-bold mx-4 py-4 text-[20px] mb-2 ">
                                                OUR SERVICES
                                             </p>
                                         </li>
                                         <div className="w-[152px] h-[3px] bg-orange-500 mx-auto md:mx-0 md:ml-[15px]"></div>
-                                        <li className="cursor-pointer hover:bg-gray-100 hover:bg-opacity-20 border-none text-black hover:text-orange-500 font-raleway">
+                                        <li className="cursor-pointer hover:bg-gray-100 hover:bg-opacity-20 border-none text-black hover:text-orange-500  ">
                                             <div className="flex items-center justify-between p-4 border-b border-black">
                                             <p>Air Conditioning</p>
                                             <svg
@@ -259,18 +259,18 @@ const ServiceDetails = () => {
                                 <div className="my-2 md:max-w-[350px] shadow-[0_0_15px_2px_rgba(0,0,0,0.3)] md:p-10 p-5">
                                     <ul className="divide-y">
                                         <li className="border-0 cursor-pointer hover:bg-gray-100 hover:bg-opacity-20">
-                                            <p className="font-raleway font-bold mx-4 py-4 text-[20px] mb-2">
+                                            <p className="  font-bold mx-4 py-4 text-[20px] mb-2">
                                                GET FREE ESTIMATE
                                             </p>
                                         </li>
                                         <div className="w-[152px] h-[3px] bg-orange-500 mx-auto md:mx-0 md:ml-[15px]"></div>
                                         <li className="border-none cursor-pointer hover:bg-gray-100 hover:bg-opacity-20">
-                                            <h3 className="font-raleway font-bold mx-4 py-4 text-xl md:text-2xl mb-2">
+                                            <h3 className="  font-bold mx-4 py-4 text-xl md:text-2xl mb-2">
                                                123-456-78910
                                             </h3>
                                         </li>
                                         <li className="border-none cursor-pointer hover:bg-gray-100 hover:bg-opacity-20">
-                                            <p className="font-raleway mx-4 py-4 text-base mb-2">
+                                            <p className="  mx-4 py-4 text-base mb-2">
                                                Our online scheduling and payment system is safe
                                             </p>
                                         </li>
@@ -289,7 +289,7 @@ const ServiceDetails = () => {
                                 <div className="md:p-10 p-5 my-2 md:max-w-[350px] shadow-[0_0_15px_2px_rgba(0,0,0,0.3)]">
                                     <ul className="divide-y">
                                         <li className="border-0 cursor-pointer hover:bg-gray-100 hover:bg-opacity-20">
-                                            <p className="font-raleway font-bold mx-4 py-4 text-[20px] mb-2">
+                                            <p className="  font-bold mx-4 py-4 text-[20px] mb-2">
                                                DOWNLOAD
                                             </p>
                                         </li>
@@ -365,7 +365,7 @@ const ServiceDetails = () => {
                                 <div className="py-10">
                                    
                                     <ul className='divide-y text-left'>
-                                        <li className="text-left cursor-pointer hover:bg-gray-100 hover:bg-opacity-20 border-none text-black font-raleway">
+                                        <li className="text-left cursor-pointer hover:bg-gray-100 hover:bg-opacity-20 border-none text-black  ">
                                             <div className="flex items-center p-4">
                                                 <FontAwesomeIcon icon={faArrowRightLong} className="h-6 w-6 text-orange-500"/>
                                                 
@@ -373,7 +373,7 @@ const ServiceDetails = () => {
 
                                             </div>
                                         </li>
-                                        <li className="text-left cursor-pointer hover:bg-gray-100 hover:bg-opacity-20 border-none text-black font-raleway">
+                                        <li className="text-left cursor-pointer hover:bg-gray-100 hover:bg-opacity-20 border-none text-black  ">
                                             <div className="flex items-center p-4">
                                                 <FontAwesomeIcon icon={faArrowRightLong} className="h-6 w-6 text-orange-500"/>
                                                 
@@ -381,7 +381,7 @@ const ServiceDetails = () => {
 
                                             </div>
                                         </li>
-                                        <li className="text-left cursor-pointer hover:bg-gray-100 hover:bg-opacity-20 border-none text-black font-raleway">
+                                        <li className="text-left cursor-pointer hover:bg-gray-100 hover:bg-opacity-20 border-none text-black  ">
                                             <div className="flex items-center p-4">
                                                 <FontAwesomeIcon icon={faArrowRightLong} className="h-6 w-6 text-orange-500"/>
                                                 
@@ -389,7 +389,7 @@ const ServiceDetails = () => {
 
                                             </div>
                                         </li>
-                                        <li className="text-left cursor-pointer hover:bg-gray-100 hover:bg-opacity-20 border-none text-black font-raleway">
+                                        <li className="text-left cursor-pointer hover:bg-gray-100 hover:bg-opacity-20 border-none text-black  ">
                                             <div className="flex items-center p-4">
                                                 <FontAwesomeIcon icon={faArrowRightLong} className="h-6 w-6 text-orange-500"/>
                                                 
@@ -397,7 +397,7 @@ const ServiceDetails = () => {
 
                                             </div>
                                         </li>
-                                        <li className="text-left cursor-pointer hover:bg-gray-100 hover:bg-opacity-20 border-none text-black font-raleway">
+                                        <li className="text-left cursor-pointer hover:bg-gray-100 hover:bg-opacity-20 border-none text-black  ">
                                             <div className="flex items-center p-4">
                                                 <FontAwesomeIcon icon={faArrowRightLong} className="h-6 w-6 text-orange-500"/>
                                                 
