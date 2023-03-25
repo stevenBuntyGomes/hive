@@ -51,7 +51,7 @@ const Testimonial = () => {
         ]
   return (
     <>
-        <main className='w-full rounded bg-[#EBE9EB] p-10 mt-10 lg:px-20'>
+        <main className='w-full rounded bg-[#FFF] p-10 mt-10 lg:px-20'>
             <div className="text-center">
                 <h5 className="text-orange-500 uppercase font-bold md:text-[32px] text-2xl">OUR TESTIMONIALS</h5>
                 <h4 className="font-bold uppercase md:text-[42px] text-4xl py-5">WHAT IS OUR CLIENTS SAY?</h4>
@@ -81,7 +81,7 @@ const Testimonial = () => {
             >
                 {contents && contents.map((content, index) => (
                     <SwiperSlide className="py-10" key = {index}>
-                        <div className="shadow-[0_0_15px_2px_rgba(0,0,0,0.3)] border-2 border-orange-500 md:w-[370px] rounded-xl rounded-md">
+                        <div className="shadow-[0_0_15px_2px_rgba(0,0,0,0.3)] border-2 border-orange-500 md:w-[370px] rounded-xl">
                             <div className="p-4 flex items-center space-x-4">
                                 <div className="flex-shrink-0">
                                     <img className="w-16 h-16 rounded-full" src={content.img} alt="Neil image"/>
