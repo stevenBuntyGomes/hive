@@ -6,7 +6,7 @@ const AnyProblem = () => {
     }
   return (
     <>
-        <main className='bg-[#f5f5f5]'>
+        <main className='bg-[#EBE9EB]'>
             <div
                 className="text-center md:text-left w-full md:h-[623px] bg-[url('/problem.png')] bg-no-repeat bg-cover mx-auto text-gray-800 relative md:p-20">
                 <div className="md:w-[1440px] mx-auto md:flex items-center">

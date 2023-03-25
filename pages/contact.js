@@ -26,7 +26,7 @@ const Contact = () => {
   return (
       <>
           <Layout> 
-              <div className='bg-[#F5F5F5] container mx-auto'>
+              <div className='bg-white container mx-auto'>
                   
                   <div className="relative bg-[url('/priceDetailsBanner.png')] bg-no-repeat bg-cover w-full h-[378px] md:px-20 py-10 mb-10">
                     <div className='absolute bottom-0 left-0 top-0 right-0 bg-overlay'>

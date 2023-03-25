@@ -7,7 +7,7 @@ const Subscribe = () => {
     }
   return (
     <>
-        <main className='bg-[#F5F5F5] pb-10'>
+        <main className='bg-[#EBE9EB] pb-10'>
             <div className="text-center md:pt-10 md:pb-10 p-5 md:p-10">
 
                 <h6 className="text-orange-500 uppercase font-bold md:text-[32px] text-2xl pb-5">SUBSCRIBE</h6>
