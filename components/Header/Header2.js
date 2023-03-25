@@ -89,16 +89,14 @@ const Header2 = () => {
                 </div>
         </div>
             
-            <div className={`w-[50%] mobile-navbar h-[102vh] bg-white absolute top-0 left-0 text-left shadow overflow-y mobile-navbar 
+            <div className={`w-[60%] mobile-navbar h-[102vh] bg-white absolute top-0 left-0 text-left shadow overflow-y mobile-navbar 
                         ${mobileNavbarVisible ? "" : "hidden"}`} onClick={stopPropagation}>
                 
-                <div className="text-center pt-2 flex items-center mt-3">
-                    <a href="/" className="m-0 mx-auto">
-                         Call Us: +43 660 3924728
-                    </a>
+                <div className="text-center pt-2 flex flex-col items-center mt-3">
+                    <Image src="/hive.png" alt="hive-logo" width={200} height ={50} className="md:h-[50px] md:w-[200px] w-[120px] h-[30px]" />
                 </div>
                 
-                <div className="p-5">
+                <div className="pl-10">
                     <ul className="mt-3 list-none text-lg font-semibold">
                         <li className="transition p-3 cursor-pointer hover:bg-slate-100 mb-1 hover:opacity-80 border-b border-slate-100">
                             <Link href="/">
@@ -138,6 +136,20 @@ const Header2 = () => {
 
                     </ul>
                 </div>  
+
+                <div className="text-center pt-2 flex flex-col items-center mt-3">
+                    <span>
+                         Call Us:
+                    </span>
+                    <a href="tel:+43 660 3924728" className="m-0 mx-auto">
+                         +43 660 3924728
+                </a>
+                </div>
+
+
+                 
+                
+
             </div>
     </nav>
   )
