@@ -3,7 +3,7 @@ import React from 'react'
 const DownloadApp = () => {
   return (
     <>
-        <main className='bg-[#F5F5F5] pt-0 px-10 md:pb-10 md:p-10'>
+        <main className='bg-white pt-0 px-10 md:pb-10 md:p-10'>
             <div className="w-full rounded md:py-10 md:p-10 text-gray-800 relative md:text-left">
                 <div className="md:flex items-center">
                     <div className="w-full md:w-1/2 md:px-0">
