@@ -1,7 +1,9 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import ServiceCss from './service.module.css'
+import Aos from 'aos';
+import 'aos/dist/aos.css'
 
 // Import Swiper styles
 import "swiper/css";
@@ -18,6 +20,10 @@ const Service = () => {
     const onClick = () => {
         Router.replace('/details/service_details');
     }
+
+    useEffect(() => {
+        Aos.init({duration: 1000});
+    }, []);
 
     const contents = [
         {
@@ -54,7 +60,7 @@ const Service = () => {
 
   return (
     <>
-    <main className="bg-[#F9F8F9] w-full rounded md:p-10 p-5 lg:px-20">
+    <main data-aos= "fade-up" className="bg-[#F9F8F9] w-full rounded md:p-10 p-5 lg:px-20">
         <div className="text-center">
             <h2 className="text-orange-500 uppercase font-bold md:text-[32px] leading-[36px] text-2xl pb-3">Our Services</h2>
             <h2 className="font-bold uppercase md:text-[42px] text-4xl leading-[50px] mb-5">Quality Service is Our Guarantee</h2>
@@ -92,7 +98,7 @@ const Service = () => {
                   
             {contents && contents.map((content, index) => (
                 <SwiperSlide className="py-10" key = {index}>
-                    <div className="shadow-[0_0_15px_2px_rgba(0,0,0,0.3)] text-center md:max-w-[420px] rounded-md grid grid-cols-1">
+                    <div data-aos= "fade-left" className="shadow-[0_0_15px_2px_rgba(0,0,0,0.3)] text-center md:max-w-[420px] rounded-md grid grid-cols-1">
                         <img src={content.img} className="w-full h-[226px] md:h-[270px] rounded-md mb-[38px]" />
                         <div className="text-xl font-bold leading-[24px] mb-[20px]">
                             {content.title}

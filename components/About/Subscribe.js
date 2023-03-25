@@ -1,14 +1,21 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
+import Aos from 'aos';
+import 'aos/dist/aos.css'
+
 
 const Subscribe = () => {
     const [text, setText] = useState();
     const onClick = () => {
 
     }
+
+    useEffect(() => {
+        Aos.init({duration: 1000});
+    }, []);
   return (
     <>
         <main className='bg-[#FFF] pb-10'>
-            <div className="text-center md:pt-10 md:pb-10 p-5 md:p-10">
+            <div data-aos = "fade-up" className="text-center md:pt-10 md:pb-10 p-5 md:p-10">
 
                 <h6 className="text-orange-500 uppercase font-bold md:text-[32px] text-2xl pb-5">SUBSCRIBE</h6>
                 <h5 className="font-bold uppercase md:text-[42px] text-4xl mb-5">SUBSCRIBE For Last Updates</h5>

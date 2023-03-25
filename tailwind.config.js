@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      // animation: {
+      //       fadeIn: "fadeIn 2s ease-in forwards",
+      // },
       colors: {
         "orange-500": "#F07E22",
         "brightBlue": "#0A59F3",

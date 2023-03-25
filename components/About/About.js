@@ -1,5 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import Image from 'next/image'
+import Aos from 'aos';
+import 'aos/dist/aos.css'
 
 const About = () => {
     const [group, setGroup] = useState('');
@@ -25,6 +27,8 @@ const About = () => {
         },
     ];
 
+    const [animated, setAnimated] = useState(false);
+
     const handleColorChange = (event) => {
         setGroup(event.target.value);
     }
@@ -33,16 +37,24 @@ const About = () => {
     const onClick =() => {
 
     }
+
+    useEffect(() => {
+        Aos.init({duration: 1000});
+    }, []);
+    
   return (
       <>
         <div className="bg-white w-full rounded p-5 md:p-10 lg:px-20 text-gray-800 relative md:text-left">
             <div className="md:flex items-center -mx-5">
-                <div className="w-full md:w-2/5 px-5 mb-10 md:mb-0">
+                <div data-aos="fade-right" className={`w-full md:w-2/5 px-5 mb-10 md:mb-0`}>
                     <div className="md:relative">
                         <Image src="/about.png" width={400} height = {659} className="md:w-[400px] relative z-10 md:h-[659px]" alt=""/>
                     </div>
                 </div>
-                <div className="w-full md:w-3/5 md:px-10 px-5 text-center md:text-left">
+                
+                
+                
+                <div data-aos="fade-left" className="w-full md:w-3/5 md:px-10 px-5 text-center md:text-left">
                     <div className="mb-10">
                         <h4 className="text-orange-500 uppercase font-bold md:text-[32px] text-2xl pb-3">About us</h4>
                         <h5 className="font-bold uppercase md:text-[42px] text-4xl mb-5">Plumbing is what we do</h5>
