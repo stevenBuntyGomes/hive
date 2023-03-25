@@ -42,7 +42,7 @@ const Clients = () => {
     ];
   return (
     <>
-        <main className='bg-[#EBE9EB] container mx-auto'>
+        <main className='bg-[#F9F8F9] container mx-auto'>
             <div className='md:p-20 p-10'>
                 <div className="text-center">
                     <h2 className="text-orange-500 uppercase font-bold md:text-[32px] text-2xl">Our BIG CLINTS</h2>

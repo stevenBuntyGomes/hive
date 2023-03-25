@@ -258,18 +258,18 @@ const ServiceDetails = () => {
                             <div>
                                 <div className="my-2 md:max-w-[350px] shadow-[0_0_15px_2px_rgba(0,0,0,0.3)] md:p-10 p-5">
                                     <ul className="divide-y">
-                                        <li className="border-0 cursor-pointer hover:bg-gray-100 hover:bg-opacity-20">
-                                            <p className="  font-bold mx-4 py-4 text-[20px] mb-2">
+                                        <li className="border-0 hover:bg-gray-100 hover:bg-opacity-20">
+                                            <p className=" font-bold mx-4 py-4 text-[20px] mb-2">
                                                GET FREE ESTIMATE
                                             </p>
                                         </li>
                                         <div className="w-[152px] h-[3px] bg-orange-500 mx-auto md:mx-0 md:ml-[15px]"></div>
-                                        <li className="border-none cursor-pointer hover:bg-gray-100 hover:bg-opacity-20">
+                                        <li className="border-none hover:bg-gray-100 hover:bg-opacity-20">
                                             <h3 className="  font-bold mx-4 py-4 text-xl md:text-2xl mb-2">
                                                123-456-78910
                                             </h3>
                                         </li>
-                                        <li className="border-none cursor-pointer hover:bg-gray-100 hover:bg-opacity-20">
+                                        <li className="border-none hover:bg-gray-100 hover:bg-opacity-20">
                                             <p className="  mx-4 py-4 text-base mb-2">
                                                Our online scheduling and payment system is safe
                                             </p>
@@ -288,7 +288,7 @@ const ServiceDetails = () => {
                             <div>
                                 <div className="md:p-10 p-5 my-2 md:max-w-[350px] shadow-[0_0_15px_2px_rgba(0,0,0,0.3)]">
                                     <ul className="divide-y">
-                                        <li className="border-0 cursor-pointer hover:bg-gray-100 hover:bg-opacity-20">
+                                        <li className="border-0 hover:bg-gray-100 hover:bg-opacity-20">
                                             <p className="font-bold py-4 text-[20px] mb-2">
                                                DOWNLOAD
                                             </p>
@@ -317,9 +317,9 @@ const ServiceDetails = () => {
                         </div>
                       </div>
                       
-                    <div className='w-full md:w-[70%] pr-0 pl-0 md:pl-0 mb-10 md:mb-0 md:pr-10 pb-10 pt-10 text-center md:text-left'>
-                        <div className='mb-10 pb-10'>
-                            <div className='mb-10 pb-10'>
+                    <div className='w-full md:w-[70%] pr-0 pl-0 md:pl-0 md:mb-0 md:pr-10 md:pb-10 pt-10 text-center md:text-left'>
+                        <div className='md:mb-10 mb-5 md:pb-10 pb-5'>
+                            <div className='md:mb-10 md:pb-10'>
                                 <img 
                                     src = '/serviceDetails01.png'
                                     className="md:w-[100%] relative z-10"
@@ -327,7 +327,7 @@ const ServiceDetails = () => {
                             </div>
                             <div className="mb-10">
                                 <h5 className="font-bold uppercase md:text-[42px] text-4xl mb-5">QUALITY SERVICE IS OUR GUARANTEE</h5>
-                                <p className="">We offer a wide range of plumbing services catered to both residential and commercial clients. Even the all-powerful Pointing has no control about the blind texts. Qualified team Affordable pricing Quick service We offer a wide range of plumbing services catered to both residential and
+                                <p className="text-left">We offer a wide range of plumbing services catered to both residential and commercial clients. Even the all-powerful Pointing has no control about the blind texts. Qualified team Affordable pricing Quick service We offer a wide range of plumbing services catered to both residential and
                                 </p>
                                 <div className="py-10">
                                     <div className="grid grid-cols-2">
@@ -346,7 +346,7 @@ const ServiceDetails = () => {
                                     </div>
                                 </div>
 
-                                <p>No job is too big or too small, we’ve got you covered. In addition to our services, you can check out
+                                <p className='text-left'>No job is too big or too small, we’ve got you covered. In addition to our services, you can check out
                                     our shop for a wide range of plumbing supplies and equipment. When it comes to plumbing we are your
                                     one stop shop.</p>
                             </div>
@@ -360,7 +360,7 @@ const ServiceDetails = () => {
                             </div>
                             <div className="mb-10">
                                 <h5 className="font-bold uppercase md:text-[42px] text-4xl mb-5">QUALITY SERVICE IS OUR GUARANTEE</h5>
-                                <p className="">We offer a wide range of plumbing services catered to both residential and commercial clients. Even the all-powerful Pointing has no control about the blind texts. Qualified team Affordable pricing Quick service We offer a wide range of plumbing services catered to both residential and
+                                <p className="text-left">We offer a wide range of plumbing services catered to both residential and commercial clients. Even the all-powerful Pointing has no control about the blind texts. Qualified team Affordable pricing Quick service We offer a wide range of plumbing services catered to both residential and
                                 </p>
                                 <div className="py-10">
                                    
@@ -408,7 +408,7 @@ const ServiceDetails = () => {
                                     </ul>
                                 </div>
 
-                                <p>No job is too big or too small, we’ve got you covered. In addition to our services, you can check out
+                                <p className='text-left'>No job is too big or too small, we’ve got you covered. In addition to our services, you can check out
                                     our shop for a wide range of plumbing supplies and equipment. When it comes to plumbing we are your
                                     one stop shop.</p>
                             </div>
