@@ -1,5 +1,8 @@
 import React, {useState, useEffect} from 'react'
 import { Swiper, SwiperSlide } from "swiper/react";
+import Aos from 'aos';
+import 'aos/dist/aos.css'
+
 
 // Import Swiper styles
 import "swiper/css";
@@ -40,11 +43,14 @@ const Clients = () => {
             img: '/6.png'
         },
     ];
+    useEffect(() => {
+        Aos.init({duration: 1000});
+    }, []);
   return (
     <>
         <main className='bg-[#F9F8F9] container mx-auto'>
             <div className='md:p-20 p-10'>
-                <div className="text-center">
+                <div data-aos = "fade-up" className="text-center">
                     <h2 className="text-orange-500 uppercase font-bold md:text-[32px] text-2xl">Our BIG CLINTS</h2>
                     <h1 className="font-bold uppercase md:text-[42px] text-4xl py-5">WE WORK WITH</h1>
                     <p className="">We offer a wide range of plumbing services catered to both residential and commercial clients.
@@ -74,7 +80,7 @@ const Clients = () => {
             >
                 {contents && contents.map((content, index) => (
                     <SwiperSlide className="py-10" key = {index}>
-                        <img src={content.img} alt = "image content"/>
+                        <img data-aos = "fade-left" src={content.img} alt = "image content"/>
                     </SwiperSlide>
                 ))}
                 
