@@ -7,10 +7,6 @@ module.exports = {
   ],
   theme: {
     extend: {
-      fontFamily: {
-        raleway: ['Raleway', 'sans-serif']
-      },
-    // font-family: 'Roboto Slab', serif;
       colors: {
         "orange-500": "#F07E22",
         "brightBlue": "#0A59F3",

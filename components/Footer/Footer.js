@@ -193,7 +193,7 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
-                <div className='text-[14px] md:text-[16px] text-center text-gray-500 py-[15px] border-t border-gray-500 font-raleway'>
+                <div className='text-[14px] md:text-[16px] text-center text-gray-500 py-[15px] border-t border-gray-500'>
                     Copyright © 2021 Hive - Haustechnik. All Rights Reserved.
                 </div>
             </section>

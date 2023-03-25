@@ -1,4 +1,4 @@
-import React, {useStatem, useEffect} from 'react'
+import React from 'react'
 
 const DownloadApp = () => {
   return (

@@ -41,10 +41,10 @@ const About = () => {
       <>
           <Layout>
               
-            <div className="font-raleway relative bg-[url('/priceDetailsBanner.png')] bg-no-repeat bg-cover w-full h-[378px] md:px-20 py-10 mb-10">
+            <div className="  relative bg-[url('/priceDetailsBanner.png')] bg-no-repeat bg-cover w-full h-[378px] md:px-20 py-10 mb-10">
                 <div className='absolute bottom-0 left-0 top-0 right-0 bg-overlay'>
                     <div className='md:w-[1440px] md:m-auto'>
-                        <div className='mt-16 p-10 text-center text-white font-raleway'>
+                        <div className='mt-16 p-10 text-center text-white  '>
                             <h2 className='uppercase font-bold text-[42px] pb-2'>About Us</h2>
                             <h6 className='uppercase font-bold text-[20px]'>Home -  About Us</h6>
                         </div>
@@ -94,7 +94,7 @@ const About = () => {
                                 </p>
                                 <div className="py-5">
                                     <ul className='divide-y text-left'>
-                                        <li className="text-left cursor-pointer hover:bg-gray-100 hover:bg-opacity-20 border-none text-black font-raleway">
+                                        <li className="text-left cursor-pointer hover:bg-gray-100 hover:bg-opacity-20 border-none text-black  ">
                                             <div className="flex items-center p-2">
                                                 <FontAwesomeIcon icon={faArrowRightLong} className="h-6 w-6 text-orange-500"/>
                                                 
@@ -102,7 +102,7 @@ const About = () => {
 
                                             </div>
                                         </li>
-                                        <li className="text-left cursor-pointer hover:bg-gray-100 hover:bg-opacity-20 border-none text-black font-raleway">
+                                        <li className="text-left cursor-pointer hover:bg-gray-100 hover:bg-opacity-20 border-none text-black  ">
                                             <div className="flex items-center p-2">
                                                 <FontAwesomeIcon icon={faArrowRightLong} className="h-6 w-6 text-orange-500"/>
                                                 
@@ -110,7 +110,7 @@ const About = () => {
 
                                             </div>
                                         </li>
-                                        <li className="text-left cursor-pointer hover:bg-gray-100 hover:bg-opacity-20 border-none text-black font-raleway">
+                                        <li className="text-left cursor-pointer hover:bg-gray-100 hover:bg-opacity-20 border-none text-black  ">
                                             <div className="flex items-center p-2">
                                                 <FontAwesomeIcon icon={faArrowRightLong} className="h-6 w-6 text-orange-500"/>
                                                 
@@ -118,7 +118,7 @@ const About = () => {
 
                                             </div>
                                         </li>
-                                        <li className="text-left cursor-pointer hover:bg-gray-100 hover:bg-opacity-20 border-none text-black font-raleway">
+                                        <li className="text-left cursor-pointer hover:bg-gray-100 hover:bg-opacity-20 border-none text-black  ">
                                             <div className="flex items-center p-2">
                                                 <FontAwesomeIcon icon={faArrowRightLong} className="h-6 w-6 text-orange-500"/>
                                                 
@@ -126,7 +126,7 @@ const About = () => {
 
                                             </div>
                                         </li>
-                                        <li className="text-left cursor-pointer hover:bg-gray-100 hover:bg-opacity-20 border-none text-black font-raleway">
+                                        <li className="text-left cursor-pointer hover:bg-gray-100 hover:bg-opacity-20 border-none text-black  ">
                                             <div className="flex items-center p-2">
                                                 <FontAwesomeIcon icon={faArrowRightLong} className="h-6 w-6 text-orange-500"/>
                                                 

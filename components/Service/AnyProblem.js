@@ -8,7 +8,7 @@ const AnyProblem = () => {
     <>
         <main className='bg-slate-50 p-10'>
             <div
-                className="text-center md:text-left w-full md:h-[623px] bg-[url('/problem.png')] bg-no-repeat bg-cover mx-auto text-gray-800 relative md:text-left md:p-20">
+                className="text-center md:text-left w-full md:h-[623px] bg-[url('/problem.png')] bg-no-repeat bg-cover mx-auto text-gray-800 relative md:p-20">
                 <div className="md:flex items-center -mx-10">
                     <div className="w-full md:w-2/5 px-10 mb-10 md:mb-0">
                         <div className="">

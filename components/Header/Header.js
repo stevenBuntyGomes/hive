@@ -17,7 +17,7 @@ const Header = () => {
   return (
     <div className = 'md:w-[1440px] md:m-auto sticky top-0 z-50'>
         <div className='bg-black md:px-12 md:py-5 md:flex md:w-auto md:flex-grow'>
-            <div className='text-white text-xl font-raleway font-normal md:flex-grow'>
+            <div className='text-white text-xl   font-normal md:flex-grow'>
                 Call Us: +43 660 3924728
             </div>
             <div className="text-white gt-sm">
