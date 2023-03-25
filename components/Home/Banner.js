@@ -83,10 +83,10 @@ const BannerComponent = () => {
                             a type specimen book.</p>
                         </div>
                         <div className="pt-10 flex justify-center md:justify-start">
-                          <button className="bg-gray-800 text-white py-[14px] px-[30px] rounded-md mr-4" onClick={handleClick}>
+                          <button className="bg-gray-800 hover:bg-orange-500 text-white py-[14px] px-[30px] rounded-md mr-4" onClick={handleClick}>
                             GET MORE
                           </button>
-                          <button className="bg-orange-500 text-white px-[30px] py-[14px] rounded-md" onClick={handleClick}>
+                          <button className="bg-gray-800 hover:bg-orange-500 text-white px-[30px] py-[14px] rounded-md" onClick={handleClick}>
                             GET A QUOTE
                           </button>
                         </div>
@@ -135,10 +135,10 @@ const BannerComponent = () => {
                             a type specimen book.</p>
                         </div>
                         <div className="pt-[42px] flex justify-center md:justify-start">
-                          <button className="bg-gray-800 text-white py-2 px-[30px] md:py-[14px] rounded-md mr-4" onClick={handleClick}>
+                          <button className="bg-gray-800 hover:bg-orange-500 text-white py-2 px-[30px] md:py-[14px] rounded-md mr-4" onClick={handleClick}>
                             GET MORE
                           </button>
-                          <button className="bg-orange-500 text-white py-2 px-[30px] md:py-[14px] rounded-md" onClick={handleClick}>
+                          <button className="bg-gray-800 hover:bg-orange-500 text-white py-2 px-[30px] md:py-[14px] rounded-md" onClick={handleClick}>
                             GET A QUOTE
                           </button>
                         </div>
@@ -186,12 +186,12 @@ const BannerComponent = () => {
                             scrambled it to make
                             a type specimen book.</p>
                         </div>
-                        <div className="pt-10 flex justify-center md:justify-start">
-                          <button className="bg-gray-800 hover:bg-orange-500 text-white py-2 px-5 rounded-md mr-4" onClick={handleClick}>
-                            Get More
+                        <div className="pt-[42px] flex justify-center md:justify-start">
+                          <button className="bg-gray-800 hover:bg-orange-500 text-white py-2 px-[30px] md:py-[14px] rounded-md mr-4" onClick={handleClick}>
+                            GET MORE
                           </button>
-                          <button className="bg-gray-800 hover:bg-orange-500 text-white py-2 px-5 rounded-md" onClick={handleClick}>
-                            Get a Quote
+                          <button className="bg-gray-800 hover:bg-orange-500 text-white py-2 px-[30px] md:py-[14px] rounded-md" onClick={handleClick}>
+                            GET A QUOTE
                           </button>
                         </div>
                   </SwiperSlide>
