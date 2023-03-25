@@ -92,7 +92,7 @@ const Service = () => {
                   
             {contents && contents.map((content, index) => (
                 <SwiperSlide className="py-10" key = {index}>
-                    <div className="shadow-[0_0_15px_2px_rgba(0,0,0,0.3)] text-center md:w-[420px] rounded-md grid grid-cols-1">
+                    <div className="shadow-[0_0_15px_2px_rgba(0,0,0,0.3)] text-center md:max-w-[420px] rounded-md grid grid-cols-1">
                         <img src={content.img} className="w-full h-[226px] md:h-[270px] rounded-md mb-[38px]" />
                         <div className="text-xl font-bold leading-[24px] mb-[20px]">
                             {content.title}
