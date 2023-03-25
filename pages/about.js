@@ -41,7 +41,7 @@ const About = () => {
       <>
           <Layout>
               
-            <div className="  relative bg-[url('/priceDetailsBanner.png')] bg-no-repeat bg-cover w-full h-[378px] md:px-20 py-10 mb-10">
+            <div className="relative bg-[url('/priceDetailsBanner.png')] bg-no-repeat bg-cover w-full h-[378px] md:px-20 py-10 mb-10">
                 <div className='absolute bottom-0 left-0 top-0 right-0 bg-overlay'>
                     <div className='md:w-[1440px] md:m-auto'>
                         <div className='mt-16 p-10 text-center text-white  '>
@@ -52,7 +52,7 @@ const About = () => {
                 </div>
               </div>
               
-              <div className='container mx-auto'>
+              <div className='bg-[#F5F5F5] container mx-auto'>
                   <div className="w-full rounded bg-white p-10 lg:px-20 text-gray-800 relative md:text-left">
                     <div className="md:flex items-center -mx-10">
                     <div className="w-full md:w-2/5 px-10 mb-10 md:mb-0">

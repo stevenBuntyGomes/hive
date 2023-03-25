@@ -6,10 +6,10 @@ const AnyProblem = () => {
     }
   return (
     <>
-        <main className='bg-slate-50'>
+        <main className='bg-[#f5f5f5]'>
             <div
                 className="text-center md:text-left w-full md:h-[623px] bg-[url('/problem.png')] bg-no-repeat bg-cover mx-auto text-gray-800 relative md:p-20">
-                <div className="md:flex items-center">
+                <div className="md:w-[1440px] mx-auto md:flex items-center">
                     <div className="w-full md:w-2/5 md:px-10 px-5 mb-10 md:mb-0">
                         <div className="">
                             <img src="/worker.png"

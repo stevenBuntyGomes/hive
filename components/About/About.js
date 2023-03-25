@@ -34,8 +34,8 @@ const About = () => {
 
     }
   return (
-    <>
-        <div className="w-full rounded bg-white p-5 md:p-10 lg:px-20 text-gray-800 relative md:text-left">
+      <>
+        <div className="bg-[#F5F5F5] w-full rounded p-5 md:p-10 lg:px-20 text-gray-800 relative md:text-left">
             <div className="md:flex items-center -mx-5">
                 <div className="w-full md:w-2/5 md:px-10 px-5 mb-10 md:mb-0">
                     <div className="md:relative">

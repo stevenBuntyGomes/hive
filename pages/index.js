@@ -41,7 +41,9 @@ export default function Home() {
           <Video/>
           <ServicePrice/>
           <DownloadApp/>
+          </div>
           <AnyProblem/>
+          <div className='container mx-auto'>
           <Testimonial/>
           <Clients/>
           <Subscribe/>

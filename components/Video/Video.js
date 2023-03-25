@@ -3,7 +3,7 @@ import React from 'react'
 const Video = () => {
   return (
     <>
-        <main className="md:p-10 p-5">
+        <main className="md:p-10 p-5 bg-[#F5F5F5]">
             <div className="text-center">
                 <h2 className="text-orange-500 uppercase font-bold md:text-[32px] text-2xl pb-3">VIDEO TOUR</h2>
                 <h2 className="font-bold uppercase md:text-[42px] text-3xl mb-5">Take a video tour in our work</h2>
