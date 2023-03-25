@@ -47,7 +47,7 @@ const DownloadApp = () => {
 
                         </div>
                     </div>
-                    <div className="w-full md:w-1/2 mb-10 md:mb-0">
+                    <div className="w-full md:w-1/2">
                         <div className="p-5">
                             <img src="/download.png" className="md:w-[686px] md:h-[379px]" alt="" />
                         </div>

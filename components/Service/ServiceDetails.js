@@ -289,14 +289,14 @@ const ServiceDetails = () => {
                                 <div className="md:p-10 p-5 my-2 md:max-w-[350px] shadow-[0_0_15px_2px_rgba(0,0,0,0.3)]">
                                     <ul className="divide-y">
                                         <li className="border-0 cursor-pointer hover:bg-gray-100 hover:bg-opacity-20">
-                                            <p className="  font-bold mx-4 py-4 text-[20px] mb-2">
+                                            <p className="font-bold py-4 text-[20px] mb-2">
                                                DOWNLOAD
                                             </p>
                                         </li>
-                                        <div className="w-[152px] h-[3px] bg-orange-500"></div>
-                                        <div className="mb-5 mt-10 text-center border-none">
+                                        <div className="w-[152px] h-[3px] bg-orange-500 mx-auto md:mx-0"></div>
+                                        <div className="mb-5 mt-10 text-left border-none">
                                             <Link href="#"
-                                                className="mb-5 md:m-5 w-full sm:w-auto bg-white text-black border-2 border-orange-500 focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-lg inline-flex items-center justify-center px-4 py-2.5 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700">
+                                                className="mb-5 w-full sm:w-auto bg-white text-black border-2 border-orange-500 focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-lg inline-flex items-center justify-center px-4 py-2.5 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700">
                                                 <img className="mr-3 w-5 h-7" src = '/fontawesome.png'/>
                                                 
                                                 <div className="text-left">
