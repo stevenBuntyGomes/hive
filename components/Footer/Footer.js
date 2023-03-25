@@ -170,18 +170,18 @@ const Footer = () => {
                                 <div className="mx-4 pb-4">
                                     <h2 className="py-4 mb-1 font-medium text-lg">Contact Us</h2>
                                     <div className="w-[100px] h-[3px] bg-orange-500 m-auto md:mx-0 mb-2"></div>
-                                    <div className="flex flex-col space-y-2">
+                                    <div className="flex flex-col space-y-2 mt-5 md:mt-0">
                                         <div className="flex flex-col space-y-1">
                                         <span className="text-base font-medium">14 Tottenham Court Road</span>
                                         <span className="text-base">Bulls Stadium, Califorina</span>
                                         </div>
                                         <div className="flex flex-col space-y-1">
-                                        <span className="text-base font-medium">1-234-56-78910</span>
-                                        <span className="text-base">1-234-56-78910</span>
+                                            <span className="text-base font-medium mt-2 md:mt-0">1-234-56-78910</span>
+                                            <span className="text-base">1-234-56-78910</span>
                                         </div>
                                     </div>
                                 </div>
-                                <div className="cursor-pointer rounded-lg p-4">
+                                <div className="cursor-pointer rounded-lg px-4">
                                         <div className="flex flex-col md:items-start justify-center">
                                             <p className="text-lg font-medium">www.website.com</p>
                                             <p className="text-sm text-gray-500">support@email.com</p>

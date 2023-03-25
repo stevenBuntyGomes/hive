@@ -53,10 +53,10 @@ const PriceDetail = () => {
                 </div>
                 
             </div>
-            <div className='md:w-[1440px] md:m-auto sm:m-auto m-10 py-10'>
+            <div className='md:w-[1440px] md:m-auto sm:m-auto m-5 md:py-10 py-5'>
                 <div className='w-full pr-0 pl-0 md:pl-10 mb-10 md:mb-0 md:pr-10 pt-10 text-center md:text-left'>
-                        <div className='mb-10 pb-10'>
-                            <div className='mb-10 pb-10'>
+                        <div className='md:mb-10 md:pb-10'>
+                            <div className='md:mb-10 md:pb-10'>
                                 <img 
                                     src = '/serviceDetails01.png'
                                     className="md:w-[100%] relative z-10"
@@ -64,12 +64,12 @@ const PriceDetail = () => {
                             </div>
                             <div className="mb-10">
                                 {/* <h4 className="text-orange-500 uppercase font-bold md:text-[32px] text-2xl pb-3">About us</h4> */}
-                                <h4 className="text-orange-500 uppercase font-bold md:text-[32px] text-2xl pb-3">FLAT RATE 1</h4>
+                                <h4 className="text-orange-500 uppercase font-bold md:text-[32px] text-2xl pb-3 mt-5 md:mt-5">FLAT RATE 1</h4>
                                 <div className='md:flex md:justify-between'>
                                     <h5 className="font-bold uppercase md:text-[42px] text-4xl mb-5">QUALITY SERVICE IS OUR GUARANTEE</h5>
                                     <h4 className="text-orange-500 uppercase font-bold md:text-[32px] text-2xl pb-3">$199</h4>
                                 </div>
-                                <p className="">We offer a wide range of plumbing services catered to both residential and commercial clients. Even the all-powerful Pointing has no control about the blind texts. Qualified team Affordable pricing Quick service We offer a wide range of plumbing services catered to both residential and
+                                <p className="text-left">We offer a wide range of plumbing services catered to both residential and commercial clients. Even the all-powerful Pointing has no control about the blind texts. Qualified team Affordable pricing Quick service We offer a wide range of plumbing services catered to both residential and
                                 </p>
                                 <div className="py-10">
                                     <div className="grid grid-cols-2">
@@ -88,7 +88,7 @@ const PriceDetail = () => {
                                     </div>
                                 </div>
 
-                                <p>No job is too big or too small, we’ve got you covered. In addition to our services, you can check out
+                                <p className='text-left'>No job is too big or too small, we’ve got you covered. In addition to our services, you can check out
                                     our shop for a wide range of plumbing supplies and equipment. When it comes to plumbing we are your
                                     one stop shop.</p>
                             </div>
@@ -100,12 +100,12 @@ const PriceDetail = () => {
                                     className="md:w-[100%] relative z-10"
                                 />
                             </div>
-                            <div className="mb-10">
+                            <div className="mb-10 text-left">
                                 {/* <h4 className="text-orange-500 uppercase font-bold md:text-[32px] text-2xl pb-3">About us</h4> */}
                                 <h5 className="font-bold uppercase md:text-[42px] text-4xl mb-5">QUALITY SERVICE IS OUR GUARANTEE</h5>
                                 <p className="">We offer a wide range of plumbing services catered to both residential and commercial clients. Even the all-powerful Pointing has no control about the blind texts. Qualified team Affordable pricing Quick service We offer a wide range of plumbing services catered to both residential and
                                 </p>
-                                <div className="py-10">
+                                <div className="md:py-10">
                                     {/* <div className="grid grid-cols-2">
                                         {options.map((option, index) => (
                                         <label className="inline-flex items-center" key={index}>
@@ -164,7 +164,7 @@ const PriceDetail = () => {
                                     </ul>
                                 </div>
 
-                                <p>No job is too big or too small, we’ve got you covered. In addition to our services, you can check out
+                                <p className='text-left'>No job is too big or too small, we’ve got you covered. In addition to our services, you can check out
                                     our shop for a wide range of plumbing supplies and equipment. When it comes to plumbing we are your
                                     one stop shop.</p>
                             </div>
