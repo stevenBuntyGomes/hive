@@ -34,7 +34,7 @@ export default function Home() {
     <>
       {indexHeader()}
       <Layout>
-        <div className='container mx-auto'>
+        <div className='container-full mx-auto'>
           <Banner/>
           <About/>
           <Service/>
@@ -43,7 +43,7 @@ export default function Home() {
           <DownloadApp/>
         </div>
           <AnyProblem/>
-          <div className='container mx-auto'>
+          <div className='container-full mx-auto'>
           <Testimonial/>
           <Clients/>
           <Subscribe/>

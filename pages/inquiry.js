@@ -31,7 +31,7 @@ const Inquiry = () => {
                 </div>
               </div>
 
-              <div className='bg-[#F5F5F5] container mx-auto'>
+              <div className='bg-[#F5F5F5] container-full mx-auto'>
                   <div className='grid md:grid-cols-2 grid-cols-1 justify-center items-center transform -translate-y-32 md:-translate-y-[369px]  md:px-20 px-5 gap-5'>
                   <div className="mb-5 md:mb-0 text-center w-max-[360px] py-2 bg-white shadow-[0_4px_20px_0px_rgba(0,0,0,0.3)]">
                       

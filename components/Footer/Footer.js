@@ -4,7 +4,7 @@ import Link from 'next/link'
 const Footer = () => {
   return (
     <>
-        <main className='container mx-auto'>
+        <main className='container-full mx-auto'>
             <section className="bg-black text-white">
                 <div className="grid md:grid-cols-4 p-5 md:p-20 gap-5 text-center md:text-left">
                     <div className="px-4 md:px-0 my-2 max-w-[350px]">
