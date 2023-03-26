@@ -9,7 +9,7 @@ const ServiceItem = ({content , index}) => {
         Aos.init({duration: 1000});
     }, []);
   return (
-    <div data-aos = "fade-left" className={`shadow-[0_0_15px_2px_rgba(0,0,0,0.3)] text-center lg:max-w-[420px] rounded-md grid grid-cols-1 my-5 ${index % 3 === 0 ? 'md:mr-5 md:my-5' : 'md:mx-5 md:my-5'}`} key={index}>
+    <div data-aos = "fade-up" className={`shadow-[0_0_15px_2px_rgba(0,0,0,0.3)] text-center md:max-w-[28.5%] rounded-md grid grid-cols-1 my-5 ${index % 3 === 0 ? 'md:mr-5 md:my-5' : 'md:mx-5 md:my-5'}`} key={index}>
         <img src={content.img} className="w-full h-[216px] md:h-[250px] rounded-md" />
         <div className="text-xl font-bold py-4">
             {content.title}
