@@ -7,7 +7,7 @@ const Footer = () => {
         <main className='container-full mx-auto'>
             <section className="bg-black text-white">
                 <div className="grid md:grid-cols-4 p-5 md:p-20 gap-5 text-center md:text-left">
-                    <div className="px-4 md:px-0 my-2 max-w-[350px]">
+                    <div className="px-4 md:px-0 my-2 md:max-w-[350px]">
                         <ul className="divide-y divide-gray-300">
                             <li className="cursor-pointer">
                                 <p className="py-4 font-medium text-lg mb-2">{/* About Us */}About Us</p>
@@ -23,7 +23,7 @@ const Footer = () => {
                     <div>
 
                         <div>
-                            <div className="px-4 my-2 max-w-[350px]">
+                            <div className="px-4 my-2 md:max-w-[350px]">
                                 <ul className="divide-y divide-gray-300">
                                     <li className="cursor-pointer">
                                         <p className="py-4 font-medium text-lg mb-2">Quick Links</p>
@@ -121,7 +121,7 @@ const Footer = () => {
                     <div>
 
                         <div>
-                            <div className="px-4 my-2 max-w-[350px]">
+                            <div className="px-4 my-2 md:max-w-[350px]">
                                 <ul className="">
                                     <li className="pb-2 font-medium text-lg">
                                         <h3 className="py-4 font-medium text-lg mb-2">
@@ -166,7 +166,7 @@ const Footer = () => {
                     <div>
 
                         <div>
-                            <div className="px-4 my-2 max-w-[350px]">
+                            <div className="px-4 my-2 md:max-w-[350px]">
                                 <div className="mx-4 pb-4">
                                     <h2 className="py-4 mb-1 font-medium text-lg">Contact Us</h2>
                                     <div className="w-[100px] h-[3px] bg-orange-500 m-auto md:mx-0 mb-2"></div>

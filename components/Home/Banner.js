@@ -10,9 +10,10 @@ import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import './banner.module.css';
+import 'swiper/css/autoplay';
 
 // import required modules
-import { FreeMode, Pagination } from "swiper";
+import { Autoplay, FreeMode, Pagination } from "swiper";
 
 const BannerComponent = () => {
   const [color, setColor] = useState('');
@@ -37,12 +38,17 @@ const BannerComponent = () => {
                 <Swiper
                   slidesPerView={1}
                   spaceBetween={30}
-                  freeMode={true}
+                  // freeMode={true}
+                  loop={true}
                   pagination={{
                     clickable: true,
                   }}
-                  modules={[FreeMode, Pagination]}
-                  autoplay = {{ delay: 1000 }}
+                
+                  autoplay={{
+                    delay: 2000,
+                    disableOnInteraction: false,
+                  }}
+                  modules={[Autoplay, FreeMode, Pagination]}
                   className="mySwiper"
                 >
                   <SwiperSlide className="py-10">

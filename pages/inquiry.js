@@ -22,7 +22,7 @@ const Inquiry = () => {
               
             <div className="  relative bg-[url('/inquery.png')] bg-no-repeat bg-cover w-full h-[378px] md:h-[783px] md:px-20 py-10">
                 <div className='absolute bottom-0 left-0 top-0 right-0 bg-overlay'>
-                    <div data-aos = "fade-up" className='md:w-[1440px] md:m-auto'>
+                    <div data-aos = "fade-up" className='md:max-w-[1440px] md:m-auto'>
                         <div className='mt-16 p-10 text-center text-white  '>
                             <h2 className='uppercase font-bold text-[42px] pb-2'>Inquiry</h2>
                             <h6 className='uppercase font-bold text-[20px]'>Home -  Inquiry</h6>
@@ -32,7 +32,7 @@ const Inquiry = () => {
               </div>
 
               <div className='bg-[#F5F5F5] container-full mx-auto'>
-                  <div className='grid md:grid-cols-2 grid-cols-1 justify-center items-center transform -translate-y-32 md:-translate-y-[369px]  md:px-20 px-5 gap-5'>
+                <div className='grid md:grid-cols-2 grid-cols-1 justify-center items-center transform -translate-y-32 md:-translate-y-[369px] md:h-[700px] md:px-20 px-5 gap-5'>
                   <div className="mb-5 md:mb-0 text-center w-max-[360px] py-2 bg-white shadow-[0_4px_20px_0px_rgba(0,0,0,0.3)]">
                       
                      <section className="text-gray-700 body-font relative">
@@ -123,7 +123,7 @@ const Inquiry = () => {
                                     </div>
                                 </div>
                                 <div className="pb-[4px] w-full">
-                                    <button className="py-2 px-5 md:px-[185px] md:py-[20px] font-bold bg-orange-500 text-white rounded-md">
+                                    <button className="py-2 px-5 md:max-px-[135px] md:py-[20px] font-bold bg-orange-500 text-white rounded-md">
                                         GET A FREE INQUERY
                                     </button>
                                 </div>   

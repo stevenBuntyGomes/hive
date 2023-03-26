@@ -12,7 +12,7 @@ import "swiper/css/pagination";
 import { useRouter } from "next/router";
 
 // import required modules
-import { FreeMode, Pagination, Autoplay } from "swiper";
+import { Autoplay, FreeMode, Pagination } from "swiper";
 
 const Service = () => {
     const Router = useRouter();
@@ -77,8 +77,11 @@ const Service = () => {
         <Swiper
             slidesPerView={3}
             spaceBetween={30}
-            freeMode={true}
-            Autoplay = {{ delay: 1000 }}
+            loop={true}        
+            autoplay={{
+            delay: 2000,
+            disableOnInteraction: false,
+            }}
             breakpoints={{
                 0: {
                     slidesPerView: 1,
@@ -92,6 +95,7 @@ const Service = () => {
                     slidesPerView: 3,
                 },
             }}
+            modules={[Autoplay, FreeMode, Pagination]}
             // modules={[FreeMode, Pagination]}
             className={`mySwiper`}
               >
