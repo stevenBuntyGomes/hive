@@ -12,7 +12,7 @@ const DownloadApp = () => {
         <main className='bg-white pt-0 px-10 md:pb-10 md:p-10'>
             <div className="w-full rounded md:py-10 md:p-10 text-gray-800 relative md:text-left">
                 <div className="md:flex items-center">
-                    <div data-aos="fade-right" className="w-full md:w-1/2 md:px-0">
+                    <div data-aos="fade-up" className="w-full md:w-1/2 md:px-0">
                         <div className="mb-10">
 
                             <div className="text-center md:text-left w-full md:py-4 bg-white rounded-lg  dark:border-gray-700">
@@ -53,7 +53,7 @@ const DownloadApp = () => {
 
                         </div>
                     </div>
-                    <div data-aos="fade-left" className="w-full md:w-1/2">
+                    <div data-aos="fade-up" className="w-full md:w-1/2">
                         <div className="p-5">
                             <img src="/download.png" className="md:w-[686px] md:h-[379px]" alt="" />
                         </div>

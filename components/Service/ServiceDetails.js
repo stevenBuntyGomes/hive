@@ -58,7 +58,7 @@ const ServiceDetails = () => {
                         <div className="my-10">
 
                             <div>
-                                <div data-aos = "fade-right" className="md:p-10 p-5 my-2 md:max-w-[350px] shadow-[0_0_15px_2px_rgba(0,0,0,0.3)]">
+                                <div data-aos = "fade-up" className="md:p-10 p-5 my-2 md:max-w-[350px] shadow-[0_0_15px_2px_rgba(0,0,0,0.3)]">
                                     <ul className="divide-y">
                                         <li className="cursor-pointer hover:bg-gray-100 hover:bg-opacity-20">
                                             <p className="  font-bold mx-4 py-4 text-[20px] mb-2 ">
@@ -262,7 +262,7 @@ const ServiceDetails = () => {
                         </div>
                         <div className='my-10'>
                             <div>
-                                <div data-aos = "fade-right" className="my-2 md:max-w-[350px] shadow-[0_0_15px_2px_rgba(0,0,0,0.3)] md:p-10 p-5">
+                                <div data-aos = "fade-up" className="my-2 md:max-w-[350px] shadow-[0_0_15px_2px_rgba(0,0,0,0.3)] md:p-10 p-5">
                                     <ul className="divide-y">
                                         <li className="border-0 hover:bg-gray-100 hover:bg-opacity-20">
                                             <p className=" font-bold mx-4 py-4 text-[20px] mb-2">
@@ -292,7 +292,7 @@ const ServiceDetails = () => {
                           
                         <div className='my-10'>
                             <div>
-                                <div data-aos = "fade-right" className="md:p-10 p-5 my-2 md:max-w-[350px] shadow-[0_0_15px_2px_rgba(0,0,0,0.3)]">
+                                <div data-aos = "fade-up" className="md:p-10 p-5 my-2 md:max-w-[350px] shadow-[0_0_15px_2px_rgba(0,0,0,0.3)]">
                                     <ul className="divide-y">
                                         <li className="border-0 hover:bg-gray-100 hover:bg-opacity-20">
                                             <p className="font-bold py-4 text-[20px] mb-2">
@@ -324,7 +324,7 @@ const ServiceDetails = () => {
                       </div>
                       
                     <div className='w-full md:w-[70%] pr-0 pl-0 md:pl-0 md:mb-0 md:pr-10 md:pb-10 pt-10 text-center md:text-left'>
-                        <div data-aos = "fade-left" className='md:mb-10 mb-5 md:pb-10 pb-5'>
+                        <div data-aos = "fade-up" className='md:mb-10 mb-5 md:pb-10 pb-5'>
                             <div className='md:mb-10 md:pb-10'>
                                 <img 
                                     src = '/serviceDetails01.png'
@@ -357,7 +357,7 @@ const ServiceDetails = () => {
                                     one stop shop.</p>
                             </div>
                         </div>
-                        <div data-aos = "fade-left" className='mb-10 pb-10'>
+                        <div data-aos = "fade-up" className='mb-10 pb-10'>
                             <div className='mb-10 pb-10'>
                                 <img 
                                     src = '/serviceDetails02.png'

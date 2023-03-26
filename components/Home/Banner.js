@@ -206,7 +206,7 @@ const BannerComponent = () => {
           </div>
         
           <div className='mt-20 md:mt-0 grid md:grid-cols-3 grid-cols-1 justify-between items-center transform -translate-y-32  md:px-20 px-5 gap-5'>
-              <div data-aos= "fade-right" className="text-center w-max-[360px] rounded-xl pt-[70px] pb-[70px] bg-white shadow-[0_4px_20px_0px_rgba(0,0,0,0.3)]">
+              <div data-aos= "fade-up" className="text-center w-max-[360px] rounded-xl pt-[70px] pb-[70px] bg-white shadow-[0_4px_20px_0px_rgba(0,0,0,0.3)]">
                 <img src="/icon1.png" className="w-[111px] h-[108px] m-auto" alt="icon1" />
                 <div className="text-xl font-bold leading-[30px] pt-[22px] pb-[37px] md:px-20 px-5">GENERAL PLUMBING MAINTAINANCE</div>
                 <div className="px-5 md:px-12">Leaky faucet? Clogged toilet? We got you of plumbing maintenance services.</div>
@@ -216,7 +216,7 @@ const BannerComponent = () => {
                 <div className="text-xl font-bold leading-[30px] pt-[22px] pb-[37px] md:px-20 px-5">24/7 EMERGENCY PLUBMUING SERVICE</div>
                 <div className="px-5 md:px-12">No matter the time or day are on call to serve you. It is in which roasted parts.</div>
               </div>
-              <div data-aos= "fade-left" className="text-center w-max-[360px] rounded-xl pt-[70px] pb-[70px] bg-white shadow-[0_4px_20px_0px_rgba(0,0,0,0.3)]">
+              <div data-aos= "fade-up" className="text-center w-max-[360px] rounded-xl pt-[70px] pb-[70px] bg-white shadow-[0_4px_20px_0px_rgba(0,0,0,0.3)]">
                 <img src="/icon3.png" className="w-[111px] h-[108px] m-auto" alt="icon2" />
                 <div className="text-xl font-bold leading-[30px] pt-[22px] pb-[37px] md:px-20 px-5">PLUMBING SUPPLIES AND EQUIPMENT</div>
                 <div className="px-5 md:px-12">Need a plunger or a new faucet? We sell a wide range of plumbing supplies for all needs.</div>

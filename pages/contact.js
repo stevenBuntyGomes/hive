@@ -47,37 +47,40 @@ const Contact = () => {
                 </div>
 
               <div className='justify-between items-center rounded-xl transform -translate-y-32 shadow-[0_4px_20px_0px_rgba(0,0,0,0.3)] mx-5 md:mx-[90px] gap-5'>
-                  <div data-aos = "fade-up" className="text-center w-max-[360px] py-5 bg-white rounded-xl">
-                     <h2 data-aos = "fade-up" className="text-[32px] font-bold text-center pt-[44px] leading-[36px] pb-[56px]">
-                        CONTACT US
-                    </h2>
-                </div>
-                <div data-aos = "fade-up" className="mx-auto">
-                    <div className='md:flex items-center justify-center text-center pb-[60px]'>
-                        <div className = "md:flex px-5 md:px-[37px] md:border-r-2 border-orange-500 py-[16px]">
-                            <FontAwesomeIcon icon = {faLocationDot} className='pb-[10px] md:pb-0 pt-[8px] text-[35px] text-orange-500 px-[14px]'/>
-                            <div className='text-black'>
-                                <p>14 Tottenham Court Road</p>
-                                <p>Bulls Stadium, Califorina</p>
-                            </div>
-                        </div>
-                        <div className = "md:flex px-5 md:px-[37px] md:border-r-2 border-orange-500 py-[16px]">
-                            <FontAwesomeIcon icon = {faPhoneFlip} className='pb-[10px] md:pt-[8px] md:pb-0 text-[35px] text-orange-500 px-[14px]'/>
-                            <div className='text-black'>
-                                <p>14 Tottenham Court Road</p>
-                                <p>Bulls Stadium, Califorina</p>
-                            </div>
-                        </div>
-                        <div className = "md:flex px-5 md:px-[37px] py-[16px]">
-                            <FontAwesomeIcon icon = {faEnvelope} className='pb-[10px] md:pb-0 pt-[8px] text-[35px] text-orange-500 px-[14px]'/>
-                            <div className='text-black'>
-                                <p>14 Tottenham Court Road</p>
-                                <p>Bulls Stadium, Califorina</p>
-                            </div>
-                        </div>
+                  <div data-aos = "fade-up">
+                    <div className="text-center w-max-[360px] py-5 bg-white rounded-xl">
+                        <h2 className="text-[32px] font-bold text-center pt-[44px] leading-[36px] pb-[56px]">
+                            CONTACT US
+                        </h2>
                     </div>
-                </div>
-                </div>
+                    <div className="mx-auto">
+                            <div className='md:flex items-center justify-center text-center pb-[60px]'>
+                                <div className = "md:flex px-5 md:px-[37px] md:border-r-2 border-orange-500 py-[16px]">
+                                    <FontAwesomeIcon icon = {faLocationDot} className='pb-[10px] md:pb-0 pt-[8px] text-[35px] text-orange-500 px-[14px]'/>
+                                    <div className='text-black'>
+                                        <p>14 Tottenham Court Road</p>
+                                        <p>Bulls Stadium, Califorina</p>
+                                    </div>
+                                </div>
+                                <div className = "md:flex px-5 md:px-[37px] md:border-r-2 border-orange-500 py-[16px]">
+                                    <FontAwesomeIcon icon = {faPhoneFlip} className='pb-[10px] md:pt-[8px] md:pb-0 text-[35px] text-orange-500 px-[14px]'/>
+                                    <div className='text-black'>
+                                        <p>14 Tottenham Court Road</p>
+                                        <p>Bulls Stadium, Califorina</p>
+                                    </div>
+                                </div>
+                                <div className = "md:flex px-5 md:px-[37px] py-[16px]">
+                                    <FontAwesomeIcon icon = {faEnvelope} className='pb-[10px] md:pb-0 pt-[8px] text-[35px] text-orange-500 px-[14px]'/>
+                                    <div className='text-black'>
+                                        <p>14 Tottenham Court Road</p>
+                                        <p>Bulls Stadium, Califorina</p>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                  </div>
+                  
+              </div>
               
                 <div data-aos = "fade-up" className='grid md:grid-cols-2 grid-cols-1 justify-center items-center transform -translate-y-32  md:px-20 px-5 gap-5 mt-[100px]'>
                         <div className='bg-[url("/contactWorkImage.png")] bg-no-repeat bg-cover max-w-[935px] max-h-[959px] md:w-[935px] md:h-[959px]'>
