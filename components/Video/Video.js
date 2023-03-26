@@ -19,7 +19,7 @@ const Video = () => {
                 </div>
 
             </div>
-            <div data-aos = "fade-left" className="md:mt-[60px] mt-[40px]">
+            <div data-aos = "fade-right" className="md:mt-[60px] mt-[40px]">
                 <iframe
                     title="Video"
                     className="md:w-[855px] w-auto md:h-[481px] m-auto"
