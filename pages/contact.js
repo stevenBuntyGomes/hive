@@ -70,11 +70,11 @@ const Contact = () => {
                   
               </div>
               
-                <div data-aos = "fade-up" className='grid md:grid-cols-2 grid-cols-1 justify-center items-center transform -translate-y-32  md:px-20 px-5 gap-5 mt-[100px]'>
+                <div data-aos = "fade-up" className='grid md:grid-cols-2 grid-cols-1 justify-center items-center transform -translate-y-32  md:px-20 px-5 gap-5'>
                         <div className='bg-[url("/contactWorkImage.png")] bg-no-repeat bg-cover max-w-[935px] max-h-[959px] md:w-[935px] md:h-[959px]'>
 
                         </div>
-                    <div className="text-center w-max-[360px] rounded-xl py-5 bg-white shadow-[0_4px_20px_0px_rgba(0,0,0,0.3)] md:mr-4">
+                    <div className="text-center w-max-[360px] rounded-xl py-5 bg-white shadow-[0_4px_20px_0px_rgba(0,0,0,0.3)] md:mr-4 -mt-[50px] md:mt-0">
                         
                         <section className="text-gray-700 body-font relative">
                             <div className="md:pl-[52px] md:pr-[52px] px-[30px] pt-[54px] pb-[54px] py-[40px] mx-auto">
