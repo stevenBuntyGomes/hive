@@ -66,18 +66,15 @@ const Contact = () => {
                                 </div>
                             </div>
                     </div>
-                  </div>
-                  
+                  </div>  
               </div>
               
-                <div data-aos = "fade-up" className='grid md:grid-cols-2 grid-cols-1 justify-center items-center transform -translate-y-32  md:px-20 px-5 gap-5 mt-[100px]'>
-                        <div className='bg-[url("/contactWorkImage.png")] bg-no-repeat bg-cover max-w-[935px] max-h-[959px] md:w-[935px] md:h-[959px]'>
-
-                        </div>
-                    <div className="text-center w-max-[360px] rounded-xl py-5 bg-white shadow-[0_4px_20px_0px_rgba(0,0,0,0.3)] md:mr-4">
-                        
-                        <section className="text-gray-700 body-font relative">
-                            <div className="md:pl-[52px] md:pr-[52px] px-[30px] pt-[54px] pb-[54px] py-[40px] mx-auto">
+            <div data-aos ="fade-up" className='grid md:grid-cols-2 grid-cols-1 justify-center items-center transform -translate-y-32 md:px-20 px-5 gap-5 md:mt-[100px]'>
+                    <div className='bg-[url("/contactWorkImage.png")] bg-no-repeat bg-cover max-w-[935px] max-h-[959px] md:w-[935px] md:h-[959px]'>
+                    </div>
+                <div className="text-center w-max-[360px] rounded-xl py-5 bg-white shadow-[0_4px_20px_0px_rgba(0,0,0,0.3)] md:mr-4 -mt-[50px] md:mt-0">
+                    <section className="text-gray-700 body-font relative">
+                        <div className="md:pl-[52px] md:pr-[52px] px-[30px] pt-[54px] pb-[54px] py-[40px] mx-auto">
                             <div className="text-center md:text-left flex flex-col w-full">
                                 <h1 className="text-center md:text-left text-base font-medium leading-[18px] pb-[12px]">
                                     QUICK SUPPORT
@@ -87,72 +84,72 @@ const Contact = () => {
                                 </h2>
                             </div>
                             <div className="flex flex-wrap -m-2">
-                                    <div className="pb-[28px] w-full md:w-1/2 md:pr-[24px]">
-                                        <div className="relative">
-                                        <input
-                                            type="text"
-                                            name="first_name"
-                                            placeholder='First Name'
-                                            className="w-full bg-gray-100 rounded border border-gray-300 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-                                        />
-                                        </div>
+                                <div className="pb-[28px] w-full md:w-1/2 md:pr-[24px]">
+                                    <div className="relative">
+                                    <input
+                                        type="text"
+                                        name="first_name"
+                                        placeholder='First Name'
+                                        className="w-full bg-gray-100 rounded border border-gray-300 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                                    />
                                     </div>
-                                    
-                                    <div className="pb-[28px] w-full md:w-1/2">
-                                        <div className="relative">
-                                        <input
-                                            type="text"
-                                            name="last_name"
-                                            placeholder='Last Name'
-                                            className="w-full bg-gray-100 rounded border border-gray-300 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-                                        />
-                                        </div>
-                                    </div>
-
-                                    <div className="pb-[28px] w-full md:w-1/2 md:pr-[24px]">
-                                        <div className="relative">
-                                        <input
-                                            type="number"
-                                            name="phone"
-                                            placeholder='Phone Number'
-                                            className="w-full bg-gray-100 rounded border border-gray-300 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-                                        />
-                                        </div>
-                                    </div>
-                                    
-                                    <div className="pb-[28px] w-full md:w-1/2">
-                                        <div className="relative">
-                                        <input
-                                            type="email"
-                                            id="email"
-                                            name="email"
-                                            placeholder='Your Email'
-                                            className="w-full bg-gray-100 rounded border border-gray-300 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-                                        />
-                                        </div>
-                                    </div>
-
-                                    <div className="pb-[31px] w-full">
-                                        <div className="relative">
-                                        <textarea
-                                            id="message"
-                                            name="message"
-                                            placeholder='Message'
-                                            className="w-full bg-gray-100 rounded border border-gray-300 focus:border-indigo-500 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
-                                        ></textarea>
-                                        </div>
-                                    </div>
-                                    <div className="pb-[4px] w-full">
-                                        <button className="py-2 px-5 md:px-[185px] md:py-[20px] font-bold bg-orange-500 text-white rounded-md">
-                                            SEND US A MESSAGTE
-                                        </button>
-                                    </div>   
                                 </div>
+                                
+                                <div className="pb-[28px] w-full md:w-1/2">
+                                    <div className="relative">
+                                    <input
+                                        type="text"
+                                        name="last_name"
+                                        placeholder='Last Name'
+                                        className="w-full bg-gray-100 rounded border border-gray-300 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                                    />
+                                    </div>
+                                </div>
+
+                                <div className="pb-[28px] w-full md:w-1/2 md:pr-[24px]">
+                                    <div className="relative">
+                                    <input
+                                        type="number"
+                                        name="phone"
+                                        placeholder='Phone Number'
+                                        className="w-full bg-gray-100 rounded border border-gray-300 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                                    />
+                                    </div>
+                                </div>
+                                
+                                <div className="pb-[28px] w-full md:w-1/2">
+                                    <div className="relative">
+                                    <input
+                                        type="email"
+                                        id="email"
+                                        name="email"
+                                        placeholder='Your Email'
+                                        className="w-full bg-gray-100 rounded border border-gray-300 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                                    />
+                                    </div>
+                                </div>
+
+                                <div className="pb-[31px] w-full">
+                                    <div className="relative">
+                                    <textarea
+                                        id="message"
+                                        name="message"
+                                        placeholder='Message'
+                                        className="w-full bg-gray-100 rounded border border-gray-300 focus:border-indigo-500 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
+                                    ></textarea>
+                                    </div>
+                                </div>
+                                <div className="pb-[4px] w-full">
+                                    <button className="py-2 px-5 md:px-[185px] md:py-[20px] font-bold bg-orange-500 text-white rounded-md">
+                                        SEND US A MESSAGTE
+                                    </button>
+                                </div>   
                             </div>
-                        </section>   
-                    </div>
-                  </div> 
-                                </div>
+                        </div>
+                    </section>   
+                </div>
+            </div> 
+            </div>
 
                 <div className='mt-[50px] md:mt-[100px]'>
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7303.244618545146!2d90.41679097639884!3d23.760844307764646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8783ab9882f%3A0x50f429f46d937f3c!2sRampura%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1679686568123!5m2!1sen!2sbd" className='w-full md:max-w-full h-[400px] md:h-[661px] bg-no-repeat bg-cover' allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
