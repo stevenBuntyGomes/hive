@@ -48,7 +48,7 @@ const Clients = () => {
     }, []);
   return (
     <>
-        <main className='bg-[#F9F8F9] container mx-auto'>
+        <main className='bg-[#F9F8F9] container-full mx-auto'>
             <div className='md:p-20 p-10'>
                 <div data-aos = "fade-up" className="text-center">
                     <h2 className="text-orange-500 uppercase font-bold md:text-[32px] text-2xl">Our BIG CLINTS</h2>

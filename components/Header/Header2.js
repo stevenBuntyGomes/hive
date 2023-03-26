@@ -27,7 +27,7 @@ const Header2 = () => {
 
     return (
     <nav className="sticky top-0 z-50">
-        <div className="">
+        <div className="container-full mx-auto">
         {/* top bar number part starts */}
             <div className={`container mx-auto md:px-20 hidden bg-black md:py-5 md:flex md:w-auto md:flex-grow`}>
                 <div className='text-white text-xl font-normal md:flex-grow'>
