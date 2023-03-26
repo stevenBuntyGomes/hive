@@ -143,7 +143,7 @@ const Contact = () => {
                                         </div>
                                     </div>
                                     <div className="pb-[4px] w-full">
-                                        <button className="py-2 px-5 md:px-[185px] md:py-[20px] font-bold bg-orange-500 text-white rounded-md">
+                                        <button className="py-2 px-5 md:max-px-[135px] md:py-[20px] font-bold bg-orange-500 text-white rounded-md">
                                             SEND US A MESSAGTE
                                         </button>
                                     </div>   
