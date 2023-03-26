@@ -30,7 +30,7 @@ const Header2 = () => {
         <div className="container-full mx-auto">
         {/* top bar number part starts */}
             <div className={`md:px-20 hidden bg-black md:py-5 md:flex md:w-auto md:flex-grow`}>
-                <div className='text-white text-xl   font-normal md:flex-grow'>
+                <div className='text-white text-xl font-normal md:flex-grow'>
                     Call Us: +43 660 3924728
                 </div>
                 <div className="text-white gt-sm">
