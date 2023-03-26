@@ -120,7 +120,7 @@ const Services = () => {
 
             <div className='bg-[#F5F5F5] md:m-auto'>
 
-                <main className="bg-slate-50 p-5 md:p-10 container mx-auto">
+                <main className="bg-slate-50 p-5 md:p-10 container-full mx-auto">
                     <div data-aos = "fade-up" className="text-center mb-10">
                         <h2 className="text-orange-500 uppercase font-bold md:text-[32px] text-2xl pb-3">Our Services</h2>
                         <h2 className="font-bold uppercase md:text-[42px] text-4xl mb-5">Quality Service is Our Guarantee</h2>
