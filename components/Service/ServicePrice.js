@@ -88,7 +88,7 @@ export const ServicePrice = () => {
         >
             {contents && contents.map((content, index) => (
                 <SwiperSlide className="py-10" key = {index}>
-                    <div data-aos = "fade-left" className={`shadow-[0_0_15px_2px_rgba(0,0,0,0.4)] ${index % 2 === 0 ? 'border-orange-500' : 'border-black'} text-center md:max-w-[430px] rounded-xl grid grid-cols-1 border-2 bg-white`}>
+                    <div data-aos = "fade-up" className={`shadow-[0_0_15px_2px_rgba(0,0,0,0.4)] ${index % 2 === 0 ? 'border-orange-500' : 'border-black'} text-center md:max-w-[430px] rounded-xl grid grid-cols-1 border-2 bg-white`}>
                         <div className={`rounded-xl ${index % 2 === 0 ? 'bg-orange-500' : 'bg-black'} text-white p-10`}>
                             <h1 className="uppercase font-bold text-[32px]">{content.rate}</h1>
                         </div>

@@ -21,7 +21,7 @@ const AnyProblem = () => {
                                 className="md:w-[435px] w-[265px] md:h-[548px] h-[348px] m-auto md:absolute  bottom-0" alt=""/>
                         </div>
                     </div>
-                    <div data-aos = "fade-right" className="w-full md:w-3/5 md:px-10 px-5 pb-[50px] md:pb-0">
+                    <div data-aos = "fade-up" className="w-full md:w-3/5 md:px-10 px-5 pb-[50px] md:pb-0">
                         <div className="md:mt-28 mt-10 md:px-10 px-5">
                             <h5 className="text-orange-500 uppercase font-bold md:text-[32px] text-2xl pb-3">CALL: 012-345-6789</h5>
                             <h4 className="font-bold uppercase md:text-[42px] text-4xl mb-5">HAVE ANY PROBLEMS?</h4>

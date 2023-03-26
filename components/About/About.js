@@ -46,7 +46,7 @@ const About = () => {
       <>
         <div className="bg-white w-full rounded p-5 md:p-10 lg:px-20 text-gray-800 relative md:text-left">
             <div className="md:flex items-center -mx-5">
-                <div data-aos="fade-right" className={`w-full md:w-2/5 px-5 mb-10 md:mb-0`}>
+                <div data-aos="fade-up" className={`w-full md:w-2/5 px-5 mb-10 md:mb-0`}>
                     <div className="md:relative">
                         <Image src="/about.png" width={400} height = {659} className="md:w-[400px] relative z-10 md:h-[659px]" alt=""/>
                     </div>
@@ -54,7 +54,7 @@ const About = () => {
                 
                 
                 
-                <div data-aos="fade-left" className="w-full md:w-3/5 md:px-10 px-5 text-center md:text-left">
+                <div data-aos="fade-up" className="w-full md:w-3/5 md:px-10 px-5 text-center md:text-left">
                     <div className="mb-10">
                         <h4 className="text-orange-500 uppercase font-bold md:text-[32px] text-2xl pb-3">About us</h4>
                         <h5 className="font-bold uppercase md:text-[42px] text-4xl mb-5">Plumbing is what we do</h5>
