@@ -1,5 +1,6 @@
 import React, {useEffect} from 'react'
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, FreeMode, Pagination } from "swiper";
 import Aos from 'aos';
 import 'aos/dist/aos.css'
 
@@ -67,8 +68,12 @@ const Testimonial = () => {
             <Swiper
                 slidesPerView={3}
                 spaceBetween={30}
-                freeMode={true}
-                autoplay = {{ delay: 1000 }}
+                loop={true}        
+                autoplay={{
+                    delay: 2000,
+                    disableOnInteraction: false,
+                }}
+                modules={[Autoplay, FreeMode, Pagination]}
                 // modules={[FreeMode, Pagination]}
                 className="mySwiper"
                 breakpoints={{

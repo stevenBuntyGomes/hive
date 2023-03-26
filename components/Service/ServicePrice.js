@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { useRouter } from 'next/router';
 import Aos from 'aos';
 import 'aos/dist/aos.css'
-
+import { Autoplay, FreeMode, Pagination } from "swiper";
 
 // Import Swiper styles
 import "swiper/css";
@@ -68,8 +68,11 @@ export const ServicePrice = () => {
             <Swiper
             slidesPerView={3}
             spaceBetween={30}
-            freeMode={true}
-            autoplay = {{ delay: 1000 }}
+            loop={true}        
+            autoplay={{
+                delay: 2000,
+                disableOnInteraction: false,
+            }}
             breakpoints={{
                 0: {
                     slidesPerView: 1,
@@ -83,6 +86,7 @@ export const ServicePrice = () => {
                     slidesPerView: 3,
                 },
             }}
+            modules={[Autoplay, FreeMode, Pagination]}
             // modules={[FreeMode, Pagination]}
             className="mySwiper"
         >
