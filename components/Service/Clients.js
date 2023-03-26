@@ -80,7 +80,7 @@ const Clients = () => {
             >
                 {contents && contents.map((content, index) => (
                     <SwiperSlide className="py-10" key = {index}>
-                        <img data-aos = "fade-left" src={content.img} alt = "image content"/>
+                        <img data-aos = "fade-up" src={content.img} alt = "image content"/>
                     </SwiperSlide>
                 ))}
                 

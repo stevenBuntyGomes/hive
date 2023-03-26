@@ -88,7 +88,7 @@ const BannerComponent = () => {
                             scrambled it to make
                             a type specimen book.</p>
                         </div>
-                        <div className="pt-10 flex justify-center md:justify-start">
+                        <div data-aos= "fade-up" className="pt-10 flex justify-center md:justify-start">
                           <button className="bg-gray-800 hover:bg-orange-500 text-white py-[14px] px-[30px] rounded-md mr-4" onClick={handleClick}>
                             GET MORE
                           </button>
