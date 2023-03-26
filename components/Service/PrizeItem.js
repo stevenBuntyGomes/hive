@@ -1,13 +1,20 @@
 import React, {useSta, useEffect} from "react";
 import {useRouter} from "next/router";
+import Aos from 'aos';
+import 'aos/dist/aos.css'
+
 
 const PrizeItem = ({content , index}) => {
     const router = useRouter();
     const prizeDetailhandler = () => {
         router.replace('/details/price_details');
     }
+
+    useEffect(() => {
+        Aos.init({duration: 1000});
+    }, []);
   return (
-    <div className={`shadow-[0_0_15px_2px_rgba(0,0,0,0.4)] ${index % 2 === 0 ? 'border-orange-500' : 'border-black'} text-center md:max-w-[420px] rounded-xl grid grid-cols-1 border-2 bg-white my-5 ${index % 3 === 0 ? 'md:mr-5 md:my-5' : 'md:mx-5 md:my-5'}`}>
+    <div data-aos = "fade-left" className={`shadow-[0_0_15px_2px_rgba(0,0,0,0.4)] ${index % 2 === 0 ? 'border-orange-500' : 'border-black'} text-center md:max-w-[420px] rounded-xl grid grid-cols-1 border-2 bg-white my-5 ${index % 3 === 0 ? 'md:mr-5 md:my-5' : 'md:mx-5 md:my-5'}`}>
         <div className={`rounded-t-xl ${index % 2 === 0 ? 'bg-orange-500' : 'bg-black'} text-white p-10`}>
             <h1 className="uppercase font-bold text-[32px]">{content.rate}</h1>
             

@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import Layout from '@/components/Layout';
 import Clients from '@/components/Service/Clients';
 import Subscribe from '@/components/About/Subscribe';
@@ -9,6 +9,9 @@ import {
     faPhoneFlip,
     faEnvelope,
 } from '@fortawesome/free-solid-svg-icons'
+import Aos from 'aos';
+import 'aos/dist/aos.css'
+
 
 const Contact = () => {
     const containerStyle = {
@@ -23,6 +26,10 @@ const Contact = () => {
 
     const zoom = 10;
 
+    useEffect(() => {
+        Aos.init({duration: 1000});
+    }, []);
+
   return (
       <>
           <Layout> 
@@ -30,7 +37,7 @@ const Contact = () => {
                   
                   <div className="relative bg-[url('/priceDetailsBanner.png')] bg-no-repeat bg-cover w-full h-[378px] md:px-20 py-10 mb-10">
                     <div className='absolute bottom-0 left-0 top-0 right-0 bg-overlay'>
-                        <div className='md:w-[1440px] md:m-auto'>
+                        <div data-aos = "fade-up" className='md:w-[1440px] md:m-auto'>
                             <div className='mt-16 p-10 text-center text-white  '>
                                 <h2 className='uppercase font-bold text-[42px] pb-2'>Contact US</h2>
                                 <h6 className='uppercase font-bold text-[20px]'>Home -  Contact US</h6>
@@ -40,12 +47,12 @@ const Contact = () => {
                 </div>
 
               <div className='justify-between items-center rounded-xl transform -translate-y-32 shadow-[0_4px_20px_0px_rgba(0,0,0,0.3)] mx-5 md:mx-[90px] gap-5'>
-                  <div className="text-center w-max-[360px] py-5 bg-white rounded-xl">
-                     <h2 className="text-[32px] font-bold text-center pt-[44px] leading-[36px] pb-[56px]">
+                  <div data-aos = "fade-up" className="text-center w-max-[360px] py-5 bg-white rounded-xl">
+                     <h2 data-aos = "fade-up" className="text-[32px] font-bold text-center pt-[44px] leading-[36px] pb-[56px]">
                         CONTACT US
                     </h2>
                 </div>
-                <div className="mx-auto">
+                <div data-aos = "fade-up" className="mx-auto">
                     <div className='md:flex items-center justify-center text-center pb-[60px]'>
                         <div className = "md:flex px-5 md:px-[37px] md:border-r-2 border-orange-500 py-[16px]">
                             <FontAwesomeIcon icon = {faLocationDot} className='pb-[10px] md:pb-0 pt-[8px] text-[35px] text-orange-500 px-[14px]'/>
@@ -72,7 +79,7 @@ const Contact = () => {
                 </div>
                 </div>
               
-                <div className='grid md:grid-cols-2 grid-cols-1 justify-center items-center transform -translate-y-32  md:px-20 px-5 gap-5 mt-[100px]'>
+                <div data-aos = "fade-up" className='grid md:grid-cols-2 grid-cols-1 justify-center items-center transform -translate-y-32  md:px-20 px-5 gap-5 mt-[100px]'>
                         <div className='bg-[url("/contactWorkImage.png")] bg-no-repeat bg-cover max-w-[935px] max-h-[959px] md:w-[935px] md:h-[959px]'>
 
                         </div>
@@ -156,9 +163,9 @@ const Contact = () => {
                   </div> 
                                 </div>
 
-                <div className=''>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7303.244618545146!2d90.41679097639884!3d23.760844307764646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8783ab9882f%3A0x50f429f46d937f3c!2sRampura%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1679686568123!5m2!1sen!2sbd" className='w-full md:max-w-full h-[400px] md:h-[661px] bg-no-repeat bg-cover' allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-              </div>
+                <div className='mt-[50px] md:mt-[100px]'>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7303.244618545146!2d90.41679097639884!3d23.760844307764646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8783ab9882f%3A0x50f429f46d937f3c!2sRampura%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1679686568123!5m2!1sen!2sbd" className='w-full md:max-w-full h-[400px] md:h-[661px] bg-no-repeat bg-cover' allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
               
               <div className='container mx-auto'>
                 <Clients />
