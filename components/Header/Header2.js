@@ -29,8 +29,8 @@ const Header2 = () => {
     <nav className="sticky top-0 z-50">
         <div className="container-full mx-auto">
         {/* top bar number part starts */}
-            <div className={`md:px-20 hidden bg-black md:py-5 md:flex md:w-auto md:flex-grow`}>
-                <div className='text-white text-xl   font-normal md:flex-grow'>
+            <div className={`container mx-auto md:px-20 hidden bg-black md:py-5 md:flex md:w-auto md:flex-grow`}>
+                <div className='text-white text-xl font-normal md:flex-grow'>
                     Call Us: +43 660 3924728
                 </div>
                 <div className="text-white gt-sm">
@@ -54,7 +54,7 @@ const Header2 = () => {
                 </div>
             </div>
 
-            <div className='bg-white py-5 gt-sm md:px-20 px-5 md:flex md:w-auto md:flex-grow shadow-[0_4px_20px_0px_rgba(0,0,0,0.3)]'>
+            <div className='container mx-auto bg-white py-5 gt-sm md:px-20 px-5 md:flex md:w-auto md:flex-grow shadow-[0_4px_20px_0px_rgba(0,0,0,0.3)]'>
                 <div className='md:flex-grow'>
                     <Image src="/hive.png" alt="hive-logo" width={200} height ={50} className="md:h-[50px] md:w-[200px] w-[200px] h-[50px]" />
                 </div>
