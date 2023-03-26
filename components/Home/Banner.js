@@ -13,7 +13,7 @@ import './banner.module.css';
 import 'swiper/css/autoplay';
 
 // import required modules
-import SwiperCore, { Autoplay, FreeMode, Pagination } from "swiper";
+import { Autoplay, FreeMode, Pagination } from "swiper";
 
 const BannerComponent = () => {
   const [color, setColor] = useState('');
