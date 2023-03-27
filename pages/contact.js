@@ -11,7 +11,6 @@ import {
 import Aos from 'aos';
 import 'aos/dist/aos.css'
 
-
 const Contact = () => {
 
     useEffect(() => {
@@ -22,8 +21,7 @@ const Contact = () => {
       <>
           <Layout> 
               <div className='bg-white container-full mx-auto'>
-                  
-                  <div className="relative bg-[url('/priceDetailsBanner.png')] bg-no-repeat bg-cover w-full h-[378px] md:px-20 py-10 mb-10">
+                <div className="relative bg-[url('/priceDetailsBanner.png')] bg-no-repeat bg-cover w-full h-[378px] md:px-20 py-10 mb-10">
                     <div className='absolute bottom-0 left-0 top-0 right-0 bg-overlay'>
                         <div data-aos = "fade-up" className='md:max-w-[1440px] md:m-auto'>
                             <div className='mt-16 p-10 text-center text-white  '>
@@ -34,44 +32,43 @@ const Contact = () => {
                     </div>
                 </div>
 
-              <div className='justify-between items-center rounded-xl transform -translate-y-32 shadow-[0_4px_20px_0px_rgba(0,0,0,0.3)] mx-5 md:mx-[90px] gap-5'>
-                  <div data-aos = "fade-up">
-                    <div className="text-center w-max-[360px] py-5 bg-white rounded-xl">
-                        <h2 className="text-[32px] font-bold text-center pt-[44px] leading-[36px] pb-[56px]">
-                            CONTACT US
-                        </h2>
+                <div className='justify-between items-center rounded-xl transform -translate-y-32 shadow-[0_4px_20px_0px_rgba(0,0,0,0.3)] mx-5 md:mx-[90px] gap-5'>
+                    <div data-aos = "fade-up">
+                        <div className="text-center w-max-[360px] py-5 bg-white rounded-xl">
+                            <h2 className="text-[32px] font-bold text-center pt-[44px] leading-[36px] pb-[56px]">
+                                CONTACT US
+                            </h2>
+                        </div>
+                        <div className="mx-auto">
+                                <div className='md:flex items-center justify-center text-center pb-[60px]'>
+                                    <div className = "lg:flex px-5 md:px-[37px] md:border-r-2 border-orange-500 py-[16px]">
+                                        <FontAwesomeIcon icon = {faLocationDot} className='pb-[10px] mb-5 md:pb-0 pt-[8px] text-[35px] text-orange-500 px-[14px]'/>
+                                        <div className='text-black'>
+                                            <p>14 Tottenham Court Road</p>
+                                            <p>Bulls Stadium, Califorina</p>
+                                        </div>
+                                    </div>
+                                    <div className = "lg:flex px-5 md:px-[37px] md:border-r-2 border-orange-500 py-[16px]">
+                                        <FontAwesomeIcon icon = {faPhoneFlip} className='pb-[10px] mb-5 md:pt-[8px] md:pb-0 text-[35px] text-orange-500 px-[14px]'/>
+                                        <div className='text-black'>
+                                            <p>14 Tottenham Court Road</p>
+                                            <p>Bulls Stadium, Califorina</p>
+                                        </div>
+                                    </div>
+                                    <div className = "lg:flex px-5 md:px-[37px] py-[16px]">
+                                        <FontAwesomeIcon icon = {faEnvelope} className='pb-[10px] mb-5 md:pb-0 pt-[8px] text-[35px] text-orange-500 px-[14px]'/>
+                                        <div className='text-black'>
+                                            <p>14 Tottenham Court Road</p>
+                                            <p>Bulls Stadium, Califorina</p>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
                     </div>
-                    <div className="mx-auto">
-                            <div className='md:flex items-center justify-center text-center pb-[60px]'>
-                                <div className = "md:flex px-5 md:px-[37px] md:border-r-2 border-orange-500 py-[16px]">
-                                    <FontAwesomeIcon icon = {faLocationDot} className='pb-[10px] md:pb-0 pt-[8px] text-[35px] text-orange-500 px-[14px]'/>
-                                    <div className='text-black'>
-                                        <p>14 Tottenham Court Road</p>
-                                        <p>Bulls Stadium, Califorina</p>
-                                    </div>
-                                </div>
-                                <div className = "md:flex px-5 md:px-[37px] md:border-r-2 border-orange-500 py-[16px]">
-                                    <FontAwesomeIcon icon = {faPhoneFlip} className='pb-[10px] md:pt-[8px] md:pb-0 text-[35px] text-orange-500 px-[14px]'/>
-                                    <div className='text-black'>
-                                        <p>14 Tottenham Court Road</p>
-                                        <p>Bulls Stadium, Califorina</p>
-                                    </div>
-                                </div>
-                                <div className = "md:flex px-5 md:px-[37px] py-[16px]">
-                                    <FontAwesomeIcon icon = {faEnvelope} className='pb-[10px] md:pb-0 pt-[8px] text-[35px] text-orange-500 px-[14px]'/>
-                                    <div className='text-black'>
-                                        <p>14 Tottenham Court Road</p>
-                                        <p>Bulls Stadium, Califorina</p>
-                                    </div>
-                                </div>
-                            </div>
-                    </div>
-                  </div>
-                  
-              </div>
+                </div>
               
                 <div data-aos = "fade-up" className='grid md:grid-cols-2 grid-cols-1 justify-center items-center transform -translate-y-32  md:px-20 px-5 gap-5'>
-                        <div className='bg-[url("/contactWorkImage.png")] bg-no-repeat bg-cover max-w-[935px] max-h-[959px] md:w-[935px] md:h-[959px]'>
+                        <div className='bg-[url("/contactWorkImage.png")] bg-no-repeat bg-cover max-w-[935px] max-h-[959px] md:w-[150%] md:h-[959px]'>
 
                         </div>
                     <div className="text-center w-max-[360px] rounded-xl py-5 bg-white shadow-[0_4px_20px_0px_rgba(0,0,0,0.3)] md:mr-4 -mt-[50px] md:mt-0">
@@ -152,16 +149,16 @@ const Contact = () => {
                         </section>   
                     </div>
                   </div> 
-                                </div>
+                </div>
 
                 <div className='mt-[50px] md:mt-[100px]'>
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7303.244618545146!2d90.41679097639884!3d23.760844307764646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8783ab9882f%3A0x50f429f46d937f3c!2sRampura%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1679686568123!5m2!1sen!2sbd" className='w-full md:max-w-full h-[400px] md:h-[661px] bg-no-repeat bg-cover' allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
               
-              <div className='container-full mx-auto'>
-                <Clients />
-                <Subscribe />
-              </div>
+                <div className='container-full mx-auto'>
+                    <Clients />
+                    <Subscribe />
+                </div>
  
         </Layout>
     </>

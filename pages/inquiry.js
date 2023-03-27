@@ -111,7 +111,6 @@ const Inquiry = () => {
                                     </div>
                                   </div>
                                   
-
                                 <div className="pb-[31px] w-full">
                                     <div className="relative">
                                     <textarea
@@ -131,15 +130,15 @@ const Inquiry = () => {
                         </div>
                     </section>   
                 </div>
-                <div className='bg-[url("/inquery01.png")] w-full bg-no-repeat bg-cover w-max-[360px] md:ml-[-20px]'>
-                    <div className='text-center md:text-left mt-[351px] mb-[51px] md:ml-[60px]'>
+                <div className='bg-[url("/inquery01.png")] w-full bg-no-repeat bg-cover w-max-[360px] md:ml-[-20px] md:-mt-[110px] lg:mt-0 md:-mb-[75px] lg:mb-0'>
+                    <div className='text-center md:text-left md:mt-[351px] mb-[51px] md:ml-[60px]'>
                         <h3 className="md:text-[70px] text-2xl font-bold md:pt-5 text-orange-500 md:mb-[26px]">
                             LETS
                         </h3>
-                        <h3 className="md:text-[70px] text-2xl font-bold md:pt-5 text-white md:mb-[26px]">
+                        <h3 className="lg:text-[70px] md:text-[60px] text-2xl font-bold md:pt-5 text-white md:mb-[26px]">
                             CONNECT
                         </h3>
-                        <h3 className="md:text-[70px] text-2xl font-bold md:pt-5 text-orange-500 md:mb-[46px]">
+                        <h3 className="lg:text-[70px] md:text-[60px] text-2xl font-bold md:pt-5 text-orange-500 md:mb-[46px]">
                             TOGETHER
                         </h3>
                         <div className="p-2 w-full">
