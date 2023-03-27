@@ -61,7 +61,7 @@ const ServiceDetails = () => {
                             <div>
                                 <div data-aos = "fade-up" className="md:p-10 p-5 my-2 md:max-w-[350px] shadow-[0_0_15px_2px_rgba(0,0,0,0.3)]">
                                     <ul className="divide-y">
-                                        <li className="cursor-pointer hover:bg-gray-100 hover:bg-opacity-20">
+                                        <li className="hover:bg-gray-100 hover:bg-opacity-20">
                                             <p className="  font-bold mx-4 py-4 text-[20px] mb-2 ">
                                                OUR SERVICES
                                             </p>
@@ -272,7 +272,7 @@ const ServiceDetails = () => {
                                         </li>
                                         <div className="w-[152px] h-[3px] bg-orange-500 mx-auto md:mx-0 md:ml-[15px]"></div>
                                         <li className="border-none hover:bg-gray-100 hover:bg-opacity-20">
-                                            <h3 className="  font-bold mx-4 py-4 text-xl md:text-2xl mb-2">
+                                            <h3 className="sans-serif font-bold mx-4 py-4 text-xl md:text-2xl mb-2">
                                                123-456-78910
                                             </h3>
                                         </li>

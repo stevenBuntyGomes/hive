@@ -72,7 +72,7 @@ const PriceDetail = () => {
                                 <h4 className="text-orange-500 uppercase font-bold md:text-[32px] text-2xl pb-3 mt-5 md:mt-5">FLAT RATE 1</h4>
                                 <div className='md:flex md:justify-between'>
                                     <h5 className="font-bold uppercase md:text-[42px] text-4xl mb-5">QUALITY SERVICE IS OUR GUARANTEE</h5>
-                                    <h4 className="text-orange-500 uppercase font-bold md:text-[32px] text-2xl pb-3">$199</h4>
+                                    <h4 className="text-orange-500 uppercase sans-serif font-bold md:text-[32px] text-2xl pb-3">$199</h4>
                                 </div>
                                 <p className="text-left">We offer a wide range of plumbing services catered to both residential and commercial clients. Even the all-powerful Pointing has no control about the blind texts. Qualified team Affordable pricing Quick service We offer a wide range of plumbing services catered to both residential and
                                 </p>
@@ -111,20 +111,6 @@ const PriceDetail = () => {
                                 <p className="">We offer a wide range of plumbing services catered to both residential and commercial clients. Even the all-powerful Pointing has no control about the blind texts. Qualified team Affordable pricing Quick service We offer a wide range of plumbing services catered to both residential and
                                 </p>
                                 <div className="md:py-10">
-                                    {/* <div className="grid grid-cols-2">
-                                        {options.map((option, index) => (
-                                        <label className="inline-flex items-center" key={index}>
-                                            <input
-                                            type="radio"
-                                            className="form-radio h-4 w-4 text-orange-500"
-                                            value={option.name}
-                                            checked={group === option.name}
-                                            onChange={() => setGroup(option.name)}
-                                            />
-                                            <span className="ml-2 text-gray-700">{option.name}</span>
-                                        </label>
-                                        ))}
-                                    </div> */}
                                     <ul className='divide-y text-left'>
                                         <li className="text-left cursor-pointer hover:bg-gray-100 hover:bg-opacity-20 border-none text-black font-raleway">
                                             <div className="flex items-center p-4">

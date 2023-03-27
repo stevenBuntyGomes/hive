@@ -99,7 +99,7 @@ export const ServicePrice = () => {
                         <div className="p-8 mb-[38]">
                             {content.desc}
                         </div>
-                        <div className={`text-[42px] mb-[38px] font-bold ${index % 2 === 0 ? 'text-black' : 'text-orange-500'} `}>
+                        <div className={`text-[42px] mb-[38px] sans-serif font-bold ${index % 2 === 0 ? 'text-black' : 'text-orange-500'} `}>
                             €{content.price }
                         </div>
                         <div className='mb-[36px]'>excl vat</div>
