@@ -22,19 +22,19 @@ const Header = () => {
             </div>
             <div className="text-white gt-sm">
                 <div className="text-sm md:flex-grow">
-                    <Link href="#responsive-header" className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-orange-500 mr-6">
+                    <Link href="#responsive-header" className="block mt-4 md:inline-block md:mt-0 text-white hover:text-orange-500 mr-6">
                         <FontAwesomeIcon icon={faFacebookF} />
                     </Link>
-                    <Link href="#responsive-header" className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-orange-500 mr-6">
+                    <Link href="#responsive-header" className="block mt-4 md:inline-block md:mt-0 text-white hover:text-orange-500 mr-6">
                         <FontAwesomeIcon icon={faInstagram} />
                     </Link>
-                    <Link href="#responsive-header" className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-orange-500 mr-6">
+                    <Link href="#responsive-header" className="block mt-4 md:inline-block md:mt-0 text-white hover:text-orange-500 mr-6">
                         <FontAwesomeIcon icon={faTwitter} />
                     </Link>
-                    <Link href="#responsive-header" className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-orange-500 mr-6">
+                    <Link href="#responsive-header" className="block mt-4 md:inline-block md:mt-0 text-white hover:text-orange-500 mr-6">
                         <FontAwesomeIcon icon={faLinkedin} />
                     </Link>
-                    <Link href="#responsive-header" className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-orange-500 mr-6">
+                    <Link href="#responsive-header" className="block mt-4 md:inline-block md:mt-0 text-white hover:text-orange-500 mr-6">
                         <FontAwesomeIcon icon={faYoutube} />
                     </Link>
                 </div>
@@ -48,22 +48,22 @@ const Header = () => {
             </div>
             <div className="text-black gt-sm pt-2">
                 <div className="md:flex-grow text-base">
-                    <Link href="/" className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-orange-500 mr-6">
+                    <Link href="/" className="block mt-4 md:inline-block md:mt-0 text-black hover:text-orange-500 mr-6">
                         Home
                     </Link>
-                    <Link href="/service" className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-orange-500 mr-6">
+                    <Link href="/service" className="block mt-4 md:inline-block md:mt-0 text-black hover:text-orange-500 mr-6">
                         Services
                     </Link>
-                    <Link href="/prize" className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-orange-500 mr-6">
+                    <Link href="/prize" className="block mt-4 md:inline-block md:mt-0 text-black hover:text-orange-500 mr-6">
                         Prizes
                     </Link>
-                    <Link href="/about" className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-orange-500 mr-6">
+                    <Link href="/about" className="block mt-4 md:inline-block md:mt-0 text-black hover:text-orange-500 mr-6">
                         About Us
                     </Link>
-                    <Link href="/inquiry" className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-orange-500 mr-6">
+                    <Link href="/inquiry" className="block mt-4 md:inline-block md:mt-0 text-black hover:text-orange-500 mr-6">
                         Inquery
                     </Link>
-                    <Link href="/contact" className="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-orange-500 mr-6">
+                    <Link href="/contact" className="block mt-4 md:inline-block md:mt-0 text-black hover:text-orange-500 mr-6">
                         Contact
                     </Link>
                 </div>

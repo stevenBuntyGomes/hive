@@ -58,7 +58,7 @@ const Testimonial = () => {
         }, []);
   return (
     <>
-        <main className='w-full rounded bg-[#FFF] p-10 mt-10 lg:px-20'>
+        <main className='w-full rounded bg-[#FFF] p-10 mt-10 md:px-20'>
             <div data-aos = "fade-up" className="text-center">
                 <h5 className="text-orange-500 uppercase font-bold md:text-[32px] text-2xl">OUR TESTIMONIALS</h5>
                 <h4 className="font-bold uppercase md:text-[42px] text-4xl py-5">WHAT IS OUR CLIENTS SAY?</h4>

@@ -44,7 +44,7 @@ const About = () => {
     
   return (
       <>
-        <div className="bg-white w-full rounded p-5 md:p-10 lg:px-20 text-gray-800 relative md:text-left">
+        <div className="bg-white w-full rounded p-5 md:p-10 md:px-20 text-gray-800 relative md:text-left">
             <div className="md:flex items-center -mx-5">
                 <div data-aos="fade-up" className={`w-full md:w-2/5 px-5 mb-10 md:mb-0`}>
                     <div className="md:relative">
