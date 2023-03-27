@@ -130,8 +130,8 @@ const Inquiry = () => {
                         </div>
                     </section>   
                 </div>
-                <div className='bg-[url("/inquery01.png")] w-full bg-no-repeat bg-cover w-max-[360px] md:ml-[-20px] md:-mt-[50px] lg:mt-0 md:-mb-[50px] lg:mb-0'>
-                    <div className='text-center md:text-left md:mt-[351px] mb-[51px] md:ml-[60px]'>
+                <div className='bg-[url("/inquery01.png")] w-full bg-no-repeat bg-cover w-max-[360px] h-[400px] md:h-auto md:ml-[-20px]'>
+                    <div className='text-center md:text-left md:mt-[351px] mb-[51px] md:ml-[60px] mt-[200px]'>
                         <h3 className="md:text-[70px] text-2xl font-bold md:pt-5 text-orange-500 md:mb-[26px]">
                             LETS
                         </h3>
@@ -142,7 +142,7 @@ const Inquiry = () => {
                             TOGETHER
                         </h3>
                         <div className="p-2 w-full">
-                            <button className="  rounded-md font-bold bg-transparent text-white py-2 px-[50px] border-2 border-white hover:bg-orange-500 hover:border-orange-500 transition">
+                            <button className="rounded-md font-bold bg-transparent text-white py-2 px-[50px] border-2 border-white hover:bg-orange-500 hover:border-orange-500 transition">
                                 CONTACT US <FontAwesomeIcon icon = {faChevronRight}/><FontAwesomeIcon className='ml-[-2px]' icon = {faChevronRight}/>
                             </button>
                         </div>
