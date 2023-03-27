@@ -22,7 +22,7 @@ const PrizeItem = ({content , index}) => {
         <div className="p-10">
             {content.desc}
         </div>
-        <div className={`text-[42px] font-bold ${index % 2 === 0 ? 'text-black mb-5' : 'text-orange-500 mb-5'} `}>
+        <div className={`text-[42px] sans-serif font-bold ${index % 2 === 0 ? 'text-black mb-5' : 'text-orange-500 mb-5'} `}>
             €{content.price }
         </div>
         <div className='mb-[36px]'>excl vat</div>

@@ -30,7 +30,7 @@ const Header2 = () => {
         <div className="container-full mx-auto">
         {/* top bar number part starts */}
             <div className={`md:px-20 hidden bg-black md:py-5 md:flex md:w-auto md:flex-grow`}>
-                <div className='text-white text-xl font-normal md:flex-grow'>
+                <div className='text-white text-xl font-normal md:flex-grow sans-serif'>
                     Call Us: +43 660 3924728
                 </div>
                 <div className="text-white gt-sm">
@@ -141,7 +141,7 @@ const Header2 = () => {
                     <span>
                          Call Us:
                     </span>
-                    <a href="tel:+43 660 3924728" className="m-0 mx-auto">
+                    <a href="tel:+43 660 3924728" className="m-0 mx-auto font-normal sans-serif">
                          +43 660 3924728
                 </a>
                 </div>
