@@ -32,7 +32,7 @@ const Contact = () => {
                     </div>
                 </div>
 
-                <div className='justify-between items-center rounded-xl transform -translate-y-32 shadow-[0_4px_20px_0px_rgba(0,0,0,0.3)] mx-5 md:mx-[90px] gap-5'>
+                <div className='justify-between items-center rounded-xl transform -translate-y-32 shadow-[0_4px_20px_0px_rgba(0,0,0,0.3)] mx-5 md:mx-[80px] gap-5'>
                     <div data-aos = "fade-up">
                         <div className="text-center w-max-[360px] py-5 bg-white rounded-xl">
                             <h2 className="text-[32px] font-bold text-center pt-[44px] leading-[36px] pb-[56px]">

@@ -130,7 +130,7 @@ const Inquiry = () => {
                         </div>
                     </section>   
                 </div>
-                <div className='bg-[url("/inquery01.png")] w-full bg-no-repeat bg-cover w-max-[360px] md:ml-[-20px] md:-mt-[110px] lg:mt-0 md:-mb-[75px] lg:mb-0'>
+                <div className='bg-[url("/inquery01.png")] w-full bg-no-repeat bg-cover w-max-[360px] md:ml-[-20px] md:-mt-[75px] lg:mt-0 md:-mb-[75px] lg:mb-0'>
                     <div className='text-center md:text-left md:mt-[351px] mb-[51px] md:ml-[60px]'>
                         <h3 className="md:text-[70px] text-2xl font-bold md:pt-5 text-orange-500 md:mb-[26px]">
                             LETS
