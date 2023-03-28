@@ -91,7 +91,7 @@ const Clients = () => {
                 },
             }}
                 // modules={[FreeMode, Pagination]}
-                // className="mySwiper"
+                className="mySwiper"
             >
                 {contents && contents.map((content, index) => (
                     <SwiperSlide className="py-10" key = {index}>
