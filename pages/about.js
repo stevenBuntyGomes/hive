@@ -10,9 +10,13 @@ import Clients from '@/components/Service/Clients';
 import Subscribe from '@/components/About/Subscribe';
 import Aos from 'aos';
 import 'aos/dist/aos.css'
-
+import { useDispatch, useSelector } from 'react-redux';
+import {ABOUT_IMAGE_URL} from '../config'
+import {getAboutAction} from '../Action/AboutAction'
 
 const About = () => {
+    const dispatch = useDispatch();
+    const {about, loading} = useSelector((state) => state.about);
     const [group, setGroup] = useState('');
 
     const options = [
@@ -41,9 +45,15 @@ const About = () => {
 
     }
 
+    const getAboutDispatchHandler = async () => {
+        dispatch(getAboutAction());
+    }
+
+
     useEffect(() => {
+        getAboutDispatchHandler();
         Aos.init({duration: 1000});
-    }, []);
+    }, [dispatch]);
   return (
       <>
           <Layout>
@@ -64,16 +74,15 @@ const About = () => {
                     <div className="md:flex items-center -mx-10">
                     <div data-aos = "fade-up" className="w-full md:w-2/5 md:px-10 px-5 mb-10 md:mb-0">
                         <div className="relative">
-                            <Image src="/about.png" width={400} height = {659} className="md:w-[400px] relative z-10 md:h-[659px]" alt=""/>
+                            <img src={`${ABOUT_IMAGE_URL}${about && about?.left_image}`} width={400} height = {659} className="md:w-[400px] relative z-10 md:h-[659px]" alt=""/>
                         </div>
                     </div>
                     <div data-aos = "fade-up" className="w-full md:w-3/5 md:px-10 px-5 text-center md:text-left">
                         <div className="mb-10">
-                            <h4 className="text-orange-500 uppercase font-bold md:text-[32px] text-2xl pb-3">About us</h4>
-                            <h5 className="font-bold uppercase md:text-[42px] text-4xl mb-5">Plumbing is what we do</h5>
-                            <p className="text-base leading-[30px] text-left">We are an award winning plumbing company with over 20 years experience in the
-                                business. We provide a wide range of services for both residential and commercial clients.</p>
-                            <div className="py-10">
+                            <h4 className="text-orange-500 uppercase font-bold md:text-[32px] text-2xl pb-3">{about && about?.heading}</h4>
+                            <h5 className="font-bold uppercase md:text-[42px] text-4xl mb-5">{about && about?.title}</h5>
+                            <p className="text-base leading-[30px] text-left">{about && about?.description}</p>
+                            {/* <div className="py-10">
                                 <div className="grid grid-cols-2">
                                     {options.map((option, index) => (
                                     <label className="inline-flex items-center" key={index}>
@@ -88,18 +97,18 @@ const About = () => {
                                     </label>
                                     ))}
                                 </div>
-                            </div>
+                            </div> */}
 
-                            <p className='text-base leading-[30px] text-left'>No job is too big or too small, we’ve got you covered. In addition to our services, you can check out our shop for a wide range of plumbing supplies and equipment. When it comes to plumbing we are your one stop shop. No job is too big or too small, we’ve got you covered. In addition to our services, you can check out our shop for a wide range of plumbing supplies and equipment. When it comes to plumbing we are your one stop shop.</p>
+                            {/* <p className='text-base leading-[30px] text-left'>No job is too big or too small, we’ve got you covered. In addition to our services, you can check out our shop for a wide range of plumbing supplies and equipment. When it comes to plumbing we are your one stop shop. No job is too big or too small, we’ve got you covered. In addition to our services, you can check out our shop for a wide range of plumbing supplies and equipment. When it comes to plumbing we are your one stop shop.</p> */}
                         </div>
                       </div>
                   </div>
                   
                    <div data-aos = "fade-up" className="mt-[85px] mb-10">
-                                <h5 className="font-bold uppercase md:text-[20px] mb-5">QUALITY SERVICE IS OUR GUARANTEE</h5>
-                                <p className="">We offer a wide range of plumbing services catered to both residential and commercial clients. Even the all-powerful Pointing has no control about the blind texts
+                                <h5 className="font-bold uppercase md:text-[20px] mb-5">{about && about?.first_heading}</h5>
+                                <p className="pb-10">{about && about?.first_description}
                                 </p>
-                                <div className="py-5">
+                                {/* <div className="py-5">
                                     <ul className='divide-y text-left'>
                                         <li className="text-left cursor-pointer hover:bg-gray-100 hover:bg-opacity-20 border-none text-black  ">
                                             <div className="flex items-center p-2">
@@ -142,18 +151,76 @@ const About = () => {
                                             </div>
                                         </li>
                                     </ul>
-                                </div>
+                                </div> */}
 
-                      <p className='text-base mt-[20px] mb-[80px]'>No job is too big or too small, we’ve got you covered. In addition to our services, you can check out our shop for a wide range of plumbing supplies and equipment. When it comes to plumbing we are your one stop shop. No job is too big or too small, we’ve got you covered. In addition to our services, you can check out our shop for a wide range of plumbing supplies and equipment. When it comes to plumbing we are your one stop shop.</p>
+                     
                       
 
-                      <div data-aos = "fade-up" className="bg-[url('/priceDetailsBanner.png')] bg-no-repeat bg-cover w-full h-[278px] md:px-20 py-10 mb-10"></div>
+                      <div data-aos = "fade-up" style={{ backgroundImage: `url(${ABOUT_IMAGE_URL}${about && about?.first_image})`}}  className={`bg-no-repeat bg-cover w-full h-[278px] md:px-20 py-10 mb-10`}></div>
                       
-                      <p data-aos = "fade-up" className='text-base mt-[60px]'>No job is too big or too small, we’ve got you covered. In addition to our services, you can check out our shop for a wide range of plumbing supplies and equipment. When it comes to plumbing we are your one stop shop. No job is too big or too small, we’ve got you covered. In addition to our services, you can check out our shop for a wide range of plumbing supplies and equipment. When it comes to plumbing we are your one stop shop.</p> 
+                      <p data-aos = "fade-up" className='text-base mt-[60px]'>{about && about.second_description}</p> 
 
-                      </div>
+                    </div>
+
+                    <div data-aos = "fade-up" className="mt-[85px] mb-10">
+                                <h5 className="font-bold uppercase md:text-[20px] mb-5">{about && about?.second_heading}</h5>
+                                <p className="pb-10">{about && about?.second_description}
+                                </p>
+                                {/* <div className="py-5">
+                                    <ul className='divide-y text-left'>
+                                        <li className="text-left cursor-pointer hover:bg-gray-100 hover:bg-opacity-20 border-none text-black  ">
+                                            <div className="flex items-center p-2">
+                                                <FontAwesomeIcon icon={faArrowRightLong} className="h-6 w-6 text-orange-500"/>
+                                                
+                                                <p className='ml-2'>Quisque aliquet nibh sit amet lectus auctor</p>
+
+                                            </div>
+                                        </li>
+                                        <li className="text-left cursor-pointer hover:bg-gray-100 hover:bg-opacity-20 border-none text-black  ">
+                                            <div className="flex items-center p-2">
+                                                <FontAwesomeIcon icon={faArrowRightLong} className="h-6 w-6 text-orange-500"/>
+                                                
+                                                <p className='ml-2'>Nulla at metus ultricies, placerat augue sed</p>
+
+                                            </div>
+                                        </li>
+                                        <li className="text-left cursor-pointer hover:bg-gray-100 hover:bg-opacity-20 border-none text-black  ">
+                                            <div className="flex items-center p-2">
+                                                <FontAwesomeIcon icon={faArrowRightLong} className="h-6 w-6 text-orange-500"/>
+                                                
+                                                <p className='ml-2'>Curabitur mollis ex vestibulum, ullamcorper.</p>
+
+                                            </div>
+                                        </li>
+                                        <li className="text-left cursor-pointer hover:bg-gray-100 hover:bg-opacity-20 border-none text-black  ">
+                                            <div className="flex items-center p-2">
+                                                <FontAwesomeIcon icon={faArrowRightLong} className="h-6 w-6 text-orange-500"/>
+                                                
+                                                <p className='ml-2'>Nulla at metus ultricies, placerat augue sed.</p>
+
+                                            </div>
+                                        </li>
+                                        <li className="text-left cursor-pointer hover:bg-gray-100 hover:bg-opacity-20 border-none text-black  ">
+                                            <div className="flex items-center p-2">
+                                                <FontAwesomeIcon icon={faArrowRightLong} className="h-6 w-6 text-orange-500"/>
+                                                
+                                                <p className='ml-2'>Curabitur mollis ex vestibulum, ullamcorper.</p>
+
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div> */}
+
                       
-                                 </div>
+                      
+
+                      <div data-aos = "fade-up" style={{ backgroundImage: `url(${ABOUT_IMAGE_URL}${about && about?.second_image})`}}  className={`bg-no-repeat bg-cover w-full h-[278px] md:px-20 py-10 mb-10`}></div>
+                      
+                      <p data-aos = "fade-up" className='text-base mt-[60px]'>{about && about.second_description}</p> 
+
+                    </div>
+                      
+                </div>
               </div>
                   
                   <Clients />
