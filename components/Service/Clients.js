@@ -3,18 +3,25 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import Aos from 'aos';
 import 'aos/dist/aos.css'
 import { Autoplay, FreeMode, Pagination } from "swiper";
+import { useDispatch, useSelector } from 'react-redux';
+import { useRouter } from 'next/router';
+import { getBrandAction } from '@/Action/BrandAction';
+import {BRAND_IMAGE_URL} from '../../config'
 
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
-import 'swiper/css/autoplay';
+import 'swiper/css/autoplay'; 
 
 
 const Clients = () => {
-    const onClick = () => {
-
+    const dispatch = useDispatch();
+    const router = useRouter();
+    const {brands, loading, error} = useSelector((state) => state.brand);
+    const visitPageHandler = (link) => {
+        window.location.replace(`${link}`);
     }
     const contents = [
         {
@@ -54,7 +61,13 @@ const Clients = () => {
             img: '/6.png'
         },
     ];
+
+    const getBrandHandler = async () => {
+        dispatch(getBrandAction());
+    }
+
     useEffect(() => {
+        getBrandHandler();
         Aos.init({duration: 1000});
     }, []);
   return (
@@ -93,9 +106,9 @@ const Clients = () => {
                 // modules={[FreeMode, Pagination]}
                 className="mySwiper"
             >
-                {contents && contents.map((content, index) => (
-                    <SwiperSlide className="py-10" key = {index}>
-                        <img data-aos = "fade-up" src={content.img} alt = "image content"/>
+                {brands && brands.map((brand, index) => (
+                    <SwiperSlide key = {index} onClick = { () => window.location.replace(`${brand && brand.link}`)} className="py-10">
+                        <img data-aos = "fade-up" src={`${BRAND_IMAGE_URL}${brand && brand.logo}`} alt = "image content"/>
                     </SwiperSlide>
                 ))}
                 

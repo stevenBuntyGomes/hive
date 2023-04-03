@@ -1,18 +1,25 @@
 import {createReducer} from '@reduxjs/toolkit'
 
 const initialState = {
-    blogs: [],
-    blog:{},
-    message: null,
+    banner: {},
     loading: false,
     error: null,
-    categories: [],
-    tags: [],
-    size: 0,
-    searchBlog: [],
+    message: '',
+    banners: [],
 };
 
 
 export const bannerReducer = createReducer(initialState, {
-
+    getBannerRequest: (state, action) => {
+        state.loading = true;
+    },
+    getBannerSuccess: (state, action) => {
+        state.loading = false;
+        state.banners = action.payload.data;
+        state.message = action.payload.message;
+    },
+    getBannerFailure: (state, action) => {
+        state.loading = false;
+        state.error = action.payload.error;
+    },
 });

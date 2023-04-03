@@ -4,6 +4,9 @@ import Image from 'next/image'
 import { Swiper, SwiperSlide } from "swiper/react";
 import Aos from 'aos';
 import 'aos/dist/aos.css'
+import { useDispatch, useSelector } from 'react-redux';
+import { getBannerAction } from '@/Action/BannerAction';
+import { useRouter } from 'next/router';
 
 // Import Swiper styles
 import "swiper/css";
@@ -16,20 +19,28 @@ import 'swiper/css/autoplay';
 import { Autoplay, FreeMode, Pagination } from "swiper";
 
 const BannerComponent = () => {
+  const router = useRouter();
   const [color, setColor] = useState('');
+  const dispatch = useDispatch();
+  const {banners, banner, loading, error} = useSelector((state) => state.banner);
   // const size = window.innerWidth >= 960 ? 'xl' : 'md';
 
   const handleChange = (event) => {
     setColor(event.target.value);
   };
 
-  const handleClick = () => {
-
+  const handleClick = (link) => {
+    // router.replace(link);
   }
 
+  const getBannersHandler = async () => {
+    await dispatch(getBannerAction());
+  } 
+
     useEffect(() => {
+        getBannersHandler();
         Aos.init({duration: 1000});
-    }, []);
+    }, [dispatch]);
 
   return (
     <Fragment>
@@ -51,162 +62,55 @@ const BannerComponent = () => {
                   modules={[Autoplay, FreeMode, Pagination]}
                   className="mySwiper"
                 >
-                  <SwiperSlide className="py-10">
-                      <div data-aos= "fade-up" className="p-4 md:p-0 text-center md:text-left relative">
-                          <h5 className="md:text-[32px] text-2xl font-semibold">Handyman Expertise</h5>
-                          <h3 className="md:text-[70px] text-4xl font-bold pt-[25px]">
-                            You Can <span className="text-orange-500">Trust</span>
-                          </h3>
-                          <div className="md:py-10 pt-[25px] pb-[36px]">
-                            <ul className="flex justify-center md:justify-start">
-                              <li className="pt-2 md:text-[32px] text-md">PAINTING</li>
-                              <li className='align-middle pt-2 md:text-[32px] text-md mx-2'>
-                                <label className={`inline-flex items-center cursor-pointer md text-orange-500`}>
-                                  <input
-                                    type="radio"
-                                    value="hello"
-                                    checked={color === 'hello'}
-                                    onChange={handleChange}
-                                    className="form-radio h-6 w-6 text-orange-500"
-                                  />
-                                </label>
-                              </li>
-                              <li className="pt-2 md:text-[32px] text-md">PLUMBING</li>
-                              <li className='align-middle pt-2 md:text-[32px] text-md mx-2'>
-                                <label className={`inline-flex items-center cursor-pointer md text-orange-500`}>
-                                  <input
-                                    type="radio"
-                                    value="world"
-                                    checked={color === 'world'}
-                                    onChange={handleChange}
-                                    className="form-radio h-6 w-6 text-orange-500"
-                                  />
-                                </label>
-                              </li>
-                              <li className="pt-2 md:text-[32px] text-md">CARPENTRY</li>
-                            </ul>
+                  {banners && banners.map((banner, index) => (
+                      <SwiperSlide className="py-10">
+                        <div data-aos= "fade-up" className="p-4 md:p-0 text-center md:text-left relative">
+                            <h5 className="md:text-[32px] text-2xl font-semibold">{banner && banner.heading}</h5>
+                            <h3 className="md:text-[70px] text-4xl font-bold pt-[25px]">
+                              You Can <span className="text-orange-500">{banner && banner.title}</span>
+                            </h3>
+                            <div className="md:py-10 pt-[25px] pb-[36px]">
+                              <ul className="flex justify-center md:justify-start">
+                                <li className="pt-2 md:text-[32px] text-md">{banner && banner.details}</li>
+                                <li className='align-middle pt-2 md:text-[32px] text-md mx-2'>
+                                  <label className={`inline-flex items-center cursor-pointer md text-orange-500`}>
+                                    <input
+                                      type="radio"
+                                      value="hello"
+                                      checked={color === 'hello'}
+                                      onChange={handleChange}
+                                      className="form-radio h-6 w-6 text-orange-500"
+                                    />
+                                  </label>
+                                </li>
+                                <li className="pt-2 md:text-[32px] text-md">PLUMBING</li>
+                                <li className='align-middle pt-2 md:text-[32px] text-md mx-2'>
+                                  <label className={`inline-flex items-center cursor-pointer md text-orange-500`}>
+                                    <input
+                                      type="radio"
+                                      value="world"
+                                      checked={color === 'world'}
+                                      onChange={handleChange}
+                                      className="form-radio h-6 w-6 text-orange-500"
+                                    />
+                                  </label>
+                                </li>
+                                <li className="pt-2 md:text-[32px] text-md">CARPENTRY</li>
+                              </ul>
+                            </div>
+                            <p className="text-[16px] h-auto md:w-[701px] p-0 md:pr-10">Lorem Ipsum is simply dummy text of the printing and
+                              {banner && banner.description}</p>
                           </div>
-                          <p className="text-[16px] h-auto md:w-[701px] p-0 md:pr-10">Lorem Ipsum is simply dummy text of the printing and
-                            typesetting
-                            industry. Lorem Ipsum has
-                            been the industry's
-                            standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                            scrambled it to make
-                            a type specimen book.</p>
-                        </div>
-                        <div data-aos= "fade-up" className="pt-10 flex justify-center md:justify-start">
-                          <button className="bg-gray-800 hover:bg-orange-500 text-white py-[14px] px-[30px] rounded-md mr-4" onClick={handleClick}>
-                            GET MORE
-                          </button>
-                          <button className="bg-gray-800 hover:bg-orange-500 text-white px-[30px] py-[14px] rounded-md" onClick={handleClick}>
-                            GET A QUOTE
-                          </button>
-                        </div>
-                  </SwiperSlide>
-                  <SwiperSlide className="py-10">
-                      <div data-aos= "fade-up" className="p-4 md:p-0 text-center md:text-left relative">
-                          <h5 className="md:text-[32px] text-2xl font-semibold">Handyman Expertise</h5>
-                          <h3 className="md:text-[70px] text-4xl font-bold pt-[25px]">
-                            You Can <span className="text-orange-500">Trust</span>
-                          </h3>
-                          <div className="md:py-10 pt-[25px] pb-[36px]">
-                            <ul className="flex justify-center md:justify-start">
-                              <li className="pt-2 md:text-[32px] text-md">PAINTING</li>
-                              <li className='align-middle pt-2 md:text-[32px] text-md mx-2'>
-                                <label className={`inline-flex items-center cursor-pointer md text-orange-500`}>
-                                  <input
-                                    type="radio"
-                                    value="hello"
-                                    checked={color === 'hello'}
-                                    onChange={handleChange}
-                                    className="form-radio h-6 w-6 text-orange-500"
-                                  />
-                                </label>
-                              </li>
-                              <li className="pt-2 md:text-[32px] text-md">PLUMBING</li>
-                              <li className='align-middle pt-2 md:text-[32px] text-md mx-2'>
-                                <label className={`inline-flex items-center cursor-pointer md text-orange-500`}>
-                                  <input
-                                    type="radio"
-                                    value="world"
-                                    checked={color === 'world'}
-                                    onChange={handleChange}
-                                    className="form-radio h-6 w-6 text-orange-500"
-                                  />
-                                </label>
-                              </li>
-                              <li className="pt-2 md:text-[32px] text-md">CARPENTRY</li>
-                            </ul>
+                          <div data-aos= "fade-up" className="pt-10 flex justify-center md:justify-start">
+                            <button className="bg-gray-800 hover:bg-orange-500 text-white py-[14px] px-[30px] rounded-md mr-4" onClick={handleClick(banner && banner.link_one)}>
+                              {banner && banner.button_one}
+                            </button>
+                            <button className="bg-gray-800 hover:bg-orange-500 text-white px-[30px] py-[14px] rounded-md" onClick={handleClick(banner && banner.link_two)}>
+                              {banner && banner.button_two}
+                            </button>
                           </div>
-                          <p className="text-[16px] h-auto md:w-[701px] p-0 md:pr-10">Lorem Ipsum is simply dummy text of the printing and
-                            typesetting
-                            industry. Lorem Ipsum has
-                            been the industry's
-                            standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                            scrambled it to make
-                            a type specimen book.</p>
-                        </div>
-                        <div data-aos= "fade-up" className="pt-10 flex justify-center md:justify-start">
-                          <button className="bg-gray-800 hover:bg-orange-500 text-white py-[14px] px-[30px] rounded-md mr-4" onClick={handleClick}>
-                            GET MORE
-                          </button>
-                          <button className="bg-gray-800 hover:bg-orange-500 text-white px-[30px] py-[14px] rounded-md" onClick={handleClick}>
-                            GET A QUOTE
-                          </button>
-                        </div>
-                  </SwiperSlide>
-                  <SwiperSlide className="py-10">
-                      <div data-aos= "fade-up" className="p-4 md:p-0 text-center md:text-left relative">
-                          <h5 className="md:text-[32px] text-2xl font-semibold">Handyman Expertise</h5>
-                          <h3 className="md:text-[70px] text-4xl font-bold pt-[25px]">
-                            You Can <span className="text-orange-500">Trust</span>
-                          </h3>
-                          <div className="md:py-10 pt-[25px] pb-[36px]">
-                            <ul className="flex justify-center md:justify-start">
-                              <li className="pt-2 md:text-[32px] text-md">PAINTING</li>
-                              <li className='align-middle pt-2 md:text-[32px] text-md mx-2'>
-                                <label className={`inline-flex items-center cursor-pointer md text-orange-500`}>
-                                  <input
-                                    type="radio"
-                                    value="hello"
-                                    checked={color === 'hello'}
-                                    onChange={handleChange}
-                                    className="form-radio h-6 w-6 text-orange-500"
-                                  />
-                                </label>
-                              </li>
-                              <li className="pt-2 md:text-[32px] text-md">PLUMBING</li>
-                              <li className='align-middle pt-2 md:text-[32px] text-md mx-2'>
-                                <label className={`inline-flex items-center cursor-pointer md text-orange-500`}>
-                                  <input
-                                    type="radio"
-                                    value="world"
-                                    checked={color === 'world'}
-                                    onChange={handleChange}
-                                    className="form-radio h-6 w-6 text-orange-500"
-                                  />
-                                </label>
-                              </li>
-                              <li className="pt-2 md:text-[32px] text-md">CARPENTRY</li>
-                            </ul>
-                          </div>
-                          <p className="text-[16px] h-auto md:w-[701px] p-0 md:pr-10">Lorem Ipsum is simply dummy text of the printing and
-                            typesetting
-                            industry. Lorem Ipsum has
-                            been the industry's
-                            standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                            scrambled it to make
-                            a type specimen book.</p>
-                        </div>
-                        <div data-aos= "fade-up" className="pt-10 flex justify-center md:justify-start">
-                          <button className="bg-gray-800 hover:bg-orange-500 text-white py-[14px] px-[30px] rounded-md mr-4" onClick={handleClick}>
-                            GET MORE
-                          </button>
-                          <button className="bg-gray-800 hover:bg-orange-500 text-white px-[30px] py-[14px] rounded-md" onClick={handleClick}>
-                            GET A QUOTE
-                          </button>
-                        </div>
-                  </SwiperSlide>
+                    </SwiperSlide>
+                  ))}
 
                 </Swiper>           
           </div>

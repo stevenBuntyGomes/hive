@@ -4,17 +4,23 @@ import { useRouter } from 'next/router';
 import Aos from 'aos';
 import 'aos/dist/aos.css'
 import { Autoplay, FreeMode, Pagination } from "swiper";
-
+import { useDispatch, useSelector } from 'react-redux';
+import { getPriceAction } from '@/Action/PriceAction';
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
 
 export const ServicePrice = () => {
+    const dispatch = useDispatch();
+    const {prices, loading, error} = useSelector((state) => state.price);
     const Router = useRouter();
 
-    const onClick = () => {
-        Router.replace('/details/price_details');
+    const onServicePriceClick = (price) => {
+        Router.push({
+            pathname: '/details/price_details',
+            query: { price: price.id }
+        })
     }
 
     const contents = [
@@ -50,7 +56,12 @@ export const ServicePrice = () => {
                 }
             ];
 
+            const getPricesHandler = () => {
+                dispatch(getPriceAction());
+            }
+
             useEffect(() => {
+                getPricesHandler();
                 Aos.init({duration: 1000});
             }, []);
   return (
@@ -90,21 +101,21 @@ export const ServicePrice = () => {
             // modules={[FreeMode, Pagination]}
             className="mySwiper"
         >
-            {contents && contents.map((content, index) => (
+            {prices && prices.map((price, index) => (
                 <SwiperSlide className="py-10" key = {index}>
                     <div data-aos = "fade-up" className={`shadow-[0_0_15px_2px_rgba(0,0,0,0.4)] ${index % 2 === 0 ? 'border-orange-500' : 'border-black'} text-center md:max-w-[430px] rounded-xl grid grid-cols-1 border-2 bg-white`}>
                         <div className={`rounded-xl ${index % 2 === 0 ? 'bg-orange-500' : 'bg-black'} text-white p-10`}>
-                            <h1 className="uppercase font-bold text-[32px]">{content.rate}</h1>
+                            <h1 className="uppercase font-bold text-[32px]">{price && price.title}</h1>
                         </div>
                         <div className="p-8 mb-[38]">
-                            {content.desc}
+                            {price && price.description}
                         </div>
                         <div className={`text-[42px] mb-[38px] sans-serif font-bold ${index % 2 === 0 ? 'text-black' : 'text-orange-500'} `}>
-                            €{content.price }
+                            €{price && price.price}
                         </div>
                         <div className='mb-[36px]'>excl vat</div>
                         <div className="mb-[48px]">
-                            <button onClick={onClick} className="bg-black hover:bg-orange-500 text-white font-bold py-2 px-4 rounded">
+                            <button onClick={() => onServicePriceClick(price && price)} className="bg-black hover:bg-orange-500 text-white font-bold py-2 px-4 rounded">
                                 Show More
                             </button>
                         </div>
