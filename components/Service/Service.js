@@ -4,26 +4,39 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import ServiceCss from './service.module.css'
 import Aos from 'aos';
 import 'aos/dist/aos.css'
+import { SERVICE_IMAGE_URL } from "@/config";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import { useRouter } from "next/router";
+import { useDispatch, useSelector } from "react-redux";
+import { getServiceAction } from "@/Action/ServiceAction";
 
 // import required modules
 import { Autoplay, FreeMode, Pagination } from "swiper";
 
 const Service = () => {
     const Router = useRouter();
+    const dispatch = useDispatch();
+    const {services, loading, error} = useSelector((state) => state.service);
 
-    const onClick = () => {
-        Router.replace('/details/service_details');
+    const onClick = (service) => {
+        Router.push({
+            pathname: '/details/service_details',
+            query: { service: service.id }
+        })
+    }
+
+    const getServiceHandler = async () => {
+        await dispatch(getServiceAction());
     }
 
     useEffect(() => {
+        getServiceHandler();
         Aos.init({duration: 1000});
-    }, []);
+    }, [dispatch]);
 
     const contents = [
         {
@@ -100,19 +113,19 @@ const Service = () => {
             className={`mySwiper`}
               >
                   
-            {contents && contents.map((content, index) => (
+            {services && services.map((service, index) => (
                 <SwiperSlide className="py-10" key = {index}>
                     <div data-aos= "fade-up" className="shadow-[0_0_15px_2px_rgba(0,0,0,0.3)] text-center md:max-w-[420px] rounded-md grid grid-cols-1">
-                        <img src={content.img} className="w-full h-[226px] md:h-[270px] rounded-md mb-[38px]" />
+                        <img src={`${SERVICE_IMAGE_URL}${service && service.image}`} alt = {service && service.image} className="w-full h-[226px] md:h-[270px] rounded-md mb-[38px]" />
                         <div className="text-xl font-bold leading-[24px] mb-[20px]">
-                            {content.title}
+                            {service && service.title}
                         </div>
                         <div className="w-[152px] h-[3px] bg-orange-500 text-center items-center m-auto"></div>
                         <div className="text-base leading-[30px] p-8">
-                            {content.desc}
+                            {service && service.description}
                         </div>
                         <div className="mb-[38px]">
-                            <button onClick={onClick} className="bg-black hover:bg-orange-500 text-white font-bold py-2 px-4 rounded">
+                            <button onClick={() => onClick(service)} className="bg-black hover:bg-orange-500 text-white font-bold py-2 px-4 rounded">
                                 Show More
                             </button>
                         </div>

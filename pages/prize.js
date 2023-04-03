@@ -3,11 +3,21 @@ import Layout from '../components/Layout'
 import PrizeItem from '../components/Service/PrizeItem'
 import Aos from 'aos';
 import 'aos/dist/aos.css'
+import { useDispatch, useSelector } from 'react-redux';
+import { getPriceAction } from '@/Action/PriceAction';
+
 
 
 const Services = () => {
+    const dispatch = useDispatch(); 
+    const {prices, loading, error} = useSelector((state) => state.price);
+
+    const getPricesHandler = () => {
+        dispatch(getPriceAction());
+    }
 
     useEffect(() => {
+        getPricesHandler();
         Aos.init({duration: 1000});
     }, []);
 
@@ -132,8 +142,8 @@ const Services = () => {
                 
 
                 <div className='flex flex-row flex-wrap justify-center'>
-                {contents && contents.map((content, index) => (
-                    <PrizeItem content={content} index={index} key={index} />
+                {prices && prices.map((price, index) => (
+                    <PrizeItem price={price} index={index} key={index} />
                 ))}
                 </div>
             </main>

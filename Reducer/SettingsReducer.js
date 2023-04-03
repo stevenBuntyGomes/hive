@@ -1,18 +1,24 @@
 import {createReducer} from '@reduxjs/toolkit'
 
 const initialState = {
-    blogs: [],
-    blog:{},
-    message: null,
+    settings: {},
     loading: false,
     error: null,
-    categories: [],
-    tags: [],
-    size: 0,
-    searchBlog: [],
+    message: '',
 };
 
 
 export const settingsReducer = createReducer(initialState, {
-
+    getSettingsRequest: (state, action) => {
+        state.loading = true;
+    },
+    getSettingsSuccess: (state, action) => {
+        state.loading = false;
+        state.settings = action.payload.data;
+        state.message = action.payload.message;
+    },
+    getSettingsFailure: (state, action) => {
+        state.loading = false;
+        state.error = action.payload.error;
+    },
 });

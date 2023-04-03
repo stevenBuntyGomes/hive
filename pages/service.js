@@ -3,10 +3,28 @@ import Layout from '../components/Layout'
 import ServiceItem from '../components/Service/ServiceItem'
 import Aos from 'aos';
 import 'aos/dist/aos.css'
+import { useRouter } from "next/router";
+import { useDispatch, useSelector } from "react-redux";
+import { getServiceAction } from "@/Action/ServiceAction";
+
 
 const Services = () => {
 
+    const Router = useRouter();
+    const dispatch = useDispatch();
+    const {services, loading, error} = useSelector((state) => state.service);
+    const onClick = (service) => {
+        Router.push({
+            pathname: '/details/service_details',
+            query: { service: service.id }
+    })
+    }
+    const getServiceHandler = async () => {
+        await dispatch(getServiceAction());
+    }
+
     useEffect(() => {
+        getServiceHandler();
         Aos.init({duration: 1000});
     }, []);
 
@@ -133,8 +151,8 @@ const Services = () => {
                     </div>
                     
                     <div className='flex flex-row flex-wrap justify-center'>
-                        {contents && contents.map((content, index) => (
-                        <ServiceItem className="w-1/3" key = {index} content={content} index={index} />
+                        {services && services.map((service, index) => (
+                        <ServiceItem className="w-1/3" key = {index} content={service} index={index} />
                         ))}
                     </div>
                 </main>  

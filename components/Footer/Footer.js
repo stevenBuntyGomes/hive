@@ -1,7 +1,18 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import Link from 'next/link'
+import { useDispatch, useSelector } from "react-redux";
+import { getSettingsAction } from "@/Action/SettingsAction";
+
 
 const Footer = () => {
+    const dispatch = useDispatch();
+    const {settings, loading} = useSelector((state) => state.settings);
+    const getSettingsHandler = async () => {
+        dispatch(getSettingsAction())
+    }
+    useEffect(() => {
+        getSettingsHandler();
+    }, [dispatch]);
   return (
     <>
         <main className='container-full mx-auto sans-serif'>
@@ -15,7 +26,7 @@ const Footer = () => {
                             </li>
                             <li className="border-none">
                                 <p className="py-4">
-                                We are an award winning plumbing company with over 20 years experience in the business. We provide a wide range of services for both residential and commercial clients.
+                                {settings && settings.about_message}
                                 </p>
                             </li>
                         </ul>
@@ -172,19 +183,20 @@ const Footer = () => {
                                     <div className="w-[100px] h-[3px] bg-orange-500 m-auto md:mx-0 mb-2"></div>
                                     <div className="flex flex-col space-y-2 mt-5 md:mt-0">
                                         <div className="flex flex-col space-y-1">
-                                        <span className="text-base font-medium">14 Tottenham Court Road</span>
-                                        <span className="text-base">Bulls Stadium, Califorina</span>
+                                        <span className="text-base font-medium">{settings && settings.first_address}</span>
+                                        <span className="text-base">{settings && settings.second_address}</span>
                                         </div>
                                         <div className="flex flex-col space-y-1">
-                                            <span className="text-base font-medium mt-2 md:mt-0">1-234-56-78910</span>
-                                            <span className="text-base">1-234-56-78910</span>
+                                            <span className="text-base font-medium mt-2 md:mt-0">{settings && settings.first_number}</span>
+                                            <span className="text-base">{settings && settings.second_number}</span>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="rounded-lg px-4">
                                         <div className="flex flex-col md:items-start justify-center">
-                                            <p className="text-lg font-medium">www.website.com</p>
-                                            <p className="text-sm text-gray-500">support@email.com</p>
+                                            <p onClick={() => window.location.replace(settings && settings.web_link)} className="text-lg font-medium">{settings && settings.web_link}</p>
+                                            <p className="text-sm text-gray-500">{settings && settings.first_email}</p>
+                                            <p className="text-sm text-gray-500">{settings && settings.second_email}</p>
                                         </div>
                                     </div>
                             </div>
