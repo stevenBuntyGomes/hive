@@ -9,15 +9,36 @@ import {
     
 } from '@fortawesome/free-solid-svg-icons'
 import Link from 'next/link';
-import { useRouter } from 'next/router';
+import { useDispatch, useSelector } from 'react-redux';
+import { getSinglePriceAction } from '@/Action/PriceAction';
+import { withRouter, useRouter } from 'next/router'
+import {PRICE_IMAGE_URL} from '../../config'
 
-const PriceDetail = () => {
+
+
+const PriceDetail = ({priceId}) => {
     const Router = useRouter();
+    const dispatch = useDispatch();
+    const {price, loading, error} = useSelector((state) => state.price);
 
     const [group, setGroup] = useState('');
 
-    const onClick = () => {
-        Router.replace("/details/price_details");
+    const getSinglePriceActionHandler = async () => {
+        dispatch(getSinglePriceAction(priceId));
+    }
+
+    useEffect(() => {
+        if(priceId == undefined || priceId == null){
+            Router.replace('/prize');
+        }
+        // console.log(props);
+        getSinglePriceActionHandler();
+        
+        Aos.init({duration: 1000});
+    }, [dispatch]);
+
+    const onClick = (id) => {
+        Router.replace(`/details/price_details/${id}`);
     }
 
     const options = [
@@ -41,9 +62,9 @@ const PriceDetail = () => {
         },
     ];
 
-    useEffect(() => {
-        Aos.init({duration: 1000});
-    }, []);
+    
+
+    
   return (
     <>
         <main className='font-raleway w-full rounded bg-white'>
@@ -63,20 +84,21 @@ const PriceDetail = () => {
                         <div className='md:mb-10 md:pb-10'>
                             <div data-aos = "fade-up" className='md:mb-10 md:pb-10'>
                                 <img 
-                                    src = '/serviceDetails01.png'
+                                    src = {`${PRICE_IMAGE_URL}${price && price.first_image}`}
                                     className="md:w-[100%] relative z-10"
                                 />
                             </div>
                             <div data-aos = "fade-up" className="mb-10">
                                 {/* <h4 className="text-orange-500 uppercase font-bold md:text-[32px] text-2xl pb-3">About us</h4> */}
-                                <h4 className="text-orange-500 uppercase font-bold md:text-[32px] text-2xl pb-3 mt-5 md:mt-5">FLAT RATE 1</h4>
+                                <h4 className="text-orange-500 uppercase font-bold md:text-[32px] text-2xl pb-3 mt-5 md:mt-5">{price && price.title}</h4>
                                 <div className='md:flex md:justify-between'>
-                                    <h5 className="font-bold uppercase md:text-[42px] text-4xl mb-5">QUALITY SERVICE IS OUR GUARANTEE</h5>
-                                    <h4 className="text-orange-500 uppercase sans-serif font-bold md:text-[32px] text-2xl pb-3">$199</h4>
+                                    <h5 className="font-bold uppercase md:text-[42px] text-4xl mb-5">{price && price.first_heading}</h5>
+                                    <h4 className="text-orange-500 uppercase sans-serif font-bold md:text-[32px] text-2xl pb-3">${price && price.price}</h4>
                                 </div>
-                                <p className="text-left">We offer a wide range of plumbing services catered to both residential and commercial clients. Even the all-powerful Pointing has no control about the blind texts. Qualified team Affordable pricing Quick service We offer a wide range of plumbing services catered to both residential and
+                                <p className="text-left">
+                                    {price && price.first_description}
                                 </p>
-                                <div className="py-10">
+                                {/* <div className="py-10">
                                     <div className="grid grid-cols-2">
                                         {options.map((option, index) => (
                                         <label className="inline-flex items-center text-left" key={index}>
@@ -91,26 +113,27 @@ const PriceDetail = () => {
                                         </label>
                                         ))}
                                     </div>
-                                </div>
+                                </div> */}
 
-                                <p className='text-left'>No job is too big or too small, we’ve got you covered. In addition to our services, you can check out
+                                {/* <p className='text-left'>No job is too big or too small, we’ve got you covered. In addition to our services, you can check out
                                     our shop for a wide range of plumbing supplies and equipment. When it comes to plumbing we are your
-                                    one stop shop.</p>
+                                    one stop shop.</p> */}
                             </div>
                         </div>
                         <div className=''>
                             <div data-aos = "fade-up" className='pb-10 mb-10'>
                                 <img 
-                                    src = '/priceDetails2.png'
+                                    src = {`${PRICE_IMAGE_URL}${price && price.second_image}`}
                                     className="md:w-[100%] relative z-10"
                                 />
                             </div>
                             <div data-aos = "fade-up" className="mb-10 text-left">
                                 {/* <h4 className="text-orange-500 uppercase font-bold md:text-[32px] text-2xl pb-3">About us</h4> */}
-                                <h5 className="font-bold uppercase md:text-[42px] text-4xl mb-5">QUALITY SERVICE IS OUR GUARANTEE</h5>
-                                <p className="">We offer a wide range of plumbing services catered to both residential and commercial clients. Even the all-powerful Pointing has no control about the blind texts. Qualified team Affordable pricing Quick service We offer a wide range of plumbing services catered to both residential and
+                                <h5 className="font-bold uppercase md:text-[42px] text-4xl mb-5">{price && price.second_heading}</h5>
+                                <p className="">
+                                    {price && price.second_description}
                                 </p>
-                                <div className="md:py-10">
+                                {/* <div className="md:py-10">
                                     <ul className='divide-y text-left'>
                                         <li className="text-left cursor-pointer hover:bg-gray-100 hover:bg-opacity-20 border-none text-black font-raleway">
                                             <div className="flex items-center p-4">
@@ -153,11 +176,11 @@ const PriceDetail = () => {
                                             </div>
                                         </li>
                                     </ul>
-                                </div>
+                                </div> */}
 
-                                <p className='text-left'>No job is too big or too small, we’ve got you covered. In addition to our services, you can check out
+                                {/* <p className='text-left'>No job is too big or too small, we’ve got you covered. In addition to our services, you can check out
                                     our shop for a wide range of plumbing supplies and equipment. When it comes to plumbing we are your
-                                    one stop shop.</p>
+                                    one stop shop.</p> */}
                             </div>
                         </div>
 
@@ -168,4 +191,4 @@ const PriceDetail = () => {
   )
 }
 
-export default PriceDetail
+export default withRouter(PriceDetail)
