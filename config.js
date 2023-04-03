@@ -4,3 +4,4 @@ export const DOMAIN = process.env.PRODUCTION ? process.env.DOMAIN_PRODUCTION : p
 export const ABOUT_IMAGE_URL = 'https://hive.fexdvers.com/uploads/about_photos/';
 export const BRAND_IMAGE_URL = 'http://hive.fexdvers.com/uploads/brand_photos/';
 export const PRICE_IMAGE_URL = 'http://hive.fexdvers.com/uploads/price_photos/';
+export const SERVICE_IMAGE_URL = 'http://hive.fexdvers.com/uploads/service_photos/';

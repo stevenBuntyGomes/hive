@@ -3,12 +3,13 @@ import Layout from '../../components/Layout'
 import ServiceDetail from '../../components/Service/ServiceDetails'
 import Clients from '../../components/Service/Clients'
 import Subscribe from '../../components/About/Subscribe'
+import { withRouter } from 'next/router'
 
-const ServiceDetails = () => {
+const ServiceDetails = (props) => {
   return (
     <>
         <Layout>
-            <ServiceDetail/>
+            <ServiceDetail serviceId = {props.router.query.service}/>
             <Clients/>
             <Subscribe/>
         </Layout>
@@ -16,4 +17,4 @@ const ServiceDetails = () => {
   )
 }
 
-export default ServiceDetails
+export default withRouter(ServiceDetails)

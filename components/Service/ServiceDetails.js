@@ -6,17 +6,32 @@ import {
 import Link from 'next/link';
 import Aos from 'aos';
 import 'aos/dist/aos.css'
+import { withRouter, useRouter } from 'next/router'
+import { getSingleServiceAction } from '@/Action/ServiceAction';
+import { useDispatch, useSelector } from 'react-redux';
+import { SERVICE_IMAGE_URL } from '@/config';
 
-const ServiceDetails = () => {
+const ServiceDetails = ({serviceId}) => {
+    const Router = useRouter();
+    const dispatch = useDispatch();
+    const {service, loading, error} = useSelector((state) => state.service);
     const [group, setGroup] = useState('');
 
-    const onClick = () => {
+    const onClick = (service) => {
+        Router.push({
+            pathname: '/details/service_details',
+            query: { service: service.id }
+        })
+    }
 
+    const getSingleServiceHandler = () => {
+        dispatch(getSingleServiceAction(serviceId));
     }
 
     useEffect(() => {
+        getSingleServiceHandler();
         Aos.init({duration: 1000});
-    }, []);
+    }, [dispatch]);
 
     const options = [
         {
@@ -282,7 +297,7 @@ const ServiceDetails = () => {
                                             </p>
                                         </li>
                                         <div className="mb-5 text-center">
-                                            <button onClick={onClick} className="bg-black hover:bg-orange-500 text-white font-base text-lg py-2 px-4 rounded">
+                                            <button onClick={() => onClick} className="bg-black hover:bg-orange-500 text-white font-base text-lg py-2 px-4 rounded">
                                                 REQUEST WITH ONLINE FORM
                                             </button>
                                         </div>
@@ -328,15 +343,16 @@ const ServiceDetails = () => {
                         <div data-aos = "fade-up" className='md:mb-10 mb-5 md:pb-10 pb-5'>
                             <div className='md:mb-10 md:pb-10'>
                                 <img 
-                                    src = '/serviceDetails01.png'
+                                    src = {`${SERVICE_IMAGE_URL}${service && service.first_image}`}
                                     className="md:w-[100%] relative z-10"
                                 />
                             </div>
                             <div className="mb-10">
-                                <h5 className="font-bold uppercase md:text-[42px] mt-10 md:mt-0 text-4xl mb-5">QUALITY SERVICE IS OUR GUARANTEE</h5>
-                                <p className="text-left">We offer a wide range of plumbing services catered to both residential and commercial clients. Even the all-powerful Pointing has no control about the blind texts. Qualified team Affordable pricing Quick service We offer a wide range of plumbing services catered to both residential and
+                                <h5 className="font-bold uppercase md:text-[42px] mt-10 md:mt-0 text-4xl mb-5">{service && service.first_heading}</h5>
+                                <p className="text-left">
+                                    {service && service.first_description}
                                 </p>
-                                <div className="py-10">
+                                {/* <div className="py-10">
                                     <div className="grid grid-cols-2">
                                         {options.map((option, index) => (
                                         <label className="inline-flex items-center text-left" key={index}>
@@ -351,25 +367,22 @@ const ServiceDetails = () => {
                                         </label>
                                         ))}
                                     </div>
-                                </div>
-
-                                <p className='text-left'>No job is too big or too small, we’ve got you covered. In addition to our services, you can check out
-                                    our shop for a wide range of plumbing supplies and equipment. When it comes to plumbing we are your
-                                    one stop shop.</p>
+                                </div> */}
                             </div>
                         </div>
                         <div data-aos = "fade-up" className='mb-10 pb-10'>
                             <div className='mb-10 pb-10'>
                                 <img 
-                                    src = '/serviceDetails02.png'
+                                    src = {`${SERVICE_IMAGE_URL}${service && service.second_image}`}
                                     className="md:w-[100%] relative z-10"
                                 />
                             </div>
                             <div className="mb-10">
-                                <h5 className="font-bold uppercase md:text-[42px] text-4xl mb-5">QUALITY SERVICE IS OUR GUARANTEE</h5>
-                                <p className="text-left">We offer a wide range of plumbing services catered to both residential and commercial clients. Even the all-powerful Pointing has no control about the blind texts. Qualified team Affordable pricing Quick service We offer a wide range of plumbing services catered to both residential and
+                                <h5 className="font-bold uppercase md:text-[42px] text-4xl mb-5">{service && service.second_heading}</h5>
+                                <p className="text-left">
+                                    {service && service.second_description}
                                 </p>
-                                <div className="py-10">
+                                {/* <div className="py-10">
                                    
                                     <ul className='divide-y text-left'>
                                         <li className="text-left cursor-pointer hover:bg-gray-100 hover:bg-opacity-20 border-none text-black  ">
@@ -413,11 +426,7 @@ const ServiceDetails = () => {
                                             </div>
                                         </li>
                                     </ul>
-                                </div>
-
-                                <p className='text-left'>No job is too big or too small, we’ve got you covered. In addition to our services, you can check out
-                                    our shop for a wide range of plumbing supplies and equipment. When it comes to plumbing we are your
-                                    one stop shop.</p>
+                                </div> */}
                             </div>
                         </div>
 
@@ -430,4 +439,4 @@ const ServiceDetails = () => {
   )
 }
 
-export default ServiceDetails
+export default withRouter(ServiceDetails)

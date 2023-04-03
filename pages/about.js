@@ -13,11 +13,18 @@ import 'aos/dist/aos.css'
 import { useDispatch, useSelector } from 'react-redux';
 import {ABOUT_IMAGE_URL} from '../config'
 import {getAboutAction} from '../Action/AboutAction'
+import { getSettingsAction } from "@/Action/SettingsAction";
+
 
 const About = () => {
+
     const dispatch = useDispatch();
     const {about, loading} = useSelector((state) => state.about);
     const [group, setGroup] = useState('');
+
+    const getSettingsHandler = async () => {
+        dispatch(getSettingsAction())
+    }
 
     const options = [
         {
@@ -52,6 +59,7 @@ const About = () => {
 
     useEffect(() => {
         getAboutDispatchHandler();
+        getSettingsHandler();
         Aos.init({duration: 1000});
     }, [dispatch]);
   return (

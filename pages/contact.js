@@ -10,10 +10,19 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 import Aos from 'aos';
 import 'aos/dist/aos.css'
+import { useDispatch, useSelector } from 'react-redux';
+import { getSettingsAction } from "@/Action/SettingsAction"
 
 const Contact = () => {
+    const dispatch = useDispatch();
+    const {settings, loading} = useSelector((state) => state.settings);
+
+    const getSettingsHandler = async () => {
+        dispatch(getSettingsAction());
+    }
 
     useEffect(() => {
+        getSettingsHandler();
         Aos.init({duration: 1000});
     }, []);
 
@@ -44,27 +53,27 @@ const Contact = () => {
                                     <div className = "lg:flex px-5 md:px-[37px] md:border-r-2 border-orange-500 py-[16px]">
                                         <FontAwesomeIcon icon = {faLocationDot} className='pb-[10px] mb-5 md:pb-0 pt-[8px] text-[35px] text-orange-500 px-[14px]'/>
                                         <div className='text-black'>
-                                            <p>14 Tottenham Court Road</p>
-                                            <p>Bulls Stadium, Califorina</p>
+                                            <p>{settings && settings.first_address}</p>
+                                            <p>{settings && settings.second_address}</p>
                                         </div>
                                     </div>
                                     <div className = "lg:flex px-5 md:px-[37px] md:border-r-2 border-orange-500 py-[16px]">
                                         <FontAwesomeIcon icon = {faPhoneFlip} className='pb-[10px] mb-5 md:pt-[8px] md:pb-0 text-[35px] text-orange-500 px-[14px]'/>
                                         <div className='text-black'>
                                             <a href="tel:+43 660 3924728" className="m-0 mx-auto font-normal block">
-                                                +43 660 3924728
+                                                {settings && settings.first_number}
                                           </a>
                                          
                                            <a href="tel:+43 660 3924728" className="m-0 mx-auto font-normal block">
-                                                +43 660 3924728
+                                                {settings && settings.first_number}
                                             </a>
                                         </div>
                                     </div>
                                     <div className = "lg:flex px-5 md:px-[37px] py-[16px]">
                                         <FontAwesomeIcon icon = {faEnvelope} className='pb-[10px] mb-5 md:pb-0 pt-[8px] text-[35px] text-orange-500 px-[14px]'/>
                                         <div className='text-black'>
-                                            <p>example@gmail.com</p>
-                                            <p>example@gamil.com</p>
+                                            <p>{settings && settings.first_email}</p>
+                                            <p>{settings && settings.first_email}</p>
                                         </div>
                                     </div>
                                 </div>

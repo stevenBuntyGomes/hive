@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Link from 'next/link'
 import { faTimes, faBars } from '@fortawesome/free-solid-svg-icons';
 import Image from 'next/image'
@@ -13,9 +13,13 @@ import {
     faTwitter,
     faYoutube,
 } from '@fortawesome/free-brands-svg-icons'
+import { useDispatch, useSelector } from "react-redux";
+import { getSettingsAction } from "@/Action/SettingsAction";
 
 const Header2 = () => {
+    const dispatch = useDispatch();
     const [mobileNavbarVisible, setMobileNavbarVisible] = useState(false);
+    const {settings, loading} = useSelector((state) => state.settings);
 
     function toggleMobileNavbar() {
         setMobileNavbarVisible((prevState) => !prevState);
@@ -25,31 +29,43 @@ const Header2 = () => {
         event.stopPropagation();
     }
 
+    const sendToLinkHandler = (link) => {
+        window.location.replace(link);
+    }
+
+    const getSettingsHandler = async () => {
+        dispatch(getSettingsAction())
+    }
+
+    useEffect(() => {
+        getSettingsHandler();
+    }, [dispatch]);
+
     return (
     <nav className="sticky top-0 z-50">
         <div className="container-full mx-auto">
         {/* top bar number part starts */}
             <div className={`md:px-20 hidden bg-black md:py-5 md:flex md:w-auto md:flex-grow`}>
                 <div className='text-white text-xl font-normal md:flex-grow sans-serif'>
-                    Call Us: +43 660 3924728
+                    Call Us: {settings && settings.top_number}
                 </div>
                 <div className="text-white gt-sm">
                     <div className="text-sm md:flex-grow">
-                        <Link href="#responsive-header" className="block mt-4 md:inline-block text-sm md:mt-0 text-white hover:text-orange-500 mr-[40px]">
+                        <div onClick={() => window.location.replace(settings && settings.fb_link)} className="block mt-4 md:inline-block text-sm md:mt-0 text-white hover:text-orange-500 mr-[40px]">
                             <FontAwesomeIcon icon={faFacebookF} />
-                        </Link>
-                        <Link href="#responsive-header" className="block mt-4 md:inline-block text-sm md:mt-0 text-white hover:text-orange-500 mr-[40px]">
+                        </div>
+                        <div onClick={() => sendToLinkHandler(settings && settings.in_link)} className="block mt-4 md:inline-block text-sm md:mt-0 text-white hover:text-orange-500 mr-[40px]">
                             <FontAwesomeIcon icon={faInstagram} />
-                        </Link>
-                        <Link href="#responsive-header" className="block mt-4 md:inline-block text-sm md:mt-0 text-white hover:text-orange-500 mr-[40px]">
+                        </div>
+                        <div onClick={() => sendToLinkHandler(settings && settings.tw_link)} className="block mt-4 md:inline-block text-sm md:mt-0 text-white hover:text-orange-500 mr-[40px]">
                             <FontAwesomeIcon icon={faTwitter} />
-                        </Link>
-                        <Link href="#responsive-header" className="block mt-4 md:inline-block md:mt-0 text-white hover:text-orange-500 mr-[40px]">
+                        </div>
+                        <div onClick={() => sendToLinkHandler(settings && settings.li_link)} className="block mt-4 md:inline-block md:mt-0 text-white hover:text-orange-500 mr-[40px]">
                             <FontAwesomeIcon icon={faLinkedin} />
-                        </Link>
-                        <Link href="#responsive-header" className="block mt-4 md:inline-block md:mt-0 text-white hover:text-orange-500">
+                        </div>
+                        <div onClick={() => sendToLinkHandler(settings && settings.yo_link)} className="block mt-4 md:inline-block md:mt-0 text-white hover:text-orange-500">
                             <FontAwesomeIcon icon={faYoutube} />
-                        </Link>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -142,7 +158,7 @@ const Header2 = () => {
                          Call Us:
                     </span>
                     <a href="tel:+43 660 3924728" className="m-0 mx-auto font-normal sans-serif">
-                         +43 660 3924728
+                         {settings && settings.top_number}
                 </a>
                 </div>
 
