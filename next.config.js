@@ -8,9 +8,9 @@
 module.exports = {
   env: {
     APP_NAME: "Hive Fexdvers",
-    API_DEVELOPMENT: "http://hive.fexdvers.com/api",
+    API_DEVELOPMENT: "https://hive.fexdvers.com/api",
     PRODUCTION: true,
-    DOMAIN_DEVELOPMENT: 'http://hive.fexdvers.com/api',
-    DOMAIN_PRODUCTION: 'http://hive.fexdvers.com/api',
+    DOMAIN_DEVELOPMENT: 'https://hive.fexdvers.com/api',
+    DOMAIN_PRODUCTION: 'https://hive.fexdvers.com/api',
   },
 }
