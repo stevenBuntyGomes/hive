@@ -10,6 +10,10 @@ import { settingsReducer } from "./Reducer/SettingsReducer";
 import { subscribeReducer } from "./Reducer/SubscribeReducer";
 import { testimonialReducer } from "./Reducer/TestimonialReducer";
 import { videoLinkReducer } from "./Reducer/VideoLinkReducer";
+import { topServiceReducer } from "./Reducer/TopServiceReducer";
+import { downloadAppReducer } from "./Reducer/DownloadAppReducer";
+import { anyProblemReducer } from "./Reducer/AnyProblemReducer";
+import { googleMapReducer } from "./Reducer/GoogleMapReducer";
 
 
 export const store = configureStore({
@@ -25,5 +29,9 @@ export const store = configureStore({
     subscribe: subscribeReducer,
     testimonial: testimonialReducer,
     video: videoLinkReducer,
+    topService: topServiceReducer,
+    downloadApp: downloadAppReducer,
+    anyProblem: anyProblemReducer,
+    map: googleMapReducer,
   },
 });

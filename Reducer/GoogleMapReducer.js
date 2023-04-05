@@ -1,24 +1,23 @@
 import {createReducer} from '@reduxjs/toolkit'
 
 const initialState = {
+    map: {},
     loading: false,
     error: null,
     message: '',
-    testimonials: [],
-    service: {},
 };
 
 
-export const testimonialReducer = createReducer(initialState, {
-    getTestimonialRequest: (state, action) => {
+export const googleMapReducer = createReducer(initialState, {
+    getGoogleMapRequest: (state, action) => {
         state.loading = true;
     },
-    getTestimonialSuccess: (state, action) => {
+    getGoogleMapSuccess: (state, action) => {
         state.loading = false;
-        state.testimonials = action.payload.data;
+        state.map = action.payload.data;
         state.message = action.payload.message;
     },
-    getTestimonialFailure: (state, action) => {
+    getGoogleMapFailure: (state, action) => {
         state.loading = false;
         state.error = action.payload.error;
     },

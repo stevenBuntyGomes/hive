@@ -55,3 +55,32 @@ export const getSingleServiceAction = (id) => async (dispatch) => {
     }
 }
 
+
+// service category action
+export const getServiceCategoryAction = () => async (dispatch) => {
+    try{
+        dispatch({type: "getServiceCategoryRequest"});
+        const config = {
+            headers: {
+                "Accept": "application/json",
+            },
+        };
+        const {data, status} = await axios.get(`${API}/categories`, {}, config);
+        // const {data, status} = await axios.post(`${API}/blog/createBlog`, formData, config);
+        if(status == 401){
+            handleResponse(status);
+        }else{
+            dispatch({
+                type: "getServiceCategorySuccess",
+                payload: data,
+            });
+        }
+    }catch(error){
+        dispatch({
+            type: "getServiceCategoryFailure",
+            payload: "blog has not been created due to server error",
+        });
+    }
+}
+
+// service category action

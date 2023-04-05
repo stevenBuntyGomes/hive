@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React, {useEffect, useState} from 'react'
 import Layout from '@/components/Layout';
 import Clients from '@/components/Service/Clients';
 import Subscribe from '@/components/About/Subscribe';
@@ -7,27 +7,99 @@ import {
     faLocationDot,
     faPhoneFlip,
     faEnvelope,
+    faXmark,
 } from '@fortawesome/free-solid-svg-icons'
 import Aos from 'aos';
 import 'aos/dist/aos.css'
 import { useDispatch, useSelector } from 'react-redux';
 import { getSettingsAction } from "@/Action/SettingsAction"
+import { sendContactAction, removeContactMessageAction } from '@/Action/ContactUsAction';
+import Head from 'next/head';
+import { getGoogleMapAction } from '@/Action/GoogleMapAction';
+
 
 const Contact = () => {
     const dispatch = useDispatch();
     const {settings, loading} = useSelector((state) => state.settings);
+    const {message: contactMessage} = useSelector((state) => state.contact);
+    const [firstName, setFirstName] = useState('');
+    const [lastName, setLastName] = useState('');
+    const [phone, setPhone] = useState('');
+    const [email, setEmail] = useState('');
+    const [message, setMessage] = useState('');
+    const {map} = useSelector((state) => state.map);
+    const fetchGoogleMap = async () => {
+        dispatch(getGoogleMapAction());
+    }
 
     const getSettingsHandler = async () => {
         dispatch(getSettingsAction());
     }
 
+
+    const sendContactMessageHandler = async () => {
+        dispatch(sendContactAction(firstName, lastName, phone, email, message));
+        setLastName('');
+        setFirstName('');
+        setEmail('');
+        setPhone('');
+        setMessage('');
+    }
+
+    const removeContactMessageHandler = () => {
+        dispatch(removeContactMessageAction());
+    }
+
     useEffect(() => {
+        fetchGoogleMap();
         getSettingsHandler();
         Aos.init({duration: 1000});
     }, []);
 
+    const indexHeader = () => {
+    <Head>
+      {/* oi kam kor */}
+        <title>Hive</title>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+        {/* <title>On Time Delivery &amp; Installation Services, LLC</title> */}
+
+        <meta name="author" content="On Time Delivery &amp; Installation Services, LLC"/>
+        <meta name="description" content="Installations: Gas/Electric Ranges, Cooktops,Wall/Double Ovens, Microwaves, Fridges, Dishwashers,Washing Machines,Gas/Electric Dryer,Pro Hoods, Pro Appliances"/>
+
+        <meta name="generator" content="Starfield Technologies; Go Daddy Website Builder 8.0.0000"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:image" content="https://img1.wsimg.com/isteam/ip/b9cddd56-4571-4583-9d8f-c78d87254b08/Banner%20On%20Time%20Delivery.jpg"/>
+        <meta property="og:locale" content="en_US"/>
+        <meta property="og:url" content="https://ontimedelsvc.com/"/>
+        <meta property="og:site_name" content="On Time Delivery &amp; Installation Services, LLC"/>
+        <meta property="og:title" content="On Time Delivery &amp; Installation Services, LLC"/>
+        <meta property="og:description" content="Installations: Gas/Electric Ranges, Cooktops,Wall/Double Ovens, Microwaves, Fridges, Dishwashers,Washing Machines,Gas/Electric Dryer,Pro Hoods, Pro Appliances
+        "/>
+
+        <meta name="twitter:card" content="summary"/>
+        <meta name="twitter:site" content="@OnTimeDelivery3"/>
+        <meta name="twitter:title" content="On Time Delivery &amp; Installation Services, LLC"/>
+        <meta name="twitter:description" content="Installations: Gas/Electric Ranges, Cooktops,Wall/Double Ovens, Microwaves, Fridges, Dishwashers,Washing Machines,Gas/Electric Dryer,Pro Hoods, Pro Appliances
+        "/>
+        <meta name="twitter:image" content="https://img1.wsimg.com/isteam/ip/b9cddd56-4571-4583-9d8f-c78d87254b08/Banner%20On%20Time%20Delivery.jpg"/>
+        <meta name="twitter:image:alt" content="On Time Delivery &amp; Installation Services, LLC"/>
+        <meta name="theme-color" content="#C8A000"/>
+
+
+            <meta name="google-site-verification" content="BWGbcQysQDMY3CUG52WgSL3mcv2BBWGzSFH7h6jEl7M" />
+            <meta name="google-site-verification" content="LkPXwFzf5YwCygIHTPgZIavg1A48JWt_KyInPvfE7Ho" />
+
+                
+
+              </Head>
+  }
+
   return (
       <>
+      {indexHeader()}
           <Layout> 
               <div className='bg-white container-full mx-auto'>
                 <div className="relative bg-[url('/priceDetailsBanner.png')] bg-no-repeat bg-cover w-full h-[378px] md:px-20 py-10 mb-10">
@@ -105,6 +177,8 @@ const Contact = () => {
                                             name="first_name"
                                             placeholder='First Name'
                                             className="w-full bg-gray-100 rounded border border-gray-300 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                                            value={firstName}
+                                            onChange={e => setFirstName(e.target.value)}
                                         />
                                         </div>
                                     </div>
@@ -116,6 +190,8 @@ const Contact = () => {
                                             name="last_name"
                                             placeholder='Last Name'
                                             className="w-full bg-gray-100 rounded border border-gray-300 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                                            value={lastName}
+                                            onChange={e => setLastName(e.target.value)}
                                         />
                                         </div>
                                     </div>
@@ -127,6 +203,8 @@ const Contact = () => {
                                             name="phone"
                                             placeholder='Phone Number'
                                             className="w-full bg-gray-100 rounded border border-gray-300 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                                            value={phone}
+                                            onChange={e => setPhone(e.target.value)}
                                         />
                                         </div>
                                     </div>
@@ -139,6 +217,8 @@ const Contact = () => {
                                             name="email"
                                             placeholder='Your Email'
                                             className="w-full bg-gray-100 rounded border border-gray-300 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                                            value={email}
+                                            onChange={e => setEmail(e.target.value)}
                                         />
                                         </div>
                                     </div>
@@ -150,14 +230,28 @@ const Contact = () => {
                                             name="message"
                                             placeholder='Message'
                                             className="w-full bg-gray-100 rounded border border-gray-300 focus:border-indigo-500 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
+                                            value={message}
+                                            onChange={e => setMessage(e.target.value)}
                                         ></textarea>
                                         </div>
                                     </div>
                                     <div className="pb-[4px] w-full">
-                                        <button className="py-2 px-5 md:max-px-[135px] md:py-[20px] font-bold bg-orange-500 text-white rounded-md">
+                                        <button onClick={() => sendContactMessageHandler()} className="md:w-full py-2 px-5 md:max-px-[135px] md:py-[20px] font-bold bg-orange-500 text-white rounded-md">
                                             SEND US A MESSAGTE
                                         </button>
                                     </div>   
+                                    <div className="mx-5 md:mt-0 mt-5">
+                                    {contactMessage && (
+                                        <div onClick={() => removeContactMessageHandler()} className="bg-teal-100 border-t-4 border-teal-500 rounded-b text-teal-900 px-4 py-3 text-center shadow-md" role="alert">
+                                            <div className="text-center">
+                                                <p className="text-sm text-center">{contactMessage} <FontAwesomeIcon icon={faXmark}/></p>
+                                            </div>
+                                        </div>
+                                    )}
+
+                                    
+                                    
+                                </div>
                                 </div>
                             </div>
                         </section>   
@@ -166,7 +260,10 @@ const Contact = () => {
                 </div>
 
                 <div className='mt-[50px] md:mt-[100px]'>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7303.244618545146!2d90.41679097639884!3d23.760844307764646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8783ab9882f%3A0x50f429f46d937f3c!2sRampura%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1679686568123!5m2!1sen!2sbd" className='w-full md:max-w-full h-[400px] md:h-[661px] bg-no-repeat bg-cover' allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src={map && map.map_link}
+                            className='w-full md:max-w-full h-[400px] md:h-[661px] bg-no-repeat bg-cover' allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                        ></iframe>
+                        {/* <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7303.244618545146!2d90.41679097639884!3d23.760844307764646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8783ab9882f%3A0x50f429f46d937f3c!2sRampura%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1679686568123!5m2!1sen!2sbd" className='w-full md:max-w-full h-[400px] md:h-[661px] bg-no-repeat bg-cover' allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> */}
                 </div>
               
                 <div className='container-full mx-auto'>

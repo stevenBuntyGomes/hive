@@ -6,6 +6,7 @@ const initialState = {
     message: '',
     services: [],
     service: {},
+    serviceCategories: []
 };
 
 
@@ -31,6 +32,19 @@ export const serviceReducer = createReducer(initialState, {
         state.message = action.payload.message;
     },
     getSingleServiceFailure: (state, action) => {
+        state.loading = false;
+        state.error = action.payload.error;
+    },
+
+    getServiceCategoryRequest: (state, action) => {
+        state.loading = true;
+    },
+    getServiceCategorySuccess: (state, action) => {
+        state.loading = false;
+        state.serviceCategories = action.payload.data;
+        state.message = action.payload.message;
+    },
+    getServiceCategoryFailure: (state, action) => {
         state.loading = false;
         state.error = action.payload.error;
     },
