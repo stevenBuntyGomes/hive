@@ -4,21 +4,21 @@ const initialState = {
     loading: false,
     error: null,
     message: '',
-    testimonials: [],
+    topServices: [],
     service: {},
 };
 
 
-export const testimonialReducer = createReducer(initialState, {
-    getTestimonialRequest: (state, action) => {
+export const topServiceReducer = createReducer(initialState, {
+    getTopServiceRequest: (state, action) => {
         state.loading = true;
     },
-    getTestimonialSuccess: (state, action) => {
+    getTopServiceSuccess: (state, action) => {
         state.loading = false;
-        state.testimonials = action.payload.data;
+        state.topServices = action.payload.data;
         state.message = action.payload.message;
     },
-    getTestimonialFailure: (state, action) => {
+    getTopServiceFailure: (state, action) => {
         state.loading = false;
         state.error = action.payload.error;
     },

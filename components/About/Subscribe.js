@@ -1,17 +1,28 @@
 import React, {useState, useEffect} from 'react'
 import Aos from 'aos';
 import 'aos/dist/aos.css'
+import { useDispatch, useSelector } from 'react-redux';
+import { sendSubscribeAction, removeMessageAction } from '@/Action/SubscribeAction';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faX, faXmark } from '@fortawesome/free-solid-svg-icons';
 
 
 const Subscribe = () => {
-    const [text, setText] = useState();
-    const onClick = () => {
+    const dispatch = useDispatch();
+    const {message} = useSelector((state) => state.subscribe);
+    const [email, setEmail] = useState('');
+    const subscribeHandler = async () => {
+        await dispatch(sendSubscribeAction(email));
+        setEmail('');
+    }
 
+    const removeMessageHandler = async () => {
+        await dispatch(removeMessageAction());
     }
 
     useEffect(() => {
         Aos.init({duration: 1000});
-    }, []);
+    }, [dispatch, message]);
   return (
     <>
         <main className='bg-[#FFF] pb-10'>
@@ -28,16 +39,28 @@ const Subscribe = () => {
                             id="text"
                             type="text"
                             placeholder="Enter text"
-                            value={text}
-                            onChange={e => setText(e.target.value)}
+                            value={email}
+                            onChange={e => setEmail(e.target.value)}
                         />
                     </div>
                     <div className="mx-5 md:mt-0 mt-5">
-                        <button className="bg-black hover:bg-orange-500 text-white font-medium py-2 px-5 rounded-md mr-3" onClick={onClick}>
+                        <button className="bg-black hover:bg-orange-500 text-white font-medium py-2 px-5 rounded-md mr-3" onClick={() => subscribeHandler()}>
                             Submit
                         </button>
                     </div>
+                    
                 </div>
+                <div className="md:mt-5 mt-5 md:max-w-[400px] mx-auto">
+                        {message && (
+                            <div onClick={() => removeMessageHandler()} className="bg-teal-100 border-t-4 border-teal-500 rounded-b text-teal-900 px-4 py-3 text-center shadow-md" role="alert">
+                                <div className="text-center">
+                                    <p className="text-sm text-center">{message} <FontAwesomeIcon icon={faXmark}/></p>
+                                </div>
+                            </div>
+                        )}
+                        
+                    </div>
+                
             </div>
         </main>
     </>

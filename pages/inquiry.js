@@ -8,16 +8,85 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 import Aos from 'aos';
 import 'aos/dist/aos.css'
-
+import { useDispatch, useSelector } from 'react-redux';
+import { sendInqueryAction, removeInqueryAction } from '@/Action/InqueryAction';
+import Head from 'next/head';
 
 const Inquiry = () => {
+    const dispatch = useDispatch();
+    const {message: inquerymessage} = useSelector((state) => state.inquery);
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [phone, setPhone] = useState('');
+    const [address, setAddress] = useState('');
+    const [services, setServices] = useState('');
+    const [budget, setbudget] = useState('');
+    const [message, setMessage] = useState('');
+
+    const sendInqueryHandler = async () => {
+        await dispatch(sendInqueryAction(name, email, phone, address, services, budget, message));
+        setName('');
+        setEmail('');
+        setPhone('');
+        setAddress('');
+        setServices('');
+        setbudget('');
+        setMessage('');
+    }
+
+
+    const removeInqueryHandler = async () => {
+       await dispatch(removeInqueryAction());
+    }
 
     useEffect(() => {
         Aos.init({duration: 1000});
     }, []);
 
+    const indexHeader = () => {
+    <Head>
+      {/* oi kam kor */}
+        <title>Hive</title>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+        {/* <title>On Time Delivery &amp; Installation Services, LLC</title> */}
+
+        <meta name="author" content="On Time Delivery &amp; Installation Services, LLC"/>
+        <meta name="description" content="Installations: Gas/Electric Ranges, Cooktops,Wall/Double Ovens, Microwaves, Fridges, Dishwashers,Washing Machines,Gas/Electric Dryer,Pro Hoods, Pro Appliances"/>
+
+        <meta name="generator" content="Starfield Technologies; Go Daddy Website Builder 8.0.0000"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:image" content="https://img1.wsimg.com/isteam/ip/b9cddd56-4571-4583-9d8f-c78d87254b08/Banner%20On%20Time%20Delivery.jpg"/>
+        <meta property="og:locale" content="en_US"/>
+        <meta property="og:url" content="https://ontimedelsvc.com/"/>
+        <meta property="og:site_name" content="On Time Delivery &amp; Installation Services, LLC"/>
+        <meta property="og:title" content="On Time Delivery &amp; Installation Services, LLC"/>
+        <meta property="og:description" content="Installations: Gas/Electric Ranges, Cooktops,Wall/Double Ovens, Microwaves, Fridges, Dishwashers,Washing Machines,Gas/Electric Dryer,Pro Hoods, Pro Appliances
+        "/>
+
+        <meta name="twitter:card" content="summary"/>
+        <meta name="twitter:site" content="@OnTimeDelivery3"/>
+        <meta name="twitter:title" content="On Time Delivery &amp; Installation Services, LLC"/>
+        <meta name="twitter:description" content="Installations: Gas/Electric Ranges, Cooktops,Wall/Double Ovens, Microwaves, Fridges, Dishwashers,Washing Machines,Gas/Electric Dryer,Pro Hoods, Pro Appliances
+        "/>
+        <meta name="twitter:image" content="https://img1.wsimg.com/isteam/ip/b9cddd56-4571-4583-9d8f-c78d87254b08/Banner%20On%20Time%20Delivery.jpg"/>
+        <meta name="twitter:image:alt" content="On Time Delivery &amp; Installation Services, LLC"/>
+        <meta name="theme-color" content="#C8A000"/>
+
+
+            <meta name="google-site-verification" content="BWGbcQysQDMY3CUG52WgSL3mcv2BBWGzSFH7h6jEl7M" />
+            <meta name="google-site-verification" content="LkPXwFzf5YwCygIHTPgZIavg1A48JWt_KyInPvfE7Ho" />
+
+                
+
+              </Head>
+  }
+
   return (
       <>
+        {indexHeader()}
           <Layout> 
               
             <div className="  relative bg-[url('/inquery.png')] bg-no-repeat bg-cover w-full h-[378px] md:h-[783px] md:px-20 py-10">
@@ -53,6 +122,8 @@ const Inquiry = () => {
                                         name="name"
                                         placeholder='Full Name'
                                         className="w-full bg-gray-100 rounded border border-gray-300 focus:border-indigo-500 text-base outline-none text-gray-700 py-3 px-5 leading-8 transition-colors duration-200 ease-in-out"
+                                        value={name}
+                                        onChange = {(e) => setName(e.target.value)}
                                     />
                                     </div>
                                 </div>
@@ -64,6 +135,8 @@ const Inquiry = () => {
                                         name="email"
                                         placeholder='Email'
                                         className="w-full bg-gray-100 rounded border border-gray-300 focus:border-indigo-500 text-base outline-none text-gray-700 py-3 px-5 leading-8 transition-colors duration-200 ease-in-out"
+                                        value={email}
+                                        onChange = {(e) => setEmail(e.target.value)}
                                     />
                                     </div>
                                   </div>
@@ -75,6 +148,8 @@ const Inquiry = () => {
                                         name="phone"
                                         placeholder='Phone Number'
                                         className="w-full bg-gray-100 rounded border border-gray-300 focus:border-indigo-500 text-base outline-none text-gray-700 py-3 px-5 leading-8 transition-colors duration-200 ease-in-out"
+                                        value={phone}
+                                        onChange = {(e) => setPhone(e.target.value)}
                                     />
                                     </div>
                                 </div>
@@ -85,6 +160,8 @@ const Inquiry = () => {
                                         name="address"
                                         placeholder='Address'
                                         className="w-full bg-gray-100 rounded border border-gray-300 focus:border-indigo-500 text-base outline-none text-gray-700 py-3 px-5 leading-8 transition-colors duration-200 ease-in-out"
+                                        value={address}
+                                        onChange = {(e) => setAddress(e.target.value)}
                                     />
                                     </div>
                                   </div>
@@ -96,6 +173,8 @@ const Inquiry = () => {
                                         name="service"
                                         placeholder='Your Service'
                                         className="w-full bg-gray-100 rounded border border-gray-300 focus:border-indigo-500 text-base outline-none text-gray-700 py-3 px-5 leading-8 transition-colors duration-200 ease-in-out"
+                                        value={services}
+                                        onChange = {(e) => setServices(e.target.value)}
                                     />
                                     </div>
                                   </div>
@@ -107,6 +186,8 @@ const Inquiry = () => {
                                         name="budget"
                                         placeholder='Your Budget'
                                         className="w-full bg-gray-100 rounded border border-gray-300 focus:border-indigo-500 text-base outline-none text-gray-700 py-3 px-5 leading-8 transition-colors duration-200 ease-in-out"
+                                        value={budget}
+                                        onChange = {(e) => setbudget(e.target.value)}
                                     />
                                     </div>
                                   </div>
@@ -118,14 +199,21 @@ const Inquiry = () => {
                                         name="message"
                                         placeholder='Message'
                                         className="w-full bg-gray-100 rounded border border-gray-300 focus:border-indigo-500 h-32 text-base outline-none text-gray-700 py-3 px-5 resize-none leading-6 transition-colors duration-200 ease-in-out"
+                                        value={message}
+                                        onChange = {(e) => setMessage(e.target.value)}
                                     ></textarea>
                                     </div>
                                 </div>
                                 <div className="pb-[4px] w-full">
-                                    <button className="py-2 px-5 md:max-px-[135px] md:py-[20px] font-bold bg-orange-500 text-white rounded-md">
+                                    <button onClick={() => sendInqueryHandler()} className="py-2 px-5 md:w-full md:max-px-[135px] md:py-[20px] font-bold bg-orange-500 text-white rounded-md">
                                         GET A FREE INQUERY
                                     </button>
-                                </div>   
+                                </div>  
+                                {/* <div onClick={() => removeContactMessageHandler()} className="bg-teal-100 border-t-4 border-teal-500 rounded-b text-teal-900 px-4 py-3 text-center shadow-md" role="alert">
+                                            <div className="text-center">
+                                                <p className="text-sm text-center">{contactMessage} <FontAwesomeIcon icon={faXmark}/></p>
+                                            </div>
+                                        </div>  */}
                             </div>
                         </div>
                     </section>   

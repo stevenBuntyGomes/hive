@@ -204,7 +204,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className='text-[14px] md:text-[16px] text-center text-gray-500 py-[15px] border-t border-gray-500'>
-                    Copyright © 2021 Hive - Haustechnik. All Rights Reserved.
+                    Copyright © 2022. All rights reserved by <a className='text-orange-500' target='_blank' href = "https://www.fexdvers.com/">Fexdvers</a>. || ReactJs v18.2.0 (NextJs v13.2.4)
                 </div>
             </section>
         </main>

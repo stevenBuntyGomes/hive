@@ -1,25 +1,28 @@
 import {createReducer} from '@reduxjs/toolkit'
 
 const initialState = {
+    anyProblem: {},
     loading: false,
     error: null,
     message: '',
-    testimonials: [],
-    service: {},
 };
 
 
-export const testimonialReducer = createReducer(initialState, {
-    getTestimonialRequest: (state, action) => {
+export const anyProblemReducer = createReducer(initialState, {
+    getAnyProblemRequest: (state, action) => {
         state.loading = true;
     },
-    getTestimonialSuccess: (state, action) => {
+    getAnyProblemSuccess: (state, action) => {
         state.loading = false;
-        state.testimonials = action.payload.data;
+        state.anyProblem = action.payload.data;
         state.message = action.payload.message;
     },
-    getTestimonialFailure: (state, action) => {
+    getAnyProblemFailure: (state, action) => {
         state.loading = false;
         state.error = action.payload.error;
     },
 });
+
+
+
+
