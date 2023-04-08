@@ -145,7 +145,7 @@ const Footer = () => {
                                         <h4 className="text-sm leading-5 font-medium">
                                             MONDAY - FRIDAY
                                         </h4>
-                                        <p className="text-sm leading-5 text-gray-100">
+                                        <p className="text-sm leading-5 text-gray-100 cursor-pointer hover:text-orange-500">
                                             8.00AM - 5.00PM
                                         </p>
                                         </div>
@@ -155,7 +155,7 @@ const Footer = () => {
                                         <h4 className="text-sm leading-5 font-medium">
                                             SATURDAY
                                         </h4>
-                                        <p className="text-sm leading-5 text-gray-100">
+                                        <p className="text-sm leading-5 text-gray-100 cursor-pointer hover:text-orange-500">
                                             9.00AM - 6.00PM
                                         </p>
                                         </div>
@@ -165,7 +165,7 @@ const Footer = () => {
                                         <h4 className="text-sm leading-5 font-medium">
                                             SUNDAY
                                         </h4>
-                                        <p className="text-sm leading-5 text-gray-100">
+                                        <p className="text-sm leading-5 text-gray-100 cursor-pointer hover:text-orange-500">
                                             Closed
                                         </p>
                                         </div>
@@ -183,28 +183,42 @@ const Footer = () => {
                                     <div className="w-[100px] h-[3px] bg-orange-500 m-auto md:mx-0 mb-2"></div>
                                     <div className="flex flex-col space-y-2 mt-5 md:mt-0">
                                         <div className="flex flex-col space-y-1">
-                                        <span className="text-base font-medium">{settings && settings.first_address}</span>
-                                        <span className="text-base">{settings && settings.second_address}</span>
+                                            <span className="text-base font-medium cursor-pointer hover:text-orange-500">{settings && settings.first_address}</span>
+                                            <span className="text-base cursor-pointer hover:text-orange-500">{settings && settings.second_address}</span>
                                         </div>
-                                        <div className="flex flex-col space-y-1">
-                                            <span className="text-base font-medium mt-2 md:mt-0">{settings && settings.first_number}</span>
-                                            <span className="text-base">{settings && settings.second_number}</span>
+                                        <div className="flex flex-col space-y-1 cursor-pointer">
+                                              <a href={`tel: ${settings && settings.first_number}`} className="text-base font-medium mt-2 md:mt-0 cursor-pointer hover:text-orange-500">
+                                                  {settings && settings.first_number}
+                                              </a>
+                                              
+                                              <a href={`tel: ${settings && settings.second_number}`} className="text-base cursor-pointer hover:text-orange-500">
+                                                  {settings && settings.second_number}
+                                              </a>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="rounded-lg px-4">
-                                        <div className="flex flex-col md:items-start justify-center">
-                                            <p onClick={() => window.location.replace(settings && settings.web_link)} className="text-lg font-medium">{settings && settings.web_link}</p>
-                                            <p className="text-sm text-gray-500">{settings && settings.first_email}</p>
-                                            <p className="text-sm text-gray-500">{settings && settings.second_email}</p>
-                                        </div>
+                                    <div className="flex flex-col md:items-start justify-center">
+                                        <a href={`${settings && settings.web_link}`} target='_blank' className="text-sm cursor-pointer hover:text-orange-500 mb-2">
+                                            {settings && settings.web_link}
+                                        </a>
+
+                                        <a href={`mailto: ${settings && settings.first_email}`} target='_blank' className="text-sm cursor-pointer hover:text-orange-500 text-gray-500">
+                                            {settings && settings.first_email}
+                                        </a>
+                                        
+                                        <a href={`mailto: ${settings && settings.second_email}`} target='_blank' className="text-sm cursor-pointer hover:text-orange-500 text-gray-500">
+                                            {settings && settings.second_email}
+                                        </a>
                                     </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div className='text-[14px] md:text-[16px] text-center text-gray-500 py-[15px] border-t border-gray-500'>
-                    Copyright © 2022. All rights reserved by <a className='text-orange-500' target='_blank' href = "https://www.fexdvers.com/">Fexdvers</a>. || ReactJs v18.2.0 (NextJs v13.2.4)
+                      Copyright © 2022. All rights reserved by <a className='text-orange-500' target='_blank' href="https://www.hive.com/">Hive</a>. || Design & Develop by  
+                      <a className='text-orange-500' target='_blank' href = "https://www.fexdvers.com/"> Fexdvers</a>.
                 </div>
             </section>
         </main>

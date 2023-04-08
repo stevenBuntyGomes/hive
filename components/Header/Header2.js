@@ -47,7 +47,10 @@ const Header2 = () => {
         {/* top bar number part starts */}
             <div className={`md:px-20 hidden bg-black md:py-5 md:flex md:w-auto md:flex-grow`}>
                 <div className='text-white text-xl font-normal md:flex-grow sans-serif'>
-                    Call Us: {settings && settings.top_number}
+                        Call Us:
+                    <a href="tel:+43 660 3924728" className="m-0 mx-auto font-normal sans-serif">
+                         {settings && settings.top_number}
+                    </a>    
                 </div>
                 <div className="text-white gt-sm">
                     <div className="text-sm md:flex-grow">
@@ -159,7 +162,7 @@ const Header2 = () => {
                     <span>
                          Call Us:
                     </span>
-                    <a href="tel:+43 660 3924728" className="m-0 mx-auto font-normal sans-serif">
+                <a href="tel:+43 660 3924728" className="m-0 mx-auto font-normal sans-serif">
                          {settings && settings.top_number}
                 </a>
                 </div>

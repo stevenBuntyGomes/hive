@@ -63,8 +63,6 @@ const About = () => {
                     </div>
                 </div>
                 
-                
-                
                 <div data-aos="fade-up" className="w-full md:w-3/5 md:px-10 px-5 text-center md:text-left">
                     <div className="mb-10">
                         <h4 className="text-orange-500 uppercase font-bold md:text-[32px] text-2xl pb-3">{about && about?.heading}</h4>
