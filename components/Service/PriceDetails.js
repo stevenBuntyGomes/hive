@@ -13,7 +13,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getSinglePriceAction } from '@/Action/PriceAction';
 import { withRouter, useRouter } from 'next/router'
 import {PRICE_IMAGE_URL} from '../../config'
-
+import parse from 'html-react-parser';
 
 
 const PriceDetail = ({priceId}) => {
@@ -96,7 +96,7 @@ const PriceDetail = ({priceId}) => {
                                     <h4 className="text-orange-500 uppercase sans-serif font-bold md:text-[32px] text-2xl pb-3">${price && price.price}</h4>
                                 </div>
                                 <p className="text-left">
-                                    {price && price.first_description}
+                                    {parse(`${price && price.first_description}`)}
                                 </p>
                                 {/* <div className="py-10">
                                     <div className="grid grid-cols-2">
@@ -131,7 +131,7 @@ const PriceDetail = ({priceId}) => {
                                 {/* <h4 className="text-orange-500 uppercase font-bold md:text-[32px] text-2xl pb-3">About us</h4> */}
                                 <h5 className="font-bold uppercase md:text-[42px] text-4xl mb-5">{price && price.second_heading}</h5>
                                 <p className="">
-                                    {price && price.second_description}
+                                    {parse(`${price && price.second_description}`)}
                                 </p>
                                 {/* <div className="md:py-10">
                                     <ul className='divide-y text-left'>

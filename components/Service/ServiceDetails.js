@@ -12,6 +12,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { SERVICE_IMAGE_URL } from '@/config';
 import { getSettingsAction, getSettingsBroucharAction } from '@/Action/SettingsAction';
 import { BROUCHER_PDF_URL, COMPANY_PDF_URL } from '@/config';
+import parse from 'html-react-parser';
 
 const ServiceDetails = ({serviceId}) => {
     const Router = useRouter();
@@ -373,7 +374,7 @@ const ServiceDetails = ({serviceId}) => {
                             <div className="mb-10">
                                 <h5 className="font-bold uppercase md:text-[42px] mt-10 md:mt-0 text-4xl mb-5">{service && service.first_heading}</h5>
                                 <p className="text-left">
-                                    {service && service.first_description}
+                                    {parse(`${service && service.first_description}`)}
                                 </p>
                                 {/* <div className="py-10">
                                     <div className="grid grid-cols-2">
@@ -403,7 +404,7 @@ const ServiceDetails = ({serviceId}) => {
                             <div className="mb-10">
                                 <h5 className="font-bold uppercase md:text-[42px] text-4xl mb-5">{service && service.second_heading}</h5>
                                 <p className="text-left">
-                                    {service && service.second_description}
+                                    {parse(`${service && service.second_description}`)}
                                 </p>
                                 {/* <div className="py-10">
                                    

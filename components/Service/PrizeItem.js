@@ -4,6 +4,7 @@ import Aos from 'aos';
 import 'aos/dist/aos.css'
 import { useDispatch, useSelector } from 'react-redux';
 import { getPriceAction } from '@/Action/PriceAction';
+import parse from 'html-react-parser';
 
 
 
@@ -33,7 +34,7 @@ const PrizeItem = ({price , index}) => {
             
         </div>
         <div className="p-10">
-            {price && price.description}
+            {parse(`${price && price.description}`)}
         </div>
         <div className={`text-[42px] sans-serif font-bold ${index % 2 === 0 ? 'text-black mb-5' : 'text-orange-500 mb-5'} `}>
             €{price && price.price}

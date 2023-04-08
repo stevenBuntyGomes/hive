@@ -10,6 +10,7 @@ import { getPriceAction } from '@/Action/PriceAction';
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
+import parse from 'html-react-parser';
 
 export const ServicePrice = () => {
     const dispatch = useDispatch();
@@ -108,7 +109,7 @@ export const ServicePrice = () => {
                             <h1 className="uppercase font-bold text-[32px]">{price && price.title}</h1>
                         </div>
                         <div className="p-8 mb-[38]">
-                            {price && price.description}
+                            {parse(`${price && price.description}`)}
                         </div>
                         <div className={`text-[42px] mb-[38px] sans-serif font-bold ${index % 2 === 0 ? 'text-black' : 'text-orange-500'} `}>
                             €{price && price.price}

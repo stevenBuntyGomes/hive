@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import {getAboutAction} from '../../Action/AboutAction'
 import Link from 'next/link';
 import {ABOUT_IMAGE_URL} from '../../config'
-
+import parse from 'html-react-parser';
 
 const About = () => {
     const dispatch = useDispatch();
@@ -69,7 +69,7 @@ const About = () => {
                     <div className="mb-10">
                         <h4 className="text-orange-500 uppercase font-bold md:text-[32px] text-2xl pb-3">{about && about?.heading}</h4>
                         <h5 className="font-bold uppercase md:text-[42px] text-4xl mb-5">{about && about.title}</h5>
-                        <p className="text-base leading-[30px]">{about && about?.description}</p>
+                        <p className="text-base leading-[30px]">{parse(`${about && about?.description}`)}</p>
                         {/* <div className="py-10">
                             <div className="grid grid-cols-2">
                                 {options.map((option, index) => (

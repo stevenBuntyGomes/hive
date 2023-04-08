@@ -54,7 +54,7 @@ export default function Document() {
 
         {/* <title>On Time Delivery &amp; Installation Services, LLC</title> */}
 
-        <meta name="author" content="On Time Delivery &amp; Installation Services, LLC"/>
+        <meta name="author" content="Hive Fexdevers"/>
         <meta name="description" content="Installations: Gas/Electric Ranges, Cooktops,Wall/Double Ovens, Microwaves, Fridges, Dishwashers,Washing Machines,Gas/Electric Dryer,Pro Hoods, Pro Appliances"/>
 
         <meta name="generator" content="Starfield Technologies; Go Daddy Website Builder 8.0.0000"/>

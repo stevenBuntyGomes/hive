@@ -16,6 +16,7 @@ import { getServiceAction } from "@/Action/ServiceAction";
 
 // import required modules
 import { Autoplay, FreeMode, Pagination } from "swiper";
+import parse from 'html-react-parser';
 
 const Service = () => {
     const Router = useRouter();
@@ -122,7 +123,7 @@ const Service = () => {
                         </div>
                         <div className="w-[152px] h-[3px] bg-orange-500 text-center items-center m-auto"></div>
                         <div className="text-base leading-[30px] p-8">
-                            {service && service.description}
+                            {parse(`${service && service.description}`)}
                         </div>
                         <div className="mb-[38px]">
                             <button onClick={() => onClick(service)} className="bg-black hover:bg-orange-500 text-white font-bold py-2 px-4 rounded">
