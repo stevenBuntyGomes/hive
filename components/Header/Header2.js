@@ -48,25 +48,25 @@ const Header2 = () => {
             <div className={`md:px-20 hidden bg-black md:py-5 md:flex md:w-auto md:flex-grow`}>
                 <div className='text-white text-xl font-normal md:flex-grow sans-serif'>
                         Call Us:
-                    <a href="tel:+43 660 3924728" className="m-0 mx-auto font-normal sans-serif">
-                         {settings && settings.top_number}
+                    <a href="tel:+43 660 3924728" className="m-0 mx-auto font-normal sans-serif hover:text-orange-500 mr-[40px] cursor-pointer ml-[5px]">
+                          {settings && settings.top_number}
                     </a>    
                 </div>
                 <div className="text-white gt-sm">
                     <div className="text-sm md:flex-grow">
-                        <div onClick={() => window.location.replace(settings && settings.fb_link)} className="block mt-4 md:inline-block text-sm md:mt-0 text-white hover:text-orange-500 mr-[40px]">
+                        <div onClick={() => window.location.replace(settings && settings.fb_link)} className="block mt-4 md:inline-block text-sm md:mt-0 text-white hover:text-orange-500 mr-[40px] cursor-pointer">
                             <FontAwesomeIcon icon={faFacebookF} />
                         </div>
-                        <div onClick={() => sendToLinkHandler(settings && settings.in_link)} className="block mt-4 md:inline-block text-sm md:mt-0 text-white hover:text-orange-500 mr-[40px]">
+                        <div onClick={() => sendToLinkHandler(settings && settings.in_link)} className="block mt-4 md:inline-block text-sm md:mt-0 text-white hover:text-orange-500 mr-[40px] cursor-pointer">
                             <FontAwesomeIcon icon={faInstagram} />
                         </div>
-                        <div onClick={() => sendToLinkHandler(settings && settings.tw_link)} className="block mt-4 md:inline-block text-sm md:mt-0 text-white hover:text-orange-500 mr-[40px]">
+                        <div onClick={() => sendToLinkHandler(settings && settings.tw_link)} className="block mt-4 md:inline-block text-sm md:mt-0 text-white hover:text-orange-500 mr-[40px] cursor-pointer">
                             <FontAwesomeIcon icon={faTwitter} />
                         </div>
-                        <div onClick={() => sendToLinkHandler(settings && settings.li_link)} className="block mt-4 md:inline-block md:mt-0 text-white hover:text-orange-500 mr-[40px]">
+                        <div onClick={() => sendToLinkHandler(settings && settings.li_link)} className="block mt-4 md:inline-block md:mt-0 text-white hover:text-orange-500 mr-[40px] cursor-pointer">
                             <FontAwesomeIcon icon={faLinkedin} />
                         </div>
-                        <div onClick={() => sendToLinkHandler(settings && settings.yo_link)} className="block mt-4 md:inline-block md:mt-0 text-white hover:text-orange-500">
+                        <div onClick={() => sendToLinkHandler(settings && settings.yo_link)} className="block mt-4 md:inline-block md:mt-0 text-white hover:text-orange-500 cursor-pointer">
                             <FontAwesomeIcon icon={faYoutube} />
                         </div>
                     </div>
