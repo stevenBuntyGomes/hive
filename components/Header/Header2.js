@@ -72,7 +72,9 @@ const Header2 = () => {
 
             <div className='bg-white py-5 gt-sm md:px-20 px-5 md:flex md:w-auto md:flex-grow shadow-[0_4px_20px_0px_rgba(0,0,0,0.3)]'>
                 <div className='md:flex-grow'>
-                    <Image src="/hive.png" alt="hive-logo" width={200} height ={50} className="md:h-[50px] md:w-[200px] w-[200px] h-[50px]" />
+                    <Link href="/">
+                        <Image src="/hive.png" alt="hive-logo" width={200} height ={50} className="md:h-[50px] md:w-[200px] w-[200px] h-[50px]" />
+                    </Link>
                 </div>
                 <div className="hidden md:flex text-black gt-sm pt-2">
                     <div className="md:flex-grow text-base">
