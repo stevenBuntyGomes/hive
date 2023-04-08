@@ -19,6 +19,7 @@ import 'swiper/css/autoplay';
 import { Autoplay, FreeMode, Pagination } from "swiper";
 import { getTopServiceAction } from '@/Action/TopServicesAction';
 import { TOP_SERVICE_IMAGE_URL } from '@/config';
+import parse from 'html-react-parser';
 
 const BannerComponent = () => {
   const router = useRouter();
@@ -107,7 +108,7 @@ const BannerComponent = () => {
                               </ul>
                             </div>
                             <p className="text-[16px] h-auto md:w-[701px] p-0 md:pr-10">
-                              {banner && banner.description}</p>
+                              {banner && banner.description.length < 300 ? parse(`${banner && banner.description}`) : parse(`${banner && banner.description.slice(0, 300)}...`)}</p>
                           </div>
                           <div data-aos= "fade-up" className="pt-10 flex justify-center md:justify-start">
                             <button className="bg-gray-800 hover:bg-orange-500 text-white py-[14px] px-[30px] rounded-md mr-4" onClick={handleClick(banner && banner.link_one)}>
@@ -128,7 +129,7 @@ const BannerComponent = () => {
                 <div data-aos= "fade-up" className="text-center w-max-[360px] rounded-xl pt-[70px] pb-[70px] bg-white shadow-[0_4px_20px_0px_rgba(0,0,0,0.3)]">
                   <img src={`${TOP_SERVICE_IMAGE_URL}${service && service.icon}`} className="w-[111px] h-[108px] m-auto" alt="icon1" />
                   <div className="text-xl font-bold leading-[30px] pt-[22px] pb-[37px] md:px-20 px-5">{service && service.title}</div>
-                  <div className="px-5 md:px-12">Le{service && service.description}</div>
+                  <div className="px-5 md:px-12">Le{parse(`${service && service.description}`)}</div>
                 </div>
               ))}
               {/* <div data-aos= "fade-up" className="text-center w-max-[360px] rounded-xl pt-[70px] pb-[70px] bg-white shadow-[0_4px_20px_0px_rgba(0,0,0,0.3)]">

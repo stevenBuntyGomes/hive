@@ -4,6 +4,7 @@ import 'aos/dist/aos.css'
 import { useDispatch, useSelector } from 'react-redux';
 import { getAnyProblemAction } from '@/Action/AnyProblemAction';
 import Link from 'next/link';
+import parse from 'html-react-parser';
 
 const AnyProblem = () => {
     const dispatch = useDispatch();
@@ -36,7 +37,7 @@ const AnyProblem = () => {
                         <div className="md:mt-28 mt-10 md:px-10 px-5">
                             <h5 className="text-orange-500 uppercase sans-serif font-bold md:text-[32px] text-2xl pb-3">CALL: {anyProblem && anyProblem.phone}</h5>
                             <h4 className="font-bold uppercase md:text-[42px] text-4xl mb-5">{anyProblem && anyProblem.title}</h4>
-                            <p className="">{anyProblem && anyProblem.description}</p>
+                            <p className="">{parse(`${anyProblem && anyProblem.description}`)}</p>
                             <div className="pt-10">
                                 <Link href = "/contact" className="bg-black hover:bg-orange-500 text-white font-medium py-2 my-2 md:my-0 ml-2 px-5 rounded-md mr-3" onClick={onClick}>
                                     Contact Us

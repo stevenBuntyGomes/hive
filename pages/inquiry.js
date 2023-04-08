@@ -11,6 +11,7 @@ import 'aos/dist/aos.css'
 import { useDispatch, useSelector } from 'react-redux';
 import { sendInqueryAction, removeInqueryAction } from '@/Action/InqueryAction';
 import Head from 'next/head';
+import parse from 'html-react-parser';
 
 const Inquiry = () => {
     const dispatch = useDispatch();

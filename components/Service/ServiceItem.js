@@ -3,6 +3,7 @@ import Link from "next/link";
 import Aos from 'aos';
 import 'aos/dist/aos.css'
 import { useRouter } from "next/router";
+import parse from 'html-react-parser';
 import { SERVICE_IMAGE_URL } from "@/config";
 
 
@@ -26,7 +27,7 @@ const ServiceItem = ({content , index}) => {
         </div>
         <div className="w-[152px] h-[3px] bg-orange-500 text-center items-center m-auto"></div>
         <div className="p-4 text-textColor mb-5">
-            {content && content.description}
+            {parse(`${content && content.description}`)}
         </div>
         <div className="mb-10">
             <button onClick={() => onClick(content)} className="bg-black hover:bg-orange-500 text-white font-bold py-2 px-4 rounded">
