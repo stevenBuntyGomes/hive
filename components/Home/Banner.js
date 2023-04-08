@@ -129,7 +129,7 @@ const BannerComponent = () => {
                 <div data-aos= "fade-up" className="text-center w-max-[360px] rounded-xl pt-[70px] pb-[70px] bg-white shadow-[0_4px_20px_0px_rgba(0,0,0,0.3)]">
                   <img src={`${TOP_SERVICE_IMAGE_URL}${service && service.icon}`} className="w-[111px] h-[108px] m-auto" alt="icon1" />
                   <div className="text-xl font-bold leading-[30px] pt-[22px] pb-[37px] md:px-20 px-5">{service && service.title}</div>
-                  <div className="px-5 md:px-12">Le{parse(`${service && service.description}`)}</div>
+                  <div className="px-5 md:px-12">{parse(`${service && service.description}`)}</div>
                 </div>
               ))}
               {/* <div data-aos= "fade-up" className="text-center w-max-[360px] rounded-xl pt-[70px] pb-[70px] bg-white shadow-[0_4px_20px_0px_rgba(0,0,0,0.3)]">

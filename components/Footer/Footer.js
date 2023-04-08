@@ -40,7 +40,7 @@ const Footer = () => {
                                         <p className="py-4 font-medium text-lg mb-2">Quick Links</p>
                                     <div className="w-[100px] h-[3px] bg-orange-500 m-auto md:mx-0"></div>
                                     </li>
-                                    <li className="cursor-pointer border-none">
+                                    <li className="cursor-pointer hover:text-orange-500 border-none">
                                         <div className="flex items-center justify-between p-4 border-b">
                                         <Link href = "/service">
                                             Services
@@ -61,7 +61,7 @@ const Footer = () => {
                                         </svg>
                                         </div>
                                     </li>
-                                    <li className="cursor-pointer">
+                                    <li className="cursor-pointer hover:text-orange-500">
                                         <div className="flex items-center justify-between p-4 border-b">
                                         <Link href = "/about">
                                             About Us
@@ -83,7 +83,7 @@ const Footer = () => {
                                         </svg>
                                         </div>
                                     </li>
-                                    <li className="cursor-pointer">
+                                    <li className="cursor-pointer hover:text-orange-500">
                                         <div className="flex items-center justify-between p-4 border-b">
                                         <Link href = "/inquiry">
                                             Inquery
@@ -104,7 +104,7 @@ const Footer = () => {
                                         </svg>
                                         </div>
                                     </li>
-                                    <li className="cursor-pointer">
+                                    <li className="cursor-pointer hover:text-orange-500">
                                         <div className="flex items-center justify-between p-4 border-b">
                                         <Link href = "/inquiry">
                                             Contact Us

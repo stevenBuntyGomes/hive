@@ -36,7 +36,6 @@ const Contact = () => {
         dispatch(getSettingsAction());
     }
 
-
     const sendContactMessageHandler = async () => {
         dispatch(sendContactAction(firstName, lastName, phone, email, message));
         setLastName('');
@@ -124,7 +123,7 @@ const Contact = () => {
                                 <div className='md:flex items-center justify-center text-center pb-[60px] sans-serif'>
                                     <div className = "lg:flex px-5 md:px-[37px] md:border-r-2 border-orange-500 py-[16px]">
                                         <FontAwesomeIcon icon = {faLocationDot} className='pb-[10px] mb-5 md:pb-0 pt-[8px] text-[35px] text-orange-500 px-[14px]'/>
-                                        <div className='text-black'>
+                                        <div className='text-black text-left'>
                                             <p>{settings && settings.first_address}</p>
                                             <p>{settings && settings.second_address}</p>
                                         </div>
@@ -137,7 +136,7 @@ const Contact = () => {
                                           </a>
                                          
                                            <a href="tel:+43 660 3924728" className="m-0 mx-auto font-normal block">
-                                                {settings && settings.first_number}
+                                                {settings && settings.second_number}
                                             </a>
                                         </div>
                                     </div>
@@ -145,7 +144,7 @@ const Contact = () => {
                                         <FontAwesomeIcon icon = {faEnvelope} className='pb-[10px] mb-5 md:pb-0 pt-[8px] text-[35px] text-orange-500 px-[14px]'/>
                                         <div className='text-black'>
                                             <p>{settings && settings.first_email}</p>
-                                            <p>{settings && settings.first_email}</p>
+                                            <p>{settings && settings.second_email}</p>
                                         </div>
                                     </div>
                                 </div>
