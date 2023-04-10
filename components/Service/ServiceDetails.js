@@ -30,6 +30,10 @@ const ServiceDetails = ({serviceId}) => {
         })
     }
 
+    const sendToInqueryHandler = () => {
+        Router.push('/inquiry')
+    }
+
     const downloadSettingsBrowchar = async (id) => {
         await dispatch(getSettingsBroucharAction(id));
     }
@@ -327,7 +331,7 @@ const ServiceDetails = ({serviceId}) => {
                                             </p>
                                         </li>
                                         <div className="mb-5 text-center">
-                                            <button onClick={() => onClick} className="bg-black hover:bg-orange-500 text-white font-base text-lg py-2 px-4 rounded">
+                                            <button onClick={() => sendToInqueryHandler()} className="bg-black hover:bg-orange-500 text-white font-base text-lg py-2 px-4 rounded">
                                                 REQUEST WITH ONLINE FORM
                                             </button>
                                         </div>
