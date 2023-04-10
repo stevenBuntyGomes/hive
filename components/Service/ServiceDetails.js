@@ -312,18 +312,18 @@ const ServiceDetails = ({serviceId}) => {
                                     <ul className="divide-y">
                                         <li className="border-0 hover:bg-gray-100 hover:bg-opacity-20">
                                             <p className=" font-bold mx-4 py-4 text-[20px] mb-2">
-                                               GET FREE ESTIMATE
+                                               {settings && settings.service_title}
                                             </p>
                                         </li>
                                         <div className="w-[152px] h-[3px] bg-orange-500 mx-auto md:mx-0 md:ml-[15px]"></div>
                                         <li className="border-none hover:bg-gray-100 hover:bg-opacity-20">
                                             <h3 className="sans-serif font-bold mx-4 py-4 text-xl md:text-2xl mb-2">
-                                               123-456-78910
+                                               {settings && settings.service_number}
                                             </h3>
                                         </li>
                                         <li className="border-none hover:bg-gray-100 hover:bg-opacity-20">
                                             <p className="  mx-4 py-4 text-base mb-2">
-                                               Our online scheduling and payment system is safe
+                                               {settings && settings.service_description}
                                             </p>
                                         </li>
                                         <div className="mb-5 text-center">
