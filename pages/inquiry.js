@@ -4,7 +4,8 @@ import Clients from '@/components/Service/Clients';
 import Subscribe from '@/components/About/Subscribe';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-    faChevronRight
+    faChevronRight,
+    faXmark
 } from '@fortawesome/free-solid-svg-icons'
 import Aos from 'aos';
 import 'aos/dist/aos.css'
@@ -241,11 +242,14 @@ Trockenbau"/>
                                         GET A FREE INQUERY
                                     </button>
                                 </div>  
-                                {/* <div onClick={() => removeContactMessageHandler()} className="bg-teal-100 border-t-4 border-teal-500 rounded-b text-teal-900 px-4 py-3 text-center shadow-md" role="alert">
+                                
+                                    {inquerymessage && (
+                                        <div onClick={() => removeInqueryHandler()} className="flex justify-center w-full bg-teal-100 border-t-4 border-teal-500 rounded-b text-teal-900 px-4 py-3 shadow-md" role="alert">
                                             <div className="text-center">
-                                                <p className="text-sm text-center">{contactMessage} <FontAwesomeIcon icon={faXmark}/></p>
+                                                <p className="text-sm text-center">{inquerymessage} <FontAwesomeIcon icon={faXmark}/></p>
                                             </div>
-                                        </div>  */}
+                                        </div>
+                                    )}
                             </div>
                         </div>
                     </section>   
