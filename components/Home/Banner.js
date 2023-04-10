@@ -81,42 +81,18 @@ const BannerComponent = () => {
                             <div className="md:py-10 pt-[25px] pb-[36px]">
                               <ul className="flex justify-center md:justify-start">
                                 <li className="pt-2 md:text-[32px] text-md">{banner && banner.details}</li>
-                                {/* <li className='align-middle pt-2 md:text-[32px] text-md mx-2'>
-                                  <label className={`inline-flex items-center cursor-pointer md text-orange-500`}>
-                                    <input
-                                      type="radio"
-                                      value="hello"
-                                      checked={color === 'hello'}
-                                      onChange={handleChange}
-                                      className="form-radio h-6 w-6 text-orange-500"
-                                    />
-                                  </label>
-                                </li>
-                                <li className="pt-2 md:text-[32px] text-md">PLUMBING</li>
-                                <li className='align-middle pt-2 md:text-[32px] text-md mx-2'>
-                                  <label className={`inline-flex items-center cursor-pointer md text-orange-500`}>
-                                    <input
-                                      type="radio"
-                                      value="world"
-                                      checked={color === 'world'}
-                                      onChange={handleChange}
-                                      className="form-radio h-6 w-6 text-orange-500"
-                                    />
-                                  </label>
-                                </li>
-                                <li className="pt-2 md:text-[32px] text-md">CARPENTRY</li> */}
                               </ul>
                             </div>
                             <p className="text-[16px] h-auto md:w-[701px] p-0 md:pr-10">
                               {banner && banner.description.length < 300 ? parse(`${banner && banner.description}`) : parse(`${banner && banner.description.slice(0, 300)}...`)}</p>
                           </div>
                           <div data-aos= "fade-up" className="pt-10 flex justify-center md:justify-start">
-                            <button className="bg-gray-800 hover:bg-orange-500 text-white py-[14px] px-[30px] rounded-md mr-4" onClick={handleClick(banner && banner.link_one)}>
+                            <Link href="/contact" className="bg-gray-800 hover:bg-orange-500 text-white py-[14px] px-[30px] rounded-md mr-4" onClick={handleClick(banner && banner.link_one)}>
                               {banner && banner.button_one}
-                            </button>
-                            <button className="bg-gray-800 hover:bg-orange-500 text-white px-[30px] py-[14px] rounded-md" onClick={handleClick(banner && banner.link_two)}>
+                            </Link>
+                            <Link href="/inquiry" className="bg-gray-800 hover:bg-orange-500 text-white px-[30px] py-[14px] rounded-md" onClick={handleClick(banner && banner.link_two)}>
                               {banner && banner.button_two}
-                            </button>
+                            </Link>
                           </div>
                     </SwiperSlide>
                   ))}
@@ -129,7 +105,7 @@ const BannerComponent = () => {
                 <div data-aos= "fade-up" className="text-center w-max-[360px] rounded-xl pt-[70px] pb-[70px] bg-white shadow-[0_4px_20px_0px_rgba(0,0,0,0.3)]">
                   <img src={`${TOP_SERVICE_IMAGE_URL}${service && service.icon}`} className="w-[111px] h-[108px] m-auto" alt="icon1" />
                   <div className="text-xl font-bold leading-[30px] pt-[22px] pb-[37px] md:px-20 px-5">{service && service.title}</div>
-                  <div className="px-5 md:px-12">Le{parse(`${service && service.description}`)}</div>
+                  <div className="px-5 md:px-12">{parse(`${service && service.description}`)}</div>
                 </div>
               ))}
               {/* <div data-aos= "fade-up" className="text-center w-max-[360px] rounded-xl pt-[70px] pb-[70px] bg-white shadow-[0_4px_20px_0px_rgba(0,0,0,0.3)]">

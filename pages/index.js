@@ -56,8 +56,7 @@ export default function Home() {
             <meta name="google-site-verification" content="BWGbcQysQDMY3CUG52WgSL3mcv2BBWGzSFH7h6jEl7M" />
             <meta name="google-site-verification" content="LkPXwFzf5YwCygIHTPgZIavg1A48JWt_KyInPvfE7Ho" />
 
-                
-
+          
               </Head>
   }
   return (

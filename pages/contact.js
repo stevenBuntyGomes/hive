@@ -36,7 +36,6 @@ const Contact = () => {
         dispatch(getSettingsAction());
     }
 
-
     const sendContactMessageHandler = async () => {
         dispatch(sendContactAction(firstName, lastName, phone, email, message));
         setLastName('');
@@ -124,28 +123,37 @@ const Contact = () => {
                                 <div className='md:flex items-center justify-center text-center pb-[60px] sans-serif'>
                                     <div className = "lg:flex px-5 md:px-[37px] md:border-r-2 border-orange-500 py-[16px]">
                                         <FontAwesomeIcon icon = {faLocationDot} className='pb-[10px] mb-5 md:pb-0 pt-[8px] text-[35px] text-orange-500 px-[14px]'/>
-                                        <div className='text-black'>
-                                            <p>{settings && settings.first_address}</p>
-                                            <p>{settings && settings.second_address}</p>
+                                        <div className='text-black text-left'>
+                                            <p className='cursor-pointer hover:text-orange-500'>{settings && settings.first_address}</p>
+                                            <p className='cursor-pointer hover:text-orange-500'>{settings && settings.second_address}</p>
                                         </div>
                                     </div>
                                     <div className = "lg:flex px-5 md:px-[37px] md:border-r-2 border-orange-500 py-[16px]">
                                         <FontAwesomeIcon icon = {faPhoneFlip} className='pb-[10px] mb-5 md:pt-[8px] md:pb-0 text-[35px] text-orange-500 px-[14px]'/>
                                         <div className='text-black'>
-                                            <a href="tel:+43 660 3924728" className="m-0 mx-auto font-normal block">
-                                                {settings && settings.first_number}
+                                          <a href={`tel: ${settings && settings.first_number}`} className="text-base font-medium mt-2 md:mt-0 cursoir-pointer hover:text-orange-500 block">
+                                                  {settings && settings.first_number}
+                                              </a>
+                                              
+                                              <a href={`tel: ${settings && settings.second_number}`} className="text-base cursoir-pointer hover:text-orange-500 block">
+                                                  {settings && settings.second_number}
                                           </a>
-                                         
-                                           <a href="tel:+43 660 3924728" className="m-0 mx-auto font-normal block">
-                                                {settings && settings.second_number}
-                                            </a>
+
+                                     
                                         </div>
                                     </div>
                                     <div className = "lg:flex px-5 md:px-[37px] py-[16px]">
                                         <FontAwesomeIcon icon = {faEnvelope} className='pb-[10px] mb-5 md:pb-0 pt-[8px] text-[35px] text-orange-500 px-[14px]'/>
                                         <div className='text-black'>
-                                            <p>{settings && settings.first_email}</p>
-                                            <p>{settings && settings.first_email}</p>
+
+                                        <a href={`mailto: ${settings && settings.first_email}`} target='_blank' className="text-md cursoir-pointer hover:text-orange-500 block text-left">
+                                            {settings && settings.first_email}
+                                        </a>
+                                        
+                                        <a href={`mailto: ${settings && settings.second_email}`} target='_blank' className="text-md cursoir-pointer hover:text-orange-500 block text-left">
+                                            {settings && settings.second_email}
+                                          </a>
+                                          
                                         </div>
                                     </div>
                                 </div>

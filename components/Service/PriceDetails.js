@@ -41,30 +41,7 @@ const PriceDetail = ({priceId}) => {
         Router.replace(`/details/price_details/${id}`);
     }
 
-    const options = [
-        {
-            name: 'Qualified Team',
-        },
-        {
-            name: 'Affordable pricing',
-        },
-        {
-            name: 'Quick service',
-        },
-        {
-            name: 'Full service',
-        },
-        {
-            name: 'Emergency power solutions',
-        },
-        {
-            name: 'Virtually any electrical',
-        },
-    ];
 
-    
-
-    
   return (
     <>
         <main className='font-raleway w-full rounded bg-white'>
@@ -93,7 +70,7 @@ const PriceDetail = ({priceId}) => {
                                 <h4 className="text-orange-500 uppercase font-bold md:text-[32px] text-2xl pb-3 mt-5 md:mt-5">{price && price.title}</h4>
                                 <div className='md:flex md:justify-between'>
                                     <h5 className="font-bold uppercase md:text-[42px] text-4xl mb-5">{price && price.first_heading}</h5>
-                                    <h4 className="text-orange-500 uppercase sans-serif font-bold md:text-[32px] text-2xl pb-3">${price && price.price}</h4>
+                                    <h4 className="text-orange-500 uppercase sans-serif font-bold md:text-[32px] text-2xl pb-3">€{price && price.price}</h4>
                                 </div>
                                 <p className="text-left">
                                     {parse(`${price && price.first_description}`)}

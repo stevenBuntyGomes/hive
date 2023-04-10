@@ -47,23 +47,26 @@ const Header2 = () => {
         {/* top bar number part starts */}
             <div className={`md:px-20 hidden bg-black md:py-5 md:flex md:w-auto md:flex-grow`}>
                 <div className='text-white text-xl font-normal md:flex-grow sans-serif'>
-                    Call Us: {settings && settings.top_number}
+                        Call Us:
+                    <a href="tel:+43 660 3924728" className="m-0 mx-auto font-normal sans-serif hover:text-orange-500 mr-[40px] cursor-pointer ml-[5px]">
+                          {settings && settings.top_number}
+                    </a>    
                 </div>
                 <div className="text-white gt-sm">
                     <div className="text-sm md:flex-grow">
-                        <div onClick={() => window.location.replace(settings && settings.fb_link)} className="block mt-4 md:inline-block text-sm md:mt-0 text-white hover:text-orange-500 mr-[40px]">
+                        <div onClick={() => window.location.replace(settings && settings.fb_link)} className="block mt-4 md:inline-block text-sm md:mt-0 text-white hover:text-orange-500 mr-[40px] cursor-pointer">
                             <FontAwesomeIcon icon={faFacebookF} />
                         </div>
-                        <div onClick={() => sendToLinkHandler(settings && settings.in_link)} className="block mt-4 md:inline-block text-sm md:mt-0 text-white hover:text-orange-500 mr-[40px]">
+                        <div onClick={() => sendToLinkHandler(settings && settings.in_link)} className="block mt-4 md:inline-block text-sm md:mt-0 text-white hover:text-orange-500 mr-[40px] cursor-pointer">
                             <FontAwesomeIcon icon={faInstagram} />
                         </div>
-                        <div onClick={() => sendToLinkHandler(settings && settings.tw_link)} className="block mt-4 md:inline-block text-sm md:mt-0 text-white hover:text-orange-500 mr-[40px]">
+                        <div onClick={() => sendToLinkHandler(settings && settings.tw_link)} className="block mt-4 md:inline-block text-sm md:mt-0 text-white hover:text-orange-500 mr-[40px] cursor-pointer">
                             <FontAwesomeIcon icon={faTwitter} />
                         </div>
-                        <div onClick={() => sendToLinkHandler(settings && settings.li_link)} className="block mt-4 md:inline-block md:mt-0 text-white hover:text-orange-500 mr-[40px]">
+                        <div onClick={() => sendToLinkHandler(settings && settings.li_link)} className="block mt-4 md:inline-block md:mt-0 text-white hover:text-orange-500 mr-[40px] cursor-pointer">
                             <FontAwesomeIcon icon={faLinkedin} />
                         </div>
-                        <div onClick={() => sendToLinkHandler(settings && settings.yo_link)} className="block mt-4 md:inline-block md:mt-0 text-white hover:text-orange-500">
+                        <div onClick={() => sendToLinkHandler(settings && settings.yo_link)} className="block mt-4 md:inline-block md:mt-0 text-white hover:text-orange-500 cursor-pointer">
                             <FontAwesomeIcon icon={faYoutube} />
                         </div>
                     </div>
@@ -72,7 +75,7 @@ const Header2 = () => {
 
             <div className='bg-white py-5 gt-sm md:px-20 px-5 md:flex md:w-auto md:flex-grow shadow-[0_4px_20px_0px_rgba(0,0,0,0.3)]'>
                 <div className='md:flex-grow'>
-                    <Link href = '/'>
+                    <Link href="/">
                         <Image src="/hive.png" alt="hive-logo" width={200} height ={50} className="md:h-[50px] md:w-[200px] w-[200px] h-[50px]" />
                     </Link>
                 </div>
@@ -161,7 +164,7 @@ const Header2 = () => {
                     <span>
                          Call Us:
                     </span>
-                    <a href="tel:+43 660 3924728" className="m-0 mx-auto font-normal sans-serif">
+                <a href="tel:+43 660 3924728" className="m-0 mx-auto font-normal sans-serif">
                          {settings && settings.top_number}
                 </a>
                 </div>
