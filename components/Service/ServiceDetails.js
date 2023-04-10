@@ -7,7 +7,7 @@ import Link from 'next/link';
 import Aos from 'aos';
 import 'aos/dist/aos.css'
 import { withRouter, useRouter } from 'next/router'
-import { getSingleServiceAction, getServiceCategoryAction } from '@/Action/ServiceAction';
+import { getSingleServiceAction, getServiceCategoryAction, getServiceAction } from '@/Action/ServiceAction';
 import { useDispatch, useSelector } from 'react-redux';
 import { SERVICE_IMAGE_URL } from '@/config';
 import { getSettingsAction, getSettingsBroucharAction } from '@/Action/SettingsAction';
@@ -17,7 +17,7 @@ import parse from 'html-react-parser';
 const ServiceDetails = ({serviceId}) => {
     const Router = useRouter();
     const dispatch = useDispatch();
-    const {service, serviceCategories, loading, error} = useSelector((state) => state.service);
+    const {service, services, serviceCategories, loading, error} = useSelector((state) => state.service);
     const {settings, settingsBrouchar} = useSelector((state) => state.settings);
 
 
@@ -46,9 +46,14 @@ const ServiceDetails = ({serviceId}) => {
         await dispatch(getServiceCategoryAction());
     }
 
+    const fetchServicesHandler = async () => {
+        dispatch(getServiceAction());
+    }
+
     useEffect(() => {
         getSingleServiceHandler();
         fetchSettingsHandler();
+        fetchServicesHandler();
         fetchServiceCategory();
         Aos.init({duration: 1000});
     }, [dispatch]);
@@ -102,24 +107,26 @@ const ServiceDetails = ({serviceId}) => {
                                             </p>
                                         </li>
                                         <div className="w-[152px] h-[3px] bg-orange-500 mx-auto md:mx-0 md:ml-[15px]"></div>
-                                        {serviceCategories && serviceCategories.map((category, index) => (
+                                        {services && services.map((service, index) => (
                                             <li key = {index} className="cursor-pointer hover:bg-gray-100 hover:bg-opacity-20 border-none text-black hover:text-orange-500  ">
-                                                <div className="flex items-center justify-between p-4 border-b border-black">
-                                                <p>{category && category.name}</p>
-                                                <svg
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    className="h-6 w-6"
-                                                    fill="none"
-                                                    viewBox="0 0 24 24"
-                                                    stroke="currentColor"
-                                                >
-                                                    <path
-                                                    strokeLinecap="round"
-                                                    strokeLinejoin="round"
-                                                    strokeWidth={2}
-                                                    d="M9 5l7 7-7 7"
-                                                    />
-                                                </svg>
+                                                <div className="">
+                                                <Link className='flex items-center justify-between p-4 border-b border-black' href = {`/details/service/${service && service.id}`}>
+                                                    <p>{service && service.title}</p>
+                                                    <svg
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        className="h-6 w-6"
+                                                        fill="none"
+                                                        viewBox="0 0 24 24"
+                                                        stroke="currentColor"
+                                                    >
+                                                        <path
+                                                        strokeLinecap="round"
+                                                        strokeLinejoin="round"
+                                                        strokeWidth={2}
+                                                        d="M9 5l7 7-7 7"
+                                                        />
+                                                    </svg>
+                                                </Link>
                                                 </div>
                                             </li>
                                         ))}

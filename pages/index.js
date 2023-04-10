@@ -16,6 +16,7 @@ import Subscribe from '../components/About/Subscribe'
 
 
 
+
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {

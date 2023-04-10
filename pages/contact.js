@@ -137,7 +137,7 @@ const Contact = () => {
                                           </a>
                                          
                                            <a href="tel:+43 660 3924728" className="m-0 mx-auto font-normal block">
-                                                {settings && settings.first_number}
+                                                {settings && settings.second_number}
                                             </a>
                                         </div>
                                     </div>
