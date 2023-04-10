@@ -3,14 +3,10 @@ import Layout from '../components/Layout'
 import ServiceItem from '../components/Service/ServiceItem'
 import Aos from 'aos';
 import 'aos/dist/aos.css'
-import { useRouter } from "next/router";
+import { useRouter, withRouter } from "next/router";
 import { useDispatch, useSelector } from "react-redux";
 import { getServiceAction } from "@/Action/ServiceAction";
 import Head from 'next/head';
-
-
-
-
 
 const Services = () => {
 
@@ -116,4 +112,4 @@ const Services = () => {
   )
 }
 
-export default Services
+export default withRouter(Services)

@@ -138,7 +138,8 @@ const Contact = () => {
                                               <a href={`tel: ${settings && settings.second_number}`} className="text-base cursoir-pointer hover:text-orange-500 block">
                                                   {settings && settings.second_number}
                                           </a>
-                                          
+
+                                     
                                         </div>
                                     </div>
                                     <div className = "lg:flex px-5 md:px-[37px] py-[16px]">

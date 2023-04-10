@@ -2,9 +2,9 @@ import React, {useState, useEffect} from "react";
 import Link from "next/link";
 import Aos from 'aos';
 import 'aos/dist/aos.css'
-import { useRouter } from "next/router";
 import parse from 'html-react-parser';
 import { SERVICE_IMAGE_URL } from "@/config";
+import { useRouter, withRouter } from "next/router";
 
 
 
@@ -30,12 +30,12 @@ const ServiceItem = ({content , index}) => {
             {parse(`${content && content.description}`)}
         </div>
         <div className="mb-10">
-            <button onClick={() => onClick(content)} className="bg-black hover:bg-orange-500 text-white font-bold py-2 px-4 rounded">
+            <Link href = {`/details/service/${content && content.id}`} className="bg-black hover:bg-orange-500 text-white font-bold py-2 px-4 rounded">
                 Show More
-            </button>
+            </Link>
         </div>
     </div>
   )
 }
 
-export default ServiceItem;
+export default withRouter(ServiceItem);

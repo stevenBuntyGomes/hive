@@ -13,6 +13,7 @@ import "swiper/css/pagination";
 import { useRouter } from "next/router";
 import { useDispatch, useSelector } from "react-redux";
 import { getServiceAction } from "@/Action/ServiceAction";
+import Link from "next/link";
 
 // import required modules
 import { Autoplay, FreeMode, Pagination } from "swiper";
@@ -126,9 +127,9 @@ const Service = () => {
                             {parse(`${service && service.description}`)}
                         </div>
                         <div className="mb-[38px]">
-                            <button onClick={() => onClick(service)} className="bg-black hover:bg-orange-500 text-white font-bold py-2 px-4 rounded">
+                            <Link href = {`/details/service/${service && service.id}`} className="bg-black hover:bg-orange-500 text-white font-bold py-2 px-4 rounded">
                                 Show More
-                            </button>
+                            </Link>
                         </div>
                     </div>
                 </SwiperSlide>

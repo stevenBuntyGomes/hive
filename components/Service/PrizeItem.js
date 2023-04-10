@@ -5,6 +5,7 @@ import 'aos/dist/aos.css'
 import { useDispatch, useSelector } from 'react-redux';
 import { getPriceAction } from '@/Action/PriceAction';
 import parse from 'html-react-parser';
+import Link from "next/link";
 
 
 
@@ -41,9 +42,9 @@ const PrizeItem = ({price , index}) => {
         </div>
         <div className='mb-[36px]'>excl vat</div>
         <div className="mb-[36px]">
-            <button onClick={() => prizeDetailhandler(price && price)} className="bg-black hover:bg-orange-500 text-white font-bold py-2 px-4 rounded">
+            <Link href = {`/details/prize/${price && price.id}`} className="bg-black hover:bg-orange-500 text-white font-bold py-2 px-4 rounded">
                 Show More
-            </button>
+            </Link>
         </div>
     </div>
   )

@@ -114,7 +114,9 @@ const Header2 = () => {
                         ${mobileNavbarVisible ? "" : "hidden"}`} onClick={stopPropagation}>
                 
                 <div className="text-center pt-2 flex flex-col items-center mt-3">
-                    <Image src="/hive.png" alt="hive-logo" width={200} height ={50} className="md:h-[50px] md:w-[200px] w-[120px] h-[30px]" />
+                    <Link href = '/'>
+                        <Image src="/hive.png" alt="hive-logo" width={200} height ={50} className="md:h-[50px] md:w-[200px] w-[120px] h-[30px]" />
+                    </Link>
                 </div>
                 
                 <div className="pl-10">

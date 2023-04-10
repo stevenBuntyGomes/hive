@@ -11,6 +11,7 @@ import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import parse from 'html-react-parser';
+import Link from 'next/link';
 
 export const ServicePrice = () => {
     const dispatch = useDispatch();
@@ -116,9 +117,9 @@ export const ServicePrice = () => {
                         </div>
                         <div className='mb-[36px]'>excl vat</div>
                         <div className="mb-[48px]">
-                            <button onClick={() => onServicePriceClick(price && price)} className="bg-black hover:bg-orange-500 text-white font-bold py-2 px-4 rounded">
+                            <Link href = {`/details/prize/${price && price.id}`} className="bg-black hover:bg-orange-500 text-white font-bold py-2 px-4 rounded">
                                 Show More
-                            </button>
+                            </Link>
                         </div>
                     </div>
                 </SwiperSlide>
