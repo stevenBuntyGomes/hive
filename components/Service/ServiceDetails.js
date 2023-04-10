@@ -327,9 +327,9 @@ const ServiceDetails = ({serviceId}) => {
                                             </p>
                                         </li>
                                         <div className="mb-5 text-center">
-                                            <button onClick={() => onClick} className="bg-black hover:bg-orange-500 text-white font-base text-lg py-2 px-4 rounded">
+                                            <Link href = '/inquiry' className="bg-black hover:bg-orange-500 text-white font-base text-lg py-2 px-4 rounded">
                                                 REQUEST WITH ONLINE FORM
-                                            </button>
+                                            </Link>
                                         </div>
                                     </ul>
                                 </div>
