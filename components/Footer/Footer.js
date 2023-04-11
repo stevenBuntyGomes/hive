@@ -106,7 +106,7 @@ const Footer = () => {
                                     </li>
                                     <li className="cursor-pointer hover:text-orange-500">
                                         <div className="flex items-center justify-between p-4 border-b">
-                                        <Link href = "/inquiry">
+                                        <Link href = "/contact">
                                             Contact Us
                                         </Link>
                                         <svg

@@ -11,6 +11,7 @@ import "swiper/css/pagination";
 import { useDispatch, useSelector } from 'react-redux';
 import { getTestimonialAction } from '@/Action/TestimonialAction';
 import { TESTIMONIAL_IMAGE_URL } from '@/config';
+import parse from 'html-react-parser';
 
 
 const Testimonial = () => {
@@ -112,7 +113,7 @@ const Testimonial = () => {
                                         { testimonial && testimonial.name }
                                     </p>
                                     <p className="text-sm text-gray-500 truncate ">
-                                        { testimonial && testimonial.position }
+                                        {testimonial && testimonial.position}
                                     </p>
                                     <div className="flex items-center mt-2.5 mb-5">
                                         {testimonial && Array(testimonial.rating).fill().map((_, i) => (
@@ -130,7 +131,7 @@ const Testimonial = () => {
 
                             </div>
                             <div className = 'p-4'>
-                                {testimonial && testimonial.description}
+                                {parse(`${testimonial && testimonial.description}`)}
                             </div>
                         </div>
                     </SwiperSlide>

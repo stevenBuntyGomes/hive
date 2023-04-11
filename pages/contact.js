@@ -152,7 +152,7 @@ Trockenbau"/>
                                 <div className='md:flex items-center justify-center text-center pb-[60px] sans-serif'>
                                     <div className = "lg:flex px-5 md:px-[37px] md:border-r-2 border-orange-500 py-[16px]">
                                         <FontAwesomeIcon icon = {faLocationDot} className='pb-[10px] mb-5 md:pb-0 pt-[8px] text-[35px] text-orange-500 px-[14px]'/>
-                                        <div className='text-black text-left'>
+                                        <div className='text-black text-center md:text-left'>
                                             <p className='cursor-pointer hover:text-orange-500'>{settings && settings.first_address}</p>
                                             <p className='cursor-pointer hover:text-orange-500'>{settings && settings.second_address}</p>
                                         </div>
@@ -173,15 +173,15 @@ Trockenbau"/>
                                     </div>
                                     <div className = "lg:flex px-5 md:px-[37px] py-[16px]">
                                         <FontAwesomeIcon icon = {faEnvelope} className='pb-[10px] mb-5 md:pb-0 pt-[8px] text-[35px] text-orange-500 px-[14px]'/>
-                                        <div className='text-black'>
+                                        <div className='text-black text-center md:text-left'>
 
-                                        <a href={`mailto: ${settings && settings.first_email}`} target='_blank' className="text-md cursoir-pointer hover:text-orange-500 block text-left">
-                                            {settings && settings.first_email}
-                                        </a>
-                                        
-                                        <a href={`mailto: ${settings && settings.second_email}`} target='_blank' className="text-md cursoir-pointer hover:text-orange-500 block text-left">
-                                            {settings && settings.second_email}
-                                          </a>
+                                            <a href={`mailto: ${settings && settings.first_email}`} target='_blank' className="text-md cursoir-pointer hover:text-orange-500 block md:text-left">
+                                                {settings && settings.first_email}
+                                            </a>
+                                            
+                                            <a href={`mailto: ${settings && settings.second_email}`} target='_blank' className="text-md cursoir-pointer hover:text-orange-500 block md:text-left">
+                                                {settings && settings.second_email}
+                                            </a>
                                           
                                         </div>
                                     </div>
@@ -277,18 +277,15 @@ Trockenbau"/>
                                             SEND US A MESSAGTE
                                         </button>
                                     </div>   
-                                    <div className="mx-5 md:mt-0 mt-5">
-                                    {contactMessage && (
-                                        <div onClick={() => removeContactMessageHandler()} className="bg-teal-100 border-t-4 border-teal-500 rounded-b text-teal-900 px-4 py-3 text-center shadow-md" role="alert">
-                                            <div className="text-center">
-                                                <p className="text-sm text-center">{contactMessage} <FontAwesomeIcon icon={faXmark}/></p>
+                                    <div className="w-full mx-5 md:mt-0 mt-5">
+                                        {contactMessage && (
+                                            <div onClick={() => removeContactMessageHandler()} className="flex justify-center w-full bg-teal-100 border-t-4 border-teal-500 rounded-b text-teal-900 px-4 py-3 shadow-md" role="alert">
+                                                <div className="text-center">
+                                                    <p className="text-sm text-center">{contactMessage} <FontAwesomeIcon icon={faXmark}/></p>
+                                                </div>
                                             </div>
-                                        </div>
-                                    )}
-
-                                    
-                                    
-                                </div>
+                                        )}
+                                    </div>
                                 </div>
                             </div>
                         </section>   
