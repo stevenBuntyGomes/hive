@@ -38,7 +38,7 @@ const Subscribe = () => {
                             className="border-2 border-orange-500 hover:border-blue-500 appearance-none rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                             id="text"
                             type="text"
-                            placeholder="Enter text"
+                            placeholder="Enter Email address"
                             value={email}
                             onChange={e => setEmail(e.target.value)}
                         />

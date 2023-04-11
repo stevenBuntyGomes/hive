@@ -59,18 +59,19 @@ const PriceDetail = ({priceId}) => {
             <div className='bg-slate-50 p-5 md:px-20 container-full mx-auto'>
                 <div className='w-full pr-0 pl-0 mb-10 md:mb-0 pt-10 text-center md:text-left'>
                         <div className='md:mb-10 md:pb-10'>
-                            <div data-aos = "fade-up" className='md:mb-10 md:pb-10'>
-                                <img 
-                                    src = {`${PRICE_IMAGE_URL}${price && price.first_image}`}
-                                    className="md:w-[100%] relative z-10"
-                                />
-                            </div>
+                            
                             <div data-aos = "fade-up" className="mb-10">
                                 {/* <h4 className="text-orange-500 uppercase font-bold md:text-[32px] text-2xl pb-3">About us</h4> */}
                                 <h4 className="text-orange-500 uppercase font-bold md:text-[32px] text-2xl pb-3 mt-5 md:mt-5">{price && price.title}</h4>
                                 <div className='md:flex md:justify-between'>
                                     <h5 className="font-bold uppercase md:text-[42px] text-4xl mb-5">{price && price.first_heading}</h5>
                                     <h4 className="text-orange-500 uppercase sans-serif font-bold md:text-[32px] text-2xl pb-3">€{price && price.price}</h4>
+                                </div>
+                                <div data-aos = "fade-up" className='mt-5 md:mb-10 md:pb-10'>
+                                    <img 
+                                        src = {`${PRICE_IMAGE_URL}${price && price.first_image}`}
+                                        className="md:w-[100%] relative z-10"
+                                    />
                                 </div>
                                 <p className="text-left">
                                     {parse(`${price && price.first_description}`)}
@@ -98,15 +99,15 @@ const PriceDetail = ({priceId}) => {
                             </div>
                         </div>
                         <div className=''>
-                            <div data-aos = "fade-up" className='pb-10 mb-10'>
-                                <img 
-                                    src = {`${PRICE_IMAGE_URL}${price && price.second_image}`}
-                                    className="md:w-[100%] relative z-10"
-                                />
-                            </div>
                             <div data-aos = "fade-up" className="mb-10 text-left">
                                 {/* <h4 className="text-orange-500 uppercase font-bold md:text-[32px] text-2xl pb-3">About us</h4> */}
                                 <h5 className="font-bold uppercase md:text-[42px] text-4xl mb-5">{price && price.second_heading}</h5>
+                                <div data-aos = "fade-up" className='mt-5 pb-10 mb-10'>
+                                    <img 
+                                        src = {`${PRICE_IMAGE_URL}${price && price.second_image}`}
+                                        className="md:w-[100%] relative z-10"
+                                    />
+                                </div>
                                 <p className="">
                                     {parse(`${price && price.second_description}`)}
                                 </p>
