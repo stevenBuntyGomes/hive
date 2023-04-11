@@ -115,7 +115,7 @@ const ServiceDetails = ({serviceId}) => {
                                             <li key = {index} className="cursor-pointer hover:bg-gray-100 hover:bg-opacity-20 border-none text-black hover:text-orange-500  ">
                                                 <div className="">
                                                 <Link className='flex items-center justify-between p-4 border-b border-black' href = {`/details/service/${service && service.id}`}>
-                                                    <p>{service && service.title}</p>
+                                                    <p>{service && service.category}</p>
                                                     <svg
                                                         xmlns="http://www.w3.org/2000/svg"
                                                         className="h-6 w-6"
@@ -378,13 +378,16 @@ const ServiceDetails = ({serviceId}) => {
                         <div data-aos = "fade-up" className='md:mb-10 mb-5 md:pb-10 pb-5'>
                             
                             <div className="mb-10">
-                                <h5 className="font-bold pb-4 uppercase md:text-[42px] mt-10 md:mt-0 text-4xl mb-5">{service && service.first_heading}</h5>
+                                <h5 className="font-bold pb-4 uppercase md:text-[42px] mt-10 md:mt-0 text-4xl mb-5">
+                                      {service && service.title}</h5>
                                 <div className='md:mb-10 md:pb-10'>
                                     <img 
                                         src = {`${SERVICE_IMAGE_URL}${service && service.first_image}`}
                                         className="md:w-[100%] relative z-10"
                                     />
-                                </div>
+                                  </div>
+                                  <h5 className="font-bold pb-4 uppercase md:text-[42px] mt-10 md:mt-0 text-4xl mb-5">
+                                      {service && service.first_heading}</h5>
                                 <p className="text-left">
                                     {parse(`${service && service.first_description}`)}
                                 </p>
@@ -408,13 +411,13 @@ const ServiceDetails = ({serviceId}) => {
                         </div>
                         <div data-aos = "fade-up" className='mb-10 pb-10'>
                             <div className="mb-10">
-                                <h5 className="font-bold pb-4 uppercase md:text-[42px] text-4xl mb-5">{service && service.second_heading}</h5>
                                 <div className='mb-10 pb-10'>
                                     <img 
                                         src = {`${SERVICE_IMAGE_URL}${service && service.second_image}`}
                                         className="md:w-[100%] relative z-10"
                                     />
-                                </div>
+                                  </div>
+                                  <h5 className="font-bold pb-4 uppercase md:text-[42px] text-4xl mb-5">{service && service.second_heading}</h5>
                                 <p className="text-left">
                                     {parse(`${service && service.second_description}`)}
                                 </p>
