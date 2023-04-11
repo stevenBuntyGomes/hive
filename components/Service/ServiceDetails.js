@@ -60,7 +60,7 @@ const ServiceDetails = ({serviceId}) => {
         fetchServicesHandler();
         fetchServiceCategory();
         Aos.init({duration: 1000});
-    }, [dispatch]);
+    }, [dispatch, serviceId]);
 
     const options = [
         {
@@ -114,7 +114,7 @@ const ServiceDetails = ({serviceId}) => {
                                         {services && services.map((service, index) => (
                                             <li key = {index} className="cursor-pointer hover:bg-gray-100 hover:bg-opacity-20 border-none text-black hover:text-orange-500  ">
                                                 <div className="">
-                                                <Link className='flex items-center justify-between p-4 border-b border-black' href = {`/details/service/${service && service.id}`}>
+                                                <Link href = {`/details/service/${service && service.id}`} className='flex items-center justify-between p-4 border-b border-black'>
                                                     <p>{service && service.category}</p>
                                                     <svg
                                                         xmlns="http://www.w3.org/2000/svg"

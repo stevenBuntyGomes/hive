@@ -60,7 +60,7 @@ const PriceDetail = ({priceId}) => {
                 <div className='w-full pr-0 pl-0 mb-10 md:mb-0 pt-10 text-center md:text-left'>
                         <div className='md:mb-10 md:pb-10'>
                             
-                            <div data-aos = "fade-up" className="mb-10">
+                            <div className="mb-10">
                                 {/* <h4 className="text-orange-500 uppercase font-bold md:text-[32px] text-2xl pb-3">About us</h4> */}
                                 <h4 className="text-orange-500 uppercase font-bold md:text-[32px] text-2xl pb-3 mt-5 md:mt-5">{price && price.title}</h4>
                                 <div className='md:flex md:justify-between'>
@@ -99,7 +99,7 @@ const PriceDetail = ({priceId}) => {
                             </div>
                         </div>
                         <div className=''>
-                            <div data-aos = "fade-up" className="mb-10 text-left">
+                            <div className="mb-10 text-left">
                                 {/* <h4 className="text-orange-500 uppercase font-bold md:text-[32px] text-2xl pb-3">About us</h4> */}
                                 <h5 className="font-bold uppercase md:text-[42px] text-4xl mb-5">{price && price.second_heading}</h5>
                                 <div data-aos = "fade-up" className='mt-5 pb-10 mb-10'>
