@@ -13,6 +13,7 @@ import AnyProblem from '../components/Service/AnyProblem'
 import Testimonial from '../components/About/Testimonial'
 import Clients from '../components/Service/Clients'
 import Subscribe from '../components/About/Subscribe'
+import Logo from '../public/logo.png'
 
 
 
@@ -23,11 +24,11 @@ export default function Home() {
   const indexHeader = () => {
     <Head>
       {/* oi kam kor */}
-        <title>Hive</title>
+        <title>Hive - Home</title>
         <meta charset="utf-8"/>
         <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
-
+        <link rel="icon" href={`/logo.png`} type="image/x-icon" />
         {/* <title>On Time Delivery &amp; Installation Services, LLC</title> */}
 
         <meta name="author" content="On Time Delivery &amp; Installation Services, LLC"/>
@@ -95,6 +96,7 @@ Trockenbau"/>
       {indexHeader()}
       <Layout>
         <div className='container-full mx-auto'>
+          
           <Banner/>
           <About/>
           <Service/>

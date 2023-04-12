@@ -1,12 +1,14 @@
 import { Html, Head, Main, NextScript } from 'next/document'
 
+
 export default function Document() {
 
     const indexHeader = () => {
     <Head>
       {/* oi kam kor */}
-        <title>Hive</title>
-        <link rel="shortcut icon" href="/static/favicon.ico" />
+        
+        {/* <link rel="icon" href={`${Logo}`} type="image/x-icon" /> */}
+        {/* <title>Hive</title> */}
         <meta charset="utf-8"/>
         <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -79,7 +81,7 @@ Trockenbau"/>
     <Html lang="en">
       <Head>
               {/* oi kam kor */}
-        <title>Hive</title>
+        {/* <title>Hive</title> */}
         <meta charset="utf-8"/>
         <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
