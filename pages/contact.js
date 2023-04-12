@@ -26,7 +26,9 @@ const Contact = () => {
     const [lastName, setLastName] = useState('');
     const [phone, setPhone] = useState('');
     const [email, setEmail] = useState('');
+
     const [message, setMessage] = useState('');
+    const [requiredMessage, setRequiredMessage] = useState('');
     const {map} = useSelector((state) => state.map);
     const fetchGoogleMap = async () => {
         dispatch(getGoogleMapAction());
@@ -37,7 +39,11 @@ const Contact = () => {
     }
 
     const sendContactMessageHandler = async () => {
-        dispatch(sendContactAction(firstName, lastName, phone, email, message));
+        if(firstName == '' || lastName == '' || phone == ''|| email == '' || message == ''){
+            setRequiredMessage('All the fields in the form must be filled');
+        }else{
+            dispatch(sendContactAction(firstName, lastName, phone, email, message));
+        }
         setLastName('');
         setFirstName('');
         setEmail('');
@@ -282,6 +288,13 @@ Trockenbau"/>
                                             <div onClick={() => removeContactMessageHandler()} className="flex justify-center w-full bg-teal-100 border-t-4 border-teal-500 rounded-b text-teal-900 px-4 py-3 shadow-md" role="alert">
                                                 <div className="text-center">
                                                     <p className="text-sm text-center">{contactMessage} <FontAwesomeIcon icon={faXmark}/></p>
+                                                </div>
+                                            </div>
+                                        )}
+                                        {requiredMessage && (
+                                            <div onClick={() => setRequiredMessage('')} className="flex justify-center w-full bg-red-100 border-t-4 border-red-500 rounded-b text-teal-900 px-4 py-3 shadow-md" role="alert">
+                                                <div className="text-center">
+                                                    <p className="text-sm text-center">{requiredMessage} <FontAwesomeIcon icon={faXmark}/></p>
                                                 </div>
                                             </div>
                                         )}

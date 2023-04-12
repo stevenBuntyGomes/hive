@@ -11,8 +11,13 @@ const Subscribe = () => {
     const dispatch = useDispatch();
     const {message} = useSelector((state) => state.subscribe);
     const [email, setEmail] = useState('');
+    const [requiredMessage, setRequiredMessage] = useState('');
     const subscribeHandler = async () => {
-        await dispatch(sendSubscribeAction(email));
+        if(email == ''){
+            setRequiredMessage('The field can not be empty');
+        }else{
+            await dispatch(sendSubscribeAction(email));
+        }
         setEmail('');
     }
 
@@ -55,6 +60,13 @@ const Subscribe = () => {
                             <div onClick={() => removeMessageHandler()} className="bg-teal-100 border-t-4 border-teal-500 rounded-b text-teal-900 px-4 py-3 text-center shadow-md" role="alert">
                                 <div className="text-center">
                                     <p className="text-sm text-center">{message} <FontAwesomeIcon icon={faXmark}/></p>
+                                </div>
+                            </div>
+                        )}
+                        {requiredMessage && (
+                            <div onClick={() => setRequiredMessage('')} className="bg-red-100 border-t-4 border-red-500 rounded-b text-teal-900 px-4 py-3 text-center shadow-md" role="alert">
+                                <div className="text-center">
+                                    <p className="text-sm text-center">{requiredMessage} <FontAwesomeIcon icon={faXmark}/></p>
                                 </div>
                             </div>
                         )}
