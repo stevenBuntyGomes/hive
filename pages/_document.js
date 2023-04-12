@@ -6,6 +6,7 @@ export default function Document() {
     <Head>
       {/* oi kam kor */}
         <title>Hive</title>
+        <link rel="shortcut icon" href="/static/favicon.ico" />
         <meta charset="utf-8"/>
         <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>

@@ -24,9 +24,15 @@ const Inquiry = () => {
     const [services, setServices] = useState('');
     const [budget, setbudget] = useState('');
     const [message, setMessage] = useState('');
+    const [requiredMessage, setRequiredMessage] = useState('');
 
     const sendInqueryHandler = async () => {
-        await dispatch(sendInqueryAction(name, email, phone, address, services, budget, message));
+        if(name == '' || email == '' || phone == '' || address == '' || services == '' || budget == '' || message == ''){
+            setRequiredMessage('All the fields in the form must be filled');
+        }else{
+            await dispatch(sendInqueryAction(name, email, phone, address, services, budget, message));
+        }
+        
         setName('');
         setEmail('');
         setPhone('');
@@ -154,6 +160,7 @@ Trockenbau"/>
                                         type="text"
                                         name="name"
                                         placeholder='Full Name'
+                                        required
                                         className="w-full bg-gray-100 rounded border border-gray-300 focus:border-indigo-500 text-base outline-none text-gray-700 py-3 px-5 leading-8 transition-colors duration-200 ease-in-out"
                                         value={name}
                                         onChange = {(e) => setName(e.target.value)}
@@ -167,6 +174,7 @@ Trockenbau"/>
                                         id="email"
                                         name="email"
                                         placeholder='Email'
+                                        required
                                         className="w-full bg-gray-100 rounded border border-gray-300 focus:border-indigo-500 text-base outline-none text-gray-700 py-3 px-5 leading-8 transition-colors duration-200 ease-in-out"
                                         value={email}
                                         onChange = {(e) => setEmail(e.target.value)}
@@ -180,6 +188,7 @@ Trockenbau"/>
                                         type="number"
                                         name="phone"
                                         placeholder='Phone Number'
+                                        required
                                         className="w-full bg-gray-100 rounded border border-gray-300 focus:border-indigo-500 text-base outline-none text-gray-700 py-3 px-5 leading-8 transition-colors duration-200 ease-in-out"
                                         value={phone}
                                         onChange = {(e) => setPhone(e.target.value)}
@@ -192,6 +201,7 @@ Trockenbau"/>
                                         type="text"
                                         name="address"
                                         placeholder='Address'
+                                        required
                                         className="w-full bg-gray-100 rounded border border-gray-300 focus:border-indigo-500 text-base outline-none text-gray-700 py-3 px-5 leading-8 transition-colors duration-200 ease-in-out"
                                         value={address}
                                         onChange = {(e) => setAddress(e.target.value)}
@@ -205,6 +215,7 @@ Trockenbau"/>
                                         type="text"
                                         name="service"
                                         placeholder='Your Service'
+                                        required
                                         className="w-full bg-gray-100 rounded border border-gray-300 focus:border-indigo-500 text-base outline-none text-gray-700 py-3 px-5 leading-8 transition-colors duration-200 ease-in-out"
                                         value={services}
                                         onChange = {(e) => setServices(e.target.value)}
@@ -218,6 +229,7 @@ Trockenbau"/>
                                         type="number"
                                         name="budget"
                                         placeholder='Your Budget'
+                                        required
                                         className="w-full bg-gray-100 rounded border border-gray-300 focus:border-indigo-500 text-base outline-none text-gray-700 py-3 px-5 leading-8 transition-colors duration-200 ease-in-out"
                                         value={budget}
                                         onChange = {(e) => setbudget(e.target.value)}
@@ -231,6 +243,7 @@ Trockenbau"/>
                                         id="message"
                                         name="message"
                                         placeholder='Message'
+                                        required
                                         className="w-full bg-gray-100 rounded border border-gray-300 focus:border-indigo-500 h-32 text-base outline-none text-gray-700 py-3 px-5 resize-none leading-6 transition-colors duration-200 ease-in-out"
                                         value={message}
                                         onChange = {(e) => setMessage(e.target.value)}
@@ -247,6 +260,13 @@ Trockenbau"/>
                                         <div onClick={() => removeInqueryHandler()} className="flex justify-center w-full bg-teal-100 border-t-4 border-teal-500 rounded-b text-teal-900 px-4 py-3 shadow-md" role="alert">
                                             <div className="text-center">
                                                 <p className="text-sm text-center">{inquerymessage} <FontAwesomeIcon icon={faXmark}/></p>
+                                            </div>
+                                        </div>
+                                    )}
+                                    {requiredMessage && (
+                                        <div onClick={() => setRequiredMessage('')} className="flex justify-center w-full bg-red-100 border-t-4 border-red-500 rounded-b text-teal-900 px-4 py-3 shadow-md" role="alert">
+                                            <div className="text-center">
+                                                <p className="text-sm text-center">{requiredMessage} <FontAwesomeIcon icon={faXmark}/></p>
                                             </div>
                                         </div>
                                     )}
