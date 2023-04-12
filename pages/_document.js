@@ -6,13 +6,11 @@ export default function Document() {
     const indexHeader = () => {
     <Head>
       {/* oi kam kor */}
-        
-        {/* <link rel="icon" href={`${Logo}`} type="image/x-icon" /> */}
-        {/* <title>Hive</title> */}
+        <title>Hive</title>
         <meta charset="utf-8"/>
         <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
-
+        
         {/* <title>On Time Delivery &amp; Installation Services, LLC</title> */}
 
         <meta name="author" content="On Time Delivery &amp; Installation Services, LLC"/>
@@ -81,12 +79,11 @@ Trockenbau"/>
     <Html lang="en">
       <Head>
               {/* oi kam kor */}
-        {/* <title>Hive</title> */}
+        <title>Hive</title>
+        <link rel="icon" href={`/logo.png`} type="image/x-icon" />
         <meta charset="utf-8"/>
         <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
-
-        {/* <title>On Time Delivery &amp; Installation Services, LLC</title> */}
 
         <meta name="author" content="Hive Fexdevers"/>
         <meta name="description" content="Installations: Gas/Electric Ranges, Cooktops,Wall/Double Ovens, Microwaves, Fridges, Dishwashers,Washing Machines,Gas/Electric Dryer,Pro Hoods, Pro Appliances"/>
