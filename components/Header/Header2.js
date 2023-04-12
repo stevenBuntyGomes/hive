@@ -101,7 +101,7 @@ const Header2 = () => {
                         </Link>
                     </div>
                 </div>
-                </div>
+            </div>
                 
                 {/* Mobile Menu Setup */}
                 <div className="absolute top-3 right-6 cursor-pointer mt-5">
@@ -111,8 +111,8 @@ const Header2 = () => {
                 </div>
         </div>
             
-            <div className={`w-[60%] mobile-navbar h-[102vh] bg-white absolute top-0 left-0 text-left shadow overflow-y mobile-navbar 
-                        ${mobileNavbarVisible ? "" : "hidden"}`} onClick={stopPropagation}>
+            <div 
+                className={`w-[60%] mobile-navbar h-[102vh] bg-white absolute top-0 left-0 text-left shadow overflow-y mobile-navbar ${mobileNavbarVisible ? "" : "hidden"}`} onClick={stopPropagation}>
                 
                 <div className="text-center pt-2 flex flex-col items-center mt-3">
                     <Link href = '/'>

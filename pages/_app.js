@@ -9,10 +9,6 @@ export default function App({ Component, pageProps }) {
   return (
     
     <Provider store = {store}>
-        <Head>
-          <title>Hive</title>
-          <link rel="icon" href={`/logo.png`} type="image/x-icon" />
-        </Head>
         <Component {...pageProps} />
     </Provider>
   ) 
