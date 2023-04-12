@@ -103,6 +103,7 @@ const Header2 = () => {
                 </div>
                 </div>
                 
+                {/* Mobile Menu Setup */}
                 <div className="absolute top-3 right-6 cursor-pointer mt-5">
                     <span className="md:hidden navbar-toggle text-slate-900 transition duration-500" onClick={toggleMobileNavbar}>
                         <FontAwesomeIcon className="text-2xl" icon={ mobileNavbarVisible ? faTimes : faBars } />
