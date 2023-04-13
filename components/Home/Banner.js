@@ -72,7 +72,7 @@ const BannerComponent = () => {
                   className="mySwiper"
                 >
                   {banners && banners.map((banner, index) => (
-                      <SwiperSlide className="py-10">
+                      <SwiperSlide key = {index} className="py-10">
                         <div data-aos= "fade-up" className="p-4 md:p-0 text-center md:text-left relative">
                             <h5 className="md:text-[32px] text-2xl font-semibold">{banner && banner.heading}</h5>
                             <h3 className="md:text-[70px] text-4xl font-bold pt-[25px]">
@@ -83,8 +83,9 @@ const BannerComponent = () => {
                                 <li className="pt-2 md:text-[32px] text-md">{banner && banner.details}</li>
                               </ul>
                             </div>
-                            <p className="text-[16px] h-auto md:w-[701px] p-0 md:pr-10">
-                              {banner && banner.description.length < 300 ? parse(`${banner && banner.description}`) : parse(`${banner && banner.description.slice(0, 300)}...`)}</p>
+                            <div className="text-[16px] h-auto md:w-[701px] p-0 md:pr-10">
+                              {banner && banner.description.length < 300 ? parse(`${banner && banner.description}`) : parse(`${banner && banner.description.slice(0, 300)}...`)}
+                            </div>
                           </div>
                           <div data-aos= "fade-up" className="pt-10 flex justify-center md:justify-start">
                             <Link href="/contact" className="bg-gray-800 hover:bg-orange-500 text-white py-[14px] px-[30px] rounded-md mr-4" onClick={handleClick(banner && banner.link_one)}>
@@ -102,7 +103,7 @@ const BannerComponent = () => {
         
           <div className='mt-20 md:mt-0 grid md:grid-cols-3 grid-cols-1 justify-between items-center transform -translate-y-32  md:px-20 px-5 gap-5'>
               {topServices && topServices.map((service, index) => (
-                <div data-aos= "fade-up" className="text-center w-max-[360px] rounded-xl pt-[70px] pb-[70px] bg-white shadow-[0_4px_20px_0px_rgba(0,0,0,0.3)]">
+                <div key = {index} data-aos= "fade-up" className="text-center w-max-[360px] rounded-xl pt-[70px] pb-[70px] bg-white shadow-[0_4px_20px_0px_rgba(0,0,0,0.3)]">
                   <img src={`${TOP_SERVICE_IMAGE_URL}${service && service.icon}`} className="w-[111px] h-[108px] m-auto" alt="icon1" />
                   <div className="text-xl font-bold leading-[30px] pt-[22px] pb-[37px] md:px-20 px-5">{service && service.title}</div>
                   <div className="px-5 md:px-12">{parse(`${service && service.description}`)}</div>

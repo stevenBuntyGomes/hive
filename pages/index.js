@@ -14,7 +14,7 @@ import Testimonial from '../components/About/Testimonial'
 import Clients from '../components/Service/Clients'
 import Subscribe from '../components/About/Subscribe'
 import Logo from '../public/logo.png'
-
+import { Suspense } from 'react'
 
 
 
@@ -96,20 +96,19 @@ Trockenbau"/>
       {indexHeader()}
       <Layout>
         <div className='container-full mx-auto'>
-          
-          <Banner/>
-          <About/>
-          <Service/>
-          <Video/>
-          <ServicePrice/>
-          <DownloadApp/>
-        </div>
-          <AnyProblem/>
-          <div className='container-full mx-auto'>
-          <Testimonial/>
-          <Clients/>
-          <Subscribe/>
-        </div>
+            <Banner/>
+            <About/>
+            <Service/>
+            <Video/>
+            <ServicePrice/>
+            <DownloadApp/>
+          </div>
+            <AnyProblem/>
+            <div className='container-full mx-auto'>
+            <Testimonial/>
+            <Clients/>
+            <Subscribe/>
+          </div>
       </Layout>
     </>
   )

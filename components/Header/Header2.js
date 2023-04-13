@@ -16,6 +16,7 @@ import {
 import { useDispatch, useSelector } from "react-redux";
 import { getSettingsAction } from "@/Action/SettingsAction";
 
+
 const Header2 = () => {
     const dispatch = useDispatch();
     const [mobileNavbarVisible, setMobileNavbarVisible] = useState(false);

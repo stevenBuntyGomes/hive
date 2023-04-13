@@ -131,7 +131,7 @@ Trockenbau"/>
                     <div className="md:flex items-center -mx-10">
                     <div data-aos = "fade-up" className="w-full md:w-2/5 md:px-10 px-5 mb-10 md:mb-0">
                         <div className="relative">
-                            <img src={`${ABOUT_IMAGE_URL}${about && about?.left_image}`} width={400} height = {659} className="md:w-[400px] relative z-10 md:h-[659px]" alt=""/>
+                            <img src={`${ABOUT_IMAGE_URL}${about && about.left_image}`} width={400} height = {659} className="md:w-[400px] relative z-10 md:h-[659px]" alt=""/>
                         </div>
                     </div>
                     <div data-aos = "fade-up" className="w-full md:w-3/5 md:px-10 px-5 text-center md:text-left">
@@ -145,14 +145,14 @@ Trockenbau"/>
                   
                     <div data-aos = "fade-up" className="mt-[85px]">
                         <h5 className="font-bold uppercase md:text-[20px] mb-5">{about && about?.first_heading}</h5>
-                          <div data-aos="fade-up" style={{ backgroundImage: `url(${ABOUT_IMAGE_URL}${about && about?.first_image})` }} className={`bg-no-repeat bg-cover w-full h-[278px] md:px-20 py-10 mb-10`}></div>
+                          <div data-aos="fade-up" style={{ backgroundImage: `url(${ABOUT_IMAGE_URL}${about && about.first_image})` }} className={`bg-no-repeat bg-cover w-full h-[278px] md:px-20 py-10 mb-10`}></div>
                         <p className="pb-10">{parse(`${about && about?.first_description}`)}
                         </p>   
                     </div>
                    
                     <div data-aos = "fade-up" className="mt-[85px] mb-10">
                         <h5 className="font-bold uppercase md:text-[20px] mb-5">{about && about?.second_heading}</h5>
-                        <div data-aos = "fade-up" style={{ backgroundImage: `url(${ABOUT_IMAGE_URL}${about && about?.second_image})`}}  className={`bg-no-repeat bg-cover w-full h-[278px] md:px-20 py-10 mb-10`}></div>
+                        <div data-aos = "fade-up" style={{ backgroundImage: `url(${ABOUT_IMAGE_URL}${about && about.second_image})`}}  className={`bg-no-repeat bg-cover w-full h-[278px] md:px-20 py-10 mb-10`}></div>
                             
                         <p className="pb-10">{parse(`${about && about?.second_description}`)}
                         </p>

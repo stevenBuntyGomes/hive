@@ -308,7 +308,7 @@ Trockenbau"/>
 
                 <div className='mt-[50px] md:mt-[100px]'>
                         <iframe src={map && map.map_link}
-                            className='w-full md:max-w-full h-[400px] md:h-[661px] bg-no-repeat bg-cover' allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                            className='w-full md:max-w-full h-[400px] md:h-[661px] bg-no-repeat bg-cover' allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"
                         ></iframe>
                         {/* <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7303.244618545146!2d90.41679097639884!3d23.760844307764646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8783ab9882f%3A0x50f429f46d937f3c!2sRampura%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1679686568123!5m2!1sen!2sbd" className='w-full md:max-w-full h-[400px] md:h-[661px] bg-no-repeat bg-cover' allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> */}
                 </div>

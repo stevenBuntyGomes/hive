@@ -59,7 +59,7 @@ const About = () => {
             <div className="md:flex items-center -mx-5">
                 <div data-aos="fade-up" className={`w-full md:w-2/5 px-5 mb-10 md:mb-0`}>
                     <div className="md:relative">
-                        <img src={`${ABOUT_IMAGE_URL}${about && about?.left_image}`} width={400} height = {659} className="md:w-[400px] relative z-10 md:h-[659px]" alt=""/>
+                        <img src={`${ABOUT_IMAGE_URL}${about && about.left_image}`} width={400} height = {659} className="md:w-[400px] relative z-10 md:h-[659px]" alt=""/>
                     </div>
                 </div>
                 
