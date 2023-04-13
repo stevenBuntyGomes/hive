@@ -15,6 +15,17 @@ import {
 } from '@fortawesome/free-brands-svg-icons'
 import { useDispatch, useSelector } from "react-redux";
 import { getSettingsAction } from "@/Action/SettingsAction";
+import NProgress from "nprogress"
+import Router from "next/router"
+
+Router.onRouteChangeStart = url => {
+  NProgress.start()
+}
+
+Router.onRouteChangeComplete = () => NProgress.done()
+
+Router.onRouteChangeError = () => NProgress.done()
+
 
 
 const Header2 = () => {
