@@ -183,8 +183,8 @@ const Footer = () => {
                                     <div className="w-[100px] h-[3px] bg-orange-500 m-auto md:mx-0 mb-2"></div>
                                     <div className="flex flex-col space-y-2 mt-5 md:mt-0">
                                         <div className="flex flex-col space-y-1">
-                                            <span className="text-base font-medium cursor-pointer hover:text-orange-500">{settings && settings.first_address}</span>
-                                            <span className="text-base cursor-pointer hover:text-orange-500">{settings && settings.second_address}</span>
+                                            <span className="text-base font-medium">{settings && settings.first_address}</span>
+                                            <span className="text-base">{settings && settings.second_address}</span>
                                         </div>
                                         <div className="flex flex-col space-y-1 cursor-pointer">
                                               <a href={`tel: ${settings && settings.first_number}`} className="text-base font-medium mt-2 md:mt-0 cursor-pointer hover:text-orange-500">

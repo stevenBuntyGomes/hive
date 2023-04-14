@@ -159,8 +159,8 @@ Trockenbau"/>
                                     <div className = "lg:flex px-5 md:px-[37px] md:border-r-2 border-orange-500 py-[16px]">
                                         <FontAwesomeIcon icon = {faLocationDot} className='pb-[10px] mb-5 md:pb-0 pt-[8px] text-[35px] text-orange-500 px-[14px]'/>
                                         <div className='text-black text-center md:text-left'>
-                                            <p className='cursor-pointer hover:text-orange-500'>{settings && settings.first_address}</p>
-                                            <p className='cursor-pointer hover:text-orange-500'>{settings && settings.second_address}</p>
+                                            <p className=''>{settings && settings.first_address}</p>
+                                            <p className=''>{settings && settings.second_address}</p>
                                         </div>
                                     </div>
                                     <div className = "lg:flex px-5 md:px-[37px] md:border-r-2 border-orange-500 py-[16px]">

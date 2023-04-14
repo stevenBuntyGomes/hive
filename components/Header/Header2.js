@@ -60,7 +60,7 @@ const Header2 = () => {
             <div className={`md:px-20 hidden bg-black md:py-5 md:flex md:w-auto md:flex-grow`}>
                 <div className='text-white text-xl font-normal md:flex-grow sans-serif'>
                         Call Us:
-                    <a href="tel:+43 660 3924728" className="m-0 mx-auto font-normal sans-serif hover:text-orange-500 mr-[40px] cursor-pointer ml-[5px]">
+                    <a href="tel:+43 660 3924728" className="m-0 mx-auto font-normal sans-serif mr-[40px] cursor-pointer ml-[5px]">
                           {settings && settings.top_number}
                     </a>    
                 </div>
@@ -115,12 +115,12 @@ const Header2 = () => {
                 </div>
             </div>
                 
-                {/* Mobile Menu Setup */}
-                <div className="absolute top-3 right-6 cursor-pointer mt-5">
-                    <span className="md:hidden navbar-toggle text-slate-900 transition duration-500" onClick={toggleMobileNavbar}>
-                        <FontAwesomeIcon className="text-2xl" icon={ mobileNavbarVisible ? faTimes : faBars } />
-                    </span>
-                </div>
+            {/* Mobile Menu Setup */}
+            <div className="absolute top-3 right-6 cursor-pointer mt-5">
+                <span className="md:hidden navbar-toggle text-slate-900 transition duration-500" onClick={toggleMobileNavbar}>
+                    <FontAwesomeIcon className="text-2xl" icon={ mobileNavbarVisible ? faTimes : faBars } />
+                </span>
+            </div>
         </div>
             
             <div 
