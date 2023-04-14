@@ -12,7 +12,7 @@ import 'aos/dist/aos.css'
 import { useDispatch, useSelector } from 'react-redux';
 import { sendInqueryAction, removeInqueryAction } from '@/Action/InqueryAction';
 import Head from 'next/head';
-import parse from 'html-react-parser';
+import Link from 'next/link'
 
 const Inquiry = () => {
     const dispatch = useDispatch();
@@ -286,10 +286,13 @@ Trockenbau"/>
                         <h3 className="lg:text-[70px] md:text-[60px] text-2xl font-bold md:pt-5 text-orange-500 md:mb-[46px]">
                             TOGETHER
                         </h3>
-                        <div className="p-2 w-full">
-                            <button className="rounded-md font-bold bg-transparent text-white py-2 px-[50px] border-2 border-white hover:bg-orange-500 hover:border-orange-500 transition">
-                                CONTACT US <FontAwesomeIcon icon = {faChevronRight}/><FontAwesomeIcon className='ml-[-2px]' icon = {faChevronRight}/>
-                            </button>
+                              <div className="p-2 w-full">
+                                  <Link href="/contact">
+                                       <button className="rounded-md font-bold bg-transparent text-white py-2 px-[50px] border-2 border-white hover:bg-orange-500 hover:border-orange-500 transition">
+                                        CONTACT US <FontAwesomeIcon icon = {faChevronRight}/><FontAwesomeIcon className='ml-[-2px]' icon = {faChevronRight}/>
+                                    </button>
+                                  </Link>
+                           
                         </div>
                     </div>
                 </div>
