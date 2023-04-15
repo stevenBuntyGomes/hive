@@ -375,7 +375,7 @@ const ServiceDetails = ({serviceId}) => {
                       </div>
                       
                     <div className='w-full md:max-w-[70%] pr-0 pl-0 md:pl-5 md:mb-0 md:pr-0 md:pb-10 pt-10 text-center md:text-left'>
-                        <div data-aos = "fade-up" className='md:mb-10 mb-5 md:pb-10 pb-5'>
+                        <div className='md:mb-10 mb-5 md:pb-10 pb-5'>
                             
                             <div className="mb-10">
                                 <h5 className="font-bold pb-4 uppercase md:text-[42px] mt-10 md:mt-0 text-4xl mb-5">
@@ -409,7 +409,7 @@ const ServiceDetails = ({serviceId}) => {
                                 </div> */}
                             </div>
                         </div>
-                        <div data-aos = "fade-up" className='mb-10 pb-10'>
+                        <div className='mb-10 pb-10'>
                             <div className="mb-10">
                                 <div className='mb-10 pb-10'>
                                     <img 
