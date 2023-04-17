@@ -182,6 +182,17 @@ const Header2 = () => {
                     </a>
                 </div>
 
+                <div className="text-center pt-2 flex flex-col items-center mt-3">
+                    <div className="pt-10 q-gutter-md">
+                        <Link href="/contact" className="bg-black hover:bg-orange-500 text-white font-medium py-2 px-5 rounded-md mr-3" onClick={onClick}>
+                            GET MORE
+                        </Link>
+                        <Link href="/inquiry" className="bg-black hover:bg-orange-500 hover:text-white text-white font-medium py-2 px-5 rounded-md" onClick={onClick}>
+                            GET A QUOTE
+                        </Link>
+                    </div>
+                </div>
+
 
 
 
