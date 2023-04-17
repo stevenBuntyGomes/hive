@@ -26,8 +26,6 @@ Router.onRouteChangeComplete = () => NProgress.done()
 
 Router.onRouteChangeError = () => NProgress.done()
 
-
-
 const Header2 = () => {
     const dispatch = useDispatch();
     const [mobileNavbarVisible, setMobileNavbarVisible] = useState(false);
@@ -39,10 +37,6 @@ const Header2 = () => {
 
     function stopPropagation(event) {
         event.stopPropagation();
-    }
-
-    const sendToLinkHandler = (link) => {
-        window.location.replace(link);
     }
 
     const getSettingsHandler = async () => {
@@ -183,18 +177,13 @@ const Header2 = () => {
                 </div>
 
                 <div className="text-center pt-2 flex flex-col items-center mt-3">
-                    <div className="pt-10 q-gutter-md">
-                        <Link href="/contact" className="bg-black hover:bg-orange-500 text-white font-medium py-2 px-5 rounded-md mr-3" onClick={onClick}>
-                            GET MORE
-                        </Link>
-                        <Link href="/inquiry" className="bg-black hover:bg-orange-500 hover:text-white text-white font-medium py-2 px-5 rounded-md" onClick={onClick}>
-                            GET A QUOTE
-                        </Link>
-                    </div>
+                    <Link href="/contact" className="bg-black hover:bg-orange-500 text-white font-medium py-2 px-5 rounded-md mr-3">
+                        Android App
+                    </Link>
+                    <Link href="/inquiry" className="bg-black hover:bg-orange-500 hover:text-white text-white font-medium py-2 px-5 rounded-md">
+                        Apple App
+                    </Link>
                 </div>
-
-
-
 
 
             </div>

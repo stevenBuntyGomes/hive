@@ -48,7 +48,7 @@ const BannerComponent = () => {
   useEffect(() => {
     getBannersHandler();
     fetchTopService();
-    Aos.init({ duration: 1000 });
+    Aos.init({ duration: 2000 });
   }, [dispatch]);
 
   return (
