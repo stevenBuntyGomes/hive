@@ -106,7 +106,7 @@ const Header2 = () => {
                                 About Us
                             </Link>
                             <Link href="/inquiry" className="block mt-4 md:inline-block text-sm md:mt-0 text-black hover:text-orange-500 mr-6">
-                                Inquery
+                                Inquiry
                             </Link>
                             <Link href="/contact" className="block mt-4 md:inline-block text-sm md:mt-0 text-black hover:text-orange-500">
                                 Contact
@@ -134,41 +134,41 @@ const Header2 = () => {
 
                 <div className="pl-10">
                     <ul className="mt-3 list-none text-lg font-semibold">
-                        <li className="transition p-3 cursor-pointer hover:bg-slate-100 mb-1 hover:opacity-80 border-b border-slate-100">
-                            <Link href="/">
+                        <Link href="/">
+                            <li className="transition p-3 cursor-pointer hover:bg-slate-100 mb-1 hover:opacity-80 border-b border-slate-100">
                                 <i className="fa-solid fa-chevron-right text-xs mr-4"></i> Home
-                            </Link>
-                        </li>
+                            </li>
+                        </Link>
 
-                        <li className="transition p-3 cursor-pointer hover:bg-slate-100 mb-1 hover:opacity-80 border-b border-slate-100">
-                            <Link href="/service">
+                        <Link href="/service">
+                            <li className="transition p-3 cursor-pointer hover:bg-slate-100 mb-1 hover:opacity-80 border-b border-slate-100">
                                 <i className="fa-solid fa-chevron-right text-xs mr-4"></i> Services
-                            </Link>
-                        </li>
+                            </li>
+                        </Link>
 
-                        <li className="transition p-3 cursor-pointer hover:bg-slate-100 mb-1 hover:opacity-80 border-b border-slate-100">
-                            <Link href="/prize">
+                        <Link href="/prize">
+                            <li className="transition p-3 cursor-pointer hover:bg-slate-100 mb-1 hover:opacity-80 border-b border-slate-100">
                                 <i className="fa-solid fa-chevron-right text-xs mr-4"></i> Prizes
-                            </Link>
-                        </li>
+                            </li>
+                        </Link>
 
-                        <li className="transition p-3 cursor-pointer hover:bg-slate-100 mb-1 hover:opacity-80 border-b border-slate-100">
-                            <Link href="/about">
+                        <Link href="/about">
+                            <li className="transition p-3 cursor-pointer hover:bg-slate-100 mb-1 hover:opacity-80 border-b border-slate-100">
                                 <i className="fa-solid fa-chevron-right text-xs mr-4"></i> About Us
-                            </Link>
-                        </li>
+                            </li>
+                        </Link>
 
-                        <li className="transition p-3 cursor-pointer hover:bg-slate-100 mb-1 hover:opacity-80 border-b border-slate-100">
-                            <Link href="/inquiry">
+                        <Link href="/inquiry">
+                            <li className="transition p-3 cursor-pointer hover:bg-slate-100 mb-1 hover:opacity-80 border-b border-slate-100">
                                 <i className="fa-solid fa-chevron-right text-xs mr-4"></i> Inquiry
-                            </Link>
-                        </li>
+                            </li>
+                        </Link>
 
-                        <li className="transition p-3 cursor-pointer hover:bg-slate-100 mb-1 hover:opacity-80 border-b border-slate-100">
-                            <Link href="/contact">
+                        <Link href="/contact">
+                            <li className="transition p-3 cursor-pointer hover:bg-slate-100 mb-1 hover:opacity-80 border-b border-slate-100">
                                 <i className="fa-solid fa-chevron-right text-xs mr-4"></i> Contact
-                            </Link>
-                        </li>
+                            </li>
+                        </Link>
 
                     </ul>
                 </div>
